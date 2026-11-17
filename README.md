@@ -1,4 +1,4 @@
-# TraceLens
+# doctor_log
 
 Système multi-agents (LangGraph) de diagnostic d'incidents à partir des logs, métriques et traces.
 
