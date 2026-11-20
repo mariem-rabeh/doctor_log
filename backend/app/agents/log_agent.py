@@ -18,8 +18,7 @@ from datetime import datetime, timedelta
 from enum import StrEnum
 from typing import Any
 
-from pydantic import BaseModel, ConfigDict, Field
-
+from app.agents.common import AgentInterpretation, detect_change_point, ground
 from app.agents.prompts.log import SYSTEM_PROMPT, build_user_prompt
 from app.schemas.diagnosis import Evidence, Finding
 from app.schemas.enums import SignalSource
@@ -61,14 +60,8 @@ _CATEGORY_ORDER = {
 }
 
 
-class LogInterpretation(BaseModel):
-    """Ce que le LLM a le droit de produire : du texte et des identifiants existants."""
-
-    model_config = ConfigDict(extra="forbid")
-
-    summary: str = Field(min_length=1)
-    anomalies: list[str] = Field(default_factory=list)
-    noise_evidence_ids: list[str] = Field(default_factory=list)
+class LogInterpretation(AgentInterpretation):
+    """Réponse attendue du LLM pour les logs (voir AgentInterpretation)."""
 
 
 @dataclass
@@ -116,16 +109,24 @@ def run(source: DataSource, window: TimeWindow, llm: LLMClient) -> Finding:
         missing_data.append(f"logs : interprétation LLM indisponible ({type(exc).__name__})")
         interpretation = None
 
-    summary, anomalies, dropped = _ground(interpretation, evidences, digest)
-    if dropped:
-        missing_data.append(f"logs : {dropped} élément(s) du LLM écarté(s), preuve citée inconnue")
+    text = ground(
+        interpretation,
+        {e.id for e in evidences},
+        _EVIDENCE_ID,
+        fallback_summary(evidences, digest),
+    )
+    anomalies = list(text.anomalies)
+    if text.dropped:
+        missing_data.append(
+            f"logs : {text.dropped} élément(s) du LLM écarté(s), preuve citée inconnue"
+        )
     hidden = len(groups) - min(len(groups), MAX_GROUP_EVIDENCES)
     if hidden:
         anomalies.append(f"{hidden} autre(s) motif(s) de log moins fréquent(s) non détaillé(s).")
 
     return Finding(
         agent=SignalSource.LOGS,
-        summary=summary,
+        summary=text.summary,
         evidences=evidences,
         anomalies=anomalies,
         missing_data=missing_data,
@@ -148,30 +149,15 @@ def bucket_counts(records: Sequence[LogRecord], window: TimeWindow) -> tuple[dat
 
 
 def detect_onset(problems: Sequence[LogRecord], window: TimeWindow) -> datetime | None:
-    """Minute où les logs problématiques décollent, ou None si rien ne change.
-
-    On essaie chaque coupure possible et on garde celle qui sépare le mieux un « avant »
-    calme d'un « après » plus chargé (écart des moyennes pondéré par la taille des deux
-    parties). La coupure n'est retenue que si la hausse est nette.
-    """
+    """Minute où les logs problématiques décollent, ou None si rien ne change."""
     start, counts = bucket_counts(problems, window)
-    n = len(counts)
-    best_k, best_score = None, 0.0
-    for k in range(MIN_SEGMENT_BUCKETS, n - MIN_SEGMENT_BUCKETS + 1):
-        before, after = sum(counts[:k]) / k, sum(counts[k:]) / (n - k)
-        if after <= before:
-            continue
-        score = k * (n - k) / n * (after - before) ** 2
-        if score > best_score:
-            best_k, best_score = k, score
-
-    if best_k is None:
-        return None
-    before = sum(counts[:best_k]) / best_k
-    after = sum(counts[best_k:]) / (n - best_k)
-    if after < max(ONSET_MIN_RATIO * before, before + ONSET_MIN_DELTA_PER_MIN):
-        return None
-    return start + best_k * BUCKET
+    k = detect_change_point(
+        counts,
+        min_segment=MIN_SEGMENT_BUCKETS,
+        min_ratio=ONSET_MIN_RATIO,
+        min_delta=ONSET_MIN_DELTA_PER_MIN,
+    )
+    return None if k is None else start + k * BUCKET
 
 
 # --- 2. Groupes et catégories ------------------------------------------------------------------
@@ -332,41 +318,6 @@ def build_digest(
 
 
 # --- 5. Contrôle de la réponse du LLM ----------------------------------------------------------
-
-
-def _ground(
-    interpretation: LogInterpretation | None,
-    evidences: Sequence[Evidence],
-    digest: dict[str, Any],
-) -> tuple[str, list[str], int]:
-    """Garde seulement ce qui cite des preuves existantes.
-
-    Renvoie (summary, anomalies, nombre d'éléments écartés).
-    """
-    known = {e.id for e in evidences}
-    if interpretation is None:
-        return fallback_summary(evidences, digest), [], 0
-
-    def grounded(text: str) -> bool:
-        return set(_EVIDENCE_ID.findall(text)) <= known
-
-    summary = interpretation.summary
-    dropped = 0
-    if not grounded(summary):
-        summary, dropped = fallback_summary(evidences, digest), 1
-
-    anomalies = []
-    for sentence in interpretation.anomalies:
-        if grounded(sentence):
-            anomalies.append(sentence)
-        else:
-            dropped += 1
-
-    noise = [i for i in dict.fromkeys(interpretation.noise_evidence_ids) if i in known]
-    dropped += len(set(interpretation.noise_evidence_ids) - known)
-    if noise:
-        anomalies.append(f"Probablement sans rapport avec l'incident : {', '.join(noise)}.")
-    return summary, anomalies, dropped
 
 
 def fallback_summary(evidences: Sequence[Evidence], digest: dict[str, Any]) -> str:
