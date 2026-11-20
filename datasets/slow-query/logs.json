@@ -1,0 +1,1482 @@
+[
+  {
+    "timestamp": "2026-11-18T10:00:00.024500Z",
+    "level": "INFO",
+    "service": "api-gateway",
+    "message": "GET /orders 200 24ms",
+    "trace_id": "b8bd22fcb63b248de9f9ded0e6a258be",
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:00:00.024500Z",
+    "level": "INFO",
+    "service": "orders-service",
+    "message": "Fetched 22 orders",
+    "trace_id": "b8bd22fcb63b248de9f9ded0e6a258be",
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:00:01.877869Z",
+    "level": "INFO",
+    "service": "orders-service",
+    "message": "Health check OK",
+    "trace_id": null,
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:00:07.860805Z",
+    "level": "INFO",
+    "service": "api-gateway",
+    "message": "Health check OK",
+    "trace_id": null,
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:00:30.025500Z",
+    "level": "INFO",
+    "service": "api-gateway",
+    "message": "GET /orders/search 200 26ms",
+    "trace_id": "b5c4d68576f83c02c55c5e5e85cd1147",
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:00:30.025500Z",
+    "level": "INFO",
+    "service": "orders-service",
+    "message": "Fetched 10 orders",
+    "trace_id": "b5c4d68576f83c02c55c5e5e85cd1147",
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:01:00.022900Z",
+    "level": "INFO",
+    "service": "api-gateway",
+    "message": "GET /orders 200 23ms",
+    "trace_id": "f53f4e8badc0b985b10c69fc3a3b1b7e",
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:01:00.022900Z",
+    "level": "INFO",
+    "service": "orders-service",
+    "message": "Fetched 7 orders",
+    "trace_id": "f53f4e8badc0b985b10c69fc3a3b1b7e",
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:01:19.693307Z",
+    "level": "INFO",
+    "service": "api-gateway",
+    "message": "Health check OK",
+    "trace_id": null,
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:01:21.533921Z",
+    "level": "INFO",
+    "service": "orders-service",
+    "message": "Health check OK",
+    "trace_id": null,
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:01:30.025500Z",
+    "level": "INFO",
+    "service": "api-gateway",
+    "message": "GET /orders/search 200 26ms",
+    "trace_id": "897ffe27ab7df14d85c214d66fdf58e9",
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:01:30.025500Z",
+    "level": "INFO",
+    "service": "orders-service",
+    "message": "Fetched 47 orders",
+    "trace_id": "897ffe27ab7df14d85c214d66fdf58e9",
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:02:00.023200Z",
+    "level": "INFO",
+    "service": "api-gateway",
+    "message": "GET /orders 200 23ms",
+    "trace_id": "76a94a609867ca7e9d6400e387bfaec9",
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:02:00.023200Z",
+    "level": "INFO",
+    "service": "orders-service",
+    "message": "Fetched 17 orders",
+    "trace_id": "76a94a609867ca7e9d6400e387bfaec9",
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:02:11.089319Z",
+    "level": "INFO",
+    "service": "orders-service",
+    "message": "Health check OK",
+    "trace_id": null,
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:02:30.026500Z",
+    "level": "INFO",
+    "service": "api-gateway",
+    "message": "GET /orders/search 200 26ms",
+    "trace_id": "9c8679b082ea15b624c520f375da7e31",
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:02:30.026500Z",
+    "level": "INFO",
+    "service": "orders-service",
+    "message": "Fetched 8 orders",
+    "trace_id": "9c8679b082ea15b624c520f375da7e31",
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:02:45.700486Z",
+    "level": "INFO",
+    "service": "api-gateway",
+    "message": "Health check OK",
+    "trace_id": null,
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:03:00.024600Z",
+    "level": "INFO",
+    "service": "api-gateway",
+    "message": "GET /orders 200 25ms",
+    "trace_id": "bf4c5658a135896fd33415ea4bf5abd2",
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:03:00.024600Z",
+    "level": "INFO",
+    "service": "orders-service",
+    "message": "Fetched 45 orders",
+    "trace_id": "bf4c5658a135896fd33415ea4bf5abd2",
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:03:25.106063Z",
+    "level": "INFO",
+    "service": "api-gateway",
+    "message": "Health check OK",
+    "trace_id": null,
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:03:30.024200Z",
+    "level": "INFO",
+    "service": "api-gateway",
+    "message": "GET /orders/search 200 24ms",
+    "trace_id": "b8b59c1d074d6b4a81de55d7cd34a7e3",
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:03:30.024200Z",
+    "level": "INFO",
+    "service": "orders-service",
+    "message": "Fetched 39 orders",
+    "trace_id": "b8b59c1d074d6b4a81de55d7cd34a7e3",
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:03:55.287202Z",
+    "level": "INFO",
+    "service": "orders-service",
+    "message": "Health check OK",
+    "trace_id": null,
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:04:00.022000Z",
+    "level": "INFO",
+    "service": "api-gateway",
+    "message": "GET /orders 200 22ms",
+    "trace_id": "c8e09d6be6afe3c03e0a03118172dc90",
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:04:00.022000Z",
+    "level": "INFO",
+    "service": "orders-service",
+    "message": "Fetched 35 orders",
+    "trace_id": "c8e09d6be6afe3c03e0a03118172dc90",
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:04:14.354787Z",
+    "level": "INFO",
+    "service": "orders-service",
+    "message": "Health check OK",
+    "trace_id": null,
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:04:28.034517Z",
+    "level": "INFO",
+    "service": "api-gateway",
+    "message": "Health check OK",
+    "trace_id": null,
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:04:30.027400Z",
+    "level": "INFO",
+    "service": "api-gateway",
+    "message": "GET /orders/search 200 27ms",
+    "trace_id": "f8dcf0dec6cd8f81b77f17b49f1cd329",
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:04:30.027400Z",
+    "level": "INFO",
+    "service": "orders-service",
+    "message": "Fetched 40 orders",
+    "trace_id": "f8dcf0dec6cd8f81b77f17b49f1cd329",
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:05:00.019100Z",
+    "level": "INFO",
+    "service": "api-gateway",
+    "message": "GET /orders 200 19ms",
+    "trace_id": "064b766863f8fb68dbb60b2ea5405a21",
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:05:00.019100Z",
+    "level": "INFO",
+    "service": "orders-service",
+    "message": "Fetched 5 orders",
+    "trace_id": "064b766863f8fb68dbb60b2ea5405a21",
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:05:06.458988Z",
+    "level": "INFO",
+    "service": "api-gateway",
+    "message": "Health check OK",
+    "trace_id": null,
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:05:30.022100Z",
+    "level": "INFO",
+    "service": "api-gateway",
+    "message": "GET /orders/search 200 22ms",
+    "trace_id": "a7d66ed3936deaa6e8cd3ddfcd249730",
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:05:30.022100Z",
+    "level": "INFO",
+    "service": "orders-service",
+    "message": "Fetched 28 orders",
+    "trace_id": "a7d66ed3936deaa6e8cd3ddfcd249730",
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:05:33.305153Z",
+    "level": "INFO",
+    "service": "orders-service",
+    "message": "Health check OK",
+    "trace_id": null,
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:06:00.025500Z",
+    "level": "INFO",
+    "service": "api-gateway",
+    "message": "GET /orders 200 26ms",
+    "trace_id": "550ed062f418f6370e6c4fdcc74e596a",
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:06:00.025500Z",
+    "level": "INFO",
+    "service": "orders-service",
+    "message": "Fetched 30 orders",
+    "trace_id": "550ed062f418f6370e6c4fdcc74e596a",
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:06:15.334427Z",
+    "level": "INFO",
+    "service": "orders-service",
+    "message": "Health check OK",
+    "trace_id": null,
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:06:30.021400Z",
+    "level": "INFO",
+    "service": "api-gateway",
+    "message": "GET /orders/search 200 21ms",
+    "trace_id": "d45a7fd34a1587142ada597372ffd7b0",
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:06:30.021400Z",
+    "level": "INFO",
+    "service": "orders-service",
+    "message": "Fetched 7 orders",
+    "trace_id": "d45a7fd34a1587142ada597372ffd7b0",
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:06:56.275807Z",
+    "level": "INFO",
+    "service": "api-gateway",
+    "message": "Health check OK",
+    "trace_id": null,
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:07:00.022400Z",
+    "level": "INFO",
+    "service": "api-gateway",
+    "message": "GET /orders 200 22ms",
+    "trace_id": "3f67ae9c9c839f614e5168fd479683be",
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:07:00.022400Z",
+    "level": "INFO",
+    "service": "orders-service",
+    "message": "Fetched 44 orders",
+    "trace_id": "3f67ae9c9c839f614e5168fd479683be",
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:07:16.687848Z",
+    "level": "INFO",
+    "service": "orders-service",
+    "message": "Health check OK",
+    "trace_id": null,
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:07:23.225808Z",
+    "level": "INFO",
+    "service": "api-gateway",
+    "message": "Health check OK",
+    "trace_id": null,
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:07:30.024400Z",
+    "level": "INFO",
+    "service": "api-gateway",
+    "message": "GET /orders/search 200 24ms",
+    "trace_id": "f825f00347ecf022e4ff508429ef49ac",
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:07:30.024400Z",
+    "level": "INFO",
+    "service": "orders-service",
+    "message": "Fetched 24 orders",
+    "trace_id": "f825f00347ecf022e4ff508429ef49ac",
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:08:00.021400Z",
+    "level": "INFO",
+    "service": "api-gateway",
+    "message": "GET /orders 200 21ms",
+    "trace_id": "b5aad8d7c1331e74e58a81ea3c591cf1",
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:08:00.021400Z",
+    "level": "INFO",
+    "service": "orders-service",
+    "message": "Fetched 46 orders",
+    "trace_id": "b5aad8d7c1331e74e58a81ea3c591cf1",
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:08:30.026600Z",
+    "level": "INFO",
+    "service": "api-gateway",
+    "message": "GET /orders/search 200 27ms",
+    "trace_id": "54a6df0db43aebca3027ef5e56bf6cfb",
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:08:30.026600Z",
+    "level": "INFO",
+    "service": "orders-service",
+    "message": "Fetched 21 orders",
+    "trace_id": "54a6df0db43aebca3027ef5e56bf6cfb",
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:08:33.884324Z",
+    "level": "INFO",
+    "service": "orders-service",
+    "message": "Health check OK",
+    "trace_id": null,
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:08:53.665262Z",
+    "level": "INFO",
+    "service": "api-gateway",
+    "message": "Health check OK",
+    "trace_id": null,
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:09:00.020300Z",
+    "level": "INFO",
+    "service": "api-gateway",
+    "message": "GET /orders 200 20ms",
+    "trace_id": "cd7a69a8d9ada5bb385fb024c3980b13",
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:09:00.020300Z",
+    "level": "INFO",
+    "service": "orders-service",
+    "message": "Fetched 5 orders",
+    "trace_id": "cd7a69a8d9ada5bb385fb024c3980b13",
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:09:03.639308Z",
+    "level": "INFO",
+    "service": "api-gateway",
+    "message": "Health check OK",
+    "trace_id": null,
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:09:30.024800Z",
+    "level": "INFO",
+    "service": "api-gateway",
+    "message": "GET /orders/search 200 25ms",
+    "trace_id": "df088d9e8669d07984b4c66407f65765",
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:09:30.024800Z",
+    "level": "INFO",
+    "service": "orders-service",
+    "message": "Fetched 24 orders",
+    "trace_id": "df088d9e8669d07984b4c66407f65765",
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:09:44.831858Z",
+    "level": "INFO",
+    "service": "orders-service",
+    "message": "Health check OK",
+    "trace_id": null,
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:10:00.027400Z",
+    "level": "INFO",
+    "service": "api-gateway",
+    "message": "GET /orders 200 27ms",
+    "trace_id": "da8f9592c33be9b72da8f0a5fd2b09bd",
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:10:00.027400Z",
+    "level": "INFO",
+    "service": "orders-service",
+    "message": "Fetched 48 orders",
+    "trace_id": "da8f9592c33be9b72da8f0a5fd2b09bd",
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:10:00.536215Z",
+    "level": "INFO",
+    "service": "orders-service",
+    "message": "Health check OK",
+    "trace_id": null,
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:10:10.657283Z",
+    "level": "INFO",
+    "service": "api-gateway",
+    "message": "Health check OK",
+    "trace_id": null,
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:10:30.031400Z",
+    "level": "INFO",
+    "service": "api-gateway",
+    "message": "GET /orders/search 200 31ms",
+    "trace_id": "6b6cb8a6604eba0dac318a6e913d6c46",
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:10:30.031400Z",
+    "level": "INFO",
+    "service": "orders-service",
+    "message": "Fetched 39 orders",
+    "trace_id": "6b6cb8a6604eba0dac318a6e913d6c46",
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:11:00.029700Z",
+    "level": "INFO",
+    "service": "api-gateway",
+    "message": "GET /orders 200 30ms",
+    "trace_id": "681e2b184be1cba102e0d5cdc00ab263",
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:11:00.029700Z",
+    "level": "INFO",
+    "service": "orders-service",
+    "message": "Fetched 20 orders",
+    "trace_id": "681e2b184be1cba102e0d5cdc00ab263",
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:11:04.633096Z",
+    "level": "INFO",
+    "service": "orders-service",
+    "message": "Health check OK",
+    "trace_id": null,
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:11:04.724358Z",
+    "level": "INFO",
+    "service": "api-gateway",
+    "message": "Health check OK",
+    "trace_id": null,
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:11:30.023100Z",
+    "level": "INFO",
+    "service": "api-gateway",
+    "message": "GET /orders/search 200 23ms",
+    "trace_id": "0dc84b70ad9e5003d1a9920b1945a141",
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:11:30.023100Z",
+    "level": "INFO",
+    "service": "orders-service",
+    "message": "Fetched 23 orders",
+    "trace_id": "0dc84b70ad9e5003d1a9920b1945a141",
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:12:00.021800Z",
+    "level": "INFO",
+    "service": "api-gateway",
+    "message": "GET /orders 200 22ms",
+    "trace_id": "df2472631fd26533718793818f6320b4",
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:12:00.021800Z",
+    "level": "INFO",
+    "service": "orders-service",
+    "message": "Fetched 41 orders",
+    "trace_id": "df2472631fd26533718793818f6320b4",
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:12:30.028700Z",
+    "level": "INFO",
+    "service": "api-gateway",
+    "message": "GET /orders/search 200 29ms",
+    "trace_id": "0ddf3a16e72b730c63c6a738c7e251e8",
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:12:30.028700Z",
+    "level": "INFO",
+    "service": "orders-service",
+    "message": "Fetched 32 orders",
+    "trace_id": "0ddf3a16e72b730c63c6a738c7e251e8",
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:12:35.503075Z",
+    "level": "INFO",
+    "service": "api-gateway",
+    "message": "Health check OK",
+    "trace_id": null,
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:12:55.299487Z",
+    "level": "INFO",
+    "service": "orders-service",
+    "message": "Health check OK",
+    "trace_id": null,
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:13:00.021200Z",
+    "level": "INFO",
+    "service": "api-gateway",
+    "message": "GET /orders 200 21ms",
+    "trace_id": "fc43481463530be3882205ddcb0df30c",
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:13:00.021200Z",
+    "level": "INFO",
+    "service": "orders-service",
+    "message": "Fetched 34 orders",
+    "trace_id": "fc43481463530be3882205ddcb0df30c",
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:13:03.981618Z",
+    "level": "INFO",
+    "service": "orders-service",
+    "message": "Health check OK",
+    "trace_id": null,
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:13:09.640742Z",
+    "level": "INFO",
+    "service": "api-gateway",
+    "message": "Health check OK",
+    "trace_id": null,
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:13:30.031300Z",
+    "level": "INFO",
+    "service": "api-gateway",
+    "message": "GET /orders/search 200 31ms",
+    "trace_id": "99328182d739a355a3a10d4e398338ca",
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:13:30.031300Z",
+    "level": "INFO",
+    "service": "orders-service",
+    "message": "Fetched 47 orders",
+    "trace_id": "99328182d739a355a3a10d4e398338ca",
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:14:00.019300Z",
+    "level": "INFO",
+    "service": "api-gateway",
+    "message": "GET /orders 200 19ms",
+    "trace_id": "93908590494a380df1006ebba903693f",
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:14:00.019300Z",
+    "level": "INFO",
+    "service": "orders-service",
+    "message": "Fetched 49 orders",
+    "trace_id": "93908590494a380df1006ebba903693f",
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:14:00.269100Z",
+    "level": "INFO",
+    "service": "api-gateway",
+    "message": "Health check OK",
+    "trace_id": null,
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:14:13.698941Z",
+    "level": "INFO",
+    "service": "orders-service",
+    "message": "Health check OK",
+    "trace_id": null,
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:14:30.023200Z",
+    "level": "INFO",
+    "service": "api-gateway",
+    "message": "GET /orders/search 200 23ms",
+    "trace_id": "b87973ab7519bd77097786765a11e2af",
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:14:30.023200Z",
+    "level": "INFO",
+    "service": "orders-service",
+    "message": "Fetched 13 orders",
+    "trace_id": "b87973ab7519bd77097786765a11e2af",
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:15:00.028500Z",
+    "level": "INFO",
+    "service": "api-gateway",
+    "message": "GET /orders 200 28ms",
+    "trace_id": "75077890b7e1ce5438b408f0bd6dcc34",
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:15:00.028500Z",
+    "level": "INFO",
+    "service": "orders-service",
+    "message": "Fetched 31 orders",
+    "trace_id": "75077890b7e1ce5438b408f0bd6dcc34",
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:15:08.433539Z",
+    "level": "INFO",
+    "service": "api-gateway",
+    "message": "Health check OK",
+    "trace_id": null,
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:15:30.026500Z",
+    "level": "INFO",
+    "service": "api-gateway",
+    "message": "GET /orders/search 200 26ms",
+    "trace_id": "7218c6cef22b452e73062dc49ec2927a",
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:15:30.026500Z",
+    "level": "INFO",
+    "service": "orders-service",
+    "message": "Fetched 21 orders",
+    "trace_id": "7218c6cef22b452e73062dc49ec2927a",
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:15:37.149244Z",
+    "level": "INFO",
+    "service": "orders-service",
+    "message": "Health check OK",
+    "trace_id": null,
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:16:00.028000Z",
+    "level": "INFO",
+    "service": "api-gateway",
+    "message": "GET /orders 200 28ms",
+    "trace_id": "c2e54daf3ee3926f9a4cb296cf1783b0",
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:16:00.028000Z",
+    "level": "INFO",
+    "service": "orders-service",
+    "message": "Fetched 23 orders",
+    "trace_id": "c2e54daf3ee3926f9a4cb296cf1783b0",
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:16:22.262775Z",
+    "level": "INFO",
+    "service": "orders-service",
+    "message": "Health check OK",
+    "trace_id": null,
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:16:30.020900Z",
+    "level": "INFO",
+    "service": "api-gateway",
+    "message": "GET /orders/search 200 21ms",
+    "trace_id": "b7f449582d6d86b6e15b63c6e33849e2",
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:16:30.020900Z",
+    "level": "INFO",
+    "service": "orders-service",
+    "message": "Fetched 29 orders",
+    "trace_id": "b7f449582d6d86b6e15b63c6e33849e2",
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:16:56.887355Z",
+    "level": "INFO",
+    "service": "api-gateway",
+    "message": "Health check OK",
+    "trace_id": null,
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:17:00.029400Z",
+    "level": "INFO",
+    "service": "api-gateway",
+    "message": "GET /orders 200 29ms",
+    "trace_id": "8301d5846043801281d15efbf1edd988",
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:17:00.029400Z",
+    "level": "INFO",
+    "service": "orders-service",
+    "message": "Fetched 36 orders",
+    "trace_id": "8301d5846043801281d15efbf1edd988",
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:17:18.272122Z",
+    "level": "INFO",
+    "service": "api-gateway",
+    "message": "Health check OK",
+    "trace_id": null,
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:17:25.668001Z",
+    "level": "INFO",
+    "service": "orders-service",
+    "message": "Health check OK",
+    "trace_id": null,
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:17:30.021900Z",
+    "level": "INFO",
+    "service": "api-gateway",
+    "message": "GET /orders/search 200 22ms",
+    "trace_id": "0ad20e61f2e6a3c3355cf38f89d473c2",
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:17:30.021900Z",
+    "level": "INFO",
+    "service": "orders-service",
+    "message": "Fetched 50 orders",
+    "trace_id": "0ad20e61f2e6a3c3355cf38f89d473c2",
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:18:00.019100Z",
+    "level": "INFO",
+    "service": "api-gateway",
+    "message": "GET /orders 200 19ms",
+    "trace_id": "9ca8a5f55fab6b5eba5e9ac90a0e0134",
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:18:00.019100Z",
+    "level": "INFO",
+    "service": "orders-service",
+    "message": "Fetched 48 orders",
+    "trace_id": "9ca8a5f55fab6b5eba5e9ac90a0e0134",
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:18:04.834656Z",
+    "level": "INFO",
+    "service": "api-gateway",
+    "message": "Health check OK",
+    "trace_id": null,
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:18:30.024900Z",
+    "level": "INFO",
+    "service": "api-gateway",
+    "message": "GET /orders/search 200 25ms",
+    "trace_id": "996f96a2cc8d586f8cff9b9b8900b483",
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:18:30.024900Z",
+    "level": "INFO",
+    "service": "orders-service",
+    "message": "Fetched 34 orders",
+    "trace_id": "996f96a2cc8d586f8cff9b9b8900b483",
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:18:32.839416Z",
+    "level": "INFO",
+    "service": "orders-service",
+    "message": "Health check OK",
+    "trace_id": null,
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:19:00.024400Z",
+    "level": "INFO",
+    "service": "api-gateway",
+    "message": "GET /orders 200 24ms",
+    "trace_id": "68b32f53cd2505e1de63dade06174f95",
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:19:00.024400Z",
+    "level": "INFO",
+    "service": "orders-service",
+    "message": "Fetched 23 orders",
+    "trace_id": "68b32f53cd2505e1de63dade06174f95",
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:19:30.020600Z",
+    "level": "INFO",
+    "service": "api-gateway",
+    "message": "GET /orders/search 200 21ms",
+    "trace_id": "bba260c4521d6997736cdb002ed47e9c",
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:19:30.020600Z",
+    "level": "INFO",
+    "service": "orders-service",
+    "message": "Fetched 38 orders",
+    "trace_id": "bba260c4521d6997736cdb002ed47e9c",
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:19:33.687063Z",
+    "level": "INFO",
+    "service": "api-gateway",
+    "message": "Health check OK",
+    "trace_id": null,
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:19:39.705255Z",
+    "level": "INFO",
+    "service": "orders-service",
+    "message": "Health check OK",
+    "trace_id": null,
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:20:00.020900Z",
+    "level": "INFO",
+    "service": "api-gateway",
+    "message": "GET /orders 200 21ms",
+    "trace_id": "39e4e99b5686f3d4288cddd0a45d3583",
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:20:00.020900Z",
+    "level": "INFO",
+    "service": "orders-service",
+    "message": "Fetched 7 orders",
+    "trace_id": "39e4e99b5686f3d4288cddd0a45d3583",
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:20:30.878200Z",
+    "level": "INFO",
+    "service": "api-gateway",
+    "message": "GET /orders/search 200 878ms",
+    "trace_id": "78b8eeb6143b68db1d6812e7ea13d884",
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:20:30.878200Z",
+    "level": "INFO",
+    "service": "orders-service",
+    "message": "Fetched 19 orders",
+    "trace_id": "78b8eeb6143b68db1d6812e7ea13d884",
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:20:42.323378Z",
+    "level": "INFO",
+    "service": "api-gateway",
+    "message": "Health check OK",
+    "trace_id": null,
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:20:56.591524Z",
+    "level": "INFO",
+    "service": "orders-service",
+    "message": "Health check OK",
+    "trace_id": null,
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:21:00.023100Z",
+    "level": "INFO",
+    "service": "api-gateway",
+    "message": "GET /orders 200 23ms",
+    "trace_id": "c415467e38dca27fd73849b5bd68bb25",
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:21:00.023100Z",
+    "level": "INFO",
+    "service": "orders-service",
+    "message": "Fetched 47 orders",
+    "trace_id": "c415467e38dca27fd73849b5bd68bb25",
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:21:20.039743Z",
+    "level": "INFO",
+    "service": "orders-service",
+    "message": "Health check OK",
+    "trace_id": null,
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:21:23.075171Z",
+    "level": "INFO",
+    "service": "api-gateway",
+    "message": "Health check OK",
+    "trace_id": null,
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:21:32.673700Z",
+    "level": "INFO",
+    "service": "api-gateway",
+    "message": "GET /orders/search 200 2674ms",
+    "trace_id": "aa6c4b12fc685fc1b7573d9067add709",
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:21:32.673700Z",
+    "level": "WARNING",
+    "service": "orders-service",
+    "message": "Slow query detected duration_ms=2661 statement=SELECT orders WHERE customer_email = ?",
+    "trace_id": "aa6c4b12fc685fc1b7573d9067add709",
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:21:32.673700Z",
+    "level": "INFO",
+    "service": "orders-service",
+    "message": "Fetched 14 orders",
+    "trace_id": "aa6c4b12fc685fc1b7573d9067add709",
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:22:00.027000Z",
+    "level": "INFO",
+    "service": "api-gateway",
+    "message": "GET /orders 200 27ms",
+    "trace_id": "b04ecfea9fb37e39d3c5d4ffc5cf4683",
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:22:00.027000Z",
+    "level": "INFO",
+    "service": "orders-service",
+    "message": "Fetched 31 orders",
+    "trace_id": "b04ecfea9fb37e39d3c5d4ffc5cf4683",
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:22:01.082791Z",
+    "level": "INFO",
+    "service": "orders-service",
+    "message": "Health check OK",
+    "trace_id": null,
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:22:07.936236Z",
+    "level": "INFO",
+    "service": "api-gateway",
+    "message": "Health check OK",
+    "trace_id": null,
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:22:34.181200Z",
+    "level": "INFO",
+    "service": "api-gateway",
+    "message": "GET /orders/search 200 4181ms",
+    "trace_id": "ecd72d86df7bf4890c7370f3716318d9",
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:22:34.181200Z",
+    "level": "WARNING",
+    "service": "orders-service",
+    "message": "Slow query detected duration_ms=4170 statement=SELECT orders WHERE customer_email = ?",
+    "trace_id": "ecd72d86df7bf4890c7370f3716318d9",
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:22:34.181200Z",
+    "level": "INFO",
+    "service": "orders-service",
+    "message": "Fetched 17 orders",
+    "trace_id": "ecd72d86df7bf4890c7370f3716318d9",
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:23:00.019000Z",
+    "level": "INFO",
+    "service": "api-gateway",
+    "message": "GET /orders 200 19ms",
+    "trace_id": "84448270fc0d763aa0638ffe827a324b",
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:23:00.019000Z",
+    "level": "INFO",
+    "service": "orders-service",
+    "message": "Fetched 34 orders",
+    "trace_id": "84448270fc0d763aa0638ffe827a324b",
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:23:34.312800Z",
+    "level": "INFO",
+    "service": "api-gateway",
+    "message": "GET /orders/search 200 4313ms",
+    "trace_id": "a3eff301e63480dc65df266cf04d11fa",
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:23:34.312800Z",
+    "level": "WARNING",
+    "service": "orders-service",
+    "message": "Slow query detected duration_ms=4304 statement=SELECT orders WHERE customer_email = ?",
+    "trace_id": "a3eff301e63480dc65df266cf04d11fa",
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:23:34.312800Z",
+    "level": "INFO",
+    "service": "orders-service",
+    "message": "Fetched 32 orders",
+    "trace_id": "a3eff301e63480dc65df266cf04d11fa",
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:23:37.683899Z",
+    "level": "INFO",
+    "service": "api-gateway",
+    "message": "Health check OK",
+    "trace_id": null,
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:23:48.913209Z",
+    "level": "INFO",
+    "service": "orders-service",
+    "message": "Health check OK",
+    "trace_id": null,
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:24:00.029100Z",
+    "level": "INFO",
+    "service": "api-gateway",
+    "message": "GET /orders 200 29ms",
+    "trace_id": "841eea723db7b3837a9f9a2c4210688e",
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:24:00.029100Z",
+    "level": "INFO",
+    "service": "orders-service",
+    "message": "Fetched 8 orders",
+    "trace_id": "841eea723db7b3837a9f9a2c4210688e",
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:24:09.962797Z",
+    "level": "INFO",
+    "service": "orders-service",
+    "message": "Health check OK",
+    "trace_id": null,
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:24:35.012300Z",
+    "level": "ERROR",
+    "service": "api-gateway",
+    "message": "GET /orders/search 500 5012ms",
+    "trace_id": "6c403d0aa45f16075db14899b60ef3c2",
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:24:35.012300Z",
+    "level": "ERROR",
+    "service": "orders-service",
+    "message": "Query failed: canceling statement due to statement timeout",
+    "trace_id": "6c403d0aa45f16075db14899b60ef3c2",
+    "exception": "psycopg.errors.QueryCanceled: canceling statement due to statement timeout"
+  },
+  {
+    "timestamp": "2026-11-18T10:24:52.496263Z",
+    "level": "INFO",
+    "service": "api-gateway",
+    "message": "Health check OK",
+    "trace_id": null,
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:25:00.027600Z",
+    "level": "INFO",
+    "service": "api-gateway",
+    "message": "GET /orders 200 28ms",
+    "trace_id": "66a3d4837a23d6e7a43f173570de6500",
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:25:00.027600Z",
+    "level": "INFO",
+    "service": "orders-service",
+    "message": "Fetched 37 orders",
+    "trace_id": "66a3d4837a23d6e7a43f173570de6500",
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:25:13.117356Z",
+    "level": "INFO",
+    "service": "orders-service",
+    "message": "Health check OK",
+    "trace_id": null,
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:25:30.883346Z",
+    "level": "INFO",
+    "service": "api-gateway",
+    "message": "Health check OK",
+    "trace_id": null,
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:25:35.012600Z",
+    "level": "ERROR",
+    "service": "api-gateway",
+    "message": "GET /orders/search 500 5013ms",
+    "trace_id": "f102d249728734280184967b9f5d4deb",
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:25:35.012600Z",
+    "level": "ERROR",
+    "service": "orders-service",
+    "message": "Query failed: canceling statement due to statement timeout",
+    "trace_id": "f102d249728734280184967b9f5d4deb",
+    "exception": "psycopg.errors.QueryCanceled: canceling statement due to statement timeout"
+  },
+  {
+    "timestamp": "2026-11-18T10:26:00.019000Z",
+    "level": "INFO",
+    "service": "api-gateway",
+    "message": "GET /orders 200 19ms",
+    "trace_id": "b55edb9dcf30b0de4a1581ccb9371291",
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:26:00.019000Z",
+    "level": "INFO",
+    "service": "orders-service",
+    "message": "Fetched 44 orders",
+    "trace_id": "b55edb9dcf30b0de4a1581ccb9371291",
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:26:03.028429Z",
+    "level": "INFO",
+    "service": "orders-service",
+    "message": "Health check OK",
+    "trace_id": null,
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:26:35.009600Z",
+    "level": "ERROR",
+    "service": "api-gateway",
+    "message": "GET /orders/search 500 5010ms",
+    "trace_id": "f66c3801c2c638d397ce3274de3beecb",
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:26:35.009600Z",
+    "level": "ERROR",
+    "service": "orders-service",
+    "message": "Query failed: canceling statement due to statement timeout",
+    "trace_id": "f66c3801c2c638d397ce3274de3beecb",
+    "exception": "psycopg.errors.QueryCanceled: canceling statement due to statement timeout"
+  },
+  {
+    "timestamp": "2026-11-18T10:26:36.911271Z",
+    "level": "INFO",
+    "service": "api-gateway",
+    "message": "Health check OK",
+    "trace_id": null,
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:27:00.023600Z",
+    "level": "INFO",
+    "service": "api-gateway",
+    "message": "GET /orders 200 24ms",
+    "trace_id": "5ebc4b4325a593352dc7f8c210650841",
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:27:00.023600Z",
+    "level": "INFO",
+    "service": "orders-service",
+    "message": "Fetched 28 orders",
+    "trace_id": "5ebc4b4325a593352dc7f8c210650841",
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:27:09.233444Z",
+    "level": "INFO",
+    "service": "api-gateway",
+    "message": "Health check OK",
+    "trace_id": null,
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:27:35.012000Z",
+    "level": "ERROR",
+    "service": "api-gateway",
+    "message": "GET /orders/search 500 5012ms",
+    "trace_id": "44d843873882b0f586dc07143acd5531",
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:27:35.012000Z",
+    "level": "ERROR",
+    "service": "orders-service",
+    "message": "Query failed: canceling statement due to statement timeout",
+    "trace_id": "44d843873882b0f586dc07143acd5531",
+    "exception": "psycopg.errors.QueryCanceled: canceling statement due to statement timeout"
+  },
+  {
+    "timestamp": "2026-11-18T10:27:38.027469Z",
+    "level": "INFO",
+    "service": "orders-service",
+    "message": "Health check OK",
+    "trace_id": null,
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:28:00.027500Z",
+    "level": "INFO",
+    "service": "api-gateway",
+    "message": "GET /orders 200 28ms",
+    "trace_id": "df5e5c660471b74ec431eb3591059c26",
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:28:00.027500Z",
+    "level": "INFO",
+    "service": "orders-service",
+    "message": "Fetched 41 orders",
+    "trace_id": "df5e5c660471b74ec431eb3591059c26",
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:28:07.426171Z",
+    "level": "INFO",
+    "service": "api-gateway",
+    "message": "Health check OK",
+    "trace_id": null,
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:28:34.234500Z",
+    "level": "INFO",
+    "service": "api-gateway",
+    "message": "GET /orders/search 200 4234ms",
+    "trace_id": "e278e716fe831a84802a36d99e20a779",
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:28:34.234500Z",
+    "level": "WARNING",
+    "service": "orders-service",
+    "message": "Slow query detected duration_ms=4221 statement=SELECT orders WHERE customer_email = ?",
+    "trace_id": "e278e716fe831a84802a36d99e20a779",
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:28:34.234500Z",
+    "level": "INFO",
+    "service": "orders-service",
+    "message": "Fetched 23 orders",
+    "trace_id": "e278e716fe831a84802a36d99e20a779",
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:28:39.223027Z",
+    "level": "INFO",
+    "service": "orders-service",
+    "message": "Health check OK",
+    "trace_id": null,
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:29:00.025700Z",
+    "level": "INFO",
+    "service": "api-gateway",
+    "message": "GET /orders 200 26ms",
+    "trace_id": "ffa26062bca20e6a2c2095c392be1091",
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:29:00.025700Z",
+    "level": "INFO",
+    "service": "orders-service",
+    "message": "Fetched 13 orders",
+    "trace_id": "ffa26062bca20e6a2c2095c392be1091",
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:29:10.794626Z",
+    "level": "INFO",
+    "service": "orders-service",
+    "message": "Health check OK",
+    "trace_id": null,
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:29:34.411800Z",
+    "level": "INFO",
+    "service": "api-gateway",
+    "message": "GET /orders/search 200 4412ms",
+    "trace_id": "1307f1c12be84e53b4e81324d44262be",
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:29:34.411800Z",
+    "level": "WARNING",
+    "service": "orders-service",
+    "message": "Slow query detected duration_ms=4400 statement=SELECT orders WHERE customer_email = ?",
+    "trace_id": "1307f1c12be84e53b4e81324d44262be",
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:29:34.411800Z",
+    "level": "INFO",
+    "service": "orders-service",
+    "message": "Fetched 45 orders",
+    "trace_id": "1307f1c12be84e53b4e81324d44262be",
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:29:45.032986Z",
+    "level": "INFO",
+    "service": "api-gateway",
+    "message": "Health check OK",
+    "trace_id": null,
+    "exception": null
+  }
+]
