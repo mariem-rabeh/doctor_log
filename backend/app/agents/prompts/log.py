@@ -4,8 +4,9 @@ Le LLM reçoit un résumé déjà calculé en Python. Il n'a le droit que d'inte
 jamais de nouveau chiffre, et uniquement des identifiants d'evidence fournis.
 """
 
-import json
 from typing import Any
+
+from app.agents.common import telemetry_prompt
 
 SYSTEM_PROMPT = """\
 Tu es le Log Agent d'un système de diagnostic d'incidents.
@@ -38,8 +39,4 @@ Règles strictes :
 
 
 def build_user_prompt(digest: dict[str, Any]) -> str:
-    """Résumé JSON compact, encadré de balises pour le séparer des instructions."""
-    payload = json.dumps(digest, ensure_ascii=False, indent=1, default=str)
-    # Un message de log ne doit pas pouvoir fermer la balise et sortir de la zone « données ».
-    payload = payload.replace("</telemetry", "<\\/telemetry")
-    return f"Résumé des logs à interpréter :\n<telemetry>\n{payload}\n</telemetry>"
+    return telemetry_prompt("Résumé des logs à interpréter :", digest)
