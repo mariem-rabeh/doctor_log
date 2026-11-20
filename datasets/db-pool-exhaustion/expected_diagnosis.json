@@ -1,0 +1,37 @@
+{
+  "scenario": "db-pool-exhaustion",
+  "cause_category": "db_pool_exhaustion",
+  "culprit_service": "orders-service",
+  "cause_keywords": [
+    "pool",
+    "connection"
+  ],
+  "must_not_conclude": [
+    "slow_query",
+    "cpu_saturation",
+    "dependency_down"
+  ],
+  "incident_start": "2026-11-18T10:20:00+00:00",
+  "key_evidence": [
+    {
+      "source": "metrics",
+      "signal": "db_connections_idle"
+    },
+    {
+      "source": "metrics",
+      "signal": "db_connections_active"
+    },
+    {
+      "source": "logs",
+      "signal": "QueuePool limit"
+    },
+    {
+      "source": "logs",
+      "signal": "Database connection timeout"
+    },
+    {
+      "source": "traces",
+      "signal": "db.acquire_connection"
+    }
+  ]
+}

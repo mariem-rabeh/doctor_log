@@ -1,0 +1,2354 @@
+[
+  {
+    "timestamp": "2026-11-18T10:00:00.063900Z",
+    "level": "INFO",
+    "service": "api-gateway",
+    "message": "GET /orders 200 64ms",
+    "trace_id": "1ebc3e8045067c900885cfb382e2346f",
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:00:00.063900Z",
+    "level": "INFO",
+    "service": "orders-service",
+    "message": "Fetched 27 orders",
+    "trace_id": "1ebc3e8045067c900885cfb382e2346f",
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:00:00.542446Z",
+    "level": "WARNING",
+    "service": "orders-service",
+    "message": "Cache miss for key orders:list:page=20",
+    "trace_id": null,
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:00:23.959196Z",
+    "level": "WARNING",
+    "service": "api-gateway",
+    "message": "Deprecated config key 'proxy.timeout' used, migrate to 'upstream.timeout'",
+    "trace_id": null,
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:00:30.026100Z",
+    "level": "INFO",
+    "service": "api-gateway",
+    "message": "GET /orders/search 200 26ms",
+    "trace_id": "706862046944f4dc83441fa76e5a1925",
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:00:30.026100Z",
+    "level": "INFO",
+    "service": "orders-service",
+    "message": "Fetched 38 orders",
+    "trace_id": "706862046944f4dc83441fa76e5a1925",
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:00:32.057579Z",
+    "level": "WARNING",
+    "service": "orders-service",
+    "message": "Cache miss for key orders:list:page=20",
+    "trace_id": null,
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:00:46.055465Z",
+    "level": "WARNING",
+    "service": "api-gateway",
+    "message": "Deprecated config key 'proxy.timeout' used, migrate to 'upstream.timeout'",
+    "trace_id": null,
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:01:00.064900Z",
+    "level": "INFO",
+    "service": "api-gateway",
+    "message": "GET /orders 200 65ms",
+    "trace_id": "2ca631828d62840e4e972f1627c894c5",
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:01:00.064900Z",
+    "level": "INFO",
+    "service": "orders-service",
+    "message": "Fetched 43 orders",
+    "trace_id": "2ca631828d62840e4e972f1627c894c5",
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:01:03.544306Z",
+    "level": "WARNING",
+    "service": "orders-service",
+    "message": "Cache miss for key orders:list:page=12",
+    "trace_id": null,
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:01:19.508969Z",
+    "level": "WARNING",
+    "service": "api-gateway",
+    "message": "Deprecated config key 'proxy.timeout' used, migrate to 'upstream.timeout'",
+    "trace_id": null,
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:01:30.026000Z",
+    "level": "INFO",
+    "service": "api-gateway",
+    "message": "GET /orders/search 200 26ms",
+    "trace_id": "f75d326862818ef6f1740554d24a79e6",
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:01:30.026000Z",
+    "level": "INFO",
+    "service": "orders-service",
+    "message": "Fetched 50 orders",
+    "trace_id": "f75d326862818ef6f1740554d24a79e6",
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:01:41.894636Z",
+    "level": "WARNING",
+    "service": "orders-service",
+    "message": "Cache miss for key orders:list:page=10",
+    "trace_id": null,
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:01:50.477629Z",
+    "level": "WARNING",
+    "service": "api-gateway",
+    "message": "Deprecated config key 'proxy.timeout' used, migrate to 'upstream.timeout'",
+    "trace_id": null,
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:02:00.074500Z",
+    "level": "INFO",
+    "service": "api-gateway",
+    "message": "GET /orders 200 74ms",
+    "trace_id": "221095aff9e72ab7c612eefc647d53bc",
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:02:00.074500Z",
+    "level": "INFO",
+    "service": "orders-service",
+    "message": "Fetched 20 orders",
+    "trace_id": "221095aff9e72ab7c612eefc647d53bc",
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:02:10.737688Z",
+    "level": "WARNING",
+    "service": "api-gateway",
+    "message": "Deprecated config key 'proxy.timeout' used, migrate to 'upstream.timeout'",
+    "trace_id": null,
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:02:20.461250Z",
+    "level": "WARNING",
+    "service": "orders-service",
+    "message": "Cache miss for key orders:list:page=14",
+    "trace_id": null,
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:02:30.023200Z",
+    "level": "INFO",
+    "service": "api-gateway",
+    "message": "GET /orders/search 200 23ms",
+    "trace_id": "57881638c436e5ae8156c47738ce7dab",
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:02:30.023200Z",
+    "level": "INFO",
+    "service": "orders-service",
+    "message": "Fetched 32 orders",
+    "trace_id": "57881638c436e5ae8156c47738ce7dab",
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:02:39.064380Z",
+    "level": "WARNING",
+    "service": "orders-service",
+    "message": "Cache miss for key orders:list:page=39",
+    "trace_id": null,
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:02:39.474034Z",
+    "level": "WARNING",
+    "service": "api-gateway",
+    "message": "Deprecated config key 'proxy.timeout' used, migrate to 'upstream.timeout'",
+    "trace_id": null,
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:03:00.063200Z",
+    "level": "INFO",
+    "service": "api-gateway",
+    "message": "GET /orders 200 63ms",
+    "trace_id": "233d85f41f9b9c075cae333947e513b2",
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:03:00.063200Z",
+    "level": "INFO",
+    "service": "orders-service",
+    "message": "Fetched 23 orders",
+    "trace_id": "233d85f41f9b9c075cae333947e513b2",
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:03:20.303992Z",
+    "level": "WARNING",
+    "service": "api-gateway",
+    "message": "Deprecated config key 'proxy.timeout' used, migrate to 'upstream.timeout'",
+    "trace_id": null,
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:03:22.671027Z",
+    "level": "WARNING",
+    "service": "orders-service",
+    "message": "Cache miss for key orders:list:page=29",
+    "trace_id": null,
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:03:30.028600Z",
+    "level": "INFO",
+    "service": "api-gateway",
+    "message": "GET /orders/search 200 29ms",
+    "trace_id": "d6e93fd6deb26ae52dd1b35fa5342084",
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:03:30.028600Z",
+    "level": "INFO",
+    "service": "orders-service",
+    "message": "Fetched 32 orders",
+    "trace_id": "d6e93fd6deb26ae52dd1b35fa5342084",
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:03:34.842364Z",
+    "level": "WARNING",
+    "service": "orders-service",
+    "message": "Cache miss for key orders:list:page=36",
+    "trace_id": null,
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:03:46.462762Z",
+    "level": "WARNING",
+    "service": "api-gateway",
+    "message": "Deprecated config key 'proxy.timeout' used, migrate to 'upstream.timeout'",
+    "trace_id": null,
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:04:00.059000Z",
+    "level": "INFO",
+    "service": "api-gateway",
+    "message": "GET /orders 200 59ms",
+    "trace_id": "6987a8d890d058378e1ba915b9949996",
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:04:00.059000Z",
+    "level": "INFO",
+    "service": "orders-service",
+    "message": "Fetched 34 orders",
+    "trace_id": "6987a8d890d058378e1ba915b9949996",
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:04:12.867257Z",
+    "level": "WARNING",
+    "service": "api-gateway",
+    "message": "Deprecated config key 'proxy.timeout' used, migrate to 'upstream.timeout'",
+    "trace_id": null,
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:04:25.500597Z",
+    "level": "WARNING",
+    "service": "orders-service",
+    "message": "Cache miss for key orders:list:page=8",
+    "trace_id": null,
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:04:30.032600Z",
+    "level": "INFO",
+    "service": "api-gateway",
+    "message": "GET /orders/search 200 33ms",
+    "trace_id": "dfd0d213af7e0a079fc771f2d4ba9318",
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:04:30.032600Z",
+    "level": "INFO",
+    "service": "orders-service",
+    "message": "Fetched 5 orders",
+    "trace_id": "dfd0d213af7e0a079fc771f2d4ba9318",
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:04:34.562426Z",
+    "level": "WARNING",
+    "service": "orders-service",
+    "message": "Cache miss for key orders:list:page=18",
+    "trace_id": null,
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:04:53.920004Z",
+    "level": "WARNING",
+    "service": "api-gateway",
+    "message": "Deprecated config key 'proxy.timeout' used, migrate to 'upstream.timeout'",
+    "trace_id": null,
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:05:00.063400Z",
+    "level": "INFO",
+    "service": "api-gateway",
+    "message": "GET /orders 200 63ms",
+    "trace_id": "a56677a0ecfc6c8d659b9f47505b8357",
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:05:00.063400Z",
+    "level": "INFO",
+    "service": "orders-service",
+    "message": "Fetched 27 orders",
+    "trace_id": "a56677a0ecfc6c8d659b9f47505b8357",
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:05:26.909960Z",
+    "level": "WARNING",
+    "service": "orders-service",
+    "message": "Cache miss for key orders:list:page=2",
+    "trace_id": null,
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:05:28.092226Z",
+    "level": "WARNING",
+    "service": "api-gateway",
+    "message": "Deprecated config key 'proxy.timeout' used, migrate to 'upstream.timeout'",
+    "trace_id": null,
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:05:30.022500Z",
+    "level": "INFO",
+    "service": "api-gateway",
+    "message": "GET /orders/search 200 22ms",
+    "trace_id": "6b816d16f32f44e8a4f4e59f562e8a0c",
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:05:30.022500Z",
+    "level": "INFO",
+    "service": "orders-service",
+    "message": "Fetched 30 orders",
+    "trace_id": "6b816d16f32f44e8a4f4e59f562e8a0c",
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:05:53.671997Z",
+    "level": "WARNING",
+    "service": "orders-service",
+    "message": "Cache miss for key orders:list:page=6",
+    "trace_id": null,
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:05:57.778747Z",
+    "level": "WARNING",
+    "service": "api-gateway",
+    "message": "Deprecated config key 'proxy.timeout' used, migrate to 'upstream.timeout'",
+    "trace_id": null,
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:06:00.079300Z",
+    "level": "INFO",
+    "service": "api-gateway",
+    "message": "GET /orders 200 79ms",
+    "trace_id": "bb1a32a747ca8963290f38638bf4a8e6",
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:06:00.079300Z",
+    "level": "INFO",
+    "service": "orders-service",
+    "message": "Fetched 5 orders",
+    "trace_id": "bb1a32a747ca8963290f38638bf4a8e6",
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:06:12.657565Z",
+    "level": "WARNING",
+    "service": "api-gateway",
+    "message": "Deprecated config key 'proxy.timeout' used, migrate to 'upstream.timeout'",
+    "trace_id": null,
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:06:28.650837Z",
+    "level": "WARNING",
+    "service": "orders-service",
+    "message": "Cache miss for key orders:list:page=17",
+    "trace_id": null,
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:06:30.032200Z",
+    "level": "INFO",
+    "service": "api-gateway",
+    "message": "GET /orders/search 200 32ms",
+    "trace_id": "153d892c7308184ffc6a3563e8571492",
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:06:30.032200Z",
+    "level": "INFO",
+    "service": "orders-service",
+    "message": "Fetched 26 orders",
+    "trace_id": "153d892c7308184ffc6a3563e8571492",
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:06:47.214377Z",
+    "level": "WARNING",
+    "service": "api-gateway",
+    "message": "Deprecated config key 'proxy.timeout' used, migrate to 'upstream.timeout'",
+    "trace_id": null,
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:06:56.953718Z",
+    "level": "WARNING",
+    "service": "orders-service",
+    "message": "Cache miss for key orders:list:page=6",
+    "trace_id": null,
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:07:00.053100Z",
+    "level": "INFO",
+    "service": "api-gateway",
+    "message": "GET /orders 200 53ms",
+    "trace_id": "fdbe8416344ad29babda495e12022c18",
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:07:00.053100Z",
+    "level": "INFO",
+    "service": "orders-service",
+    "message": "Fetched 10 orders",
+    "trace_id": "fdbe8416344ad29babda495e12022c18",
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:07:03.386437Z",
+    "level": "WARNING",
+    "service": "orders-service",
+    "message": "Cache miss for key orders:list:page=3",
+    "trace_id": null,
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:07:08.890581Z",
+    "level": "WARNING",
+    "service": "api-gateway",
+    "message": "Deprecated config key 'proxy.timeout' used, migrate to 'upstream.timeout'",
+    "trace_id": null,
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:07:30.022500Z",
+    "level": "INFO",
+    "service": "api-gateway",
+    "message": "GET /orders/search 200 22ms",
+    "trace_id": "51d5219d8f4a88f19ff13d4fef7316a4",
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:07:30.022500Z",
+    "level": "INFO",
+    "service": "orders-service",
+    "message": "Fetched 14 orders",
+    "trace_id": "51d5219d8f4a88f19ff13d4fef7316a4",
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:07:42.913945Z",
+    "level": "WARNING",
+    "service": "api-gateway",
+    "message": "Deprecated config key 'proxy.timeout' used, migrate to 'upstream.timeout'",
+    "trace_id": null,
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:07:52.193036Z",
+    "level": "WARNING",
+    "service": "orders-service",
+    "message": "Cache miss for key orders:list:page=11",
+    "trace_id": null,
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:08:00.056400Z",
+    "level": "INFO",
+    "service": "api-gateway",
+    "message": "GET /orders 200 56ms",
+    "trace_id": "5d087f54165339d27ddb298d5ec14882",
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:08:00.056400Z",
+    "level": "INFO",
+    "service": "orders-service",
+    "message": "Fetched 32 orders",
+    "trace_id": "5d087f54165339d27ddb298d5ec14882",
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:08:10.792011Z",
+    "level": "WARNING",
+    "service": "api-gateway",
+    "message": "Deprecated config key 'proxy.timeout' used, migrate to 'upstream.timeout'",
+    "trace_id": null,
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:08:21.706550Z",
+    "level": "WARNING",
+    "service": "orders-service",
+    "message": "Cache miss for key orders:list:page=20",
+    "trace_id": null,
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:08:30.033800Z",
+    "level": "INFO",
+    "service": "api-gateway",
+    "message": "GET /orders/search 200 34ms",
+    "trace_id": "4f94f197a6bfc2a4cf11afd1ead48842",
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:08:30.033800Z",
+    "level": "INFO",
+    "service": "orders-service",
+    "message": "Fetched 29 orders",
+    "trace_id": "4f94f197a6bfc2a4cf11afd1ead48842",
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:08:36.208375Z",
+    "level": "WARNING",
+    "service": "api-gateway",
+    "message": "Deprecated config key 'proxy.timeout' used, migrate to 'upstream.timeout'",
+    "trace_id": null,
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:08:58.927890Z",
+    "level": "WARNING",
+    "service": "orders-service",
+    "message": "Cache miss for key orders:list:page=13",
+    "trace_id": null,
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:09:00.068800Z",
+    "level": "INFO",
+    "service": "api-gateway",
+    "message": "GET /orders 200 69ms",
+    "trace_id": "d576dd8d7bd19a1699e4d779ae8d7d75",
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:09:00.068800Z",
+    "level": "INFO",
+    "service": "orders-service",
+    "message": "Fetched 6 orders",
+    "trace_id": "d576dd8d7bd19a1699e4d779ae8d7d75",
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:09:13.074872Z",
+    "level": "WARNING",
+    "service": "api-gateway",
+    "message": "Deprecated config key 'proxy.timeout' used, migrate to 'upstream.timeout'",
+    "trace_id": null,
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:09:21.621684Z",
+    "level": "WARNING",
+    "service": "orders-service",
+    "message": "Cache miss for key orders:list:page=35",
+    "trace_id": null,
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:09:30.022100Z",
+    "level": "INFO",
+    "service": "api-gateway",
+    "message": "GET /orders/search 200 22ms",
+    "trace_id": "970635d43901056f6eeab3e19a40b322",
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:09:30.022100Z",
+    "level": "INFO",
+    "service": "orders-service",
+    "message": "Fetched 24 orders",
+    "trace_id": "970635d43901056f6eeab3e19a40b322",
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:09:42.311566Z",
+    "level": "WARNING",
+    "service": "api-gateway",
+    "message": "Deprecated config key 'proxy.timeout' used, migrate to 'upstream.timeout'",
+    "trace_id": null,
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:09:53.713580Z",
+    "level": "WARNING",
+    "service": "orders-service",
+    "message": "Cache miss for key orders:list:page=10",
+    "trace_id": null,
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:10:00.056600Z",
+    "level": "INFO",
+    "service": "api-gateway",
+    "message": "GET /orders 200 57ms",
+    "trace_id": "5ca25762221d55cbc08b92a64d4446cc",
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:10:00.056600Z",
+    "level": "INFO",
+    "service": "orders-service",
+    "message": "Fetched 7 orders",
+    "trace_id": "5ca25762221d55cbc08b92a64d4446cc",
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:10:11.756988Z",
+    "level": "WARNING",
+    "service": "orders-service",
+    "message": "Cache miss for key orders:list:page=7",
+    "trace_id": null,
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:10:17.184932Z",
+    "level": "WARNING",
+    "service": "api-gateway",
+    "message": "Deprecated config key 'proxy.timeout' used, migrate to 'upstream.timeout'",
+    "trace_id": null,
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:10:30.021100Z",
+    "level": "INFO",
+    "service": "api-gateway",
+    "message": "GET /orders/search 200 21ms",
+    "trace_id": "0c2cbb1ff6c6957d8398a74ef780e431",
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:10:30.021100Z",
+    "level": "INFO",
+    "service": "orders-service",
+    "message": "Fetched 32 orders",
+    "trace_id": "0c2cbb1ff6c6957d8398a74ef780e431",
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:10:32.721348Z",
+    "level": "WARNING",
+    "service": "orders-service",
+    "message": "Cache miss for key orders:list:page=26",
+    "trace_id": null,
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:10:56.206620Z",
+    "level": "WARNING",
+    "service": "api-gateway",
+    "message": "Deprecated config key 'proxy.timeout' used, migrate to 'upstream.timeout'",
+    "trace_id": null,
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:11:00.081000Z",
+    "level": "INFO",
+    "service": "api-gateway",
+    "message": "GET /orders 200 81ms",
+    "trace_id": "fc23b1faae35a23df03cf076645f8de1",
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:11:00.081000Z",
+    "level": "INFO",
+    "service": "orders-service",
+    "message": "Fetched 32 orders",
+    "trace_id": "fc23b1faae35a23df03cf076645f8de1",
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:11:07.522907Z",
+    "level": "WARNING",
+    "service": "orders-service",
+    "message": "Cache miss for key orders:list:page=27",
+    "trace_id": null,
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:11:11.137670Z",
+    "level": "WARNING",
+    "service": "api-gateway",
+    "message": "Deprecated config key 'proxy.timeout' used, migrate to 'upstream.timeout'",
+    "trace_id": null,
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:11:30.020500Z",
+    "level": "INFO",
+    "service": "api-gateway",
+    "message": "GET /orders/search 200 20ms",
+    "trace_id": "3804ccadaa16b9e5ef279bc83e3482f9",
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:11:30.020500Z",
+    "level": "INFO",
+    "service": "orders-service",
+    "message": "Fetched 36 orders",
+    "trace_id": "3804ccadaa16b9e5ef279bc83e3482f9",
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:11:41.621703Z",
+    "level": "WARNING",
+    "service": "api-gateway",
+    "message": "Deprecated config key 'proxy.timeout' used, migrate to 'upstream.timeout'",
+    "trace_id": null,
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:11:46.514873Z",
+    "level": "WARNING",
+    "service": "orders-service",
+    "message": "Cache miss for key orders:list:page=14",
+    "trace_id": null,
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:12:00.067100Z",
+    "level": "INFO",
+    "service": "api-gateway",
+    "message": "GET /orders 200 67ms",
+    "trace_id": "d98ec1e8619b839dd3fb96f9e92aecb2",
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:12:00.067100Z",
+    "level": "INFO",
+    "service": "orders-service",
+    "message": "Fetched 40 orders",
+    "trace_id": "d98ec1e8619b839dd3fb96f9e92aecb2",
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:12:01.769434Z",
+    "level": "WARNING",
+    "service": "api-gateway",
+    "message": "Deprecated config key 'proxy.timeout' used, migrate to 'upstream.timeout'",
+    "trace_id": null,
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:12:18.284833Z",
+    "level": "WARNING",
+    "service": "orders-service",
+    "message": "Cache miss for key orders:list:page=37",
+    "trace_id": null,
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:12:30.027900Z",
+    "level": "INFO",
+    "service": "api-gateway",
+    "message": "GET /orders/search 200 28ms",
+    "trace_id": "c78251282b0cedf3a464bcae6989a25e",
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:12:30.027900Z",
+    "level": "INFO",
+    "service": "orders-service",
+    "message": "Fetched 25 orders",
+    "trace_id": "c78251282b0cedf3a464bcae6989a25e",
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:12:41.434980Z",
+    "level": "WARNING",
+    "service": "api-gateway",
+    "message": "Deprecated config key 'proxy.timeout' used, migrate to 'upstream.timeout'",
+    "trace_id": null,
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:12:43.776436Z",
+    "level": "WARNING",
+    "service": "orders-service",
+    "message": "Cache miss for key orders:list:page=15",
+    "trace_id": null,
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:13:00.073800Z",
+    "level": "INFO",
+    "service": "api-gateway",
+    "message": "GET /orders 200 74ms",
+    "trace_id": "9625eb0b269ed1cafa301d10ad7e3792",
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:13:00.073800Z",
+    "level": "INFO",
+    "service": "orders-service",
+    "message": "Fetched 25 orders",
+    "trace_id": "9625eb0b269ed1cafa301d10ad7e3792",
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:13:12.564976Z",
+    "level": "WARNING",
+    "service": "api-gateway",
+    "message": "Deprecated config key 'proxy.timeout' used, migrate to 'upstream.timeout'",
+    "trace_id": null,
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:13:15.861696Z",
+    "level": "WARNING",
+    "service": "orders-service",
+    "message": "Cache miss for key orders:list:page=13",
+    "trace_id": null,
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:13:30.023900Z",
+    "level": "INFO",
+    "service": "api-gateway",
+    "message": "GET /orders/search 200 24ms",
+    "trace_id": "a23699309f7f71cae28710d41fd1caa6",
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:13:30.023900Z",
+    "level": "INFO",
+    "service": "orders-service",
+    "message": "Fetched 38 orders",
+    "trace_id": "a23699309f7f71cae28710d41fd1caa6",
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:13:42.381230Z",
+    "level": "WARNING",
+    "service": "orders-service",
+    "message": "Cache miss for key orders:list:page=27",
+    "trace_id": null,
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:13:57.902668Z",
+    "level": "WARNING",
+    "service": "api-gateway",
+    "message": "Deprecated config key 'proxy.timeout' used, migrate to 'upstream.timeout'",
+    "trace_id": null,
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:14:00.072400Z",
+    "level": "INFO",
+    "service": "api-gateway",
+    "message": "GET /orders 200 72ms",
+    "trace_id": "5c8f7be22c4d6d467de76e9101f77cb5",
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:14:00.072400Z",
+    "level": "INFO",
+    "service": "orders-service",
+    "message": "Fetched 36 orders",
+    "trace_id": "5c8f7be22c4d6d467de76e9101f77cb5",
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:14:03.066782Z",
+    "level": "WARNING",
+    "service": "orders-service",
+    "message": "Cache miss for key orders:list:page=24",
+    "trace_id": null,
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:14:06.169983Z",
+    "level": "WARNING",
+    "service": "api-gateway",
+    "message": "Deprecated config key 'proxy.timeout' used, migrate to 'upstream.timeout'",
+    "trace_id": null,
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:14:30.028600Z",
+    "level": "INFO",
+    "service": "api-gateway",
+    "message": "GET /orders/search 200 29ms",
+    "trace_id": "72e95f3f3df62871ec45c1b9812358f7",
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:14:30.028600Z",
+    "level": "INFO",
+    "service": "orders-service",
+    "message": "Fetched 48 orders",
+    "trace_id": "72e95f3f3df62871ec45c1b9812358f7",
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:14:43.801798Z",
+    "level": "WARNING",
+    "service": "api-gateway",
+    "message": "Deprecated config key 'proxy.timeout' used, migrate to 'upstream.timeout'",
+    "trace_id": null,
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:14:55.244297Z",
+    "level": "WARNING",
+    "service": "orders-service",
+    "message": "Cache miss for key orders:list:page=24",
+    "trace_id": null,
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:15:00.063100Z",
+    "level": "INFO",
+    "service": "api-gateway",
+    "message": "GET /orders 200 63ms",
+    "trace_id": "a620eb0952d9ba8fc649548d8cc32c00",
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:15:00.063100Z",
+    "level": "INFO",
+    "service": "orders-service",
+    "message": "Fetched 49 orders",
+    "trace_id": "a620eb0952d9ba8fc649548d8cc32c00",
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:15:14.658639Z",
+    "level": "WARNING",
+    "service": "api-gateway",
+    "message": "Deprecated config key 'proxy.timeout' used, migrate to 'upstream.timeout'",
+    "trace_id": null,
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:15:16.125929Z",
+    "level": "WARNING",
+    "service": "orders-service",
+    "message": "Cache miss for key orders:list:page=7",
+    "trace_id": null,
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:15:30.019300Z",
+    "level": "INFO",
+    "service": "api-gateway",
+    "message": "GET /orders/search 200 19ms",
+    "trace_id": "81521072ca779408434ffb4c278063ae",
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:15:30.019300Z",
+    "level": "INFO",
+    "service": "orders-service",
+    "message": "Fetched 29 orders",
+    "trace_id": "81521072ca779408434ffb4c278063ae",
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:15:33.049897Z",
+    "level": "WARNING",
+    "service": "orders-service",
+    "message": "Cache miss for key orders:list:page=15",
+    "trace_id": null,
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:15:39.796275Z",
+    "level": "WARNING",
+    "service": "api-gateway",
+    "message": "Deprecated config key 'proxy.timeout' used, migrate to 'upstream.timeout'",
+    "trace_id": null,
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:16:00.071500Z",
+    "level": "INFO",
+    "service": "api-gateway",
+    "message": "GET /orders 200 72ms",
+    "trace_id": "24bfe43486108db418f9a48a145d294f",
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:16:00.071500Z",
+    "level": "INFO",
+    "service": "orders-service",
+    "message": "Fetched 47 orders",
+    "trace_id": "24bfe43486108db418f9a48a145d294f",
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:16:16.402843Z",
+    "level": "WARNING",
+    "service": "orders-service",
+    "message": "Cache miss for key orders:list:page=26",
+    "trace_id": null,
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:16:17.977361Z",
+    "level": "WARNING",
+    "service": "api-gateway",
+    "message": "Deprecated config key 'proxy.timeout' used, migrate to 'upstream.timeout'",
+    "trace_id": null,
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:16:30.027900Z",
+    "level": "INFO",
+    "service": "api-gateway",
+    "message": "GET /orders/search 200 28ms",
+    "trace_id": "0fd68cde764d4cbce9059711f3b83a61",
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:16:30.027900Z",
+    "level": "INFO",
+    "service": "orders-service",
+    "message": "Fetched 39 orders",
+    "trace_id": "0fd68cde764d4cbce9059711f3b83a61",
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:16:31.139263Z",
+    "level": "WARNING",
+    "service": "orders-service",
+    "message": "Cache miss for key orders:list:page=36",
+    "trace_id": null,
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:16:40.320028Z",
+    "level": "WARNING",
+    "service": "api-gateway",
+    "message": "Deprecated config key 'proxy.timeout' used, migrate to 'upstream.timeout'",
+    "trace_id": null,
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:17:00.069600Z",
+    "level": "INFO",
+    "service": "api-gateway",
+    "message": "GET /orders 200 70ms",
+    "trace_id": "737c3e20c55c45f81dc7f0d00a5846c6",
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:17:00.069600Z",
+    "level": "INFO",
+    "service": "orders-service",
+    "message": "Fetched 27 orders",
+    "trace_id": "737c3e20c55c45f81dc7f0d00a5846c6",
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:17:03.085889Z",
+    "level": "WARNING",
+    "service": "api-gateway",
+    "message": "Deprecated config key 'proxy.timeout' used, migrate to 'upstream.timeout'",
+    "trace_id": null,
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:17:04.846886Z",
+    "level": "WARNING",
+    "service": "orders-service",
+    "message": "Cache miss for key orders:list:page=6",
+    "trace_id": null,
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:17:30.028500Z",
+    "level": "INFO",
+    "service": "api-gateway",
+    "message": "GET /orders/search 200 28ms",
+    "trace_id": "6446020188c7cf4bba1769d208877c6c",
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:17:30.028500Z",
+    "level": "INFO",
+    "service": "orders-service",
+    "message": "Fetched 42 orders",
+    "trace_id": "6446020188c7cf4bba1769d208877c6c",
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:17:50.262669Z",
+    "level": "WARNING",
+    "service": "api-gateway",
+    "message": "Deprecated config key 'proxy.timeout' used, migrate to 'upstream.timeout'",
+    "trace_id": null,
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:17:58.254752Z",
+    "level": "WARNING",
+    "service": "orders-service",
+    "message": "Cache miss for key orders:list:page=26",
+    "trace_id": null,
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:18:00.065300Z",
+    "level": "INFO",
+    "service": "api-gateway",
+    "message": "GET /orders 200 65ms",
+    "trace_id": "456231d2c92125afb7e645eef41823ab",
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:18:00.065300Z",
+    "level": "INFO",
+    "service": "orders-service",
+    "message": "Fetched 49 orders",
+    "trace_id": "456231d2c92125afb7e645eef41823ab",
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:18:01.892280Z",
+    "level": "WARNING",
+    "service": "orders-service",
+    "message": "Cache miss for key orders:list:page=3",
+    "trace_id": null,
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:18:20.566381Z",
+    "level": "WARNING",
+    "service": "api-gateway",
+    "message": "Deprecated config key 'proxy.timeout' used, migrate to 'upstream.timeout'",
+    "trace_id": null,
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:18:30.022700Z",
+    "level": "INFO",
+    "service": "api-gateway",
+    "message": "GET /orders/search 200 23ms",
+    "trace_id": "6df5150a49ed0567b03b1cea43c9a0ee",
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:18:30.022700Z",
+    "level": "INFO",
+    "service": "orders-service",
+    "message": "Fetched 49 orders",
+    "trace_id": "6df5150a49ed0567b03b1cea43c9a0ee",
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:18:38.952992Z",
+    "level": "WARNING",
+    "service": "orders-service",
+    "message": "Cache miss for key orders:list:page=38",
+    "trace_id": null,
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:18:57.325092Z",
+    "level": "WARNING",
+    "service": "api-gateway",
+    "message": "Deprecated config key 'proxy.timeout' used, migrate to 'upstream.timeout'",
+    "trace_id": null,
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:19:00.050700Z",
+    "level": "INFO",
+    "service": "api-gateway",
+    "message": "GET /orders 200 51ms",
+    "trace_id": "adbb65399db955e9bbd8b455e9b6b6bd",
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:19:00.050700Z",
+    "level": "INFO",
+    "service": "orders-service",
+    "message": "Fetched 27 orders",
+    "trace_id": "adbb65399db955e9bbd8b455e9b6b6bd",
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:19:02.910516Z",
+    "level": "WARNING",
+    "service": "api-gateway",
+    "message": "Deprecated config key 'proxy.timeout' used, migrate to 'upstream.timeout'",
+    "trace_id": null,
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:19:03.121299Z",
+    "level": "WARNING",
+    "service": "orders-service",
+    "message": "Cache miss for key orders:list:page=15",
+    "trace_id": null,
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:19:30.028200Z",
+    "level": "INFO",
+    "service": "api-gateway",
+    "message": "GET /orders/search 200 28ms",
+    "trace_id": "c8d61a4a3e26513bd4cb4bef695710f0",
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:19:30.028200Z",
+    "level": "INFO",
+    "service": "orders-service",
+    "message": "Fetched 36 orders",
+    "trace_id": "c8d61a4a3e26513bd4cb4bef695710f0",
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:19:49.090233Z",
+    "level": "WARNING",
+    "service": "orders-service",
+    "message": "Cache miss for key orders:list:page=15",
+    "trace_id": null,
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:19:49.450525Z",
+    "level": "WARNING",
+    "service": "api-gateway",
+    "message": "Deprecated config key 'proxy.timeout' used, migrate to 'upstream.timeout'",
+    "trace_id": null,
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:20:00.048600Z",
+    "level": "INFO",
+    "service": "api-gateway",
+    "message": "GET /orders 200 49ms",
+    "trace_id": "6bb2500de5ae410a7c044e686f84c1d6",
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:20:00.048600Z",
+    "level": "INFO",
+    "service": "orders-service",
+    "message": "Fetched 25 orders",
+    "trace_id": "6bb2500de5ae410a7c044e686f84c1d6",
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:20:08.340484Z",
+    "level": "ERROR",
+    "service": "orders-service",
+    "message": "Failed to send metrics to collector at 10.0.3.17:4317",
+    "trace_id": null,
+    "exception": "ConnectionRefusedError: [Errno 111] Connection refused"
+  },
+  {
+    "timestamp": "2026-11-18T10:20:17.038285Z",
+    "level": "WARNING",
+    "service": "api-gateway",
+    "message": "Deprecated config key 'proxy.timeout' used, migrate to 'upstream.timeout'",
+    "trace_id": null,
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:20:18.557792Z",
+    "level": "WARNING",
+    "service": "orders-service",
+    "message": "Cache miss for key orders:list:page=19",
+    "trace_id": null,
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:20:21.211409Z",
+    "level": "ERROR",
+    "service": "orders-service",
+    "message": "Failed to send metrics to collector at 10.0.3.17:4317",
+    "trace_id": null,
+    "exception": "ConnectionRefusedError: [Errno 111] Connection refused"
+  },
+  {
+    "timestamp": "2026-11-18T10:20:30.027500Z",
+    "level": "INFO",
+    "service": "api-gateway",
+    "message": "GET /orders/search 200 28ms",
+    "trace_id": "98070bc11f816e8d88df8dc25715cc67",
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:20:30.027500Z",
+    "level": "INFO",
+    "service": "orders-service",
+    "message": "Fetched 7 orders",
+    "trace_id": "98070bc11f816e8d88df8dc25715cc67",
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:20:30.561122Z",
+    "level": "ERROR",
+    "service": "orders-service",
+    "message": "Failed to send metrics to collector at 10.0.3.17:4317",
+    "trace_id": null,
+    "exception": "ConnectionRefusedError: [Errno 111] Connection refused"
+  },
+  {
+    "timestamp": "2026-11-18T10:20:32.556403Z",
+    "level": "WARNING",
+    "service": "api-gateway",
+    "message": "Deprecated config key 'proxy.timeout' used, migrate to 'upstream.timeout'",
+    "trace_id": null,
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:20:39.024968Z",
+    "level": "ERROR",
+    "service": "orders-service",
+    "message": "Failed to send metrics to collector at 10.0.3.17:4317",
+    "trace_id": null,
+    "exception": "ConnectionRefusedError: [Errno 111] Connection refused"
+  },
+  {
+    "timestamp": "2026-11-18T10:20:47.168939Z",
+    "level": "ERROR",
+    "service": "orders-service",
+    "message": "Failed to send metrics to collector at 10.0.3.17:4317",
+    "trace_id": null,
+    "exception": "ConnectionRefusedError: [Errno 111] Connection refused"
+  },
+  {
+    "timestamp": "2026-11-18T10:20:50.373562Z",
+    "level": "WARNING",
+    "service": "orders-service",
+    "message": "Cache miss for key orders:list:page=8",
+    "trace_id": null,
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:20:58.827512Z",
+    "level": "ERROR",
+    "service": "orders-service",
+    "message": "Failed to send metrics to collector at 10.0.3.17:4317",
+    "trace_id": null,
+    "exception": "ConnectionRefusedError: [Errno 111] Connection refused"
+  },
+  {
+    "timestamp": "2026-11-18T10:21:01.432669Z",
+    "level": "WARNING",
+    "service": "api-gateway",
+    "message": "Deprecated config key 'proxy.timeout' used, migrate to 'upstream.timeout'",
+    "trace_id": null,
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:21:01.450200Z",
+    "level": "INFO",
+    "service": "api-gateway",
+    "message": "GET /orders 200 1450ms",
+    "trace_id": "6d8d3481c34becab60d37339ab37f664",
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:21:01.450200Z",
+    "level": "INFO",
+    "service": "orders-service",
+    "message": "Fetched 25 orders",
+    "trace_id": "6d8d3481c34becab60d37339ab37f664",
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:21:11.452609Z",
+    "level": "ERROR",
+    "service": "orders-service",
+    "message": "Failed to send metrics to collector at 10.0.3.17:4317",
+    "trace_id": null,
+    "exception": "ConnectionRefusedError: [Errno 111] Connection refused"
+  },
+  {
+    "timestamp": "2026-11-18T10:21:24.759066Z",
+    "level": "WARNING",
+    "service": "orders-service",
+    "message": "Cache miss for key orders:list:page=14",
+    "trace_id": null,
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:21:24.821796Z",
+    "level": "ERROR",
+    "service": "orders-service",
+    "message": "Failed to send metrics to collector at 10.0.3.17:4317",
+    "trace_id": null,
+    "exception": "ConnectionRefusedError: [Errno 111] Connection refused"
+  },
+  {
+    "timestamp": "2026-11-18T10:21:30.022700Z",
+    "level": "INFO",
+    "service": "api-gateway",
+    "message": "GET /orders/search 200 23ms",
+    "trace_id": "fd6d1129d2e8941bd146ddd5b8297540",
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:21:30.022700Z",
+    "level": "INFO",
+    "service": "orders-service",
+    "message": "Fetched 11 orders",
+    "trace_id": "fd6d1129d2e8941bd146ddd5b8297540",
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:21:38.008094Z",
+    "level": "ERROR",
+    "service": "orders-service",
+    "message": "Failed to send metrics to collector at 10.0.3.17:4317",
+    "trace_id": null,
+    "exception": "ConnectionRefusedError: [Errno 111] Connection refused"
+  },
+  {
+    "timestamp": "2026-11-18T10:21:47.659790Z",
+    "level": "ERROR",
+    "service": "orders-service",
+    "message": "Failed to send metrics to collector at 10.0.3.17:4317",
+    "trace_id": null,
+    "exception": "ConnectionRefusedError: [Errno 111] Connection refused"
+  },
+  {
+    "timestamp": "2026-11-18T10:21:50.534203Z",
+    "level": "WARNING",
+    "service": "orders-service",
+    "message": "Cache miss for key orders:list:page=38",
+    "trace_id": null,
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:21:51.377953Z",
+    "level": "WARNING",
+    "service": "api-gateway",
+    "message": "Deprecated config key 'proxy.timeout' used, migrate to 'upstream.timeout'",
+    "trace_id": null,
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:22:00.893860Z",
+    "level": "ERROR",
+    "service": "orders-service",
+    "message": "Failed to send metrics to collector at 10.0.3.17:4317",
+    "trace_id": null,
+    "exception": "ConnectionRefusedError: [Errno 111] Connection refused"
+  },
+  {
+    "timestamp": "2026-11-18T10:22:01.357623Z",
+    "level": "WARNING",
+    "service": "orders-service",
+    "message": "Cache miss for key orders:list:page=13",
+    "trace_id": null,
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:22:02.928400Z",
+    "level": "INFO",
+    "service": "api-gateway",
+    "message": "GET /orders 200 2928ms",
+    "trace_id": "880724a85294687a3944c4075b2c1cb0",
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:22:02.928400Z",
+    "level": "INFO",
+    "service": "orders-service",
+    "message": "Fetched 44 orders",
+    "trace_id": "880724a85294687a3944c4075b2c1cb0",
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:22:13.762885Z",
+    "level": "ERROR",
+    "service": "orders-service",
+    "message": "Failed to send metrics to collector at 10.0.3.17:4317",
+    "trace_id": null,
+    "exception": "ConnectionRefusedError: [Errno 111] Connection refused"
+  },
+  {
+    "timestamp": "2026-11-18T10:22:23.396232Z",
+    "level": "WARNING",
+    "service": "api-gateway",
+    "message": "Deprecated config key 'proxy.timeout' used, migrate to 'upstream.timeout'",
+    "trace_id": null,
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:22:24.217686Z",
+    "level": "ERROR",
+    "service": "orders-service",
+    "message": "Failed to send metrics to collector at 10.0.3.17:4317",
+    "trace_id": null,
+    "exception": "ConnectionRefusedError: [Errno 111] Connection refused"
+  },
+  {
+    "timestamp": "2026-11-18T10:22:30.026800Z",
+    "level": "INFO",
+    "service": "api-gateway",
+    "message": "GET /orders/search 200 27ms",
+    "trace_id": "75d0f7574c413710f1a2d795e0b71ac6",
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:22:30.026800Z",
+    "level": "INFO",
+    "service": "orders-service",
+    "message": "Fetched 9 orders",
+    "trace_id": "75d0f7574c413710f1a2d795e0b71ac6",
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:22:33.832272Z",
+    "level": "ERROR",
+    "service": "orders-service",
+    "message": "Failed to send metrics to collector at 10.0.3.17:4317",
+    "trace_id": null,
+    "exception": "ConnectionRefusedError: [Errno 111] Connection refused"
+  },
+  {
+    "timestamp": "2026-11-18T10:22:38.199725Z",
+    "level": "WARNING",
+    "service": "api-gateway",
+    "message": "Deprecated config key 'proxy.timeout' used, migrate to 'upstream.timeout'",
+    "trace_id": null,
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:22:45.204231Z",
+    "level": "WARNING",
+    "service": "orders-service",
+    "message": "Cache miss for key orders:list:page=11",
+    "trace_id": null,
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:22:45.989064Z",
+    "level": "ERROR",
+    "service": "orders-service",
+    "message": "Failed to send metrics to collector at 10.0.3.17:4317",
+    "trace_id": null,
+    "exception": "ConnectionRefusedError: [Errno 111] Connection refused"
+  },
+  {
+    "timestamp": "2026-11-18T10:22:54.920880Z",
+    "level": "ERROR",
+    "service": "orders-service",
+    "message": "Failed to send metrics to collector at 10.0.3.17:4317",
+    "trace_id": null,
+    "exception": "ConnectionRefusedError: [Errno 111] Connection refused"
+  },
+  {
+    "timestamp": "2026-11-18T10:23:04.055100Z",
+    "level": "INFO",
+    "service": "api-gateway",
+    "message": "GET /orders 200 4055ms",
+    "trace_id": "cf0f3b76058e09cdb203dba2f0e042db",
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:23:04.055100Z",
+    "level": "INFO",
+    "service": "orders-service",
+    "message": "Fetched 30 orders",
+    "trace_id": "cf0f3b76058e09cdb203dba2f0e042db",
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:23:04.836277Z",
+    "level": "ERROR",
+    "service": "orders-service",
+    "message": "Failed to send metrics to collector at 10.0.3.17:4317",
+    "trace_id": null,
+    "exception": "ConnectionRefusedError: [Errno 111] Connection refused"
+  },
+  {
+    "timestamp": "2026-11-18T10:23:10.065465Z",
+    "level": "WARNING",
+    "service": "api-gateway",
+    "message": "Deprecated config key 'proxy.timeout' used, migrate to 'upstream.timeout'",
+    "trace_id": null,
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:23:10.921603Z",
+    "level": "WARNING",
+    "service": "orders-service",
+    "message": "Cache miss for key orders:list:page=35",
+    "trace_id": null,
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:23:18.701620Z",
+    "level": "ERROR",
+    "service": "orders-service",
+    "message": "Failed to send metrics to collector at 10.0.3.17:4317",
+    "trace_id": null,
+    "exception": "ConnectionRefusedError: [Errno 111] Connection refused"
+  },
+  {
+    "timestamp": "2026-11-18T10:23:28.638853Z",
+    "level": "ERROR",
+    "service": "orders-service",
+    "message": "Failed to send metrics to collector at 10.0.3.17:4317",
+    "trace_id": null,
+    "exception": "ConnectionRefusedError: [Errno 111] Connection refused"
+  },
+  {
+    "timestamp": "2026-11-18T10:23:30.026300Z",
+    "level": "INFO",
+    "service": "api-gateway",
+    "message": "GET /orders/search 200 26ms",
+    "trace_id": "68a2ef2c03c8807d35b3eb59de748583",
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:23:30.026300Z",
+    "level": "INFO",
+    "service": "orders-service",
+    "message": "Fetched 45 orders",
+    "trace_id": "68a2ef2c03c8807d35b3eb59de748583",
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:23:37.310075Z",
+    "level": "ERROR",
+    "service": "orders-service",
+    "message": "Failed to send metrics to collector at 10.0.3.17:4317",
+    "trace_id": null,
+    "exception": "ConnectionRefusedError: [Errno 111] Connection refused"
+  },
+  {
+    "timestamp": "2026-11-18T10:23:50.293279Z",
+    "level": "ERROR",
+    "service": "orders-service",
+    "message": "Failed to send metrics to collector at 10.0.3.17:4317",
+    "trace_id": null,
+    "exception": "ConnectionRefusedError: [Errno 111] Connection refused"
+  },
+  {
+    "timestamp": "2026-11-18T10:23:51.216167Z",
+    "level": "WARNING",
+    "service": "orders-service",
+    "message": "Cache miss for key orders:list:page=26",
+    "trace_id": null,
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:23:55.741834Z",
+    "level": "WARNING",
+    "service": "api-gateway",
+    "message": "Deprecated config key 'proxy.timeout' used, migrate to 'upstream.timeout'",
+    "trace_id": null,
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:24:01.901834Z",
+    "level": "WARNING",
+    "service": "orders-service",
+    "message": "Cache miss for key orders:list:page=2",
+    "trace_id": null,
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:24:02.953712Z",
+    "level": "ERROR",
+    "service": "orders-service",
+    "message": "Failed to send metrics to collector at 10.0.3.17:4317",
+    "trace_id": null,
+    "exception": "ConnectionRefusedError: [Errno 111] Connection refused"
+  },
+  {
+    "timestamp": "2026-11-18T10:24:03.791900Z",
+    "level": "INFO",
+    "service": "api-gateway",
+    "message": "GET /orders 200 3792ms",
+    "trace_id": "a74f45eced1da4ae7886dc6ea870bf5c",
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:24:03.791900Z",
+    "level": "INFO",
+    "service": "orders-service",
+    "message": "Fetched 38 orders",
+    "trace_id": "a74f45eced1da4ae7886dc6ea870bf5c",
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:24:12.506095Z",
+    "level": "ERROR",
+    "service": "orders-service",
+    "message": "Failed to send metrics to collector at 10.0.3.17:4317",
+    "trace_id": null,
+    "exception": "ConnectionRefusedError: [Errno 111] Connection refused"
+  },
+  {
+    "timestamp": "2026-11-18T10:24:23.734677Z",
+    "level": "ERROR",
+    "service": "orders-service",
+    "message": "Failed to send metrics to collector at 10.0.3.17:4317",
+    "trace_id": null,
+    "exception": "ConnectionRefusedError: [Errno 111] Connection refused"
+  },
+  {
+    "timestamp": "2026-11-18T10:24:26.933856Z",
+    "level": "WARNING",
+    "service": "api-gateway",
+    "message": "Deprecated config key 'proxy.timeout' used, migrate to 'upstream.timeout'",
+    "trace_id": null,
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:24:30.027500Z",
+    "level": "INFO",
+    "service": "api-gateway",
+    "message": "GET /orders/search 200 28ms",
+    "trace_id": "147169f6bfef7997511aa3801c6e91de",
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:24:30.027500Z",
+    "level": "INFO",
+    "service": "orders-service",
+    "message": "Fetched 23 orders",
+    "trace_id": "147169f6bfef7997511aa3801c6e91de",
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:24:32.396809Z",
+    "level": "ERROR",
+    "service": "orders-service",
+    "message": "Failed to send metrics to collector at 10.0.3.17:4317",
+    "trace_id": null,
+    "exception": "ConnectionRefusedError: [Errno 111] Connection refused"
+  },
+  {
+    "timestamp": "2026-11-18T10:24:33.789675Z",
+    "level": "WARNING",
+    "service": "orders-service",
+    "message": "Cache miss for key orders:list:page=1",
+    "trace_id": null,
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:24:46.160250Z",
+    "level": "ERROR",
+    "service": "orders-service",
+    "message": "Failed to send metrics to collector at 10.0.3.17:4317",
+    "trace_id": null,
+    "exception": "ConnectionRefusedError: [Errno 111] Connection refused"
+  },
+  {
+    "timestamp": "2026-11-18T10:24:48.286902Z",
+    "level": "WARNING",
+    "service": "api-gateway",
+    "message": "Deprecated config key 'proxy.timeout' used, migrate to 'upstream.timeout'",
+    "trace_id": null,
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:24:59.505928Z",
+    "level": "ERROR",
+    "service": "orders-service",
+    "message": "Failed to send metrics to collector at 10.0.3.17:4317",
+    "trace_id": null,
+    "exception": "ConnectionRefusedError: [Errno 111] Connection refused"
+  },
+  {
+    "timestamp": "2026-11-18T10:25:04.124000Z",
+    "level": "INFO",
+    "service": "api-gateway",
+    "message": "GET /orders 200 4124ms",
+    "trace_id": "f926eb913cf16e8f4758692cfe882ffe",
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:25:04.124000Z",
+    "level": "INFO",
+    "service": "orders-service",
+    "message": "Fetched 17 orders",
+    "trace_id": "f926eb913cf16e8f4758692cfe882ffe",
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:25:09.719714Z",
+    "level": "ERROR",
+    "service": "orders-service",
+    "message": "Failed to send metrics to collector at 10.0.3.17:4317",
+    "trace_id": null,
+    "exception": "ConnectionRefusedError: [Errno 111] Connection refused"
+  },
+  {
+    "timestamp": "2026-11-18T10:25:21.667999Z",
+    "level": "ERROR",
+    "service": "orders-service",
+    "message": "Failed to send metrics to collector at 10.0.3.17:4317",
+    "trace_id": null,
+    "exception": "ConnectionRefusedError: [Errno 111] Connection refused"
+  },
+  {
+    "timestamp": "2026-11-18T10:25:22.292528Z",
+    "level": "WARNING",
+    "service": "orders-service",
+    "message": "Cache miss for key orders:list:page=4",
+    "trace_id": null,
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:25:26.663728Z",
+    "level": "WARNING",
+    "service": "api-gateway",
+    "message": "Deprecated config key 'proxy.timeout' used, migrate to 'upstream.timeout'",
+    "trace_id": null,
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:25:30.027200Z",
+    "level": "INFO",
+    "service": "api-gateway",
+    "message": "GET /orders/search 200 27ms",
+    "trace_id": "0e6fe6599be33731f16f4f623da631d6",
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:25:30.027200Z",
+    "level": "INFO",
+    "service": "orders-service",
+    "message": "Fetched 26 orders",
+    "trace_id": "0e6fe6599be33731f16f4f623da631d6",
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:25:32.894631Z",
+    "level": "ERROR",
+    "service": "orders-service",
+    "message": "Failed to send metrics to collector at 10.0.3.17:4317",
+    "trace_id": null,
+    "exception": "ConnectionRefusedError: [Errno 111] Connection refused"
+  },
+  {
+    "timestamp": "2026-11-18T10:25:46.032801Z",
+    "level": "ERROR",
+    "service": "orders-service",
+    "message": "Failed to send metrics to collector at 10.0.3.17:4317",
+    "trace_id": null,
+    "exception": "ConnectionRefusedError: [Errno 111] Connection refused"
+  },
+  {
+    "timestamp": "2026-11-18T10:25:46.186809Z",
+    "level": "WARNING",
+    "service": "api-gateway",
+    "message": "Deprecated config key 'proxy.timeout' used, migrate to 'upstream.timeout'",
+    "trace_id": null,
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:25:47.834346Z",
+    "level": "WARNING",
+    "service": "orders-service",
+    "message": "Cache miss for key orders:list:page=22",
+    "trace_id": null,
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:25:55.350783Z",
+    "level": "ERROR",
+    "service": "orders-service",
+    "message": "Failed to send metrics to collector at 10.0.3.17:4317",
+    "trace_id": null,
+    "exception": "ConnectionRefusedError: [Errno 111] Connection refused"
+  },
+  {
+    "timestamp": "2026-11-18T10:26:04.180100Z",
+    "level": "INFO",
+    "service": "api-gateway",
+    "message": "GET /orders 200 4180ms",
+    "trace_id": "a682a0f29d8a0ef5b8ed34a36058db0e",
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:26:04.180100Z",
+    "level": "INFO",
+    "service": "orders-service",
+    "message": "Fetched 32 orders",
+    "trace_id": "a682a0f29d8a0ef5b8ed34a36058db0e",
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:26:07.410673Z",
+    "level": "ERROR",
+    "service": "orders-service",
+    "message": "Failed to send metrics to collector at 10.0.3.17:4317",
+    "trace_id": null,
+    "exception": "ConnectionRefusedError: [Errno 111] Connection refused"
+  },
+  {
+    "timestamp": "2026-11-18T10:26:15.442437Z",
+    "level": "WARNING",
+    "service": "orders-service",
+    "message": "Cache miss for key orders:list:page=11",
+    "trace_id": null,
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:26:17.229205Z",
+    "level": "ERROR",
+    "service": "orders-service",
+    "message": "Failed to send metrics to collector at 10.0.3.17:4317",
+    "trace_id": null,
+    "exception": "ConnectionRefusedError: [Errno 111] Connection refused"
+  },
+  {
+    "timestamp": "2026-11-18T10:26:21.062468Z",
+    "level": "WARNING",
+    "service": "api-gateway",
+    "message": "Deprecated config key 'proxy.timeout' used, migrate to 'upstream.timeout'",
+    "trace_id": null,
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:26:25.283015Z",
+    "level": "ERROR",
+    "service": "orders-service",
+    "message": "Failed to send metrics to collector at 10.0.3.17:4317",
+    "trace_id": null,
+    "exception": "ConnectionRefusedError: [Errno 111] Connection refused"
+  },
+  {
+    "timestamp": "2026-11-18T10:26:30.027300Z",
+    "level": "INFO",
+    "service": "api-gateway",
+    "message": "GET /orders/search 200 27ms",
+    "trace_id": "3caafa594a3d85f94c4f2fc9713ed717",
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:26:30.027300Z",
+    "level": "INFO",
+    "service": "orders-service",
+    "message": "Fetched 43 orders",
+    "trace_id": "3caafa594a3d85f94c4f2fc9713ed717",
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:26:36.380494Z",
+    "level": "ERROR",
+    "service": "orders-service",
+    "message": "Failed to send metrics to collector at 10.0.3.17:4317",
+    "trace_id": null,
+    "exception": "ConnectionRefusedError: [Errno 111] Connection refused"
+  },
+  {
+    "timestamp": "2026-11-18T10:26:47.778302Z",
+    "level": "ERROR",
+    "service": "orders-service",
+    "message": "Failed to send metrics to collector at 10.0.3.17:4317",
+    "trace_id": null,
+    "exception": "ConnectionRefusedError: [Errno 111] Connection refused"
+  },
+  {
+    "timestamp": "2026-11-18T10:26:50.532859Z",
+    "level": "WARNING",
+    "service": "orders-service",
+    "message": "Cache miss for key orders:list:page=20",
+    "trace_id": null,
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:26:57.450454Z",
+    "level": "WARNING",
+    "service": "api-gateway",
+    "message": "Deprecated config key 'proxy.timeout' used, migrate to 'upstream.timeout'",
+    "trace_id": null,
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:26:58.880439Z",
+    "level": "ERROR",
+    "service": "orders-service",
+    "message": "Failed to send metrics to collector at 10.0.3.17:4317",
+    "trace_id": null,
+    "exception": "ConnectionRefusedError: [Errno 111] Connection refused"
+  },
+  {
+    "timestamp": "2026-11-18T10:27:04.364900Z",
+    "level": "INFO",
+    "service": "api-gateway",
+    "message": "GET /orders 200 4365ms",
+    "trace_id": "643732069cac4829539af22a72ee6c0d",
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:27:04.364900Z",
+    "level": "INFO",
+    "service": "orders-service",
+    "message": "Fetched 5 orders",
+    "trace_id": "643732069cac4829539af22a72ee6c0d",
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:27:08.367353Z",
+    "level": "ERROR",
+    "service": "orders-service",
+    "message": "Failed to send metrics to collector at 10.0.3.17:4317",
+    "trace_id": null,
+    "exception": "ConnectionRefusedError: [Errno 111] Connection refused"
+  },
+  {
+    "timestamp": "2026-11-18T10:27:16.884055Z",
+    "level": "ERROR",
+    "service": "orders-service",
+    "message": "Failed to send metrics to collector at 10.0.3.17:4317",
+    "trace_id": null,
+    "exception": "ConnectionRefusedError: [Errno 111] Connection refused"
+  },
+  {
+    "timestamp": "2026-11-18T10:27:20.192042Z",
+    "level": "WARNING",
+    "service": "orders-service",
+    "message": "Cache miss for key orders:list:page=17",
+    "trace_id": null,
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:27:27.164873Z",
+    "level": "ERROR",
+    "service": "orders-service",
+    "message": "Failed to send metrics to collector at 10.0.3.17:4317",
+    "trace_id": null,
+    "exception": "ConnectionRefusedError: [Errno 111] Connection refused"
+  },
+  {
+    "timestamp": "2026-11-18T10:27:28.788900Z",
+    "level": "WARNING",
+    "service": "api-gateway",
+    "message": "Deprecated config key 'proxy.timeout' used, migrate to 'upstream.timeout'",
+    "trace_id": null,
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:27:30.021600Z",
+    "level": "INFO",
+    "service": "api-gateway",
+    "message": "GET /orders/search 200 22ms",
+    "trace_id": "abf222c0fd388bae79efcb8502a2364f",
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:27:30.021600Z",
+    "level": "INFO",
+    "service": "orders-service",
+    "message": "Fetched 41 orders",
+    "trace_id": "abf222c0fd388bae79efcb8502a2364f",
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:27:39.775874Z",
+    "level": "ERROR",
+    "service": "orders-service",
+    "message": "Failed to send metrics to collector at 10.0.3.17:4317",
+    "trace_id": null,
+    "exception": "ConnectionRefusedError: [Errno 111] Connection refused"
+  },
+  {
+    "timestamp": "2026-11-18T10:27:40.473044Z",
+    "level": "WARNING",
+    "service": "api-gateway",
+    "message": "Deprecated config key 'proxy.timeout' used, migrate to 'upstream.timeout'",
+    "trace_id": null,
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:27:49.307663Z",
+    "level": "WARNING",
+    "service": "orders-service",
+    "message": "Cache miss for key orders:list:page=29",
+    "trace_id": null,
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:27:52.844609Z",
+    "level": "ERROR",
+    "service": "orders-service",
+    "message": "Failed to send metrics to collector at 10.0.3.17:4317",
+    "trace_id": null,
+    "exception": "ConnectionRefusedError: [Errno 111] Connection refused"
+  },
+  {
+    "timestamp": "2026-11-18T10:28:01.890463Z",
+    "level": "WARNING",
+    "service": "orders-service",
+    "message": "Cache miss for key orders:list:page=17",
+    "trace_id": null,
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:28:04.432000Z",
+    "level": "INFO",
+    "service": "api-gateway",
+    "message": "GET /orders 200 4432ms",
+    "trace_id": "ec28933f4c5e208deb44129b30cc7cbd",
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:28:04.432000Z",
+    "level": "INFO",
+    "service": "orders-service",
+    "message": "Fetched 5 orders",
+    "trace_id": "ec28933f4c5e208deb44129b30cc7cbd",
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:28:05.484891Z",
+    "level": "WARNING",
+    "service": "api-gateway",
+    "message": "Deprecated config key 'proxy.timeout' used, migrate to 'upstream.timeout'",
+    "trace_id": null,
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:28:05.703187Z",
+    "level": "ERROR",
+    "service": "orders-service",
+    "message": "Failed to send metrics to collector at 10.0.3.17:4317",
+    "trace_id": null,
+    "exception": "ConnectionRefusedError: [Errno 111] Connection refused"
+  },
+  {
+    "timestamp": "2026-11-18T10:28:13.911986Z",
+    "level": "ERROR",
+    "service": "orders-service",
+    "message": "Failed to send metrics to collector at 10.0.3.17:4317",
+    "trace_id": null,
+    "exception": "ConnectionRefusedError: [Errno 111] Connection refused"
+  },
+  {
+    "timestamp": "2026-11-18T10:28:23.750717Z",
+    "level": "ERROR",
+    "service": "orders-service",
+    "message": "Failed to send metrics to collector at 10.0.3.17:4317",
+    "trace_id": null,
+    "exception": "ConnectionRefusedError: [Errno 111] Connection refused"
+  },
+  {
+    "timestamp": "2026-11-18T10:28:30.029000Z",
+    "level": "INFO",
+    "service": "api-gateway",
+    "message": "GET /orders/search 200 29ms",
+    "trace_id": "fa3684c53e529bd1918492591efbdc34",
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:28:30.029000Z",
+    "level": "INFO",
+    "service": "orders-service",
+    "message": "Fetched 21 orders",
+    "trace_id": "fa3684c53e529bd1918492591efbdc34",
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:28:37.370047Z",
+    "level": "ERROR",
+    "service": "orders-service",
+    "message": "Failed to send metrics to collector at 10.0.3.17:4317",
+    "trace_id": null,
+    "exception": "ConnectionRefusedError: [Errno 111] Connection refused"
+  },
+  {
+    "timestamp": "2026-11-18T10:28:37.756115Z",
+    "level": "WARNING",
+    "service": "orders-service",
+    "message": "Cache miss for key orders:list:page=19",
+    "trace_id": null,
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:28:45.359447Z",
+    "level": "WARNING",
+    "service": "api-gateway",
+    "message": "Deprecated config key 'proxy.timeout' used, migrate to 'upstream.timeout'",
+    "trace_id": null,
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:28:47.213812Z",
+    "level": "ERROR",
+    "service": "orders-service",
+    "message": "Failed to send metrics to collector at 10.0.3.17:4317",
+    "trace_id": null,
+    "exception": "ConnectionRefusedError: [Errno 111] Connection refused"
+  },
+  {
+    "timestamp": "2026-11-18T10:28:58.166764Z",
+    "level": "ERROR",
+    "service": "orders-service",
+    "message": "Failed to send metrics to collector at 10.0.3.17:4317",
+    "trace_id": null,
+    "exception": "ConnectionRefusedError: [Errno 111] Connection refused"
+  },
+  {
+    "timestamp": "2026-11-18T10:29:03.995200Z",
+    "level": "INFO",
+    "service": "api-gateway",
+    "message": "GET /orders 200 3995ms",
+    "trace_id": "7e2768592a1c6c7be9ea7add8b84e7b6",
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:29:03.995200Z",
+    "level": "INFO",
+    "service": "orders-service",
+    "message": "Fetched 47 orders",
+    "trace_id": "7e2768592a1c6c7be9ea7add8b84e7b6",
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:29:08.174161Z",
+    "level": "ERROR",
+    "service": "orders-service",
+    "message": "Failed to send metrics to collector at 10.0.3.17:4317",
+    "trace_id": null,
+    "exception": "ConnectionRefusedError: [Errno 111] Connection refused"
+  },
+  {
+    "timestamp": "2026-11-18T10:29:09.113918Z",
+    "level": "WARNING",
+    "service": "orders-service",
+    "message": "Cache miss for key orders:list:page=21",
+    "trace_id": null,
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:29:20.379950Z",
+    "level": "ERROR",
+    "service": "orders-service",
+    "message": "Failed to send metrics to collector at 10.0.3.17:4317",
+    "trace_id": null,
+    "exception": "ConnectionRefusedError: [Errno 111] Connection refused"
+  },
+  {
+    "timestamp": "2026-11-18T10:29:28.164484Z",
+    "level": "WARNING",
+    "service": "api-gateway",
+    "message": "Deprecated config key 'proxy.timeout' used, migrate to 'upstream.timeout'",
+    "trace_id": null,
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:29:30.028600Z",
+    "level": "INFO",
+    "service": "api-gateway",
+    "message": "GET /orders/search 200 29ms",
+    "trace_id": "9e4ab57412f7a75260aefe5e42946309",
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:29:30.028600Z",
+    "level": "INFO",
+    "service": "orders-service",
+    "message": "Fetched 6 orders",
+    "trace_id": "9e4ab57412f7a75260aefe5e42946309",
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:29:30.163125Z",
+    "level": "WARNING",
+    "service": "api-gateway",
+    "message": "Deprecated config key 'proxy.timeout' used, migrate to 'upstream.timeout'",
+    "trace_id": null,
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:29:32.403978Z",
+    "level": "ERROR",
+    "service": "orders-service",
+    "message": "Failed to send metrics to collector at 10.0.3.17:4317",
+    "trace_id": null,
+    "exception": "ConnectionRefusedError: [Errno 111] Connection refused"
+  },
+  {
+    "timestamp": "2026-11-18T10:29:44.976034Z",
+    "level": "ERROR",
+    "service": "orders-service",
+    "message": "Failed to send metrics to collector at 10.0.3.17:4317",
+    "trace_id": null,
+    "exception": "ConnectionRefusedError: [Errno 111] Connection refused"
+  },
+  {
+    "timestamp": "2026-11-18T10:29:46.510307Z",
+    "level": "WARNING",
+    "service": "orders-service",
+    "message": "Cache miss for key orders:list:page=16",
+    "trace_id": null,
+    "exception": null
+  },
+  {
+    "timestamp": "2026-11-18T10:29:56.510377Z",
+    "level": "ERROR",
+    "service": "orders-service",
+    "message": "Failed to send metrics to collector at 10.0.3.17:4317",
+    "trace_id": null,
+    "exception": "ConnectionRefusedError: [Errno 111] Connection refused"
+  }
+]
