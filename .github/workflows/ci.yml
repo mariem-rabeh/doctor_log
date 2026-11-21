@@ -11,6 +11,23 @@ jobs:
     defaults:
       run:
         working-directory: backend
+    # PostgreSQL pour les tests de la base (tests/test_db_repository.py).
+    services:
+      postgres:
+        image: postgres:16-alpine
+        env:
+          POSTGRES_USER: doctor_log
+          POSTGRES_PASSWORD: doctor_log
+          POSTGRES_DB: doctor_log
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd "pg_isready -U doctor_log -d doctor_log"
+          --health-interval 5s
+          --health-timeout 3s
+          --health-retries 10
+    env:
+      DATABASE_URL: postgresql+psycopg://doctor_log:doctor_log@localhost:5432/doctor_log
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
