@@ -21,8 +21,7 @@ class Settings(BaseSettings):
         extra="ignore",  # les variables du .env non utilisées ici (ex. POSTGRES_*) sont ignorées
     )
 
-    database_url: str = "postgresql+psycopg://tracelens:tracelens@localhost:5432/tracelens"
-
+    database_url: str = "postgresql+psycopg://doctor_log:doctor_log@localhost:5432/doctor_log"
     llm_provider: str = "openai"
     llm_model: str = ""
     llm_api_key: SecretStr = SecretStr("")

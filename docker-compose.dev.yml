@@ -1,0 +1,22 @@
+# Développement : PostgreSQL seul (le backend tourne en local avec uvicorn).
+#   docker compose -f docker-compose.dev.yml up -d
+# Identifiants identiques à DATABASE_URL dans .env.example.
+services:
+  postgres:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_USER: doctor_log
+      POSTGRES_PASSWORD: doctor_log
+      POSTGRES_DB: doctor_log
+    ports:
+      - "${POSTGRES_PORT:-5432}:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U doctor_log -d doctor_log"]
+      interval: 5s
+      timeout: 3s
+      retries: 10
+
+volumes:
+  pgdata:
