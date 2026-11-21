@@ -1,0 +1,3814 @@
+[
+  {
+    "trace_id": "4c4c0d3c742661b2e8e1a4fe51b399bd",
+    "span_id": "3120e051978eba24",
+    "parent_span_id": null,
+    "service": "api-gateway",
+    "operation": "GET /orders",
+    "start": "2026-11-18T10:00:00Z",
+    "duration_ms": 74.8,
+    "status": "ok",
+    "attributes": {
+      "http.route": "/orders",
+      "http.status_code": 200
+    }
+  },
+  {
+    "trace_id": "4c4c0d3c742661b2e8e1a4fe51b399bd",
+    "span_id": "0b877ed99eba51b3",
+    "parent_span_id": "3120e051978eba24",
+    "service": "orders-service",
+    "operation": "list_orders",
+    "start": "2026-11-18T10:00:00.002200Z",
+    "duration_ms": 72.6,
+    "status": "ok",
+    "attributes": {}
+  },
+  {
+    "trace_id": "4c4c0d3c742661b2e8e1a4fe51b399bd",
+    "span_id": "ebdca68e18060e01",
+    "parent_span_id": "0b877ed99eba51b3",
+    "service": "orders-service",
+    "operation": "db.acquire_connection",
+    "start": "2026-11-18T10:00:00.007700Z",
+    "duration_ms": 3.5,
+    "status": "ok",
+    "attributes": {
+      "db.pool.size": 20
+    }
+  },
+  {
+    "trace_id": "4c4c0d3c742661b2e8e1a4fe51b399bd",
+    "span_id": "8755ff824d5c5c3e",
+    "parent_span_id": "0b877ed99eba51b3",
+    "service": "postgres",
+    "operation": "SELECT orders",
+    "start": "2026-11-18T10:00:00.011200Z",
+    "duration_ms": 14.2,
+    "status": "ok",
+    "attributes": {
+      "db.system": "postgresql",
+      "db.statement": "SELECT orders ORDER BY created_at DESC LIMIT ?"
+    }
+  },
+  {
+    "trace_id": "4c4c0d3c742661b2e8e1a4fe51b399bd",
+    "span_id": "a905d02861c087f0",
+    "parent_span_id": "0b877ed99eba51b3",
+    "service": "inventory-service",
+    "operation": "GET /stock",
+    "start": "2026-11-18T10:00:00.025400Z",
+    "duration_ms": 49.4,
+    "status": "ok",
+    "attributes": {
+      "http.route": "/stock",
+      "http.status_code": 200
+    }
+  },
+  {
+    "trace_id": "471c5486427fc3392d93d3795cb5e302",
+    "span_id": "a445ce98ee806b9c",
+    "parent_span_id": null,
+    "service": "api-gateway",
+    "operation": "GET /orders/search",
+    "start": "2026-11-18T10:00:30Z",
+    "duration_ms": 29.1,
+    "status": "ok",
+    "attributes": {
+      "http.route": "/orders/search",
+      "http.status_code": 200
+    }
+  },
+  {
+    "trace_id": "471c5486427fc3392d93d3795cb5e302",
+    "span_id": "1cfac9ee166534c4",
+    "parent_span_id": "a445ce98ee806b9c",
+    "service": "orders-service",
+    "operation": "search_orders",
+    "start": "2026-11-18T10:00:30.003400Z",
+    "duration_ms": 25.7,
+    "status": "ok",
+    "attributes": {}
+  },
+  {
+    "trace_id": "471c5486427fc3392d93d3795cb5e302",
+    "span_id": "a349357ed120ef5e",
+    "parent_span_id": "1cfac9ee166534c4",
+    "service": "orders-service",
+    "operation": "db.acquire_connection",
+    "start": "2026-11-18T10:00:30.008600Z",
+    "duration_ms": 1.6,
+    "status": "ok",
+    "attributes": {
+      "db.pool.size": 20
+    }
+  },
+  {
+    "trace_id": "471c5486427fc3392d93d3795cb5e302",
+    "span_id": "6a0c0f46dcd6eeb6",
+    "parent_span_id": "1cfac9ee166534c4",
+    "service": "postgres",
+    "operation": "SELECT orders",
+    "start": "2026-11-18T10:00:30.010200Z",
+    "duration_ms": 18.9,
+    "status": "ok",
+    "attributes": {
+      "db.system": "postgresql",
+      "db.statement": "SELECT orders WHERE customer_email = ?"
+    }
+  },
+  {
+    "trace_id": "bd463c056a596a9169bf7d6f54f88cd4",
+    "span_id": "5f5a6e9a7aef6f34",
+    "parent_span_id": null,
+    "service": "api-gateway",
+    "operation": "GET /orders",
+    "start": "2026-11-18T10:01:00Z",
+    "duration_ms": 74.9,
+    "status": "ok",
+    "attributes": {
+      "http.route": "/orders",
+      "http.status_code": 200
+    }
+  },
+  {
+    "trace_id": "bd463c056a596a9169bf7d6f54f88cd4",
+    "span_id": "5d634aca21588b30",
+    "parent_span_id": "5f5a6e9a7aef6f34",
+    "service": "orders-service",
+    "operation": "list_orders",
+    "start": "2026-11-18T10:01:00.004600Z",
+    "duration_ms": 70.3,
+    "status": "ok",
+    "attributes": {}
+  },
+  {
+    "trace_id": "bd463c056a596a9169bf7d6f54f88cd4",
+    "span_id": "e0f0e3669d7bb0b0",
+    "parent_span_id": "5d634aca21588b30",
+    "service": "orders-service",
+    "operation": "db.acquire_connection",
+    "start": "2026-11-18T10:01:00.011200Z",
+    "duration_ms": 3.6,
+    "status": "ok",
+    "attributes": {
+      "db.pool.size": 20
+    }
+  },
+  {
+    "trace_id": "bd463c056a596a9169bf7d6f54f88cd4",
+    "span_id": "2c58a08d69b12977",
+    "parent_span_id": "5d634aca21588b30",
+    "service": "postgres",
+    "operation": "SELECT orders",
+    "start": "2026-11-18T10:01:00.014800Z",
+    "duration_ms": 10.5,
+    "status": "ok",
+    "attributes": {
+      "db.system": "postgresql",
+      "db.statement": "SELECT orders ORDER BY created_at DESC LIMIT ?"
+    }
+  },
+  {
+    "trace_id": "bd463c056a596a9169bf7d6f54f88cd4",
+    "span_id": "f3d3a2b0dd24514f",
+    "parent_span_id": "5d634aca21588b30",
+    "service": "inventory-service",
+    "operation": "GET /stock",
+    "start": "2026-11-18T10:01:00.025300Z",
+    "duration_ms": 49.6,
+    "status": "ok",
+    "attributes": {
+      "http.route": "/stock",
+      "http.status_code": 200
+    }
+  },
+  {
+    "trace_id": "7010e31aa84de0f03c9826a4c6bf5039",
+    "span_id": "0ec4e5b2d0bf2714",
+    "parent_span_id": null,
+    "service": "api-gateway",
+    "operation": "GET /orders/search",
+    "start": "2026-11-18T10:01:30Z",
+    "duration_ms": 24.8,
+    "status": "ok",
+    "attributes": {
+      "http.route": "/orders/search",
+      "http.status_code": 200
+    }
+  },
+  {
+    "trace_id": "7010e31aa84de0f03c9826a4c6bf5039",
+    "span_id": "c347c1bc0d527fd2",
+    "parent_span_id": "0ec4e5b2d0bf2714",
+    "service": "orders-service",
+    "operation": "search_orders",
+    "start": "2026-11-18T10:01:30.003400Z",
+    "duration_ms": 21.4,
+    "status": "ok",
+    "attributes": {}
+  },
+  {
+    "trace_id": "7010e31aa84de0f03c9826a4c6bf5039",
+    "span_id": "5720e72e684dd752",
+    "parent_span_id": "c347c1bc0d527fd2",
+    "service": "orders-service",
+    "operation": "db.acquire_connection",
+    "start": "2026-11-18T10:01:30.011300Z",
+    "duration_ms": 1.9,
+    "status": "ok",
+    "attributes": {
+      "db.pool.size": 20
+    }
+  },
+  {
+    "trace_id": "7010e31aa84de0f03c9826a4c6bf5039",
+    "span_id": "95e41c5da104b028",
+    "parent_span_id": "c347c1bc0d527fd2",
+    "service": "postgres",
+    "operation": "SELECT orders",
+    "start": "2026-11-18T10:01:30.013200Z",
+    "duration_ms": 11.6,
+    "status": "ok",
+    "attributes": {
+      "db.system": "postgresql",
+      "db.statement": "SELECT orders WHERE customer_email = ?"
+    }
+  },
+  {
+    "trace_id": "9592c9fa1b2d2a9eae92d0ab38d69022",
+    "span_id": "0d54398f4d88221f",
+    "parent_span_id": null,
+    "service": "api-gateway",
+    "operation": "GET /orders",
+    "start": "2026-11-18T10:02:00Z",
+    "duration_ms": 61.5,
+    "status": "ok",
+    "attributes": {
+      "http.route": "/orders",
+      "http.status_code": 200
+    }
+  },
+  {
+    "trace_id": "9592c9fa1b2d2a9eae92d0ab38d69022",
+    "span_id": "adee019b15d0e888",
+    "parent_span_id": "0d54398f4d88221f",
+    "service": "orders-service",
+    "operation": "list_orders",
+    "start": "2026-11-18T10:02:00.002400Z",
+    "duration_ms": 59.1,
+    "status": "ok",
+    "attributes": {}
+  },
+  {
+    "trace_id": "9592c9fa1b2d2a9eae92d0ab38d69022",
+    "span_id": "6dffa82f551f475c",
+    "parent_span_id": "adee019b15d0e888",
+    "service": "orders-service",
+    "operation": "db.acquire_connection",
+    "start": "2026-11-18T10:02:00.008700Z",
+    "duration_ms": 2.6,
+    "status": "ok",
+    "attributes": {
+      "db.pool.size": 20
+    }
+  },
+  {
+    "trace_id": "9592c9fa1b2d2a9eae92d0ab38d69022",
+    "span_id": "872381b5f4764e2c",
+    "parent_span_id": "adee019b15d0e888",
+    "service": "postgres",
+    "operation": "SELECT orders",
+    "start": "2026-11-18T10:02:00.011300Z",
+    "duration_ms": 11.2,
+    "status": "ok",
+    "attributes": {
+      "db.system": "postgresql",
+      "db.statement": "SELECT orders ORDER BY created_at DESC LIMIT ?"
+    }
+  },
+  {
+    "trace_id": "9592c9fa1b2d2a9eae92d0ab38d69022",
+    "span_id": "90e301174a43f39e",
+    "parent_span_id": "adee019b15d0e888",
+    "service": "inventory-service",
+    "operation": "GET /stock",
+    "start": "2026-11-18T10:02:00.022500Z",
+    "duration_ms": 39.0,
+    "status": "ok",
+    "attributes": {
+      "http.route": "/stock",
+      "http.status_code": 200
+    }
+  },
+  {
+    "trace_id": "58c2e77d92f5aeb67083b75bf0f34a0c",
+    "span_id": "00430322540cb321",
+    "parent_span_id": null,
+    "service": "api-gateway",
+    "operation": "GET /orders/search",
+    "start": "2026-11-18T10:02:30Z",
+    "duration_ms": 32.5,
+    "status": "ok",
+    "attributes": {
+      "http.route": "/orders/search",
+      "http.status_code": 200
+    }
+  },
+  {
+    "trace_id": "58c2e77d92f5aeb67083b75bf0f34a0c",
+    "span_id": "a5c48b6ef02f1356",
+    "parent_span_id": "00430322540cb321",
+    "service": "orders-service",
+    "operation": "search_orders",
+    "start": "2026-11-18T10:02:30.004600Z",
+    "duration_ms": 27.9,
+    "status": "ok",
+    "attributes": {}
+  },
+  {
+    "trace_id": "58c2e77d92f5aeb67083b75bf0f34a0c",
+    "span_id": "0b37b4e79eabe656",
+    "parent_span_id": "a5c48b6ef02f1356",
+    "service": "orders-service",
+    "operation": "db.acquire_connection",
+    "start": "2026-11-18T10:02:30.010300Z",
+    "duration_ms": 3.7,
+    "status": "ok",
+    "attributes": {
+      "db.pool.size": 20
+    }
+  },
+  {
+    "trace_id": "58c2e77d92f5aeb67083b75bf0f34a0c",
+    "span_id": "ebd39d912e712306",
+    "parent_span_id": "a5c48b6ef02f1356",
+    "service": "postgres",
+    "operation": "SELECT orders",
+    "start": "2026-11-18T10:02:30.014000Z",
+    "duration_ms": 18.5,
+    "status": "ok",
+    "attributes": {
+      "db.system": "postgresql",
+      "db.statement": "SELECT orders WHERE customer_email = ?"
+    }
+  },
+  {
+    "trace_id": "9de501d49236a48c71a2bddee86cfbd7",
+    "span_id": "d5a9d3bc8c6cc087",
+    "parent_span_id": null,
+    "service": "api-gateway",
+    "operation": "GET /orders",
+    "start": "2026-11-18T10:03:00Z",
+    "duration_ms": 67.4,
+    "status": "ok",
+    "attributes": {
+      "http.route": "/orders",
+      "http.status_code": 200
+    }
+  },
+  {
+    "trace_id": "9de501d49236a48c71a2bddee86cfbd7",
+    "span_id": "72e83cf8ea125441",
+    "parent_span_id": "d5a9d3bc8c6cc087",
+    "service": "orders-service",
+    "operation": "list_orders",
+    "start": "2026-11-18T10:03:00.002500Z",
+    "duration_ms": 64.9,
+    "status": "ok",
+    "attributes": {}
+  },
+  {
+    "trace_id": "9de501d49236a48c71a2bddee86cfbd7",
+    "span_id": "88170a7af545ed6d",
+    "parent_span_id": "72e83cf8ea125441",
+    "service": "orders-service",
+    "operation": "db.acquire_connection",
+    "start": "2026-11-18T10:03:00.009200Z",
+    "duration_ms": 2.1,
+    "status": "ok",
+    "attributes": {
+      "db.pool.size": 20
+    }
+  },
+  {
+    "trace_id": "9de501d49236a48c71a2bddee86cfbd7",
+    "span_id": "3e5cbe79695d9b90",
+    "parent_span_id": "72e83cf8ea125441",
+    "service": "postgres",
+    "operation": "SELECT orders",
+    "start": "2026-11-18T10:03:00.011300Z",
+    "duration_ms": 18.1,
+    "status": "ok",
+    "attributes": {
+      "db.system": "postgresql",
+      "db.statement": "SELECT orders ORDER BY created_at DESC LIMIT ?"
+    }
+  },
+  {
+    "trace_id": "9de501d49236a48c71a2bddee86cfbd7",
+    "span_id": "aeebdbd20b2eedcc",
+    "parent_span_id": "72e83cf8ea125441",
+    "service": "inventory-service",
+    "operation": "GET /stock",
+    "start": "2026-11-18T10:03:00.029400Z",
+    "duration_ms": 38.0,
+    "status": "ok",
+    "attributes": {
+      "http.route": "/stock",
+      "http.status_code": 200
+    }
+  },
+  {
+    "trace_id": "5dc879ff14ca22cf939068a601146ce6",
+    "span_id": "59b0f8cdbf9950d5",
+    "parent_span_id": null,
+    "service": "api-gateway",
+    "operation": "GET /orders/search",
+    "start": "2026-11-18T10:03:30Z",
+    "duration_ms": 31.9,
+    "status": "ok",
+    "attributes": {
+      "http.route": "/orders/search",
+      "http.status_code": 200
+    }
+  },
+  {
+    "trace_id": "5dc879ff14ca22cf939068a601146ce6",
+    "span_id": "9d789a42897b7228",
+    "parent_span_id": "59b0f8cdbf9950d5",
+    "service": "orders-service",
+    "operation": "search_orders",
+    "start": "2026-11-18T10:03:30.004400Z",
+    "duration_ms": 27.5,
+    "status": "ok",
+    "attributes": {}
+  },
+  {
+    "trace_id": "5dc879ff14ca22cf939068a601146ce6",
+    "span_id": "d29860fbae6f9664",
+    "parent_span_id": "9d789a42897b7228",
+    "service": "orders-service",
+    "operation": "db.acquire_connection",
+    "start": "2026-11-18T10:03:30.010800Z",
+    "duration_ms": 2.0,
+    "status": "ok",
+    "attributes": {
+      "db.pool.size": 20
+    }
+  },
+  {
+    "trace_id": "5dc879ff14ca22cf939068a601146ce6",
+    "span_id": "2efc4d6fa8340153",
+    "parent_span_id": "9d789a42897b7228",
+    "service": "postgres",
+    "operation": "SELECT orders",
+    "start": "2026-11-18T10:03:30.012800Z",
+    "duration_ms": 19.1,
+    "status": "ok",
+    "attributes": {
+      "db.system": "postgresql",
+      "db.statement": "SELECT orders WHERE customer_email = ?"
+    }
+  },
+  {
+    "trace_id": "d7027dabe2e6ec7016312ee7deeb08c3",
+    "span_id": "96ce180ffd6f2168",
+    "parent_span_id": null,
+    "service": "api-gateway",
+    "operation": "GET /orders",
+    "start": "2026-11-18T10:04:00Z",
+    "duration_ms": 57.3,
+    "status": "ok",
+    "attributes": {
+      "http.route": "/orders",
+      "http.status_code": 200
+    }
+  },
+  {
+    "trace_id": "d7027dabe2e6ec7016312ee7deeb08c3",
+    "span_id": "11e7160b1de68425",
+    "parent_span_id": "96ce180ffd6f2168",
+    "service": "orders-service",
+    "operation": "list_orders",
+    "start": "2026-11-18T10:04:00.002400Z",
+    "duration_ms": 54.9,
+    "status": "ok",
+    "attributes": {}
+  },
+  {
+    "trace_id": "d7027dabe2e6ec7016312ee7deeb08c3",
+    "span_id": "2a94153ab549b9bb",
+    "parent_span_id": "11e7160b1de68425",
+    "service": "orders-service",
+    "operation": "db.acquire_connection",
+    "start": "2026-11-18T10:04:00.008000Z",
+    "duration_ms": 3.7,
+    "status": "ok",
+    "attributes": {
+      "db.pool.size": 20
+    }
+  },
+  {
+    "trace_id": "d7027dabe2e6ec7016312ee7deeb08c3",
+    "span_id": "317912bb980a15e0",
+    "parent_span_id": "11e7160b1de68425",
+    "service": "postgres",
+    "operation": "SELECT orders",
+    "start": "2026-11-18T10:04:00.011700Z",
+    "duration_ms": 11.5,
+    "status": "ok",
+    "attributes": {
+      "db.system": "postgresql",
+      "db.statement": "SELECT orders ORDER BY created_at DESC LIMIT ?"
+    }
+  },
+  {
+    "trace_id": "d7027dabe2e6ec7016312ee7deeb08c3",
+    "span_id": "35d49a8c866c64b9",
+    "parent_span_id": "11e7160b1de68425",
+    "service": "inventory-service",
+    "operation": "GET /stock",
+    "start": "2026-11-18T10:04:00.023200Z",
+    "duration_ms": 34.1,
+    "status": "ok",
+    "attributes": {
+      "http.route": "/stock",
+      "http.status_code": 200
+    }
+  },
+  {
+    "trace_id": "820ba0993d7830b79d1f24f7e3b7dafe",
+    "span_id": "87342ede436d1cea",
+    "parent_span_id": null,
+    "service": "api-gateway",
+    "operation": "GET /orders/search",
+    "start": "2026-11-18T10:04:30Z",
+    "duration_ms": 29.2,
+    "status": "ok",
+    "attributes": {
+      "http.route": "/orders/search",
+      "http.status_code": 200
+    }
+  },
+  {
+    "trace_id": "820ba0993d7830b79d1f24f7e3b7dafe",
+    "span_id": "4ff4324ce81e0d63",
+    "parent_span_id": "87342ede436d1cea",
+    "service": "orders-service",
+    "operation": "search_orders",
+    "start": "2026-11-18T10:04:30.004800Z",
+    "duration_ms": 24.4,
+    "status": "ok",
+    "attributes": {}
+  },
+  {
+    "trace_id": "820ba0993d7830b79d1f24f7e3b7dafe",
+    "span_id": "722784fc76134de2",
+    "parent_span_id": "4ff4324ce81e0d63",
+    "service": "orders-service",
+    "operation": "db.acquire_connection",
+    "start": "2026-11-18T10:04:30.012300Z",
+    "duration_ms": 1.9,
+    "status": "ok",
+    "attributes": {
+      "db.pool.size": 20
+    }
+  },
+  {
+    "trace_id": "820ba0993d7830b79d1f24f7e3b7dafe",
+    "span_id": "4e0f3e013398381c",
+    "parent_span_id": "4ff4324ce81e0d63",
+    "service": "postgres",
+    "operation": "SELECT orders",
+    "start": "2026-11-18T10:04:30.014200Z",
+    "duration_ms": 15.0,
+    "status": "ok",
+    "attributes": {
+      "db.system": "postgresql",
+      "db.statement": "SELECT orders WHERE customer_email = ?"
+    }
+  },
+  {
+    "trace_id": "ae10bea9d1e16a94732ad1771012b339",
+    "span_id": "490e21926e6d9ff7",
+    "parent_span_id": null,
+    "service": "api-gateway",
+    "operation": "GET /orders",
+    "start": "2026-11-18T10:05:00Z",
+    "duration_ms": 71.4,
+    "status": "ok",
+    "attributes": {
+      "http.route": "/orders",
+      "http.status_code": 200
+    }
+  },
+  {
+    "trace_id": "ae10bea9d1e16a94732ad1771012b339",
+    "span_id": "0dcca15499eaacf9",
+    "parent_span_id": "490e21926e6d9ff7",
+    "service": "orders-service",
+    "operation": "list_orders",
+    "start": "2026-11-18T10:05:00.002600Z",
+    "duration_ms": 68.8,
+    "status": "ok",
+    "attributes": {}
+  },
+  {
+    "trace_id": "ae10bea9d1e16a94732ad1771012b339",
+    "span_id": "c8bec5abc10e6263",
+    "parent_span_id": "0dcca15499eaacf9",
+    "service": "orders-service",
+    "operation": "db.acquire_connection",
+    "start": "2026-11-18T10:05:00.005700Z",
+    "duration_ms": 4.0,
+    "status": "ok",
+    "attributes": {
+      "db.pool.size": 20
+    }
+  },
+  {
+    "trace_id": "ae10bea9d1e16a94732ad1771012b339",
+    "span_id": "807ab8a19164a4ff",
+    "parent_span_id": "0dcca15499eaacf9",
+    "service": "postgres",
+    "operation": "SELECT orders",
+    "start": "2026-11-18T10:05:00.009700Z",
+    "duration_ms": 18.0,
+    "status": "ok",
+    "attributes": {
+      "db.system": "postgresql",
+      "db.statement": "SELECT orders ORDER BY created_at DESC LIMIT ?"
+    }
+  },
+  {
+    "trace_id": "ae10bea9d1e16a94732ad1771012b339",
+    "span_id": "c152d888a4a07830",
+    "parent_span_id": "0dcca15499eaacf9",
+    "service": "inventory-service",
+    "operation": "GET /stock",
+    "start": "2026-11-18T10:05:00.027700Z",
+    "duration_ms": 43.7,
+    "status": "ok",
+    "attributes": {
+      "http.route": "/stock",
+      "http.status_code": 200
+    }
+  },
+  {
+    "trace_id": "9b7b2dd4b4a777707cdd0bdd945956ae",
+    "span_id": "499dc2371952876c",
+    "parent_span_id": null,
+    "service": "api-gateway",
+    "operation": "GET /orders/search",
+    "start": "2026-11-18T10:05:30Z",
+    "duration_ms": 26.0,
+    "status": "ok",
+    "attributes": {
+      "http.route": "/orders/search",
+      "http.status_code": 200
+    }
+  },
+  {
+    "trace_id": "9b7b2dd4b4a777707cdd0bdd945956ae",
+    "span_id": "195a834e669513bf",
+    "parent_span_id": "499dc2371952876c",
+    "service": "orders-service",
+    "operation": "search_orders",
+    "start": "2026-11-18T10:05:30.002500Z",
+    "duration_ms": 23.5,
+    "status": "ok",
+    "attributes": {}
+  },
+  {
+    "trace_id": "9b7b2dd4b4a777707cdd0bdd945956ae",
+    "span_id": "776d82e94d1b25fb",
+    "parent_span_id": "195a834e669513bf",
+    "service": "orders-service",
+    "operation": "db.acquire_connection",
+    "start": "2026-11-18T10:05:30.006700Z",
+    "duration_ms": 4.0,
+    "status": "ok",
+    "attributes": {
+      "db.pool.size": 20
+    }
+  },
+  {
+    "trace_id": "9b7b2dd4b4a777707cdd0bdd945956ae",
+    "span_id": "52c06e020ddf2ce0",
+    "parent_span_id": "195a834e669513bf",
+    "service": "postgres",
+    "operation": "SELECT orders",
+    "start": "2026-11-18T10:05:30.010700Z",
+    "duration_ms": 15.3,
+    "status": "ok",
+    "attributes": {
+      "db.system": "postgresql",
+      "db.statement": "SELECT orders WHERE customer_email = ?"
+    }
+  },
+  {
+    "trace_id": "b6964a27d3ac90b4f7586911ccaa542a",
+    "span_id": "30e16c6653a134a6",
+    "parent_span_id": null,
+    "service": "api-gateway",
+    "operation": "GET /orders",
+    "start": "2026-11-18T10:06:00Z",
+    "duration_ms": 79.5,
+    "status": "ok",
+    "attributes": {
+      "http.route": "/orders",
+      "http.status_code": 200
+    }
+  },
+  {
+    "trace_id": "b6964a27d3ac90b4f7586911ccaa542a",
+    "span_id": "8d0b3ec86d820d17",
+    "parent_span_id": "30e16c6653a134a6",
+    "service": "orders-service",
+    "operation": "list_orders",
+    "start": "2026-11-18T10:06:00.004400Z",
+    "duration_ms": 75.1,
+    "status": "ok",
+    "attributes": {}
+  },
+  {
+    "trace_id": "b6964a27d3ac90b4f7586911ccaa542a",
+    "span_id": "d8ba96c6ea9dd5b1",
+    "parent_span_id": "8d0b3ec86d820d17",
+    "service": "orders-service",
+    "operation": "db.acquire_connection",
+    "start": "2026-11-18T10:06:00.008900Z",
+    "duration_ms": 3.5,
+    "status": "ok",
+    "attributes": {
+      "db.pool.size": 20
+    }
+  },
+  {
+    "trace_id": "b6964a27d3ac90b4f7586911ccaa542a",
+    "span_id": "e810fedefcc6b4e8",
+    "parent_span_id": "8d0b3ec86d820d17",
+    "service": "postgres",
+    "operation": "SELECT orders",
+    "start": "2026-11-18T10:06:00.012400Z",
+    "duration_ms": 17.2,
+    "status": "ok",
+    "attributes": {
+      "db.system": "postgresql",
+      "db.statement": "SELECT orders ORDER BY created_at DESC LIMIT ?"
+    }
+  },
+  {
+    "trace_id": "b6964a27d3ac90b4f7586911ccaa542a",
+    "span_id": "4181e4847106715b",
+    "parent_span_id": "8d0b3ec86d820d17",
+    "service": "inventory-service",
+    "operation": "GET /stock",
+    "start": "2026-11-18T10:06:00.029600Z",
+    "duration_ms": 49.9,
+    "status": "ok",
+    "attributes": {
+      "http.route": "/stock",
+      "http.status_code": 200
+    }
+  },
+  {
+    "trace_id": "452b1322d16dc131eef8639c6dbd1504",
+    "span_id": "2a686800b3ac3b7e",
+    "parent_span_id": null,
+    "service": "api-gateway",
+    "operation": "GET /orders/search",
+    "start": "2026-11-18T10:06:30Z",
+    "duration_ms": 29.5,
+    "status": "ok",
+    "attributes": {
+      "http.route": "/orders/search",
+      "http.status_code": 200
+    }
+  },
+  {
+    "trace_id": "452b1322d16dc131eef8639c6dbd1504",
+    "span_id": "409360e9ba499720",
+    "parent_span_id": "2a686800b3ac3b7e",
+    "service": "orders-service",
+    "operation": "search_orders",
+    "start": "2026-11-18T10:06:30.003600Z",
+    "duration_ms": 25.9,
+    "status": "ok",
+    "attributes": {}
+  },
+  {
+    "trace_id": "452b1322d16dc131eef8639c6dbd1504",
+    "span_id": "616a701465942b20",
+    "parent_span_id": "409360e9ba499720",
+    "service": "orders-service",
+    "operation": "db.acquire_connection",
+    "start": "2026-11-18T10:06:30.007000Z",
+    "duration_ms": 3.8,
+    "status": "ok",
+    "attributes": {
+      "db.pool.size": 20
+    }
+  },
+  {
+    "trace_id": "452b1322d16dc131eef8639c6dbd1504",
+    "span_id": "e12bfa5441ef9651",
+    "parent_span_id": "409360e9ba499720",
+    "service": "postgres",
+    "operation": "SELECT orders",
+    "start": "2026-11-18T10:06:30.010800Z",
+    "duration_ms": 18.7,
+    "status": "ok",
+    "attributes": {
+      "db.system": "postgresql",
+      "db.statement": "SELECT orders WHERE customer_email = ?"
+    }
+  },
+  {
+    "trace_id": "70818af3e1ccdf3843e28188bbe45e61",
+    "span_id": "a1cf73dacbb514cf",
+    "parent_span_id": null,
+    "service": "api-gateway",
+    "operation": "GET /orders",
+    "start": "2026-11-18T10:07:00Z",
+    "duration_ms": 77.0,
+    "status": "ok",
+    "attributes": {
+      "http.route": "/orders",
+      "http.status_code": 200
+    }
+  },
+  {
+    "trace_id": "70818af3e1ccdf3843e28188bbe45e61",
+    "span_id": "4898b64729e0dcbd",
+    "parent_span_id": "a1cf73dacbb514cf",
+    "service": "orders-service",
+    "operation": "list_orders",
+    "start": "2026-11-18T10:07:00.003700Z",
+    "duration_ms": 73.3,
+    "status": "ok",
+    "attributes": {}
+  },
+  {
+    "trace_id": "70818af3e1ccdf3843e28188bbe45e61",
+    "span_id": "0e65104fd836b7b8",
+    "parent_span_id": "4898b64729e0dcbd",
+    "service": "orders-service",
+    "operation": "db.acquire_connection",
+    "start": "2026-11-18T10:07:00.011200Z",
+    "duration_ms": 3.9,
+    "status": "ok",
+    "attributes": {
+      "db.pool.size": 20
+    }
+  },
+  {
+    "trace_id": "70818af3e1ccdf3843e28188bbe45e61",
+    "span_id": "8680b1c53f9423f7",
+    "parent_span_id": "4898b64729e0dcbd",
+    "service": "postgres",
+    "operation": "SELECT orders",
+    "start": "2026-11-18T10:07:00.015100Z",
+    "duration_ms": 15.1,
+    "status": "ok",
+    "attributes": {
+      "db.system": "postgresql",
+      "db.statement": "SELECT orders ORDER BY created_at DESC LIMIT ?"
+    }
+  },
+  {
+    "trace_id": "70818af3e1ccdf3843e28188bbe45e61",
+    "span_id": "0bb5f492134d36da",
+    "parent_span_id": "4898b64729e0dcbd",
+    "service": "inventory-service",
+    "operation": "GET /stock",
+    "start": "2026-11-18T10:07:00.030200Z",
+    "duration_ms": 46.8,
+    "status": "ok",
+    "attributes": {
+      "http.route": "/stock",
+      "http.status_code": 200
+    }
+  },
+  {
+    "trace_id": "5f2261ff4c5448b94d1dd61361696266",
+    "span_id": "a21129763e189b32",
+    "parent_span_id": null,
+    "service": "api-gateway",
+    "operation": "GET /orders/search",
+    "start": "2026-11-18T10:07:30Z",
+    "duration_ms": 27.7,
+    "status": "ok",
+    "attributes": {
+      "http.route": "/orders/search",
+      "http.status_code": 200
+    }
+  },
+  {
+    "trace_id": "5f2261ff4c5448b94d1dd61361696266",
+    "span_id": "4b33424c1399fc3e",
+    "parent_span_id": "a21129763e189b32",
+    "service": "orders-service",
+    "operation": "search_orders",
+    "start": "2026-11-18T10:07:30.004100Z",
+    "duration_ms": 23.6,
+    "status": "ok",
+    "attributes": {}
+  },
+  {
+    "trace_id": "5f2261ff4c5448b94d1dd61361696266",
+    "span_id": "e47fea4788015035",
+    "parent_span_id": "4b33424c1399fc3e",
+    "service": "orders-service",
+    "operation": "db.acquire_connection",
+    "start": "2026-11-18T10:07:30.011300Z",
+    "duration_ms": 2.4,
+    "status": "ok",
+    "attributes": {
+      "db.pool.size": 20
+    }
+  },
+  {
+    "trace_id": "5f2261ff4c5448b94d1dd61361696266",
+    "span_id": "e177c5ab09990424",
+    "parent_span_id": "4b33424c1399fc3e",
+    "service": "postgres",
+    "operation": "SELECT orders",
+    "start": "2026-11-18T10:07:30.013700Z",
+    "duration_ms": 14.0,
+    "status": "ok",
+    "attributes": {
+      "db.system": "postgresql",
+      "db.statement": "SELECT orders WHERE customer_email = ?"
+    }
+  },
+  {
+    "trace_id": "0962efb7bca6adae14144007e788d15d",
+    "span_id": "8fa785231a478dae",
+    "parent_span_id": null,
+    "service": "api-gateway",
+    "operation": "GET /orders",
+    "start": "2026-11-18T10:08:00Z",
+    "duration_ms": 74.0,
+    "status": "ok",
+    "attributes": {
+      "http.route": "/orders",
+      "http.status_code": 200
+    }
+  },
+  {
+    "trace_id": "0962efb7bca6adae14144007e788d15d",
+    "span_id": "e17541d50d85d009",
+    "parent_span_id": "8fa785231a478dae",
+    "service": "orders-service",
+    "operation": "list_orders",
+    "start": "2026-11-18T10:08:00.004600Z",
+    "duration_ms": 69.4,
+    "status": "ok",
+    "attributes": {}
+  },
+  {
+    "trace_id": "0962efb7bca6adae14144007e788d15d",
+    "span_id": "4248910bff46cc1e",
+    "parent_span_id": "e17541d50d85d009",
+    "service": "orders-service",
+    "operation": "db.acquire_connection",
+    "start": "2026-11-18T10:08:00.011100Z",
+    "duration_ms": 3.9,
+    "status": "ok",
+    "attributes": {
+      "db.pool.size": 20
+    }
+  },
+  {
+    "trace_id": "0962efb7bca6adae14144007e788d15d",
+    "span_id": "5bc2bc3a19ad4318",
+    "parent_span_id": "e17541d50d85d009",
+    "service": "postgres",
+    "operation": "SELECT orders",
+    "start": "2026-11-18T10:08:00.015000Z",
+    "duration_ms": 16.9,
+    "status": "ok",
+    "attributes": {
+      "db.system": "postgresql",
+      "db.statement": "SELECT orders ORDER BY created_at DESC LIMIT ?"
+    }
+  },
+  {
+    "trace_id": "0962efb7bca6adae14144007e788d15d",
+    "span_id": "d2333a2cbb6e7d77",
+    "parent_span_id": "e17541d50d85d009",
+    "service": "inventory-service",
+    "operation": "GET /stock",
+    "start": "2026-11-18T10:08:00.031900Z",
+    "duration_ms": 42.1,
+    "status": "ok",
+    "attributes": {
+      "http.route": "/stock",
+      "http.status_code": 200
+    }
+  },
+  {
+    "trace_id": "63e905dc9b152c02b91c699a6b5e429d",
+    "span_id": "bc9ebbbf18159468",
+    "parent_span_id": null,
+    "service": "api-gateway",
+    "operation": "GET /orders/search",
+    "start": "2026-11-18T10:08:30Z",
+    "duration_ms": 23.3,
+    "status": "ok",
+    "attributes": {
+      "http.route": "/orders/search",
+      "http.status_code": 200
+    }
+  },
+  {
+    "trace_id": "63e905dc9b152c02b91c699a6b5e429d",
+    "span_id": "dffac8fa1ae5797f",
+    "parent_span_id": "bc9ebbbf18159468",
+    "service": "orders-service",
+    "operation": "search_orders",
+    "start": "2026-11-18T10:08:30.004400Z",
+    "duration_ms": 18.9,
+    "status": "ok",
+    "attributes": {}
+  },
+  {
+    "trace_id": "63e905dc9b152c02b91c699a6b5e429d",
+    "span_id": "7b0b8a0d8b217897",
+    "parent_span_id": "dffac8fa1ae5797f",
+    "service": "orders-service",
+    "operation": "db.acquire_connection",
+    "start": "2026-11-18T10:08:30.011500Z",
+    "duration_ms": 3.8,
+    "status": "ok",
+    "attributes": {
+      "db.pool.size": 20
+    }
+  },
+  {
+    "trace_id": "63e905dc9b152c02b91c699a6b5e429d",
+    "span_id": "edc45606c2f7f623",
+    "parent_span_id": "dffac8fa1ae5797f",
+    "service": "postgres",
+    "operation": "SELECT orders",
+    "start": "2026-11-18T10:08:30.015300Z",
+    "duration_ms": 8.0,
+    "status": "ok",
+    "attributes": {
+      "db.system": "postgresql",
+      "db.statement": "SELECT orders WHERE customer_email = ?"
+    }
+  },
+  {
+    "trace_id": "86b123faca59f0f44f5edb24d30d5da2",
+    "span_id": "686bc3961d9137ce",
+    "parent_span_id": null,
+    "service": "api-gateway",
+    "operation": "GET /orders",
+    "start": "2026-11-18T10:09:00Z",
+    "duration_ms": 65.5,
+    "status": "ok",
+    "attributes": {
+      "http.route": "/orders",
+      "http.status_code": 200
+    }
+  },
+  {
+    "trace_id": "86b123faca59f0f44f5edb24d30d5da2",
+    "span_id": "5438d7fa99e67b60",
+    "parent_span_id": "686bc3961d9137ce",
+    "service": "orders-service",
+    "operation": "list_orders",
+    "start": "2026-11-18T10:09:00.002100Z",
+    "duration_ms": 63.4,
+    "status": "ok",
+    "attributes": {}
+  },
+  {
+    "trace_id": "86b123faca59f0f44f5edb24d30d5da2",
+    "span_id": "48ecbf4fa8e080a1",
+    "parent_span_id": "5438d7fa99e67b60",
+    "service": "orders-service",
+    "operation": "db.acquire_connection",
+    "start": "2026-11-18T10:09:00.006400Z",
+    "duration_ms": 1.0,
+    "status": "ok",
+    "attributes": {
+      "db.pool.size": 20
+    }
+  },
+  {
+    "trace_id": "86b123faca59f0f44f5edb24d30d5da2",
+    "span_id": "66bac9b068a33ab8",
+    "parent_span_id": "5438d7fa99e67b60",
+    "service": "postgres",
+    "operation": "SELECT orders",
+    "start": "2026-11-18T10:09:00.007400Z",
+    "duration_ms": 17.2,
+    "status": "ok",
+    "attributes": {
+      "db.system": "postgresql",
+      "db.statement": "SELECT orders ORDER BY created_at DESC LIMIT ?"
+    }
+  },
+  {
+    "trace_id": "86b123faca59f0f44f5edb24d30d5da2",
+    "span_id": "68da793a6c56b98e",
+    "parent_span_id": "5438d7fa99e67b60",
+    "service": "inventory-service",
+    "operation": "GET /stock",
+    "start": "2026-11-18T10:09:00.024600Z",
+    "duration_ms": 40.9,
+    "status": "ok",
+    "attributes": {
+      "http.route": "/stock",
+      "http.status_code": 200
+    }
+  },
+  {
+    "trace_id": "2c2dad595808cbd0f90bc8d2c1484405",
+    "span_id": "a35560bf9a53d4a6",
+    "parent_span_id": null,
+    "service": "api-gateway",
+    "operation": "GET /orders/search",
+    "start": "2026-11-18T10:09:30Z",
+    "duration_ms": 23.6,
+    "status": "ok",
+    "attributes": {
+      "http.route": "/orders/search",
+      "http.status_code": 200
+    }
+  },
+  {
+    "trace_id": "2c2dad595808cbd0f90bc8d2c1484405",
+    "span_id": "d6054cbd42b605f4",
+    "parent_span_id": "a35560bf9a53d4a6",
+    "service": "orders-service",
+    "operation": "search_orders",
+    "start": "2026-11-18T10:09:30.003600Z",
+    "duration_ms": 20.0,
+    "status": "ok",
+    "attributes": {}
+  },
+  {
+    "trace_id": "2c2dad595808cbd0f90bc8d2c1484405",
+    "span_id": "9cdc7c4408658590",
+    "parent_span_id": "d6054cbd42b605f4",
+    "service": "orders-service",
+    "operation": "db.acquire_connection",
+    "start": "2026-11-18T10:09:30.009900Z",
+    "duration_ms": 1.8,
+    "status": "ok",
+    "attributes": {
+      "db.pool.size": 20
+    }
+  },
+  {
+    "trace_id": "2c2dad595808cbd0f90bc8d2c1484405",
+    "span_id": "279a4005513bcc3e",
+    "parent_span_id": "d6054cbd42b605f4",
+    "service": "postgres",
+    "operation": "SELECT orders",
+    "start": "2026-11-18T10:09:30.011700Z",
+    "duration_ms": 11.9,
+    "status": "ok",
+    "attributes": {
+      "db.system": "postgresql",
+      "db.statement": "SELECT orders WHERE customer_email = ?"
+    }
+  },
+  {
+    "trace_id": "1dea430bb5586b72ce26a3f4e130e954",
+    "span_id": "a0fde28ef581ae56",
+    "parent_span_id": null,
+    "service": "api-gateway",
+    "operation": "GET /orders",
+    "start": "2026-11-18T10:10:00Z",
+    "duration_ms": 54.0,
+    "status": "ok",
+    "attributes": {
+      "http.route": "/orders",
+      "http.status_code": 200
+    }
+  },
+  {
+    "trace_id": "1dea430bb5586b72ce26a3f4e130e954",
+    "span_id": "97fef08ea2416545",
+    "parent_span_id": "a0fde28ef581ae56",
+    "service": "orders-service",
+    "operation": "list_orders",
+    "start": "2026-11-18T10:10:00.003800Z",
+    "duration_ms": 50.2,
+    "status": "ok",
+    "attributes": {}
+  },
+  {
+    "trace_id": "1dea430bb5586b72ce26a3f4e130e954",
+    "span_id": "222fa96ebcdd3b21",
+    "parent_span_id": "97fef08ea2416545",
+    "service": "orders-service",
+    "operation": "db.acquire_connection",
+    "start": "2026-11-18T10:10:00.009500Z",
+    "duration_ms": 1.6,
+    "status": "ok",
+    "attributes": {
+      "db.pool.size": 20
+    }
+  },
+  {
+    "trace_id": "1dea430bb5586b72ce26a3f4e130e954",
+    "span_id": "ba90b42bec313217",
+    "parent_span_id": "97fef08ea2416545",
+    "service": "postgres",
+    "operation": "SELECT orders",
+    "start": "2026-11-18T10:10:00.011100Z",
+    "duration_ms": 11.0,
+    "status": "ok",
+    "attributes": {
+      "db.system": "postgresql",
+      "db.statement": "SELECT orders ORDER BY created_at DESC LIMIT ?"
+    }
+  },
+  {
+    "trace_id": "1dea430bb5586b72ce26a3f4e130e954",
+    "span_id": "c14dd9dc8f2e83e0",
+    "parent_span_id": "97fef08ea2416545",
+    "service": "inventory-service",
+    "operation": "GET /stock",
+    "start": "2026-11-18T10:10:00.022100Z",
+    "duration_ms": 31.9,
+    "status": "ok",
+    "attributes": {
+      "http.route": "/stock",
+      "http.status_code": 200
+    }
+  },
+  {
+    "trace_id": "4ab8164574842327489e4b10c34b0274",
+    "span_id": "5ffb6b091995c9d0",
+    "parent_span_id": null,
+    "service": "api-gateway",
+    "operation": "GET /orders/search",
+    "start": "2026-11-18T10:10:30Z",
+    "duration_ms": 22.0,
+    "status": "ok",
+    "attributes": {
+      "http.route": "/orders/search",
+      "http.status_code": 200
+    }
+  },
+  {
+    "trace_id": "4ab8164574842327489e4b10c34b0274",
+    "span_id": "10341053f52a98f5",
+    "parent_span_id": "5ffb6b091995c9d0",
+    "service": "orders-service",
+    "operation": "search_orders",
+    "start": "2026-11-18T10:10:30.003700Z",
+    "duration_ms": 18.3,
+    "status": "ok",
+    "attributes": {}
+  },
+  {
+    "trace_id": "4ab8164574842327489e4b10c34b0274",
+    "span_id": "35d0b004f58738cb",
+    "parent_span_id": "10341053f52a98f5",
+    "service": "orders-service",
+    "operation": "db.acquire_connection",
+    "start": "2026-11-18T10:10:30.009200Z",
+    "duration_ms": 1.1,
+    "status": "ok",
+    "attributes": {
+      "db.pool.size": 20
+    }
+  },
+  {
+    "trace_id": "4ab8164574842327489e4b10c34b0274",
+    "span_id": "87423b130f86752e",
+    "parent_span_id": "10341053f52a98f5",
+    "service": "postgres",
+    "operation": "SELECT orders",
+    "start": "2026-11-18T10:10:30.010300Z",
+    "duration_ms": 11.7,
+    "status": "ok",
+    "attributes": {
+      "db.system": "postgresql",
+      "db.statement": "SELECT orders WHERE customer_email = ?"
+    }
+  },
+  {
+    "trace_id": "fa282ada1ab033b30b795eb317deb780",
+    "span_id": "fa64d03bb1126317",
+    "parent_span_id": null,
+    "service": "api-gateway",
+    "operation": "GET /orders",
+    "start": "2026-11-18T10:11:00Z",
+    "duration_ms": 67.0,
+    "status": "ok",
+    "attributes": {
+      "http.route": "/orders",
+      "http.status_code": 200
+    }
+  },
+  {
+    "trace_id": "fa282ada1ab033b30b795eb317deb780",
+    "span_id": "2ea84890f0de75fe",
+    "parent_span_id": "fa64d03bb1126317",
+    "service": "orders-service",
+    "operation": "list_orders",
+    "start": "2026-11-18T10:11:00.002400Z",
+    "duration_ms": 64.6,
+    "status": "ok",
+    "attributes": {}
+  },
+  {
+    "trace_id": "fa282ada1ab033b30b795eb317deb780",
+    "span_id": "6b15aa2abed8415d",
+    "parent_span_id": "2ea84890f0de75fe",
+    "service": "orders-service",
+    "operation": "db.acquire_connection",
+    "start": "2026-11-18T10:11:00.006700Z",
+    "duration_ms": 2.2,
+    "status": "ok",
+    "attributes": {
+      "db.pool.size": 20
+    }
+  },
+  {
+    "trace_id": "fa282ada1ab033b30b795eb317deb780",
+    "span_id": "2307e5bcdec0fc4f",
+    "parent_span_id": "2ea84890f0de75fe",
+    "service": "postgres",
+    "operation": "SELECT orders",
+    "start": "2026-11-18T10:11:00.008900Z",
+    "duration_ms": 8.3,
+    "status": "ok",
+    "attributes": {
+      "db.system": "postgresql",
+      "db.statement": "SELECT orders ORDER BY created_at DESC LIMIT ?"
+    }
+  },
+  {
+    "trace_id": "fa282ada1ab033b30b795eb317deb780",
+    "span_id": "3afce671fa570d18",
+    "parent_span_id": "2ea84890f0de75fe",
+    "service": "inventory-service",
+    "operation": "GET /stock",
+    "start": "2026-11-18T10:11:00.017200Z",
+    "duration_ms": 49.8,
+    "status": "ok",
+    "attributes": {
+      "http.route": "/stock",
+      "http.status_code": 200
+    }
+  },
+  {
+    "trace_id": "808a1246682ef14ec225e3d21040c051",
+    "span_id": "58508b669e237f28",
+    "parent_span_id": null,
+    "service": "api-gateway",
+    "operation": "GET /orders/search",
+    "start": "2026-11-18T10:11:30Z",
+    "duration_ms": 26.2,
+    "status": "ok",
+    "attributes": {
+      "http.route": "/orders/search",
+      "http.status_code": 200
+    }
+  },
+  {
+    "trace_id": "808a1246682ef14ec225e3d21040c051",
+    "span_id": "22b05830973487cd",
+    "parent_span_id": "58508b669e237f28",
+    "service": "orders-service",
+    "operation": "search_orders",
+    "start": "2026-11-18T10:11:30.002900Z",
+    "duration_ms": 23.3,
+    "status": "ok",
+    "attributes": {}
+  },
+  {
+    "trace_id": "808a1246682ef14ec225e3d21040c051",
+    "span_id": "9e0332895d7c3a5d",
+    "parent_span_id": "22b05830973487cd",
+    "service": "orders-service",
+    "operation": "db.acquire_connection",
+    "start": "2026-11-18T10:11:30.009900Z",
+    "duration_ms": 2.0,
+    "status": "ok",
+    "attributes": {
+      "db.pool.size": 20
+    }
+  },
+  {
+    "trace_id": "808a1246682ef14ec225e3d21040c051",
+    "span_id": "0b39fb606bcf102f",
+    "parent_span_id": "22b05830973487cd",
+    "service": "postgres",
+    "operation": "SELECT orders",
+    "start": "2026-11-18T10:11:30.011900Z",
+    "duration_ms": 14.3,
+    "status": "ok",
+    "attributes": {
+      "db.system": "postgresql",
+      "db.statement": "SELECT orders WHERE customer_email = ?"
+    }
+  },
+  {
+    "trace_id": "fe1e01a86252bca7cf063a271e0ca62d",
+    "span_id": "a2e093afe5e67cd2",
+    "parent_span_id": null,
+    "service": "api-gateway",
+    "operation": "GET /orders",
+    "start": "2026-11-18T10:12:00Z",
+    "duration_ms": 73.7,
+    "status": "ok",
+    "attributes": {
+      "http.route": "/orders",
+      "http.status_code": 200
+    }
+  },
+  {
+    "trace_id": "fe1e01a86252bca7cf063a271e0ca62d",
+    "span_id": "97415453da20ce2c",
+    "parent_span_id": "a2e093afe5e67cd2",
+    "service": "orders-service",
+    "operation": "list_orders",
+    "start": "2026-11-18T10:12:00.004000Z",
+    "duration_ms": 69.7,
+    "status": "ok",
+    "attributes": {}
+  },
+  {
+    "trace_id": "fe1e01a86252bca7cf063a271e0ca62d",
+    "span_id": "166edce098618584",
+    "parent_span_id": "97415453da20ce2c",
+    "service": "orders-service",
+    "operation": "db.acquire_connection",
+    "start": "2026-11-18T10:12:00.010800Z",
+    "duration_ms": 3.3,
+    "status": "ok",
+    "attributes": {
+      "db.pool.size": 20
+    }
+  },
+  {
+    "trace_id": "fe1e01a86252bca7cf063a271e0ca62d",
+    "span_id": "3365017a1b023b19",
+    "parent_span_id": "97415453da20ce2c",
+    "service": "postgres",
+    "operation": "SELECT orders",
+    "start": "2026-11-18T10:12:00.014100Z",
+    "duration_ms": 10.7,
+    "status": "ok",
+    "attributes": {
+      "db.system": "postgresql",
+      "db.statement": "SELECT orders ORDER BY created_at DESC LIMIT ?"
+    }
+  },
+  {
+    "trace_id": "fe1e01a86252bca7cf063a271e0ca62d",
+    "span_id": "ff55a9e06cea719a",
+    "parent_span_id": "97415453da20ce2c",
+    "service": "inventory-service",
+    "operation": "GET /stock",
+    "start": "2026-11-18T10:12:00.024800Z",
+    "duration_ms": 48.9,
+    "status": "ok",
+    "attributes": {
+      "http.route": "/stock",
+      "http.status_code": 200
+    }
+  },
+  {
+    "trace_id": "56b7d257dd228a8b2446a7c4ebb0cc4c",
+    "span_id": "6f4b090328e9bc62",
+    "parent_span_id": null,
+    "service": "api-gateway",
+    "operation": "GET /orders/search",
+    "start": "2026-11-18T10:12:30Z",
+    "duration_ms": 18.1,
+    "status": "ok",
+    "attributes": {
+      "http.route": "/orders/search",
+      "http.status_code": 200
+    }
+  },
+  {
+    "trace_id": "56b7d257dd228a8b2446a7c4ebb0cc4c",
+    "span_id": "3add5d578344b6fd",
+    "parent_span_id": "6f4b090328e9bc62",
+    "service": "orders-service",
+    "operation": "search_orders",
+    "start": "2026-11-18T10:12:30.002900Z",
+    "duration_ms": 15.2,
+    "status": "ok",
+    "attributes": {}
+  },
+  {
+    "trace_id": "56b7d257dd228a8b2446a7c4ebb0cc4c",
+    "span_id": "edeb7ad615edf9b6",
+    "parent_span_id": "3add5d578344b6fd",
+    "service": "orders-service",
+    "operation": "db.acquire_connection",
+    "start": "2026-11-18T10:12:30.007400Z",
+    "duration_ms": 1.0,
+    "status": "ok",
+    "attributes": {
+      "db.pool.size": 20
+    }
+  },
+  {
+    "trace_id": "56b7d257dd228a8b2446a7c4ebb0cc4c",
+    "span_id": "e64786b24add795f",
+    "parent_span_id": "3add5d578344b6fd",
+    "service": "postgres",
+    "operation": "SELECT orders",
+    "start": "2026-11-18T10:12:30.008400Z",
+    "duration_ms": 9.7,
+    "status": "ok",
+    "attributes": {
+      "db.system": "postgresql",
+      "db.statement": "SELECT orders WHERE customer_email = ?"
+    }
+  },
+  {
+    "trace_id": "5f922bc9f7ca59af29ed6a13cd146566",
+    "span_id": "efb4011216b56c1e",
+    "parent_span_id": null,
+    "service": "api-gateway",
+    "operation": "GET /orders",
+    "start": "2026-11-18T10:13:00Z",
+    "duration_ms": 67.2,
+    "status": "ok",
+    "attributes": {
+      "http.route": "/orders",
+      "http.status_code": 200
+    }
+  },
+  {
+    "trace_id": "5f922bc9f7ca59af29ed6a13cd146566",
+    "span_id": "a7534b09271b7c37",
+    "parent_span_id": "efb4011216b56c1e",
+    "service": "orders-service",
+    "operation": "list_orders",
+    "start": "2026-11-18T10:13:00.004300Z",
+    "duration_ms": 62.9,
+    "status": "ok",
+    "attributes": {}
+  },
+  {
+    "trace_id": "5f922bc9f7ca59af29ed6a13cd146566",
+    "span_id": "645840764b36bfcb",
+    "parent_span_id": "a7534b09271b7c37",
+    "service": "orders-service",
+    "operation": "db.acquire_connection",
+    "start": "2026-11-18T10:13:00.012000Z",
+    "duration_ms": 3.5,
+    "status": "ok",
+    "attributes": {
+      "db.pool.size": 20
+    }
+  },
+  {
+    "trace_id": "5f922bc9f7ca59af29ed6a13cd146566",
+    "span_id": "044877ecbb344115",
+    "parent_span_id": "a7534b09271b7c37",
+    "service": "postgres",
+    "operation": "SELECT orders",
+    "start": "2026-11-18T10:13:00.015500Z",
+    "duration_ms": 9.7,
+    "status": "ok",
+    "attributes": {
+      "db.system": "postgresql",
+      "db.statement": "SELECT orders ORDER BY created_at DESC LIMIT ?"
+    }
+  },
+  {
+    "trace_id": "5f922bc9f7ca59af29ed6a13cd146566",
+    "span_id": "9b4cfbda5a4297e9",
+    "parent_span_id": "a7534b09271b7c37",
+    "service": "inventory-service",
+    "operation": "GET /stock",
+    "start": "2026-11-18T10:13:00.025200Z",
+    "duration_ms": 42.0,
+    "status": "ok",
+    "attributes": {
+      "http.route": "/stock",
+      "http.status_code": 200
+    }
+  },
+  {
+    "trace_id": "b64b8e1f2ca81c2751d6171f40bd5f54",
+    "span_id": "6ae3d24dbd6f4ee9",
+    "parent_span_id": null,
+    "service": "api-gateway",
+    "operation": "GET /orders/search",
+    "start": "2026-11-18T10:13:30Z",
+    "duration_ms": 21.1,
+    "status": "ok",
+    "attributes": {
+      "http.route": "/orders/search",
+      "http.status_code": 200
+    }
+  },
+  {
+    "trace_id": "b64b8e1f2ca81c2751d6171f40bd5f54",
+    "span_id": "ecf52ab4ca5d52da",
+    "parent_span_id": "6ae3d24dbd6f4ee9",
+    "service": "orders-service",
+    "operation": "search_orders",
+    "start": "2026-11-18T10:13:30.003000Z",
+    "duration_ms": 18.1,
+    "status": "ok",
+    "attributes": {}
+  },
+  {
+    "trace_id": "b64b8e1f2ca81c2751d6171f40bd5f54",
+    "span_id": "6774a9e89528b8e2",
+    "parent_span_id": "ecf52ab4ca5d52da",
+    "service": "orders-service",
+    "operation": "db.acquire_connection",
+    "start": "2026-11-18T10:13:30.008200Z",
+    "duration_ms": 3.4,
+    "status": "ok",
+    "attributes": {
+      "db.pool.size": 20
+    }
+  },
+  {
+    "trace_id": "b64b8e1f2ca81c2751d6171f40bd5f54",
+    "span_id": "aad0e727e1fab5f3",
+    "parent_span_id": "ecf52ab4ca5d52da",
+    "service": "postgres",
+    "operation": "SELECT orders",
+    "start": "2026-11-18T10:13:30.011600Z",
+    "duration_ms": 9.5,
+    "status": "ok",
+    "attributes": {
+      "db.system": "postgresql",
+      "db.statement": "SELECT orders WHERE customer_email = ?"
+    }
+  },
+  {
+    "trace_id": "d847021e014fcab5f47951d2b78d3997",
+    "span_id": "efd56dbee33d6969",
+    "parent_span_id": null,
+    "service": "api-gateway",
+    "operation": "GET /orders",
+    "start": "2026-11-18T10:14:00Z",
+    "duration_ms": 73.2,
+    "status": "ok",
+    "attributes": {
+      "http.route": "/orders",
+      "http.status_code": 200
+    }
+  },
+  {
+    "trace_id": "d847021e014fcab5f47951d2b78d3997",
+    "span_id": "71d3fb606153dd40",
+    "parent_span_id": "efd56dbee33d6969",
+    "service": "orders-service",
+    "operation": "list_orders",
+    "start": "2026-11-18T10:14:00.003700Z",
+    "duration_ms": 69.5,
+    "status": "ok",
+    "attributes": {}
+  },
+  {
+    "trace_id": "d847021e014fcab5f47951d2b78d3997",
+    "span_id": "6df25b7974aa576a",
+    "parent_span_id": "71d3fb606153dd40",
+    "service": "orders-service",
+    "operation": "db.acquire_connection",
+    "start": "2026-11-18T10:14:00.009900Z",
+    "duration_ms": 3.2,
+    "status": "ok",
+    "attributes": {
+      "db.pool.size": 20
+    }
+  },
+  {
+    "trace_id": "d847021e014fcab5f47951d2b78d3997",
+    "span_id": "991ca7fdeb110a78",
+    "parent_span_id": "71d3fb606153dd40",
+    "service": "postgres",
+    "operation": "SELECT orders",
+    "start": "2026-11-18T10:14:00.013100Z",
+    "duration_ms": 16.0,
+    "status": "ok",
+    "attributes": {
+      "db.system": "postgresql",
+      "db.statement": "SELECT orders ORDER BY created_at DESC LIMIT ?"
+    }
+  },
+  {
+    "trace_id": "d847021e014fcab5f47951d2b78d3997",
+    "span_id": "29f9d040b906877a",
+    "parent_span_id": "71d3fb606153dd40",
+    "service": "inventory-service",
+    "operation": "GET /stock",
+    "start": "2026-11-18T10:14:00.029100Z",
+    "duration_ms": 44.1,
+    "status": "ok",
+    "attributes": {
+      "http.route": "/stock",
+      "http.status_code": 200
+    }
+  },
+  {
+    "trace_id": "037fe0750af6fd5e3fe289f285e3bc62",
+    "span_id": "cc40b9a9571d53be",
+    "parent_span_id": null,
+    "service": "api-gateway",
+    "operation": "GET /orders/search",
+    "start": "2026-11-18T10:14:30Z",
+    "duration_ms": 28.9,
+    "status": "ok",
+    "attributes": {
+      "http.route": "/orders/search",
+      "http.status_code": 200
+    }
+  },
+  {
+    "trace_id": "037fe0750af6fd5e3fe289f285e3bc62",
+    "span_id": "098e7f1fea5e9a1b",
+    "parent_span_id": "cc40b9a9571d53be",
+    "service": "orders-service",
+    "operation": "search_orders",
+    "start": "2026-11-18T10:14:30.004500Z",
+    "duration_ms": 24.4,
+    "status": "ok",
+    "attributes": {}
+  },
+  {
+    "trace_id": "037fe0750af6fd5e3fe289f285e3bc62",
+    "span_id": "8857626f77219677",
+    "parent_span_id": "098e7f1fea5e9a1b",
+    "service": "orders-service",
+    "operation": "db.acquire_connection",
+    "start": "2026-11-18T10:14:30.008300Z",
+    "duration_ms": 1.5,
+    "status": "ok",
+    "attributes": {
+      "db.pool.size": 20
+    }
+  },
+  {
+    "trace_id": "037fe0750af6fd5e3fe289f285e3bc62",
+    "span_id": "4dc84df8103fff25",
+    "parent_span_id": "098e7f1fea5e9a1b",
+    "service": "postgres",
+    "operation": "SELECT orders",
+    "start": "2026-11-18T10:14:30.009800Z",
+    "duration_ms": 19.1,
+    "status": "ok",
+    "attributes": {
+      "db.system": "postgresql",
+      "db.statement": "SELECT orders WHERE customer_email = ?"
+    }
+  },
+  {
+    "trace_id": "dbcffc07ecf6200cf3f6efea09de9817",
+    "span_id": "628288e3eb5b4690",
+    "parent_span_id": null,
+    "service": "api-gateway",
+    "operation": "GET /orders",
+    "start": "2026-11-18T10:15:00Z",
+    "duration_ms": 62.4,
+    "status": "ok",
+    "attributes": {
+      "http.route": "/orders",
+      "http.status_code": 200
+    }
+  },
+  {
+    "trace_id": "dbcffc07ecf6200cf3f6efea09de9817",
+    "span_id": "23f546cf1e0b2207",
+    "parent_span_id": "628288e3eb5b4690",
+    "service": "orders-service",
+    "operation": "list_orders",
+    "start": "2026-11-18T10:15:00.003900Z",
+    "duration_ms": 58.5,
+    "status": "ok",
+    "attributes": {}
+  },
+  {
+    "trace_id": "dbcffc07ecf6200cf3f6efea09de9817",
+    "span_id": "f5fa01d62bcec8d6",
+    "parent_span_id": "23f546cf1e0b2207",
+    "service": "orders-service",
+    "operation": "db.acquire_connection",
+    "start": "2026-11-18T10:15:00.008500Z",
+    "duration_ms": 2.6,
+    "status": "ok",
+    "attributes": {
+      "db.pool.size": 20
+    }
+  },
+  {
+    "trace_id": "dbcffc07ecf6200cf3f6efea09de9817",
+    "span_id": "2c1306814520d601",
+    "parent_span_id": "23f546cf1e0b2207",
+    "service": "postgres",
+    "operation": "SELECT orders",
+    "start": "2026-11-18T10:15:00.011100Z",
+    "duration_ms": 12.0,
+    "status": "ok",
+    "attributes": {
+      "db.system": "postgresql",
+      "db.statement": "SELECT orders ORDER BY created_at DESC LIMIT ?"
+    }
+  },
+  {
+    "trace_id": "dbcffc07ecf6200cf3f6efea09de9817",
+    "span_id": "2d30a79bdc4e411c",
+    "parent_span_id": "23f546cf1e0b2207",
+    "service": "inventory-service",
+    "operation": "GET /stock",
+    "start": "2026-11-18T10:15:00.023100Z",
+    "duration_ms": 39.3,
+    "status": "ok",
+    "attributes": {
+      "http.route": "/stock",
+      "http.status_code": 200
+    }
+  },
+  {
+    "trace_id": "5b92468b4de0cbce14e5281c97d657e0",
+    "span_id": "41d2ca302988170f",
+    "parent_span_id": null,
+    "service": "api-gateway",
+    "operation": "GET /orders/search",
+    "start": "2026-11-18T10:15:30Z",
+    "duration_ms": 29.3,
+    "status": "ok",
+    "attributes": {
+      "http.route": "/orders/search",
+      "http.status_code": 200
+    }
+  },
+  {
+    "trace_id": "5b92468b4de0cbce14e5281c97d657e0",
+    "span_id": "4750eed8f314bd55",
+    "parent_span_id": "41d2ca302988170f",
+    "service": "orders-service",
+    "operation": "search_orders",
+    "start": "2026-11-18T10:15:30.004400Z",
+    "duration_ms": 24.9,
+    "status": "ok",
+    "attributes": {}
+  },
+  {
+    "trace_id": "5b92468b4de0cbce14e5281c97d657e0",
+    "span_id": "67e74d0ce81e1ece",
+    "parent_span_id": "4750eed8f314bd55",
+    "service": "orders-service",
+    "operation": "db.acquire_connection",
+    "start": "2026-11-18T10:15:30.010800Z",
+    "duration_ms": 1.8,
+    "status": "ok",
+    "attributes": {
+      "db.pool.size": 20
+    }
+  },
+  {
+    "trace_id": "5b92468b4de0cbce14e5281c97d657e0",
+    "span_id": "3bab1a27fbb68aba",
+    "parent_span_id": "4750eed8f314bd55",
+    "service": "postgres",
+    "operation": "SELECT orders",
+    "start": "2026-11-18T10:15:30.012600Z",
+    "duration_ms": 16.7,
+    "status": "ok",
+    "attributes": {
+      "db.system": "postgresql",
+      "db.statement": "SELECT orders WHERE customer_email = ?"
+    }
+  },
+  {
+    "trace_id": "5981dc88b463010217d21202a3074258",
+    "span_id": "4daa3e220d90d65c",
+    "parent_span_id": null,
+    "service": "api-gateway",
+    "operation": "GET /orders",
+    "start": "2026-11-18T10:16:00Z",
+    "duration_ms": 54.6,
+    "status": "ok",
+    "attributes": {
+      "http.route": "/orders",
+      "http.status_code": 200
+    }
+  },
+  {
+    "trace_id": "5981dc88b463010217d21202a3074258",
+    "span_id": "8eab1317ffa232e3",
+    "parent_span_id": "4daa3e220d90d65c",
+    "service": "orders-service",
+    "operation": "list_orders",
+    "start": "2026-11-18T10:16:00.003100Z",
+    "duration_ms": 51.5,
+    "status": "ok",
+    "attributes": {}
+  },
+  {
+    "trace_id": "5981dc88b463010217d21202a3074258",
+    "span_id": "222a3dc89ddf7289",
+    "parent_span_id": "8eab1317ffa232e3",
+    "service": "orders-service",
+    "operation": "db.acquire_connection",
+    "start": "2026-11-18T10:16:00.007600Z",
+    "duration_ms": 3.2,
+    "status": "ok",
+    "attributes": {
+      "db.pool.size": 20
+    }
+  },
+  {
+    "trace_id": "5981dc88b463010217d21202a3074258",
+    "span_id": "0f19d87934e650a0",
+    "parent_span_id": "8eab1317ffa232e3",
+    "service": "postgres",
+    "operation": "SELECT orders",
+    "start": "2026-11-18T10:16:00.010800Z",
+    "duration_ms": 13.5,
+    "status": "ok",
+    "attributes": {
+      "db.system": "postgresql",
+      "db.statement": "SELECT orders ORDER BY created_at DESC LIMIT ?"
+    }
+  },
+  {
+    "trace_id": "5981dc88b463010217d21202a3074258",
+    "span_id": "11cb364302e8182c",
+    "parent_span_id": "8eab1317ffa232e3",
+    "service": "inventory-service",
+    "operation": "GET /stock",
+    "start": "2026-11-18T10:16:00.024300Z",
+    "duration_ms": 30.3,
+    "status": "ok",
+    "attributes": {
+      "http.route": "/stock",
+      "http.status_code": 200
+    }
+  },
+  {
+    "trace_id": "018bd235bfdb1bff3f9e89e6c2c17e81",
+    "span_id": "592c2d4a34f00147",
+    "parent_span_id": null,
+    "service": "api-gateway",
+    "operation": "GET /orders/search",
+    "start": "2026-11-18T10:16:30Z",
+    "duration_ms": 29.8,
+    "status": "ok",
+    "attributes": {
+      "http.route": "/orders/search",
+      "http.status_code": 200
+    }
+  },
+  {
+    "trace_id": "018bd235bfdb1bff3f9e89e6c2c17e81",
+    "span_id": "301a75f100e2f0ec",
+    "parent_span_id": "592c2d4a34f00147",
+    "service": "orders-service",
+    "operation": "search_orders",
+    "start": "2026-11-18T10:16:30.002900Z",
+    "duration_ms": 26.9,
+    "status": "ok",
+    "attributes": {}
+  },
+  {
+    "trace_id": "018bd235bfdb1bff3f9e89e6c2c17e81",
+    "span_id": "55fc0777fb57a098",
+    "parent_span_id": "301a75f100e2f0ec",
+    "service": "orders-service",
+    "operation": "db.acquire_connection",
+    "start": "2026-11-18T10:16:30.009000Z",
+    "duration_ms": 3.3,
+    "status": "ok",
+    "attributes": {
+      "db.pool.size": 20
+    }
+  },
+  {
+    "trace_id": "018bd235bfdb1bff3f9e89e6c2c17e81",
+    "span_id": "ac7158bfcc41d86a",
+    "parent_span_id": "301a75f100e2f0ec",
+    "service": "postgres",
+    "operation": "SELECT orders",
+    "start": "2026-11-18T10:16:30.012300Z",
+    "duration_ms": 17.5,
+    "status": "ok",
+    "attributes": {
+      "db.system": "postgresql",
+      "db.statement": "SELECT orders WHERE customer_email = ?"
+    }
+  },
+  {
+    "trace_id": "9634a50f5e17459f20a3ba283d31333f",
+    "span_id": "89d7e9334212d1e0",
+    "parent_span_id": null,
+    "service": "api-gateway",
+    "operation": "GET /orders",
+    "start": "2026-11-18T10:17:00Z",
+    "duration_ms": 54.4,
+    "status": "ok",
+    "attributes": {
+      "http.route": "/orders",
+      "http.status_code": 200
+    }
+  },
+  {
+    "trace_id": "9634a50f5e17459f20a3ba283d31333f",
+    "span_id": "5e1b3ca515edeb22",
+    "parent_span_id": "89d7e9334212d1e0",
+    "service": "orders-service",
+    "operation": "list_orders",
+    "start": "2026-11-18T10:17:00.002500Z",
+    "duration_ms": 51.9,
+    "status": "ok",
+    "attributes": {}
+  },
+  {
+    "trace_id": "9634a50f5e17459f20a3ba283d31333f",
+    "span_id": "4b87dc789d96ee7d",
+    "parent_span_id": "5e1b3ca515edeb22",
+    "service": "orders-service",
+    "operation": "db.acquire_connection",
+    "start": "2026-11-18T10:17:00.007500Z",
+    "duration_ms": 1.7,
+    "status": "ok",
+    "attributes": {
+      "db.pool.size": 20
+    }
+  },
+  {
+    "trace_id": "9634a50f5e17459f20a3ba283d31333f",
+    "span_id": "9e869d058d9b3672",
+    "parent_span_id": "5e1b3ca515edeb22",
+    "service": "postgres",
+    "operation": "SELECT orders",
+    "start": "2026-11-18T10:17:00.009200Z",
+    "duration_ms": 15.0,
+    "status": "ok",
+    "attributes": {
+      "db.system": "postgresql",
+      "db.statement": "SELECT orders ORDER BY created_at DESC LIMIT ?"
+    }
+  },
+  {
+    "trace_id": "9634a50f5e17459f20a3ba283d31333f",
+    "span_id": "0ba96787b7cdcc70",
+    "parent_span_id": "5e1b3ca515edeb22",
+    "service": "inventory-service",
+    "operation": "GET /stock",
+    "start": "2026-11-18T10:17:00.024200Z",
+    "duration_ms": 30.2,
+    "status": "ok",
+    "attributes": {
+      "http.route": "/stock",
+      "http.status_code": 200
+    }
+  },
+  {
+    "trace_id": "4d1c1073d593560d00890ee562116529",
+    "span_id": "0175f16c1b9d8ab8",
+    "parent_span_id": null,
+    "service": "api-gateway",
+    "operation": "GET /orders/search",
+    "start": "2026-11-18T10:17:30Z",
+    "duration_ms": 30.6,
+    "status": "ok",
+    "attributes": {
+      "http.route": "/orders/search",
+      "http.status_code": 200
+    }
+  },
+  {
+    "trace_id": "4d1c1073d593560d00890ee562116529",
+    "span_id": "4c61b876210f97c9",
+    "parent_span_id": "0175f16c1b9d8ab8",
+    "service": "orders-service",
+    "operation": "search_orders",
+    "start": "2026-11-18T10:17:30.003800Z",
+    "duration_ms": 26.8,
+    "status": "ok",
+    "attributes": {}
+  },
+  {
+    "trace_id": "4d1c1073d593560d00890ee562116529",
+    "span_id": "5f5349fe5e9d06c3",
+    "parent_span_id": "4c61b876210f97c9",
+    "service": "orders-service",
+    "operation": "db.acquire_connection",
+    "start": "2026-11-18T10:17:30.009100Z",
+    "duration_ms": 3.1,
+    "status": "ok",
+    "attributes": {
+      "db.pool.size": 20
+    }
+  },
+  {
+    "trace_id": "4d1c1073d593560d00890ee562116529",
+    "span_id": "6f34e7c4dad61c0c",
+    "parent_span_id": "4c61b876210f97c9",
+    "service": "postgres",
+    "operation": "SELECT orders",
+    "start": "2026-11-18T10:17:30.012200Z",
+    "duration_ms": 18.4,
+    "status": "ok",
+    "attributes": {
+      "db.system": "postgresql",
+      "db.statement": "SELECT orders WHERE customer_email = ?"
+    }
+  },
+  {
+    "trace_id": "d9f383585dcd089a35d1903302722126",
+    "span_id": "4be111c0a076a190",
+    "parent_span_id": null,
+    "service": "api-gateway",
+    "operation": "GET /orders",
+    "start": "2026-11-18T10:18:00Z",
+    "duration_ms": 59.4,
+    "status": "ok",
+    "attributes": {
+      "http.route": "/orders",
+      "http.status_code": 200
+    }
+  },
+  {
+    "trace_id": "d9f383585dcd089a35d1903302722126",
+    "span_id": "eceed48b85dee6a5",
+    "parent_span_id": "4be111c0a076a190",
+    "service": "orders-service",
+    "operation": "list_orders",
+    "start": "2026-11-18T10:18:00.003100Z",
+    "duration_ms": 56.3,
+    "status": "ok",
+    "attributes": {}
+  },
+  {
+    "trace_id": "d9f383585dcd089a35d1903302722126",
+    "span_id": "0a71ffcc4db1f025",
+    "parent_span_id": "eceed48b85dee6a5",
+    "service": "orders-service",
+    "operation": "db.acquire_connection",
+    "start": "2026-11-18T10:18:00.010400Z",
+    "duration_ms": 3.8,
+    "status": "ok",
+    "attributes": {
+      "db.pool.size": 20
+    }
+  },
+  {
+    "trace_id": "d9f383585dcd089a35d1903302722126",
+    "span_id": "a43ff7fca2647748",
+    "parent_span_id": "eceed48b85dee6a5",
+    "service": "postgres",
+    "operation": "SELECT orders",
+    "start": "2026-11-18T10:18:00.014200Z",
+    "duration_ms": 9.0,
+    "status": "ok",
+    "attributes": {
+      "db.system": "postgresql",
+      "db.statement": "SELECT orders ORDER BY created_at DESC LIMIT ?"
+    }
+  },
+  {
+    "trace_id": "d9f383585dcd089a35d1903302722126",
+    "span_id": "a22860feeb857350",
+    "parent_span_id": "eceed48b85dee6a5",
+    "service": "inventory-service",
+    "operation": "GET /stock",
+    "start": "2026-11-18T10:18:00.023200Z",
+    "duration_ms": 36.2,
+    "status": "ok",
+    "attributes": {
+      "http.route": "/stock",
+      "http.status_code": 200
+    }
+  },
+  {
+    "trace_id": "31d1d8f42d162f4f76619d39bd834283",
+    "span_id": "8b2370b0dfdd853d",
+    "parent_span_id": null,
+    "service": "api-gateway",
+    "operation": "GET /orders/search",
+    "start": "2026-11-18T10:18:30Z",
+    "duration_ms": 30.7,
+    "status": "ok",
+    "attributes": {
+      "http.route": "/orders/search",
+      "http.status_code": 200
+    }
+  },
+  {
+    "trace_id": "31d1d8f42d162f4f76619d39bd834283",
+    "span_id": "3ebd4ee931dfa6fb",
+    "parent_span_id": "8b2370b0dfdd853d",
+    "service": "orders-service",
+    "operation": "search_orders",
+    "start": "2026-11-18T10:18:30.004700Z",
+    "duration_ms": 26.0,
+    "status": "ok",
+    "attributes": {}
+  },
+  {
+    "trace_id": "31d1d8f42d162f4f76619d39bd834283",
+    "span_id": "4fb928a6c957346f",
+    "parent_span_id": "3ebd4ee931dfa6fb",
+    "service": "orders-service",
+    "operation": "db.acquire_connection",
+    "start": "2026-11-18T10:18:30.009800Z",
+    "duration_ms": 3.5,
+    "status": "ok",
+    "attributes": {
+      "db.pool.size": 20
+    }
+  },
+  {
+    "trace_id": "31d1d8f42d162f4f76619d39bd834283",
+    "span_id": "66b1036cc4406fe4",
+    "parent_span_id": "3ebd4ee931dfa6fb",
+    "service": "postgres",
+    "operation": "SELECT orders",
+    "start": "2026-11-18T10:18:30.013300Z",
+    "duration_ms": 17.4,
+    "status": "ok",
+    "attributes": {
+      "db.system": "postgresql",
+      "db.statement": "SELECT orders WHERE customer_email = ?"
+    }
+  },
+  {
+    "trace_id": "7b691f6c4d04db0fb5ab8a79263562ce",
+    "span_id": "d8db1ca35adae79d",
+    "parent_span_id": null,
+    "service": "api-gateway",
+    "operation": "GET /orders",
+    "start": "2026-11-18T10:19:00Z",
+    "duration_ms": 59.2,
+    "status": "ok",
+    "attributes": {
+      "http.route": "/orders",
+      "http.status_code": 200
+    }
+  },
+  {
+    "trace_id": "7b691f6c4d04db0fb5ab8a79263562ce",
+    "span_id": "228f16ce47f9ddf3",
+    "parent_span_id": "d8db1ca35adae79d",
+    "service": "orders-service",
+    "operation": "list_orders",
+    "start": "2026-11-18T10:19:00.004000Z",
+    "duration_ms": 55.2,
+    "status": "ok",
+    "attributes": {}
+  },
+  {
+    "trace_id": "7b691f6c4d04db0fb5ab8a79263562ce",
+    "span_id": "3091482d93ceff88",
+    "parent_span_id": "228f16ce47f9ddf3",
+    "service": "orders-service",
+    "operation": "db.acquire_connection",
+    "start": "2026-11-18T10:19:00.008800Z",
+    "duration_ms": 1.5,
+    "status": "ok",
+    "attributes": {
+      "db.pool.size": 20
+    }
+  },
+  {
+    "trace_id": "7b691f6c4d04db0fb5ab8a79263562ce",
+    "span_id": "3f143eb6deceb4cd",
+    "parent_span_id": "228f16ce47f9ddf3",
+    "service": "postgres",
+    "operation": "SELECT orders",
+    "start": "2026-11-18T10:19:00.010300Z",
+    "duration_ms": 13.3,
+    "status": "ok",
+    "attributes": {
+      "db.system": "postgresql",
+      "db.statement": "SELECT orders ORDER BY created_at DESC LIMIT ?"
+    }
+  },
+  {
+    "trace_id": "7b691f6c4d04db0fb5ab8a79263562ce",
+    "span_id": "78797af5ccad0761",
+    "parent_span_id": "228f16ce47f9ddf3",
+    "service": "inventory-service",
+    "operation": "GET /stock",
+    "start": "2026-11-18T10:19:00.023600Z",
+    "duration_ms": 35.6,
+    "status": "ok",
+    "attributes": {
+      "http.route": "/stock",
+      "http.status_code": 200
+    }
+  },
+  {
+    "trace_id": "17e464448c273555c96a3f54495fac0c",
+    "span_id": "488770c908fb0e4c",
+    "parent_span_id": null,
+    "service": "api-gateway",
+    "operation": "GET /orders/search",
+    "start": "2026-11-18T10:19:30Z",
+    "duration_ms": 26.5,
+    "status": "ok",
+    "attributes": {
+      "http.route": "/orders/search",
+      "http.status_code": 200
+    }
+  },
+  {
+    "trace_id": "17e464448c273555c96a3f54495fac0c",
+    "span_id": "c623b8208f08163d",
+    "parent_span_id": "488770c908fb0e4c",
+    "service": "orders-service",
+    "operation": "search_orders",
+    "start": "2026-11-18T10:19:30.002500Z",
+    "duration_ms": 24.0,
+    "status": "ok",
+    "attributes": {}
+  },
+  {
+    "trace_id": "17e464448c273555c96a3f54495fac0c",
+    "span_id": "e62549703c70e258",
+    "parent_span_id": "c623b8208f08163d",
+    "service": "orders-service",
+    "operation": "db.acquire_connection",
+    "start": "2026-11-18T10:19:30.010100Z",
+    "duration_ms": 3.7,
+    "status": "ok",
+    "attributes": {
+      "db.pool.size": 20
+    }
+  },
+  {
+    "trace_id": "17e464448c273555c96a3f54495fac0c",
+    "span_id": "b70564122e0b5d37",
+    "parent_span_id": "c623b8208f08163d",
+    "service": "postgres",
+    "operation": "SELECT orders",
+    "start": "2026-11-18T10:19:30.013800Z",
+    "duration_ms": 12.7,
+    "status": "ok",
+    "attributes": {
+      "db.system": "postgresql",
+      "db.statement": "SELECT orders WHERE customer_email = ?"
+    }
+  },
+  {
+    "trace_id": "ecccc7f9c6d8d8cb6195dd420ff965f9",
+    "span_id": "9ad365f6dcc83a61",
+    "parent_span_id": null,
+    "service": "api-gateway",
+    "operation": "GET /orders",
+    "start": "2026-11-18T10:20:00Z",
+    "duration_ms": 74.0,
+    "status": "ok",
+    "attributes": {
+      "http.route": "/orders",
+      "http.status_code": 200
+    }
+  },
+  {
+    "trace_id": "ecccc7f9c6d8d8cb6195dd420ff965f9",
+    "span_id": "1ffa894cb3f2b7d0",
+    "parent_span_id": "9ad365f6dcc83a61",
+    "service": "orders-service",
+    "operation": "list_orders",
+    "start": "2026-11-18T10:20:00.003200Z",
+    "duration_ms": 70.8,
+    "status": "ok",
+    "attributes": {}
+  },
+  {
+    "trace_id": "ecccc7f9c6d8d8cb6195dd420ff965f9",
+    "span_id": "1b19ea0b062bdf47",
+    "parent_span_id": "1ffa894cb3f2b7d0",
+    "service": "orders-service",
+    "operation": "db.acquire_connection",
+    "start": "2026-11-18T10:20:00.007300Z",
+    "duration_ms": 3.4,
+    "status": "ok",
+    "attributes": {
+      "db.pool.size": 20
+    }
+  },
+  {
+    "trace_id": "ecccc7f9c6d8d8cb6195dd420ff965f9",
+    "span_id": "e4b754b61ef0cc3d",
+    "parent_span_id": "1ffa894cb3f2b7d0",
+    "service": "postgres",
+    "operation": "SELECT orders",
+    "start": "2026-11-18T10:20:00.010700Z",
+    "duration_ms": 17.1,
+    "status": "ok",
+    "attributes": {
+      "db.system": "postgresql",
+      "db.statement": "SELECT orders ORDER BY created_at DESC LIMIT ?"
+    }
+  },
+  {
+    "trace_id": "ecccc7f9c6d8d8cb6195dd420ff965f9",
+    "span_id": "1ce34f9e4bb72363",
+    "parent_span_id": "1ffa894cb3f2b7d0",
+    "service": "inventory-service",
+    "operation": "GET /stock",
+    "start": "2026-11-18T10:20:00.027800Z",
+    "duration_ms": 46.2,
+    "status": "ok",
+    "attributes": {
+      "http.route": "/stock",
+      "http.status_code": 200
+    }
+  },
+  {
+    "trace_id": "83fe7bdc5d6f0fec72b9d19eec208271",
+    "span_id": "69dd662da9a881e4",
+    "parent_span_id": null,
+    "service": "api-gateway",
+    "operation": "GET /orders/search",
+    "start": "2026-11-18T10:20:30Z",
+    "duration_ms": 24.6,
+    "status": "ok",
+    "attributes": {
+      "http.route": "/orders/search",
+      "http.status_code": 200
+    }
+  },
+  {
+    "trace_id": "83fe7bdc5d6f0fec72b9d19eec208271",
+    "span_id": "3b625fd5fba14dfb",
+    "parent_span_id": "69dd662da9a881e4",
+    "service": "orders-service",
+    "operation": "search_orders",
+    "start": "2026-11-18T10:20:30.004200Z",
+    "duration_ms": 20.4,
+    "status": "ok",
+    "attributes": {}
+  },
+  {
+    "trace_id": "83fe7bdc5d6f0fec72b9d19eec208271",
+    "span_id": "732d9d5efb13912e",
+    "parent_span_id": "3b625fd5fba14dfb",
+    "service": "orders-service",
+    "operation": "db.acquire_connection",
+    "start": "2026-11-18T10:20:30.011400Z",
+    "duration_ms": 2.6,
+    "status": "ok",
+    "attributes": {
+      "db.pool.size": 20
+    }
+  },
+  {
+    "trace_id": "83fe7bdc5d6f0fec72b9d19eec208271",
+    "span_id": "28891259766bb9e5",
+    "parent_span_id": "3b625fd5fba14dfb",
+    "service": "postgres",
+    "operation": "SELECT orders",
+    "start": "2026-11-18T10:20:30.014000Z",
+    "duration_ms": 10.6,
+    "status": "ok",
+    "attributes": {
+      "db.system": "postgresql",
+      "db.statement": "SELECT orders WHERE customer_email = ?"
+    }
+  },
+  {
+    "trace_id": "e9f79eaa52b695f4705e386cb7780f51",
+    "span_id": "84a6f13fd874001f",
+    "parent_span_id": null,
+    "service": "api-gateway",
+    "operation": "GET /orders",
+    "start": "2026-11-18T10:21:00Z",
+    "duration_ms": 58.5,
+    "status": "ok",
+    "attributes": {
+      "http.route": "/orders",
+      "http.status_code": 200
+    }
+  },
+  {
+    "trace_id": "e9f79eaa52b695f4705e386cb7780f51",
+    "span_id": "a2405e75a4186ce3",
+    "parent_span_id": "84a6f13fd874001f",
+    "service": "orders-service",
+    "operation": "list_orders",
+    "start": "2026-11-18T10:21:00.003900Z",
+    "duration_ms": 54.6,
+    "status": "ok",
+    "attributes": {}
+  },
+  {
+    "trace_id": "e9f79eaa52b695f4705e386cb7780f51",
+    "span_id": "cb50b24f5d6a03aa",
+    "parent_span_id": "a2405e75a4186ce3",
+    "service": "orders-service",
+    "operation": "db.acquire_connection",
+    "start": "2026-11-18T10:21:00.007600Z",
+    "duration_ms": 2.6,
+    "status": "ok",
+    "attributes": {
+      "db.pool.size": 20
+    }
+  },
+  {
+    "trace_id": "e9f79eaa52b695f4705e386cb7780f51",
+    "span_id": "15bef1101d7c8586",
+    "parent_span_id": "a2405e75a4186ce3",
+    "service": "postgres",
+    "operation": "SELECT orders",
+    "start": "2026-11-18T10:21:00.010200Z",
+    "duration_ms": 14.1,
+    "status": "ok",
+    "attributes": {
+      "db.system": "postgresql",
+      "db.statement": "SELECT orders ORDER BY created_at DESC LIMIT ?"
+    }
+  },
+  {
+    "trace_id": "e9f79eaa52b695f4705e386cb7780f51",
+    "span_id": "34598b6c21590ff2",
+    "parent_span_id": "a2405e75a4186ce3",
+    "service": "inventory-service",
+    "operation": "GET /stock",
+    "start": "2026-11-18T10:21:00.024300Z",
+    "duration_ms": 34.2,
+    "status": "ok",
+    "attributes": {
+      "http.route": "/stock",
+      "http.status_code": 200
+    }
+  },
+  {
+    "trace_id": "71d51632a5fc2107855c6d1311270f52",
+    "span_id": "21e7ff29369aebcf",
+    "parent_span_id": null,
+    "service": "api-gateway",
+    "operation": "GET /orders/search",
+    "start": "2026-11-18T10:21:30Z",
+    "duration_ms": 22.2,
+    "status": "ok",
+    "attributes": {
+      "http.route": "/orders/search",
+      "http.status_code": 200
+    }
+  },
+  {
+    "trace_id": "71d51632a5fc2107855c6d1311270f52",
+    "span_id": "45710369c8c1baa3",
+    "parent_span_id": "21e7ff29369aebcf",
+    "service": "orders-service",
+    "operation": "search_orders",
+    "start": "2026-11-18T10:21:30.002500Z",
+    "duration_ms": 19.7,
+    "status": "ok",
+    "attributes": {}
+  },
+  {
+    "trace_id": "71d51632a5fc2107855c6d1311270f52",
+    "span_id": "2023c3c310e6e585",
+    "parent_span_id": "45710369c8c1baa3",
+    "service": "orders-service",
+    "operation": "db.acquire_connection",
+    "start": "2026-11-18T10:21:30.006000Z",
+    "duration_ms": 2.5,
+    "status": "ok",
+    "attributes": {
+      "db.pool.size": 20
+    }
+  },
+  {
+    "trace_id": "71d51632a5fc2107855c6d1311270f52",
+    "span_id": "d6be65bbc33e2130",
+    "parent_span_id": "45710369c8c1baa3",
+    "service": "postgres",
+    "operation": "SELECT orders",
+    "start": "2026-11-18T10:21:30.008500Z",
+    "duration_ms": 13.7,
+    "status": "ok",
+    "attributes": {
+      "db.system": "postgresql",
+      "db.statement": "SELECT orders WHERE customer_email = ?"
+    }
+  },
+  {
+    "trace_id": "545df61627fdbe33e5d7006a122f1417",
+    "span_id": "1e367ac15d7d9dfd",
+    "parent_span_id": null,
+    "service": "api-gateway",
+    "operation": "GET /orders",
+    "start": "2026-11-18T10:22:00Z",
+    "duration_ms": 26.8,
+    "status": "error",
+    "attributes": {
+      "http.route": "/orders",
+      "http.status_code": 503
+    }
+  },
+  {
+    "trace_id": "545df61627fdbe33e5d7006a122f1417",
+    "span_id": "d4b2288c33deeae1",
+    "parent_span_id": "1e367ac15d7d9dfd",
+    "service": "orders-service",
+    "operation": "list_orders",
+    "start": "2026-11-18T10:22:00.002700Z",
+    "duration_ms": 24.1,
+    "status": "error",
+    "attributes": {}
+  },
+  {
+    "trace_id": "545df61627fdbe33e5d7006a122f1417",
+    "span_id": "c9ebc94a79749de9",
+    "parent_span_id": "d4b2288c33deeae1",
+    "service": "orders-service",
+    "operation": "db.acquire_connection",
+    "start": "2026-11-18T10:22:00.006100Z",
+    "duration_ms": 1.4,
+    "status": "ok",
+    "attributes": {
+      "db.pool.size": 20
+    }
+  },
+  {
+    "trace_id": "545df61627fdbe33e5d7006a122f1417",
+    "span_id": "9b1b4a01e245bd72",
+    "parent_span_id": "d4b2288c33deeae1",
+    "service": "postgres",
+    "operation": "SELECT orders",
+    "start": "2026-11-18T10:22:00.007500Z",
+    "duration_ms": 12.9,
+    "status": "ok",
+    "attributes": {
+      "db.system": "postgresql",
+      "db.statement": "SELECT orders ORDER BY created_at DESC LIMIT ?"
+    }
+  },
+  {
+    "trace_id": "545df61627fdbe33e5d7006a122f1417",
+    "span_id": "85a3c3f7e3df0943",
+    "parent_span_id": "d4b2288c33deeae1",
+    "service": "orders-service",
+    "operation": "GET inventory-service/stock",
+    "start": "2026-11-18T10:22:00.020400Z",
+    "duration_ms": 1.4,
+    "status": "error",
+    "attributes": {
+      "peer.service": "inventory-service",
+      "http.url": "http://inventory-service:8003/stock",
+      "error.type": "ConnectionRefusedError",
+      "retry.attempt": 0
+    }
+  },
+  {
+    "trace_id": "545df61627fdbe33e5d7006a122f1417",
+    "span_id": "85bef9b1ed8eba7f",
+    "parent_span_id": "d4b2288c33deeae1",
+    "service": "orders-service",
+    "operation": "GET inventory-service/stock",
+    "start": "2026-11-18T10:22:00.021800Z",
+    "duration_ms": 2.3,
+    "status": "error",
+    "attributes": {
+      "peer.service": "inventory-service",
+      "http.url": "http://inventory-service:8003/stock",
+      "error.type": "ConnectionRefusedError",
+      "retry.attempt": 1
+    }
+  },
+  {
+    "trace_id": "545df61627fdbe33e5d7006a122f1417",
+    "span_id": "2e0fe9a30fd49fbc",
+    "parent_span_id": "d4b2288c33deeae1",
+    "service": "orders-service",
+    "operation": "GET inventory-service/stock",
+    "start": "2026-11-18T10:22:00.024100Z",
+    "duration_ms": 2.7,
+    "status": "error",
+    "attributes": {
+      "peer.service": "inventory-service",
+      "http.url": "http://inventory-service:8003/stock",
+      "error.type": "ConnectionRefusedError",
+      "retry.attempt": 2
+    }
+  },
+  {
+    "trace_id": "0221e66c974fc73975676573ce6d3121",
+    "span_id": "45a94fe999ad2fe6",
+    "parent_span_id": null,
+    "service": "api-gateway",
+    "operation": "GET /orders/search",
+    "start": "2026-11-18T10:22:30Z",
+    "duration_ms": 24.1,
+    "status": "ok",
+    "attributes": {
+      "http.route": "/orders/search",
+      "http.status_code": 200
+    }
+  },
+  {
+    "trace_id": "0221e66c974fc73975676573ce6d3121",
+    "span_id": "a1da8d77237f28ed",
+    "parent_span_id": "45a94fe999ad2fe6",
+    "service": "orders-service",
+    "operation": "search_orders",
+    "start": "2026-11-18T10:22:30.003000Z",
+    "duration_ms": 21.1,
+    "status": "ok",
+    "attributes": {}
+  },
+  {
+    "trace_id": "0221e66c974fc73975676573ce6d3121",
+    "span_id": "21fc30f618d8a539",
+    "parent_span_id": "a1da8d77237f28ed",
+    "service": "orders-service",
+    "operation": "db.acquire_connection",
+    "start": "2026-11-18T10:22:30.007700Z",
+    "duration_ms": 3.5,
+    "status": "ok",
+    "attributes": {
+      "db.pool.size": 20
+    }
+  },
+  {
+    "trace_id": "0221e66c974fc73975676573ce6d3121",
+    "span_id": "951c4215ec9fcaef",
+    "parent_span_id": "a1da8d77237f28ed",
+    "service": "postgres",
+    "operation": "SELECT orders",
+    "start": "2026-11-18T10:22:30.011200Z",
+    "duration_ms": 12.9,
+    "status": "ok",
+    "attributes": {
+      "db.system": "postgresql",
+      "db.statement": "SELECT orders WHERE customer_email = ?"
+    }
+  },
+  {
+    "trace_id": "45bd88ddcf55c0449a8542f22fd32a8d",
+    "span_id": "a8f714a809e3b241",
+    "parent_span_id": null,
+    "service": "api-gateway",
+    "operation": "GET /orders",
+    "start": "2026-11-18T10:23:00Z",
+    "duration_ms": 23.2,
+    "status": "error",
+    "attributes": {
+      "http.route": "/orders",
+      "http.status_code": 503
+    }
+  },
+  {
+    "trace_id": "45bd88ddcf55c0449a8542f22fd32a8d",
+    "span_id": "cae116efb3558954",
+    "parent_span_id": "a8f714a809e3b241",
+    "service": "orders-service",
+    "operation": "list_orders",
+    "start": "2026-11-18T10:23:00.004800Z",
+    "duration_ms": 18.4,
+    "status": "error",
+    "attributes": {}
+  },
+  {
+    "trace_id": "45bd88ddcf55c0449a8542f22fd32a8d",
+    "span_id": "901d01dbc017715e",
+    "parent_span_id": "cae116efb3558954",
+    "service": "orders-service",
+    "operation": "db.acquire_connection",
+    "start": "2026-11-18T10:23:00.007900Z",
+    "duration_ms": 1.1,
+    "status": "ok",
+    "attributes": {
+      "db.pool.size": 20
+    }
+  },
+  {
+    "trace_id": "45bd88ddcf55c0449a8542f22fd32a8d",
+    "span_id": "6bd6feb13506b9a3",
+    "parent_span_id": "cae116efb3558954",
+    "service": "postgres",
+    "operation": "SELECT orders",
+    "start": "2026-11-18T10:23:00.009000Z",
+    "duration_ms": 9.1,
+    "status": "ok",
+    "attributes": {
+      "db.system": "postgresql",
+      "db.statement": "SELECT orders ORDER BY created_at DESC LIMIT ?"
+    }
+  },
+  {
+    "trace_id": "45bd88ddcf55c0449a8542f22fd32a8d",
+    "span_id": "85b97bb720242c68",
+    "parent_span_id": "cae116efb3558954",
+    "service": "orders-service",
+    "operation": "GET inventory-service/stock",
+    "start": "2026-11-18T10:23:00.018100Z",
+    "duration_ms": 1.8,
+    "status": "error",
+    "attributes": {
+      "peer.service": "inventory-service",
+      "http.url": "http://inventory-service:8003/stock",
+      "error.type": "ConnectionRefusedError",
+      "retry.attempt": 0
+    }
+  },
+  {
+    "trace_id": "45bd88ddcf55c0449a8542f22fd32a8d",
+    "span_id": "b438ecbec0e4a96c",
+    "parent_span_id": "cae116efb3558954",
+    "service": "orders-service",
+    "operation": "GET inventory-service/stock",
+    "start": "2026-11-18T10:23:00.019900Z",
+    "duration_ms": 2.3,
+    "status": "error",
+    "attributes": {
+      "peer.service": "inventory-service",
+      "http.url": "http://inventory-service:8003/stock",
+      "error.type": "ConnectionRefusedError",
+      "retry.attempt": 1
+    }
+  },
+  {
+    "trace_id": "45bd88ddcf55c0449a8542f22fd32a8d",
+    "span_id": "377b15279a8a9e1c",
+    "parent_span_id": "cae116efb3558954",
+    "service": "orders-service",
+    "operation": "GET inventory-service/stock",
+    "start": "2026-11-18T10:23:00.022200Z",
+    "duration_ms": 1.0,
+    "status": "error",
+    "attributes": {
+      "peer.service": "inventory-service",
+      "http.url": "http://inventory-service:8003/stock",
+      "error.type": "ConnectionRefusedError",
+      "retry.attempt": 2
+    }
+  },
+  {
+    "trace_id": "5d6b7151e9fb52d480c0b5e02fb15ecd",
+    "span_id": "f489b530559f1522",
+    "parent_span_id": null,
+    "service": "api-gateway",
+    "operation": "GET /orders/search",
+    "start": "2026-11-18T10:23:30Z",
+    "duration_ms": 27.3,
+    "status": "ok",
+    "attributes": {
+      "http.route": "/orders/search",
+      "http.status_code": 200
+    }
+  },
+  {
+    "trace_id": "5d6b7151e9fb52d480c0b5e02fb15ecd",
+    "span_id": "5d13e09eed7ef5ce",
+    "parent_span_id": "f489b530559f1522",
+    "service": "orders-service",
+    "operation": "search_orders",
+    "start": "2026-11-18T10:23:30.003900Z",
+    "duration_ms": 23.4,
+    "status": "ok",
+    "attributes": {}
+  },
+  {
+    "trace_id": "5d6b7151e9fb52d480c0b5e02fb15ecd",
+    "span_id": "83b33b139b1c7aa9",
+    "parent_span_id": "5d13e09eed7ef5ce",
+    "service": "orders-service",
+    "operation": "db.acquire_connection",
+    "start": "2026-11-18T10:23:30.011000Z",
+    "duration_ms": 2.1,
+    "status": "ok",
+    "attributes": {
+      "db.pool.size": 20
+    }
+  },
+  {
+    "trace_id": "5d6b7151e9fb52d480c0b5e02fb15ecd",
+    "span_id": "3351b8bd1db2a230",
+    "parent_span_id": "5d13e09eed7ef5ce",
+    "service": "postgres",
+    "operation": "SELECT orders",
+    "start": "2026-11-18T10:23:30.013100Z",
+    "duration_ms": 14.2,
+    "status": "ok",
+    "attributes": {
+      "db.system": "postgresql",
+      "db.statement": "SELECT orders WHERE customer_email = ?"
+    }
+  },
+  {
+    "trace_id": "04f87d94cf146dd031bf14bcf94d7adf",
+    "span_id": "80f0cad8c9d33430",
+    "parent_span_id": null,
+    "service": "api-gateway",
+    "operation": "GET /orders",
+    "start": "2026-11-18T10:24:00Z",
+    "duration_ms": 28.6,
+    "status": "error",
+    "attributes": {
+      "http.route": "/orders",
+      "http.status_code": 503
+    }
+  },
+  {
+    "trace_id": "04f87d94cf146dd031bf14bcf94d7adf",
+    "span_id": "225cdc40969f71b0",
+    "parent_span_id": "80f0cad8c9d33430",
+    "service": "orders-service",
+    "operation": "list_orders",
+    "start": "2026-11-18T10:24:00.003500Z",
+    "duration_ms": 25.1,
+    "status": "error",
+    "attributes": {}
+  },
+  {
+    "trace_id": "04f87d94cf146dd031bf14bcf94d7adf",
+    "span_id": "fdfe5bc99f43e775",
+    "parent_span_id": "225cdc40969f71b0",
+    "service": "orders-service",
+    "operation": "db.acquire_connection",
+    "start": "2026-11-18T10:24:00.009900Z",
+    "duration_ms": 3.5,
+    "status": "ok",
+    "attributes": {
+      "db.pool.size": 20
+    }
+  },
+  {
+    "trace_id": "04f87d94cf146dd031bf14bcf94d7adf",
+    "span_id": "c3a1348a11ca6f5a",
+    "parent_span_id": "225cdc40969f71b0",
+    "service": "postgres",
+    "operation": "SELECT orders",
+    "start": "2026-11-18T10:24:00.013400Z",
+    "duration_ms": 10.0,
+    "status": "ok",
+    "attributes": {
+      "db.system": "postgresql",
+      "db.statement": "SELECT orders ORDER BY created_at DESC LIMIT ?"
+    }
+  },
+  {
+    "trace_id": "04f87d94cf146dd031bf14bcf94d7adf",
+    "span_id": "68e35ef1f333173b",
+    "parent_span_id": "225cdc40969f71b0",
+    "service": "orders-service",
+    "operation": "GET inventory-service/stock",
+    "start": "2026-11-18T10:24:00.023400Z",
+    "duration_ms": 1.3,
+    "status": "error",
+    "attributes": {
+      "peer.service": "inventory-service",
+      "http.url": "http://inventory-service:8003/stock",
+      "error.type": "ConnectionRefusedError",
+      "retry.attempt": 0
+    }
+  },
+  {
+    "trace_id": "04f87d94cf146dd031bf14bcf94d7adf",
+    "span_id": "afb671538b4cd432",
+    "parent_span_id": "225cdc40969f71b0",
+    "service": "orders-service",
+    "operation": "GET inventory-service/stock",
+    "start": "2026-11-18T10:24:00.024700Z",
+    "duration_ms": 2.1,
+    "status": "error",
+    "attributes": {
+      "peer.service": "inventory-service",
+      "http.url": "http://inventory-service:8003/stock",
+      "error.type": "ConnectionRefusedError",
+      "retry.attempt": 1
+    }
+  },
+  {
+    "trace_id": "04f87d94cf146dd031bf14bcf94d7adf",
+    "span_id": "9a17942c80092bd3",
+    "parent_span_id": "225cdc40969f71b0",
+    "service": "orders-service",
+    "operation": "GET inventory-service/stock",
+    "start": "2026-11-18T10:24:00.026800Z",
+    "duration_ms": 1.8,
+    "status": "error",
+    "attributes": {
+      "peer.service": "inventory-service",
+      "http.url": "http://inventory-service:8003/stock",
+      "error.type": "ConnectionRefusedError",
+      "retry.attempt": 2
+    }
+  },
+  {
+    "trace_id": "62ad193317a460072fa46f35722f9c12",
+    "span_id": "8d80bac174624f4b",
+    "parent_span_id": null,
+    "service": "api-gateway",
+    "operation": "GET /orders/search",
+    "start": "2026-11-18T10:24:30Z",
+    "duration_ms": 24.8,
+    "status": "ok",
+    "attributes": {
+      "http.route": "/orders/search",
+      "http.status_code": 200
+    }
+  },
+  {
+    "trace_id": "62ad193317a460072fa46f35722f9c12",
+    "span_id": "623ff0e11398f70a",
+    "parent_span_id": "8d80bac174624f4b",
+    "service": "orders-service",
+    "operation": "search_orders",
+    "start": "2026-11-18T10:24:30.003300Z",
+    "duration_ms": 21.5,
+    "status": "ok",
+    "attributes": {}
+  },
+  {
+    "trace_id": "62ad193317a460072fa46f35722f9c12",
+    "span_id": "5be9ed68f0c6a8e1",
+    "parent_span_id": "623ff0e11398f70a",
+    "service": "orders-service",
+    "operation": "db.acquire_connection",
+    "start": "2026-11-18T10:24:30.010100Z",
+    "duration_ms": 3.3,
+    "status": "ok",
+    "attributes": {
+      "db.pool.size": 20
+    }
+  },
+  {
+    "trace_id": "62ad193317a460072fa46f35722f9c12",
+    "span_id": "13ffc9afcc5cffce",
+    "parent_span_id": "623ff0e11398f70a",
+    "service": "postgres",
+    "operation": "SELECT orders",
+    "start": "2026-11-18T10:24:30.013400Z",
+    "duration_ms": 11.4,
+    "status": "ok",
+    "attributes": {
+      "db.system": "postgresql",
+      "db.statement": "SELECT orders WHERE customer_email = ?"
+    }
+  },
+  {
+    "trace_id": "5f56629352ac16d76268099a1af31e6d",
+    "span_id": "44ff25e45d4c7290",
+    "parent_span_id": null,
+    "service": "api-gateway",
+    "operation": "GET /orders",
+    "start": "2026-11-18T10:25:00Z",
+    "duration_ms": 33.0,
+    "status": "error",
+    "attributes": {
+      "http.route": "/orders",
+      "http.status_code": 503
+    }
+  },
+  {
+    "trace_id": "5f56629352ac16d76268099a1af31e6d",
+    "span_id": "c8cca49e22b45d9e",
+    "parent_span_id": "44ff25e45d4c7290",
+    "service": "orders-service",
+    "operation": "list_orders",
+    "start": "2026-11-18T10:25:00.002000Z",
+    "duration_ms": 31.0,
+    "status": "error",
+    "attributes": {}
+  },
+  {
+    "trace_id": "5f56629352ac16d76268099a1af31e6d",
+    "span_id": "5335279e3c0cde11",
+    "parent_span_id": "c8cca49e22b45d9e",
+    "service": "orders-service",
+    "operation": "db.acquire_connection",
+    "start": "2026-11-18T10:25:00.008100Z",
+    "duration_ms": 3.1,
+    "status": "ok",
+    "attributes": {
+      "db.pool.size": 20
+    }
+  },
+  {
+    "trace_id": "5f56629352ac16d76268099a1af31e6d",
+    "span_id": "af6a97c73811c3c5",
+    "parent_span_id": "c8cca49e22b45d9e",
+    "service": "postgres",
+    "operation": "SELECT orders",
+    "start": "2026-11-18T10:25:00.011200Z",
+    "duration_ms": 15.6,
+    "status": "ok",
+    "attributes": {
+      "db.system": "postgresql",
+      "db.statement": "SELECT orders ORDER BY created_at DESC LIMIT ?"
+    }
+  },
+  {
+    "trace_id": "5f56629352ac16d76268099a1af31e6d",
+    "span_id": "a3f379c1a99b67b8",
+    "parent_span_id": "c8cca49e22b45d9e",
+    "service": "orders-service",
+    "operation": "GET inventory-service/stock",
+    "start": "2026-11-18T10:25:00.026800Z",
+    "duration_ms": 1.3,
+    "status": "error",
+    "attributes": {
+      "peer.service": "inventory-service",
+      "http.url": "http://inventory-service:8003/stock",
+      "error.type": "ConnectionRefusedError",
+      "retry.attempt": 0
+    }
+  },
+  {
+    "trace_id": "5f56629352ac16d76268099a1af31e6d",
+    "span_id": "4e692b02cdf335f2",
+    "parent_span_id": "c8cca49e22b45d9e",
+    "service": "orders-service",
+    "operation": "GET inventory-service/stock",
+    "start": "2026-11-18T10:25:00.028100Z",
+    "duration_ms": 2.0,
+    "status": "error",
+    "attributes": {
+      "peer.service": "inventory-service",
+      "http.url": "http://inventory-service:8003/stock",
+      "error.type": "ConnectionRefusedError",
+      "retry.attempt": 1
+    }
+  },
+  {
+    "trace_id": "5f56629352ac16d76268099a1af31e6d",
+    "span_id": "7a303d2a98285781",
+    "parent_span_id": "c8cca49e22b45d9e",
+    "service": "orders-service",
+    "operation": "GET inventory-service/stock",
+    "start": "2026-11-18T10:25:00.030100Z",
+    "duration_ms": 2.9,
+    "status": "error",
+    "attributes": {
+      "peer.service": "inventory-service",
+      "http.url": "http://inventory-service:8003/stock",
+      "error.type": "ConnectionRefusedError",
+      "retry.attempt": 2
+    }
+  },
+  {
+    "trace_id": "f735bdbad5777e173fecbcff6e987725",
+    "span_id": "d6e1f9b03b0edcd0",
+    "parent_span_id": null,
+    "service": "api-gateway",
+    "operation": "GET /orders/search",
+    "start": "2026-11-18T10:25:30Z",
+    "duration_ms": 31.1,
+    "status": "ok",
+    "attributes": {
+      "http.route": "/orders/search",
+      "http.status_code": 200
+    }
+  },
+  {
+    "trace_id": "f735bdbad5777e173fecbcff6e987725",
+    "span_id": "b74fbbfb4de18417",
+    "parent_span_id": "d6e1f9b03b0edcd0",
+    "service": "orders-service",
+    "operation": "search_orders",
+    "start": "2026-11-18T10:25:30.002800Z",
+    "duration_ms": 28.3,
+    "status": "ok",
+    "attributes": {}
+  },
+  {
+    "trace_id": "f735bdbad5777e173fecbcff6e987725",
+    "span_id": "a7a053ee7226014a",
+    "parent_span_id": "b74fbbfb4de18417",
+    "service": "orders-service",
+    "operation": "db.acquire_connection",
+    "start": "2026-11-18T10:25:30.009600Z",
+    "duration_ms": 2.7,
+    "status": "ok",
+    "attributes": {
+      "db.pool.size": 20
+    }
+  },
+  {
+    "trace_id": "f735bdbad5777e173fecbcff6e987725",
+    "span_id": "baf70290e8de0826",
+    "parent_span_id": "b74fbbfb4de18417",
+    "service": "postgres",
+    "operation": "SELECT orders",
+    "start": "2026-11-18T10:25:30.012300Z",
+    "duration_ms": 18.8,
+    "status": "ok",
+    "attributes": {
+      "db.system": "postgresql",
+      "db.statement": "SELECT orders WHERE customer_email = ?"
+    }
+  },
+  {
+    "trace_id": "1151d5a0f71343760346309495bd4503",
+    "span_id": "33363b177dbeb86a",
+    "parent_span_id": null,
+    "service": "api-gateway",
+    "operation": "GET /orders",
+    "start": "2026-11-18T10:26:00Z",
+    "duration_ms": 37.2,
+    "status": "error",
+    "attributes": {
+      "http.route": "/orders",
+      "http.status_code": 503
+    }
+  },
+  {
+    "trace_id": "1151d5a0f71343760346309495bd4503",
+    "span_id": "771cb3e2b20c9e43",
+    "parent_span_id": "33363b177dbeb86a",
+    "service": "orders-service",
+    "operation": "list_orders",
+    "start": "2026-11-18T10:26:00.004800Z",
+    "duration_ms": 32.4,
+    "status": "error",
+    "attributes": {}
+  },
+  {
+    "trace_id": "1151d5a0f71343760346309495bd4503",
+    "span_id": "b6aec710b575c8be",
+    "parent_span_id": "771cb3e2b20c9e43",
+    "service": "orders-service",
+    "operation": "db.acquire_connection",
+    "start": "2026-11-18T10:26:00.011600Z",
+    "duration_ms": 3.4,
+    "status": "ok",
+    "attributes": {
+      "db.pool.size": 20
+    }
+  },
+  {
+    "trace_id": "1151d5a0f71343760346309495bd4503",
+    "span_id": "b65e44c1ef8f0a86",
+    "parent_span_id": "771cb3e2b20c9e43",
+    "service": "postgres",
+    "operation": "SELECT orders",
+    "start": "2026-11-18T10:26:00.015000Z",
+    "duration_ms": 14.3,
+    "status": "ok",
+    "attributes": {
+      "db.system": "postgresql",
+      "db.statement": "SELECT orders ORDER BY created_at DESC LIMIT ?"
+    }
+  },
+  {
+    "trace_id": "1151d5a0f71343760346309495bd4503",
+    "span_id": "f839516d4e746e6e",
+    "parent_span_id": "771cb3e2b20c9e43",
+    "service": "orders-service",
+    "operation": "GET inventory-service/stock",
+    "start": "2026-11-18T10:26:00.029300Z",
+    "duration_ms": 2.2,
+    "status": "error",
+    "attributes": {
+      "peer.service": "inventory-service",
+      "http.url": "http://inventory-service:8003/stock",
+      "error.type": "ConnectionRefusedError",
+      "retry.attempt": 0
+    }
+  },
+  {
+    "trace_id": "1151d5a0f71343760346309495bd4503",
+    "span_id": "d2b32ff551bff418",
+    "parent_span_id": "771cb3e2b20c9e43",
+    "service": "orders-service",
+    "operation": "GET inventory-service/stock",
+    "start": "2026-11-18T10:26:00.031500Z",
+    "duration_ms": 3.0,
+    "status": "error",
+    "attributes": {
+      "peer.service": "inventory-service",
+      "http.url": "http://inventory-service:8003/stock",
+      "error.type": "ConnectionRefusedError",
+      "retry.attempt": 1
+    }
+  },
+  {
+    "trace_id": "1151d5a0f71343760346309495bd4503",
+    "span_id": "4b311e1cd035b0ac",
+    "parent_span_id": "771cb3e2b20c9e43",
+    "service": "orders-service",
+    "operation": "GET inventory-service/stock",
+    "start": "2026-11-18T10:26:00.034500Z",
+    "duration_ms": 2.7,
+    "status": "error",
+    "attributes": {
+      "peer.service": "inventory-service",
+      "http.url": "http://inventory-service:8003/stock",
+      "error.type": "ConnectionRefusedError",
+      "retry.attempt": 2
+    }
+  },
+  {
+    "trace_id": "9c33419e8a214adb4b472ebaae74f58a",
+    "span_id": "a0a0b309641caffb",
+    "parent_span_id": null,
+    "service": "api-gateway",
+    "operation": "GET /orders/search",
+    "start": "2026-11-18T10:26:30Z",
+    "duration_ms": 25.9,
+    "status": "ok",
+    "attributes": {
+      "http.route": "/orders/search",
+      "http.status_code": 200
+    }
+  },
+  {
+    "trace_id": "9c33419e8a214adb4b472ebaae74f58a",
+    "span_id": "2c18abf93bc42b7a",
+    "parent_span_id": "a0a0b309641caffb",
+    "service": "orders-service",
+    "operation": "search_orders",
+    "start": "2026-11-18T10:26:30.003100Z",
+    "duration_ms": 22.8,
+    "status": "ok",
+    "attributes": {}
+  },
+  {
+    "trace_id": "9c33419e8a214adb4b472ebaae74f58a",
+    "span_id": "640fb6fb5c52bfcb",
+    "parent_span_id": "2c18abf93bc42b7a",
+    "service": "orders-service",
+    "operation": "db.acquire_connection",
+    "start": "2026-11-18T10:26:30.010700Z",
+    "duration_ms": 1.5,
+    "status": "ok",
+    "attributes": {
+      "db.pool.size": 20
+    }
+  },
+  {
+    "trace_id": "9c33419e8a214adb4b472ebaae74f58a",
+    "span_id": "4a66faed2213704f",
+    "parent_span_id": "2c18abf93bc42b7a",
+    "service": "postgres",
+    "operation": "SELECT orders",
+    "start": "2026-11-18T10:26:30.012200Z",
+    "duration_ms": 13.7,
+    "status": "ok",
+    "attributes": {
+      "db.system": "postgresql",
+      "db.statement": "SELECT orders WHERE customer_email = ?"
+    }
+  },
+  {
+    "trace_id": "d13451c55ee087ea9dfd4ca4894d9c20",
+    "span_id": "5fad9931694b8188",
+    "parent_span_id": null,
+    "service": "api-gateway",
+    "operation": "GET /orders",
+    "start": "2026-11-18T10:27:00Z",
+    "duration_ms": 33.4,
+    "status": "error",
+    "attributes": {
+      "http.route": "/orders",
+      "http.status_code": 503
+    }
+  },
+  {
+    "trace_id": "d13451c55ee087ea9dfd4ca4894d9c20",
+    "span_id": "faf91ead1fa3ce13",
+    "parent_span_id": "5fad9931694b8188",
+    "service": "orders-service",
+    "operation": "list_orders",
+    "start": "2026-11-18T10:27:00.003800Z",
+    "duration_ms": 29.6,
+    "status": "error",
+    "attributes": {}
+  },
+  {
+    "trace_id": "d13451c55ee087ea9dfd4ca4894d9c20",
+    "span_id": "ddadcf005011262f",
+    "parent_span_id": "faf91ead1fa3ce13",
+    "service": "orders-service",
+    "operation": "db.acquire_connection",
+    "start": "2026-11-18T10:27:00.007800Z",
+    "duration_ms": 2.0,
+    "status": "ok",
+    "attributes": {
+      "db.pool.size": 20
+    }
+  },
+  {
+    "trace_id": "d13451c55ee087ea9dfd4ca4894d9c20",
+    "span_id": "927a47b2662fc403",
+    "parent_span_id": "faf91ead1fa3ce13",
+    "service": "postgres",
+    "operation": "SELECT orders",
+    "start": "2026-11-18T10:27:00.009800Z",
+    "duration_ms": 16.6,
+    "status": "ok",
+    "attributes": {
+      "db.system": "postgresql",
+      "db.statement": "SELECT orders ORDER BY created_at DESC LIMIT ?"
+    }
+  },
+  {
+    "trace_id": "d13451c55ee087ea9dfd4ca4894d9c20",
+    "span_id": "22f15320d7d40369",
+    "parent_span_id": "faf91ead1fa3ce13",
+    "service": "orders-service",
+    "operation": "GET inventory-service/stock",
+    "start": "2026-11-18T10:27:00.026400Z",
+    "duration_ms": 1.8,
+    "status": "error",
+    "attributes": {
+      "peer.service": "inventory-service",
+      "http.url": "http://inventory-service:8003/stock",
+      "error.type": "ConnectionRefusedError",
+      "retry.attempt": 0
+    }
+  },
+  {
+    "trace_id": "d13451c55ee087ea9dfd4ca4894d9c20",
+    "span_id": "8da1f93d6b5da9e9",
+    "parent_span_id": "faf91ead1fa3ce13",
+    "service": "orders-service",
+    "operation": "GET inventory-service/stock",
+    "start": "2026-11-18T10:27:00.028200Z",
+    "duration_ms": 2.8,
+    "status": "error",
+    "attributes": {
+      "peer.service": "inventory-service",
+      "http.url": "http://inventory-service:8003/stock",
+      "error.type": "ConnectionRefusedError",
+      "retry.attempt": 1
+    }
+  },
+  {
+    "trace_id": "d13451c55ee087ea9dfd4ca4894d9c20",
+    "span_id": "096252109ae84063",
+    "parent_span_id": "faf91ead1fa3ce13",
+    "service": "orders-service",
+    "operation": "GET inventory-service/stock",
+    "start": "2026-11-18T10:27:00.031000Z",
+    "duration_ms": 2.4,
+    "status": "error",
+    "attributes": {
+      "peer.service": "inventory-service",
+      "http.url": "http://inventory-service:8003/stock",
+      "error.type": "ConnectionRefusedError",
+      "retry.attempt": 2
+    }
+  },
+  {
+    "trace_id": "8a313a0fbce03d8d989e3c59c74cdd6c",
+    "span_id": "a22a432daba6533a",
+    "parent_span_id": null,
+    "service": "api-gateway",
+    "operation": "GET /orders/search",
+    "start": "2026-11-18T10:27:30Z",
+    "duration_ms": 24.6,
+    "status": "ok",
+    "attributes": {
+      "http.route": "/orders/search",
+      "http.status_code": 200
+    }
+  },
+  {
+    "trace_id": "8a313a0fbce03d8d989e3c59c74cdd6c",
+    "span_id": "7b2a1413e26faf6f",
+    "parent_span_id": "a22a432daba6533a",
+    "service": "orders-service",
+    "operation": "search_orders",
+    "start": "2026-11-18T10:27:30.003200Z",
+    "duration_ms": 21.4,
+    "status": "ok",
+    "attributes": {}
+  },
+  {
+    "trace_id": "8a313a0fbce03d8d989e3c59c74cdd6c",
+    "span_id": "11eb9f199fdafb5f",
+    "parent_span_id": "7b2a1413e26faf6f",
+    "service": "orders-service",
+    "operation": "db.acquire_connection",
+    "start": "2026-11-18T10:27:30.009500Z",
+    "duration_ms": 1.8,
+    "status": "ok",
+    "attributes": {
+      "db.pool.size": 20
+    }
+  },
+  {
+    "trace_id": "8a313a0fbce03d8d989e3c59c74cdd6c",
+    "span_id": "816739c991bd7cb0",
+    "parent_span_id": "7b2a1413e26faf6f",
+    "service": "postgres",
+    "operation": "SELECT orders",
+    "start": "2026-11-18T10:27:30.011300Z",
+    "duration_ms": 13.3,
+    "status": "ok",
+    "attributes": {
+      "db.system": "postgresql",
+      "db.statement": "SELECT orders WHERE customer_email = ?"
+    }
+  },
+  {
+    "trace_id": "8f69848d769d47923211e4411784532c",
+    "span_id": "200939d8c35baef3",
+    "parent_span_id": null,
+    "service": "api-gateway",
+    "operation": "GET /orders",
+    "start": "2026-11-18T10:28:00Z",
+    "duration_ms": 37.5,
+    "status": "error",
+    "attributes": {
+      "http.route": "/orders",
+      "http.status_code": 503
+    }
+  },
+  {
+    "trace_id": "8f69848d769d47923211e4411784532c",
+    "span_id": "5f65fc94c923d619",
+    "parent_span_id": "200939d8c35baef3",
+    "service": "orders-service",
+    "operation": "list_orders",
+    "start": "2026-11-18T10:28:00.002700Z",
+    "duration_ms": 34.8,
+    "status": "error",
+    "attributes": {}
+  },
+  {
+    "trace_id": "8f69848d769d47923211e4411784532c",
+    "span_id": "ceff5ed36b3eca92",
+    "parent_span_id": "5f65fc94c923d619",
+    "service": "orders-service",
+    "operation": "db.acquire_connection",
+    "start": "2026-11-18T10:28:00.010400Z",
+    "duration_ms": 3.7,
+    "status": "ok",
+    "attributes": {
+      "db.pool.size": 20
+    }
+  },
+  {
+    "trace_id": "8f69848d769d47923211e4411784532c",
+    "span_id": "38245f728faaf094",
+    "parent_span_id": "5f65fc94c923d619",
+    "service": "postgres",
+    "operation": "SELECT orders",
+    "start": "2026-11-18T10:28:00.014100Z",
+    "duration_ms": 19.1,
+    "status": "ok",
+    "attributes": {
+      "db.system": "postgresql",
+      "db.statement": "SELECT orders ORDER BY created_at DESC LIMIT ?"
+    }
+  },
+  {
+    "trace_id": "8f69848d769d47923211e4411784532c",
+    "span_id": "f9c4aa0c08cfaef8",
+    "parent_span_id": "5f65fc94c923d619",
+    "service": "orders-service",
+    "operation": "GET inventory-service/stock",
+    "start": "2026-11-18T10:28:00.033200Z",
+    "duration_ms": 1.2,
+    "status": "error",
+    "attributes": {
+      "peer.service": "inventory-service",
+      "http.url": "http://inventory-service:8003/stock",
+      "error.type": "ConnectionRefusedError",
+      "retry.attempt": 0
+    }
+  },
+  {
+    "trace_id": "8f69848d769d47923211e4411784532c",
+    "span_id": "60af4db64845ce25",
+    "parent_span_id": "5f65fc94c923d619",
+    "service": "orders-service",
+    "operation": "GET inventory-service/stock",
+    "start": "2026-11-18T10:28:00.034400Z",
+    "duration_ms": 1.6,
+    "status": "error",
+    "attributes": {
+      "peer.service": "inventory-service",
+      "http.url": "http://inventory-service:8003/stock",
+      "error.type": "ConnectionRefusedError",
+      "retry.attempt": 1
+    }
+  },
+  {
+    "trace_id": "8f69848d769d47923211e4411784532c",
+    "span_id": "60d4b40c3b69f173",
+    "parent_span_id": "5f65fc94c923d619",
+    "service": "orders-service",
+    "operation": "GET inventory-service/stock",
+    "start": "2026-11-18T10:28:00.036000Z",
+    "duration_ms": 1.5,
+    "status": "error",
+    "attributes": {
+      "peer.service": "inventory-service",
+      "http.url": "http://inventory-service:8003/stock",
+      "error.type": "ConnectionRefusedError",
+      "retry.attempt": 2
+    }
+  },
+  {
+    "trace_id": "bb12d086e9a0334106eb2e36e2bd64b2",
+    "span_id": "e368e3a2b7896110",
+    "parent_span_id": null,
+    "service": "api-gateway",
+    "operation": "GET /orders/search",
+    "start": "2026-11-18T10:28:30Z",
+    "duration_ms": 23.6,
+    "status": "ok",
+    "attributes": {
+      "http.route": "/orders/search",
+      "http.status_code": 200
+    }
+  },
+  {
+    "trace_id": "bb12d086e9a0334106eb2e36e2bd64b2",
+    "span_id": "2af9a99e05a55f01",
+    "parent_span_id": "e368e3a2b7896110",
+    "service": "orders-service",
+    "operation": "search_orders",
+    "start": "2026-11-18T10:28:30.004100Z",
+    "duration_ms": 19.5,
+    "status": "ok",
+    "attributes": {}
+  },
+  {
+    "trace_id": "bb12d086e9a0334106eb2e36e2bd64b2",
+    "span_id": "81bd69bb608c6e26",
+    "parent_span_id": "2af9a99e05a55f01",
+    "service": "orders-service",
+    "operation": "db.acquire_connection",
+    "start": "2026-11-18T10:28:30.010400Z",
+    "duration_ms": 3.1,
+    "status": "ok",
+    "attributes": {
+      "db.pool.size": 20
+    }
+  },
+  {
+    "trace_id": "bb12d086e9a0334106eb2e36e2bd64b2",
+    "span_id": "fd4291976d2ee6b0",
+    "parent_span_id": "2af9a99e05a55f01",
+    "service": "postgres",
+    "operation": "SELECT orders",
+    "start": "2026-11-18T10:28:30.013500Z",
+    "duration_ms": 10.1,
+    "status": "ok",
+    "attributes": {
+      "db.system": "postgresql",
+      "db.statement": "SELECT orders WHERE customer_email = ?"
+    }
+  },
+  {
+    "trace_id": "079fa3ac0e597701ef73b6d659bcfc03",
+    "span_id": "9b3b25c5a24cc33e",
+    "parent_span_id": null,
+    "service": "api-gateway",
+    "operation": "GET /orders",
+    "start": "2026-11-18T10:29:00Z",
+    "duration_ms": 34.5,
+    "status": "error",
+    "attributes": {
+      "http.route": "/orders",
+      "http.status_code": 503
+    }
+  },
+  {
+    "trace_id": "079fa3ac0e597701ef73b6d659bcfc03",
+    "span_id": "6f9031357c708c80",
+    "parent_span_id": "9b3b25c5a24cc33e",
+    "service": "orders-service",
+    "operation": "list_orders",
+    "start": "2026-11-18T10:29:00.004800Z",
+    "duration_ms": 29.7,
+    "status": "error",
+    "attributes": {}
+  },
+  {
+    "trace_id": "079fa3ac0e597701ef73b6d659bcfc03",
+    "span_id": "a2c5a902e75f8b4c",
+    "parent_span_id": "6f9031357c708c80",
+    "service": "orders-service",
+    "operation": "db.acquire_connection",
+    "start": "2026-11-18T10:29:00.010800Z",
+    "duration_ms": 2.2,
+    "status": "ok",
+    "attributes": {
+      "db.pool.size": 20
+    }
+  },
+  {
+    "trace_id": "079fa3ac0e597701ef73b6d659bcfc03",
+    "span_id": "4b9dae63271907c9",
+    "parent_span_id": "6f9031357c708c80",
+    "service": "postgres",
+    "operation": "SELECT orders",
+    "start": "2026-11-18T10:29:00.013000Z",
+    "duration_ms": 14.6,
+    "status": "ok",
+    "attributes": {
+      "db.system": "postgresql",
+      "db.statement": "SELECT orders ORDER BY created_at DESC LIMIT ?"
+    }
+  },
+  {
+    "trace_id": "079fa3ac0e597701ef73b6d659bcfc03",
+    "span_id": "9db4b595af609faa",
+    "parent_span_id": "6f9031357c708c80",
+    "service": "orders-service",
+    "operation": "GET inventory-service/stock",
+    "start": "2026-11-18T10:29:00.027600Z",
+    "duration_ms": 2.9,
+    "status": "error",
+    "attributes": {
+      "peer.service": "inventory-service",
+      "http.url": "http://inventory-service:8003/stock",
+      "error.type": "ConnectionRefusedError",
+      "retry.attempt": 0
+    }
+  },
+  {
+    "trace_id": "079fa3ac0e597701ef73b6d659bcfc03",
+    "span_id": "f99abf3d30e323d6",
+    "parent_span_id": "6f9031357c708c80",
+    "service": "orders-service",
+    "operation": "GET inventory-service/stock",
+    "start": "2026-11-18T10:29:00.030500Z",
+    "duration_ms": 1.8,
+    "status": "error",
+    "attributes": {
+      "peer.service": "inventory-service",
+      "http.url": "http://inventory-service:8003/stock",
+      "error.type": "ConnectionRefusedError",
+      "retry.attempt": 1
+    }
+  },
+  {
+    "trace_id": "079fa3ac0e597701ef73b6d659bcfc03",
+    "span_id": "8205f9872bd34506",
+    "parent_span_id": "6f9031357c708c80",
+    "service": "orders-service",
+    "operation": "GET inventory-service/stock",
+    "start": "2026-11-18T10:29:00.032300Z",
+    "duration_ms": 2.2,
+    "status": "error",
+    "attributes": {
+      "peer.service": "inventory-service",
+      "http.url": "http://inventory-service:8003/stock",
+      "error.type": "ConnectionRefusedError",
+      "retry.attempt": 2
+    }
+  },
+  {
+    "trace_id": "3c871a20716e1ba476192ff7177eb8fa",
+    "span_id": "3c9265a4e7de704f",
+    "parent_span_id": null,
+    "service": "api-gateway",
+    "operation": "GET /orders/search",
+    "start": "2026-11-18T10:29:30Z",
+    "duration_ms": 24.0,
+    "status": "ok",
+    "attributes": {
+      "http.route": "/orders/search",
+      "http.status_code": 200
+    }
+  },
+  {
+    "trace_id": "3c871a20716e1ba476192ff7177eb8fa",
+    "span_id": "dfaa532402cca6ee",
+    "parent_span_id": "3c9265a4e7de704f",
+    "service": "orders-service",
+    "operation": "search_orders",
+    "start": "2026-11-18T10:29:30.004300Z",
+    "duration_ms": 19.7,
+    "status": "ok",
+    "attributes": {}
+  },
+  {
+    "trace_id": "3c871a20716e1ba476192ff7177eb8fa",
+    "span_id": "79cab7a7978c75bc",
+    "parent_span_id": "dfaa532402cca6ee",
+    "service": "orders-service",
+    "operation": "db.acquire_connection",
+    "start": "2026-11-18T10:29:30.009200Z",
+    "duration_ms": 3.3,
+    "status": "ok",
+    "attributes": {
+      "db.pool.size": 20
+    }
+  },
+  {
+    "trace_id": "3c871a20716e1ba476192ff7177eb8fa",
+    "span_id": "2124e37baead0dfd",
+    "parent_span_id": "dfaa532402cca6ee",
+    "service": "postgres",
+    "operation": "SELECT orders",
+    "start": "2026-11-18T10:29:30.012500Z",
+    "duration_ms": 11.5,
+    "status": "ok",
+    "attributes": {
+      "db.system": "postgresql",
+      "db.statement": "SELECT orders WHERE customer_email = ?"
+    }
+  }
+]
