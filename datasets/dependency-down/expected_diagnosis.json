@@ -1,0 +1,38 @@
+{
+  "scenario": "dependency-down",
+  "cause_category": "dependency_down",
+  "culprit_service": "inventory-service",
+  "cause_keywords": [
+    "inventory",
+    "unreachable",
+    "refused"
+  ],
+  "must_not_conclude": [
+    "db_pool_exhaustion",
+    "slow_query",
+    "cpu_saturation"
+  ],
+  "incident_start": "2026-11-18T10:20:00+00:00",
+  "key_evidence": [
+    {
+      "source": "logs",
+      "signal": "Stock lookup failed: inventory-service unreachable"
+    },
+    {
+      "source": "logs",
+      "signal": "Retrying GET"
+    },
+    {
+      "source": "traces",
+      "signal": "GET inventory-service/stock"
+    },
+    {
+      "source": "metrics",
+      "signal": "up"
+    },
+    {
+      "source": "metrics",
+      "signal": "error_rate"
+    }
+  ]
+}

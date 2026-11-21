@@ -98,5 +98,74 @@ def test_trap_real_cause_is_only_in_traces() -> None:
 
 
 def test_cpu_never_explains_these_incidents() -> None:
-    for name in NAMES:
+    # Scénarios où le CPU n'est PAS la cause (cpu-overload et trap-missing-metrics exclus).
+    for name in ("db-pool-exhaustion", "slow-query", "trap-misleading-logs", "dependency-down"):
         assert _series_last(name, "cpu_usage") < 0.5
+
+
+# --- Scénarios centrés sur les métriques (Ichrak) -------------------------------------------
+
+
+def _ratio_last_vs_first(name: str, metric: str, **labels: str) -> float:
+    for series in gen.generate(name).metrics:
+        if series.name == metric and labels.items() <= series.labels.items():
+            return float(series.points[-1].value / series.points[0].value)
+    raise LookupError(metric)
+
+
+def test_s02_cpu_saturates_and_latency_rises_uniformly() -> None:
+    assert _series_last("cpu-overload", "cpu_usage") > 0.9
+    # Uniforme : les deux routes sont multipliées par ~3.
+    for route in ("/orders", "/orders/search"):
+        assert (
+            2.0
+            < _ratio_last_vs_first("cpu-overload", "http_request_duration_p95", route=route)
+            < 5.0
+        )
+    # Pool sain, acquisition et SQL rapides : ce n'est pas la base.
+    assert _series_last("cpu-overload", "db_connections_idle") >= 10
+    assert _max_duration("cpu-overload", "db.acquire_connection", during_incident=True) < 100
+    assert _max_duration("cpu-overload", "SELECT orders", during_incident=True) < 100
+    # Le temps passé dans le handler explose.
+    assert _max_duration("cpu-overload", "list_orders", during_incident=False) < 100
+    assert _max_duration("cpu-overload", "list_orders", during_incident=True) > 200
+
+
+def test_s04_dependency_refuses_connections() -> None:
+    ds = gen.generate("dependency-down")
+    up = next(s for s in ds.metrics if s.name == "up")
+    assert all(p.value == (0.0 if p.ts >= gen.INCIDENT_START else 1.0) for p in up.points)
+    refused = [log for log in ds.logs if log.exception and "Connection refused" in log.exception]
+    assert refused and all(log.timestamp >= gen.INCIDENT_START for log in refused)
+    errors = [s for s in ds.traces if s.attributes.get("error.type") == "ConnectionRefusedError"]
+    assert errors and all(s.status == "error" for s in errors)
+    # Plus aucun appel réussi à inventory-service une fois la panne installée.
+    late = gen.INCIDENT_START + gen.RAMP
+    assert not [s for s in ds.traces if s.service == "inventory-service" and s.start >= late]
+    # /orders/search ne dépend pas du stock : il reste normal.
+    ratio = _ratio_last_vs_first(
+        "dependency-down", "http_request_duration_p95", route="/orders/search"
+    )
+    assert ratio < 1.5
+
+
+def test_trap_missing_cpu_metric_is_absent_and_declared() -> None:
+    ds = gen.generate("trap-missing-metrics")
+    assert ds.expected["missing_metrics"] == ["cpu_usage"]
+    assert not [s for s in ds.metrics if s.name == "cpu_usage"]
+    assert ds.expected["max_confidence"] <= 0.6
+    # Même symptôme que S02...
+    assert (
+        _ratio_last_vs_first("trap-missing-metrics", "http_request_duration_p95", route="/orders")
+        > 2.0
+    )
+    # ... mais aucun log ne nomme la cause.
+    assert not any(
+        "cpu" in log.message.lower() or "event loop" in log.message.lower() for log in ds.logs
+    )
+
+
+def test_declared_missing_metric_must_really_be_missing() -> None:
+    ds = gen.generate("cpu-overload")
+    ds.expected["missing_metrics"] = ["cpu_usage"]
+    assert gen.check_dataset(ds) == ["métrique déclarée manquante mais présente : cpu_usage"]

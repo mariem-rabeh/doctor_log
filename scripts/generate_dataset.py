@@ -261,11 +261,14 @@ def http_request(
     children: list[Call],
     *,
     status_code: int = 200,
+    handler_ms: float | None = None,
 ) -> tuple[str, datetime]:
     """Une requête api-gateway -> orders-service -> children, avec son log d'accès.
+    `handler_ms` : temps propre du handler (défaut 3-8 ms ; plus long si le CPU sature).
     Renvoie (trace_id, instant de fin) pour que le scénario ajoute ses propres logs."""
     status: SpanStatus = "error" if status_code >= 500 else "ok"
-    handler = Call("orders-service", HANDLERS[route], rng.uniform(3, 8), status, {}, children)
+    self_ms = rng.uniform(3, 8) if handler_ms is None else handler_ms
+    handler = Call("orders-service", HANDLERS[route], self_ms, status, {}, children)
     gateway_attributes: Attributes = {"http.route": route, "http.status_code": status_code}
     root = Call(
         "api-gateway", f"GET {route}", rng.uniform(2, 5), status, gateway_attributes, [handler]
@@ -509,6 +512,203 @@ def scenario_trap_misleading_logs(rng: random.Random) -> Dataset:
     return ds
 
 
+# --- Scénarios centrés sur les métriques (Ichrak) -----------------------------------------
+
+STOCK_URL = "http://inventory-service:8003/stock"
+
+
+def stock_call(rng: random.Random) -> Call:
+    """Appel normal d'orders-service à inventory-service (affichage du stock)."""
+    return Call(
+        "inventory-service",
+        "GET /stock",
+        rng.uniform(30, 50),
+        attributes={"http.route": "/stock", "http.status_code": 200},
+    )
+
+
+def cpu_bound_traffic(ds: Dataset, rng: random.Random, *, blocked_loop_logs: bool) -> None:
+    """Trafic dont le temps propre du handler (calcul CPU) est multiplié par ~40 pendant
+    l'incident, alors que l'acquisition de connexion et le SQL gardent leur durée normale."""
+    for i, ts in enumerate(request_times()):
+        k = intensity(ts)
+        route = ROUTES[i % 2]
+        handler = lerp(rng.uniform(3, 8), rng.uniform(250, 350), k)
+        children = [acquire_call(rng, rng.uniform(1, 4)), select_call(route, rng.uniform(8, 20))]
+        trace_id, end = http_request(ds, rng, ts, route, children, handler_ms=handler)
+        if handler > 200:
+            ds.log(
+                end,
+                "WARNING",
+                "orders-service",
+                f"Slow request: {HANDLERS[route]} took {handler:.0f}ms in handler",
+                trace_id,
+            )
+        ds.log(end, "INFO", "orders-service", f"Fetched {rng.randint(5, 50)} orders", trace_id)
+        if blocked_loop_logs and k == 1.0 and i % 6 == 0:
+            ds.log(
+                end + timedelta(seconds=rng.uniform(1, 5)),
+                "WARNING",
+                "orders-service",
+                f"Event loop blocked for {rng.uniform(700, 1000):.0f}ms",
+            )
+
+
+def cpu_bound_metrics(rng: random.Random, *, with_cpu: bool) -> list[MetricSeries]:
+    """Latence x3 sur les DEUX routes (uniforme), pool sain, erreurs quasi nulles."""
+    metrics = [
+        latency_p95(rng, "/orders", (0.10, 0.14), (0.35, 0.45)),
+        latency_p95(rng, "/orders/search", (0.10, 0.14), (0.35, 0.45)),
+        metric_series(
+            rng, "error_rate", {"service": "api-gateway"}, (0.001, 0.003), (0.002, 0.006)
+        ),
+        *pool_metrics(rng, (6, 10), (6, 10)),
+    ]
+    if with_cpu:
+        metrics.append(
+            metric_series(
+                rng, "cpu_usage", {"service": "orders-service"}, (0.30, 0.40), (0.95, 0.99)
+            )
+        )
+    return metrics
+
+
+def scenario_cpu_overload(rng: random.Random) -> Dataset:
+    """S02 : le CPU d'orders-service sature. Toutes les routes ralentissent de façon uniforme ;
+    le temps passé dans le handler explose, mais ni le pool ni le SQL ne sont en cause."""
+    ds = Dataset("cpu-overload")
+    health_checks(ds, rng, ["api-gateway", "orders-service"])
+    cpu_bound_traffic(ds, rng, blocked_loop_logs=True)
+    ds.metrics = cpu_bound_metrics(rng, with_cpu=True)
+    ds.expected = {
+        "scenario": ds.name,
+        "cause_category": "cpu_saturation",
+        "culprit_service": "orders-service",
+        "cause_keywords": ["cpu"],
+        "must_not_conclude": ["db_pool_exhaustion", "slow_query", "dependency_down"],
+        "incident_start": INCIDENT_START.isoformat(),
+        "key_evidence": [
+            {"source": "metrics", "signal": "cpu_usage"},
+            {"source": "metrics", "signal": "http_request_duration_p95"},
+            {"source": "metrics", "signal": "db_connections_idle"},
+            {"source": "traces", "signal": "list_orders"},
+            {"source": "logs", "signal": "Event loop blocked"},
+        ],
+    }
+    return ds
+
+
+def scenario_dependency_down(rng: random.Random) -> Dataset:
+    """S04 : inventory-service tombe. Les appels d'orders-service sont refusés
+    (ConnectionRefused, 3 tentatives) et /orders renvoie des 503 ; /orders/search,
+    le CPU et le pool restent normaux."""
+    ds = Dataset("dependency-down")
+    health_checks(ds, rng, ["api-gateway", "orders-service"])
+
+    for i, ts in enumerate(request_times()):
+        k = intensity(ts)
+        route = ROUTES[i % 2]
+        children = [acquire_call(rng, rng.uniform(1, 4)), select_call(route, rng.uniform(8, 20))]
+        if route == "/orders/search":
+            trace_id, end = http_request(ds, rng, ts, route, children)
+        elif rng.random() >= k:  # avant l'incident (ou pendant la montée) : stock OK
+            trace_id, end = http_request(ds, rng, ts, route, [*children, stock_call(rng)])
+        else:
+            attempts = [
+                Call(
+                    "orders-service",
+                    "GET inventory-service/stock",
+                    rng.uniform(1, 3),
+                    "error",
+                    {
+                        "peer.service": "inventory-service",
+                        "http.url": STOCK_URL,
+                        "error.type": "ConnectionRefusedError",
+                        "retry.attempt": attempt,
+                    },
+                )
+                for attempt in range(3)
+            ]
+            trace_id, end = http_request(
+                ds, rng, ts, route, [*children, *attempts], status_code=503
+            )
+            for attempt in (2, 3):
+                ds.log(
+                    end - ms(10 * (4 - attempt)),
+                    "WARNING",
+                    "orders-service",
+                    f"Retrying GET {STOCK_URL} (attempt {attempt}/3)",
+                    trace_id,
+                )
+            ds.log(
+                end,
+                "ERROR",
+                "orders-service",
+                "Stock lookup failed: inventory-service unreachable",
+                trace_id,
+                exception=f"httpx.ConnectError: [Errno 111] Connection refused ({STOCK_URL})",
+            )
+            continue
+        ds.log(end, "INFO", "orders-service", f"Fetched {rng.randint(5, 50)} orders", trace_id)
+
+    up_points = [
+        MetricPoint(ts=p.ts, value=0.0 if p.ts >= INCIDENT_START else 1.0)
+        for p in metric_series(rng, "up", {}, (1, 1), (1, 1)).points
+    ]
+    ds.metrics = [
+        latency_p95(rng, "/orders", (0.10, 0.14), (0.05, 0.08)),  # échec rapide
+        latency_p95(rng, "/orders/search", (0.10, 0.14), (0.10, 0.14)),
+        metric_series(rng, "error_rate", {"service": "api-gateway"}, (0.001, 0.003), (0.48, 0.52)),
+        *pool_metrics(rng, (6, 10), (6, 10)),
+        metric_series(rng, "cpu_usage", {"service": "orders-service"}, (0.30, 0.40), (0.30, 0.40)),
+        MetricSeries(name="up", labels={"service": "inventory-service"}, points=up_points),
+    ]
+    ds.expected = {
+        "scenario": ds.name,
+        "cause_category": "dependency_down",
+        "culprit_service": "inventory-service",
+        "cause_keywords": ["inventory", "unreachable", "refused"],
+        "must_not_conclude": ["db_pool_exhaustion", "slow_query", "cpu_saturation"],
+        "incident_start": INCIDENT_START.isoformat(),
+        "key_evidence": [
+            {"source": "logs", "signal": "Stock lookup failed: inventory-service unreachable"},
+            {"source": "logs", "signal": "Retrying GET"},
+            {"source": "traces", "signal": "GET inventory-service/stock"},
+            {"source": "metrics", "signal": "up"},
+            {"source": "metrics", "signal": "error_rate"},
+        ],
+    }
+    return ds
+
+
+def scenario_trap_missing_metrics(rng: random.Random) -> Dataset:
+    """Piège : même incident que S02, mais cpu_usage n'a pas été collectée et aucun log ne
+    parle du CPU. Le système doit signaler la métrique manquante, ne pas inventer de valeur
+    et rester prudent (preuves insuffisantes ou confiance limitée)."""
+    ds = Dataset("trap-missing-metrics")
+    health_checks(ds, rng, ["api-gateway", "orders-service"])
+    cpu_bound_traffic(ds, rng, blocked_loop_logs=False)
+    ds.metrics = cpu_bound_metrics(rng, with_cpu=False)
+    ds.expected = {
+        "scenario": ds.name,
+        "cause_category": "cpu_saturation",
+        "culprit_service": "orders-service",
+        "cause_keywords": ["cpu"],
+        "must_not_conclude": ["db_pool_exhaustion", "slow_query", "dependency_down"],
+        "incident_start": INCIDENT_START.isoformat(),
+        "missing_metrics": ["cpu_usage"],
+        "expected_conclusion": "insufficient_evidence",
+        "acceptable_conclusions": ["insufficient_evidence", "probable"],
+        "max_confidence": 0.6,
+        "key_evidence": [
+            {"source": "metrics", "signal": "http_request_duration_p95"},
+            {"source": "metrics", "signal": "db_connections_idle"},
+            {"source": "traces", "signal": "list_orders"},
+        ],
+    }
+    return ds
+
+
 # --- Contrôles de cohérence entre les fichiers ---------------------------------------------
 
 
@@ -539,8 +739,11 @@ def check_dataset(ds: Dataset) -> list[str]:
             problems.append(f"span {span.operation} déborde de son parent {parent.operation}")
 
     names = {series.name for series in ds.metrics}
-    for missing in sorted(REQUIRED_METRICS - names):
+    declared_missing = set(ds.expected.get("missing_metrics", []))
+    for missing in sorted(REQUIRED_METRICS - names - declared_missing):
         problems.append(f"métrique manquante : {missing}")
+    for present in sorted(declared_missing & names):
+        problems.append(f"métrique déclarée manquante mais présente : {present}")
     for series in ds.metrics:
         if any(not WINDOW.contains(p.ts) for p in series.points):
             problems.append(f"point hors fenêtre dans {series.name}")
@@ -584,6 +787,9 @@ SCENARIOS: dict[str, Callable[[random.Random], Dataset]] = {
     "db-pool-exhaustion": scenario_db_pool_exhaustion,
     "slow-query": scenario_slow_query,
     "trap-misleading-logs": scenario_trap_misleading_logs,
+    "cpu-overload": scenario_cpu_overload,
+    "dependency-down": scenario_dependency_down,
+    "trap-missing-metrics": scenario_trap_missing_metrics,
 }
 
 
