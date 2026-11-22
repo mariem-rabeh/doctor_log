@@ -228,7 +228,9 @@ def _anomaly_evidence(report: SeriesReport) -> Evidence:
             f" (moyenne {_fmt(before.mean)} avant, {_fmt(during.mean)} pendant{trend} ; "
             f"min {_fmt(during.min)}, max {_fmt(during.max)} pendant)"
         )
-    observation += f", pic {_fmt(peak.peak_value)} à {peak.peak_ts:%H:%M:%S} (z={peak.peak_z:+.1f})"
+    observation += (
+        f", pic {_fmt(peak.peak_value)} à {peak.peak_ts:%H:%M:%S} UTC ({_fmt_z(peak.peak_z)})"
+    )
     if len(report.anomalies) > 1:
         observation += f", en {len(report.anomalies)} épisodes"
     return Evidence(
@@ -267,6 +269,11 @@ def _stable_evidence(report: SeriesReport, window: TimeWindow, onset: datetime |
 
 def _fmt(value: float) -> str:
     return f"{value:.3g}" if abs(value) < 1000 else f"{value:.0f}"
+
+
+def _fmt_z(z: float) -> str:
+    # Métrique constante avant l'incident : l'écart-type est quasi nul et z explose.
+    return f"z={z:+.1f}" if abs(z) < 1000 else f"z{'>' if z > 0 else '<'}{1000 if z > 0 else -1000}"
 
 
 # --- 4. Résumé pour le LLM ----------------------------------------------------------------------

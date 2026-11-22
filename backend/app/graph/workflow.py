@@ -110,7 +110,9 @@ def _analysis_node(
                 missing_data=[f"{signal} : agent en échec ({type(exc).__name__})"],
             )
             status = AgentStatus.FAILED
-        return cast(IncidentState, {key: finding, "agent_statuses": {name: status}})
+        # Le RCA démarre juste après les trois agents : l'interface l'affiche « en cours ».
+        statuses = {name: status, AgentName.RCA: AgentStatus.RUNNING}
+        return cast(IncidentState, {key: finding, "agent_statuses": statuses})
 
     return node
 
