@@ -6,22 +6,22 @@
       "consistency": 1.0,
       "grounding": 1.0,
       "key_evidence": 1.0,
-      "seconds": 38.4,
+      "seconds": 45.7,
       "conclusions": {
-        "confirmed": 1
+        "probable": 1
       }
     },
     "details": [
       {
         "correct": true,
-        "conclusion": "confirmed",
-        "confidence": 1.0,
-        "cause": "Saturation du CPU du service orders-service due à une charge de traitement excessive (ex. boucle inefficace ou logique lourde)",
+        "conclusion": "probable",
+        "confidence": 0.7,
+        "cause": "Surcharge CPU du service orders-service due to processing inefficiency, entraînant le blocage de la boucle d'événements et des requêtes lentes",
         "confusions": [],
         "grounding": 1.0,
         "key_evidence": 1.0,
         "iterations": 1,
-        "seconds": 38.4
+        "seconds": 45.7
       }
     ]
   },
@@ -32,7 +32,7 @@
       "consistency": 1.0,
       "grounding": 1.0,
       "key_evidence": 1.0,
-      "seconds": 112.3,
+      "seconds": 56.0,
       "conclusions": {
         "confirmed": 1
       }
@@ -42,12 +42,12 @@
         "correct": true,
         "conclusion": "confirmed",
         "confidence": 1.0,
-        "cause": "Exhaustion du pool de connexions de la base de données du service orders‑service, entraînant des timeouts de connexion",
+        "cause": "Épuisement du pool de connexions de la base de données du service orders‑service, dû à une limite de pool trop basse ou à une charge soudaine",
         "confusions": [],
         "grounding": 1.0,
         "key_evidence": 1.0,
         "iterations": 1,
-        "seconds": 112.3
+        "seconds": 56.0
       }
     ]
   },
@@ -58,7 +58,7 @@
       "consistency": 1.0,
       "grounding": 1.0,
       "key_evidence": 1.0,
-      "seconds": 97.1,
+      "seconds": 42.9,
       "conclusions": {
         "confirmed": 1
       }
@@ -68,12 +68,12 @@
         "correct": true,
         "conclusion": "confirmed",
         "confidence": 1.0,
-        "cause": "Crash of the inventory-service causing it to be down, which makes orders-service unable to fetch stock and propagates errors to the API gateway.",
+        "cause": "Panne du service inventory-service (service indisponible)",
         "confusions": [],
         "grounding": 1.0,
         "key_evidence": 1.0,
         "iterations": 1,
-        "seconds": 97.1
+        "seconds": 42.9
       }
     ]
   },
@@ -84,7 +84,7 @@
       "consistency": 1.0,
       "grounding": 1.0,
       "key_evidence": 1.0,
-      "seconds": 149.0,
+      "seconds": 55.9,
       "conclusions": {
         "confirmed": 1
       }
@@ -94,12 +94,12 @@
         "correct": true,
         "conclusion": "confirmed",
         "confidence": 1.0,
-        "cause": "Dégradation du temps d'exécution de la requête SELECT orders dans le service orders‑service, probablement due à un plan de requête sous‑optimal ou à la perte d'un index.",
+        "cause": "Dégradation du temps d'exécution de la requête SQL SELECT orders dans PostgreSQL, probablement due à un plan d'exécution sous‑optimal ou à l'absence d'index, entraînant des annulations de requêtes et des timeouts dans orders‑service.",
         "confusions": [],
         "grounding": 1.0,
         "key_evidence": 1.0,
-        "iterations": 2,
-        "seconds": 149.0
+        "iterations": 1,
+        "seconds": 55.9
       }
     ]
   },
@@ -110,22 +110,22 @@
       "consistency": 1.0,
       "grounding": 1.0,
       "key_evidence": 1.0,
-      "seconds": 82.0,
+      "seconds": 36.7,
       "conclusions": {
-        "probable": 1
+        "confirmed": 1
       }
     },
     "details": [
       {
         "correct": true,
-        "conclusion": "probable",
-        "confidence": 0.7,
-        "cause": "Latence excessive du service inventory-service lors de l'appel GET /stock, propagée au travers de l'api-gateway et ralentissant la route /orders.",
+        "conclusion": "confirmed",
+        "confidence": 0.9,
+        "cause": "Dégradation du service inventory-service (endpoint GET /stock) qui alourdit les appels du orders-service et fait exploser la latence de la route /orders du api-gateway",
         "confusions": [],
         "grounding": 1.0,
         "key_evidence": 1.0,
         "iterations": 1,
-        "seconds": 82.0
+        "seconds": 36.7
       }
     ]
   },
@@ -136,22 +136,22 @@
       "consistency": 1.0,
       "grounding": 1.0,
       "key_evidence": 1.0,
-      "seconds": 83.2,
+      "seconds": 38.9,
       "conclusions": {
-        "probable": 1
+        "insufficient_evidence": 1
       }
     },
     "details": [
       {
         "correct": true,
-        "conclusion": "probable",
-        "confidence": 0.6,
-        "cause": "Déploiement récent du service orders-service introduisant une régression de requêtes, affectant les opérations search_orders et list_orders",
+        "conclusion": "insufficient_evidence",
+        "confidence": 0.45,
+        "cause": null,
         "confusions": [],
         "grounding": 1.0,
         "key_evidence": 1.0,
         "iterations": 1,
-        "seconds": 83.2
+        "seconds": 38.9
       }
     ]
   }
