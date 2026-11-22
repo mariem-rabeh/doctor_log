@@ -8,5 +8,4 @@ psutil
 opentelemetry-sdk
 opentelemetry-exporter-otlp-proto-http
 opentelemetry-instrumentation-fastapi
-opentelemetry-instrumentation-sqlalchemy
 opentelemetry-instrumentation-httpx

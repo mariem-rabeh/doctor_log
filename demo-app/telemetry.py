@@ -1,6 +1,6 @@
 """Instrumentation de la demo-app : traces OpenTelemetry vers Jaeger et logs JSON.
 
-- Traces : FastAPI, SQLAlchemy et httpx instrumentés automatiquement, export OTLP (HTTP)
+- Traces : FastAPI et httpx instrumentés automatiquement (spans SQL créés dans app.py), export OTLP (HTTP)
   vers Jaeger (OTEL_EXPORTER_OTLP_ENDPOINT, défaut http://localhost:4318).
 - Logs : une ligne JSON par log, au format LogRecord du backend, avec trace_id et span_id,
   écrite dans LOG_DIR/<service>.log : c'est ce fichier que lit la source live.
@@ -17,11 +17,9 @@ from opentelemetry import trace
 from opentelemetry.exporter.otlp.proto.http.trace_exporter import OTLPSpanExporter
 from opentelemetry.instrumentation.fastapi import FastAPIInstrumentor
 from opentelemetry.instrumentation.httpx import HTTPXClientInstrumentor
-from opentelemetry.instrumentation.sqlalchemy import SQLAlchemyInstrumentor
 from opentelemetry.sdk.resources import Resource
 from opentelemetry.sdk.trace import TracerProvider
 from opentelemetry.sdk.trace.export import BatchSpanProcessor
-from sqlalchemy.engine import Engine
 
 LOG_DIR = Path(os.getenv("LOG_DIR", Path(__file__).resolve().parents[1] / "logs"))
 OTLP_ENDPOINT = os.getenv("OTEL_EXPORTER_OTLP_ENDPOINT", "http://localhost:4318")
@@ -48,15 +46,13 @@ class JsonFormatter(logging.Formatter):
         return json.dumps(line, ensure_ascii=False)
 
 
-def setup(app: FastAPI, service: str, engine: Engine | None = None) -> logging.Logger:
+def setup(app: FastAPI, service: str) -> logging.Logger:
     """Active traces et logs JSON pour un service ; renvoie le logger à utiliser."""
     provider = TracerProvider(resource=Resource.create({"service.name": service}))
     provider.add_span_processor(BatchSpanProcessor(OTLPSpanExporter(f"{OTLP_ENDPOINT}/v1/traces")))
     trace.set_tracer_provider(provider)
     FastAPIInstrumentor.instrument_app(app, excluded_urls="metrics")
     HTTPXClientInstrumentor().instrument()
-    if engine is not None:
-        SQLAlchemyInstrumentor().instrument(engine=engine)
 
     LOG_DIR.mkdir(parents=True, exist_ok=True)
     handler = logging.FileHandler(LOG_DIR / f"{service}.log", encoding="utf-8")

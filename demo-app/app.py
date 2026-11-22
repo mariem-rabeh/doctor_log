@@ -15,14 +15,18 @@ import logging
 import os
 import threading
 import time
+from typing import Any
 
 import httpx
 import psutil
 from fastapi import FastAPI, HTTPException, Request, Response
+from opentelemetry import trace
 from prometheus_client import CONTENT_TYPE_LATEST, Counter, Gauge, Histogram, generate_latest
 from sqlalchemy import create_engine, text
 
 import telemetry
+
+tracer = trace.get_tracer("orders-service")
 
 # Base séparée de celle du backend (« demo »), créée au démarrage si besoin.
 SERVER_URL = os.getenv("DEMO_DB_SERVER", "postgresql+psycopg://doctor_log:doctor_log@localhost:5432")
@@ -85,16 +89,28 @@ async def measure(request: Request, call_next):  # type: ignore[no-untyped-def]
             logger.log(level, "%s %s %d %.0fms", request.method, route, status, seconds * 1000)
 
 
+def run_sql(sql: str, params: dict[str, float] | None = None) -> list[Any]:
+    """Requête SQL avec deux spans : l'attente d'une connexion du pool, puis la requête.
+
+    Créés à la main : l'instrumentation automatique ne gère pas SQLAlchemy 2.1.
+    Une exception (ex. timeout du pool) passe le span en erreur.
+    """
+    with tracer.start_as_current_span("db.acquire_connection", attributes={"db.pool.size": POOL_SIZE}):
+        conn = engine.connect()
+    with conn, tracer.start_as_current_span(
+        f"postgres {sql.split()[0]}", attributes={"db.system": "postgresql", "db.statement": sql}
+    ):
+        return list(conn.execute(text(sql), params or {}))
+
+
 @app.get("/orders")
 def list_orders() -> list[str]:
-    with engine.connect() as conn:
-        return [r[0] for r in conn.execute(text("SELECT item FROM demo_orders LIMIT 10"))]
+    return [r[0] for r in run_sql("SELECT item FROM demo_orders LIMIT 10")]
 
 
 @app.get("/orders/slow")
 def slow_orders(seconds: float = 3.0) -> dict[str, float]:
-    with engine.connect() as conn:
-        conn.execute(text("SELECT pg_sleep(:s)"), {"s": seconds})
+    run_sql("SELECT pg_sleep(:s)", {"s": seconds})
     return {"slept": seconds}
 
 
@@ -122,8 +138,7 @@ def hold_connections(count: int = POOL_SIZE, seconds: float = 30) -> dict[str, i
     """Occupe `count` connexions pendant `seconds` (en arrière-plan) pour saturer le pool."""
 
     def hold() -> None:
-        with engine.connect() as conn:
-            conn.execute(text("SELECT pg_sleep(:s)"), {"s": seconds})
+        run_sql("SELECT pg_sleep(:s)", {"s": seconds})
 
     for _ in range(count):
         threading.Thread(target=hold, daemon=True).start()
@@ -137,4 +152,4 @@ def metrics() -> Response:
 
 # En dernier : le middleware OpenTelemetry enveloppe alors « measure », donc les logs
 # écrits dans « measure » portent le trace_id de la requête.
-logger = telemetry.setup(app, "orders-service", engine)
+logger = telemetry.setup(app, "orders-service")
