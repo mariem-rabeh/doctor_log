@@ -93,7 +93,7 @@ def summarize(runs: list[dict[str, Any]]) -> dict[str, Any]:
 # --- Exécution ---------------------------------------------------------------------------------
 
 
-def evaluate(names: list[str], runs: int, settings: Settings) -> dict[str, Any]:
+def evaluate(names: list[str], runs: int, settings: Settings, pause: float = 0.0) -> dict[str, Any]:
     results: dict[str, Any] = {}
     for name in names:
         source = FileDataSource.from_name(name)
@@ -106,6 +106,7 @@ def evaluate(names: list[str], runs: int, settings: Settings) -> dict[str, Any]:
             started = time.perf_counter()
             report = run_analysis(source, window, get_llm(settings), incident_id=f"eval-{name}")
             details.append(score_run(report, expected, time.perf_counter() - started))
+            time.sleep(pause)  # laisse le quota du fournisseur LLM se recharger
         results[name] = {"summary": summarize(details), "details": details}
     return results
 
@@ -152,12 +153,13 @@ def main(argv: list[str] | None = None) -> int:
     parser.add_argument("datasets", nargs="*", help="défaut : tous les datasets")
     parser.add_argument("--runs", type=int, default=3)
     parser.add_argument("--fake", action="store_true", help="sans LLM")
+    parser.add_argument("--pause", type=float, default=0, help="secondes entre deux analyses")
     parser.add_argument("--out", type=Path, default=EVAL_DIR)
     args = parser.parse_args(argv)
 
     settings = Settings(llm_provider="fake") if args.fake else get_settings()
     names = args.datasets or list_datasets()
-    results = evaluate(names, args.runs, settings)
+    results = evaluate(names, args.runs, settings, args.pause)
 
     args.out.mkdir(parents=True, exist_ok=True)
     (args.out / "results.json").write_text(

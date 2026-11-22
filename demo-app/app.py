@@ -40,7 +40,7 @@ app = FastAPI(title="orders-service")
 
 REQUEST_SECONDS = Histogram(
     "http_request_duration_seconds", "Durée des requêtes HTTP", ["route"],
-    buckets=(0.05, 0.1, 0.25, 0.5, 1, 2.5, 5, 10),
+    buckets=(0.05, 0.1, 0.25, 0.5, 1, 2.5, 5, 10, 15, 30, 60),
 )
 REQUESTS = Counter("http_requests_total", "Requêtes HTTP", ["route", "status"])
 Gauge("db_connections_active", "Connexions du pool utilisées").set_function(

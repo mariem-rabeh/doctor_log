@@ -22,6 +22,7 @@ from app.tools.datasources.base import DataSource
 logger = logging.getLogger(__name__)
 
 MIN_CONFIDENCE = 0.5
+MISSING_METRIC_CAP = 0.45  # une métrique clé absente : on ne peut pas conclure
 
 SYSTEM_PROMPT = """\
 Tu es le Verification Agent d'un système de diagnostic d'incidents.
@@ -29,6 +30,7 @@ On te donne une hypothèse de cause racine et les preuves qu'elle cite.
 Dis si les preuves établissent un lien de cause (causal = true) ou seulement une
 corrélation dans le temps (causal = false). Explique en une ou deux phrases (comment),
 et liste ce qu'un humain devrait encore vérifier (to_verify). N'invente aucun chiffre.
+Rédige toujours en français.
 """
 
 
@@ -152,9 +154,12 @@ def compute_confidence(
     findings: Sequence[Finding],
 ) -> float:
     """0,5 de base ; +0,3 si causal ; +0,1 par source en plus de la première ;
-    −0,2 par problème ; −0,1 par donnée manquante (au plus −0,3)."""
+    −0,2 par problème ; −0,1 par donnée manquante (au plus −0,3).
+    Une métrique attendue absente plafonne la confiance sous le seuil d'acceptation."""
     score = 0.5 + (0.3 if judgment and judgment.causal else 0.0)
     score += 0.1 * max(0, len({e.source for e in cited}) - 1)
     score -= 0.2 * len(issues)
     score -= min(0.3, 0.1 * sum(len(f.missing_data) for f in findings))
+    if any("métrique absente" in m for f in findings for m in f.missing_data):
+        score = min(score, MISSING_METRIC_CAP)
     return round(min(1.0, max(0.0, score)), 2)
