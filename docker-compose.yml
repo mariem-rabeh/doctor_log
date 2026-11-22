@@ -1,0 +1,90 @@
+# Tout doctor_log en une commande :  docker compose up -d --build
+#   Interface      http://localhost:8080
+#   API            http://localhost:8000/docs
+#   Jaeger         http://localhost:16686
+#   Prometheus     http://localhost:9090
+#   Demo-app       http://localhost:8001  (déclencher un incident : scripts/trigger_incident.py)
+# La clé LLM est lue dans .env (LLM_PROVIDER, LLM_API_KEY).
+services:
+  postgres:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_USER: doctor_log
+      POSTGRES_PASSWORD: doctor_log
+      POSTGRES_DB: doctor_log
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U doctor_log -d doctor_log"]
+      interval: 5s
+      timeout: 3s
+      retries: 10
+
+  backend:
+    build: { context: ., dockerfile: backend/Dockerfile }
+    env_file:
+      - path: .env
+        required: false
+    environment:
+      DATABASE_URL: postgresql+psycopg://doctor_log:doctor_log@postgres:5432/doctor_log
+      PROMETHEUS_URL: http://prometheus:9090
+      JAEGER_URL: http://jaeger:16686
+      LOGS_DIR: /app/logs
+      CORS_ORIGINS: '["http://localhost:8080"]'
+    volumes:
+      - logs:/app/logs:ro
+    ports: ["8000:8000"]
+    depends_on:
+      postgres: { condition: service_healthy }
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:8000/health')"]
+      interval: 5s
+      timeout: 3s
+      retries: 20
+
+  frontend:
+    build: ./frontend
+    ports: ["8080:80"]
+    depends_on:
+      backend: { condition: service_healthy }
+
+  demo-app:
+    build: ./demo-app
+    environment:
+      DEMO_DB_SERVER: postgresql+psycopg://doctor_log:doctor_log@postgres:5432
+      PAYMENT_URL: http://payment-service:8002
+      OTEL_EXPORTER_OTLP_ENDPOINT: http://jaeger:4318
+      LOG_DIR: /app/logs
+    volumes:
+      - logs:/app/logs
+    ports: ["8001:8001"]
+    depends_on:
+      postgres: { condition: service_healthy }
+      payment-service: { condition: service_started }
+      jaeger: { condition: service_started }
+
+  payment-service:
+    build: ./demo-app
+    command: ["uvicorn", "payment_service:app", "--host", "0.0.0.0", "--port", "8002"]
+    environment:
+      OTEL_EXPORTER_OTLP_ENDPOINT: http://jaeger:4318
+      LOG_DIR: /app/logs
+    volumes:
+      - logs:/app/logs
+    ports: ["8002:8002"]
+
+  prometheus:
+    image: prom/prometheus:v2.55.1
+    volumes:
+      - ./infrastructure/prometheus/prometheus.docker.yml:/etc/prometheus/prometheus.yml:ro
+    ports: ["9090:9090"]
+
+  jaeger:
+    image: jaegertracing/all-in-one:1.62.0
+    environment:
+      COLLECTOR_OTLP_ENABLED: "true"
+    ports: ["16686:16686", "4318:4318"]
+
+volumes:
+  pgdata:
+  logs:

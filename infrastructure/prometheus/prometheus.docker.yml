@@ -1,0 +1,10 @@
+# Version pour docker-compose.yml : la demo-app est joignable par son nom de service.
+global:
+  scrape_interval: 5s
+
+scrape_configs:
+  - job_name: orders-service
+    static_configs:
+      - targets: ["demo-app:8001"]
+        labels:
+          service: orders-service
