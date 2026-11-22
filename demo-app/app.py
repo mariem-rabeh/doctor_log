@@ -24,9 +24,9 @@ from sqlalchemy import create_engine, text
 
 import telemetry
 
-DATABASE_URL = os.getenv(
-    "DATABASE_URL", "postgresql+psycopg://doctor_log:doctor_log@localhost:5432/doctor_log"
-)
+# Base séparée de celle du backend (« demo »), créée au démarrage si besoin.
+SERVER_URL = os.getenv("DEMO_DB_SERVER", "postgresql+psycopg://doctor_log:doctor_log@localhost:5432")
+DATABASE_URL = f"{SERVER_URL}/demo"
 POOL_SIZE = int(os.getenv("POOL_SIZE", "5"))
 PAYMENT_URL = os.getenv("PAYMENT_URL", "http://127.0.0.1:8002")
 
@@ -53,6 +53,11 @@ Gauge("cpu_usage", "Part du CPU utilisée par le service (0-1)").set_function(
 
 @app.on_event("startup")
 def create_table() -> None:
+    admin = create_engine(f"{SERVER_URL}/postgres", isolation_level="AUTOCOMMIT")
+    with admin.connect() as conn:
+        if not conn.execute(text("SELECT 1 FROM pg_database WHERE datname = 'demo'")).scalar():
+            conn.execute(text("CREATE DATABASE demo"))
+    admin.dispose()
     with engine.begin() as conn:
         conn.execute(text("CREATE TABLE IF NOT EXISTS demo_orders (id SERIAL PRIMARY KEY, item TEXT)"))
         if conn.execute(text("SELECT count(*) FROM demo_orders")).scalar() == 0:
