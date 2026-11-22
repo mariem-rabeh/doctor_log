@@ -1,11 +1,11 @@
 """Routes des incidents et des datasets.
 
-POST /api/incidents             crée un incident (source = dataset pour l'instant)
+POST /api/incidents             crée un incident (source dataset ou live)
 GET  /api/incidents             liste paginée, filtrable par statut
 GET  /api/incidents/{id}        détail d'un incident
 GET  /api/datasets              datasets disponibles, avec leur plage de temps
 
-L'analyse (POST /{id}/analyze, /status, /report) arrive avec la branche 19.
+Les routes d'analyse (/analyze, /status, /report) sont dans analysis.py.
 """
 
 import uuid

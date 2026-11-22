@@ -24,6 +24,7 @@ from app.db import Base, Incident, IncidentSource
 from app.db.repository import (
     MAX_PAGE_SIZE,
     create_incident,
+    fail_interrupted,
     get_incident,
     list_incidents,
     save_report,
@@ -239,3 +240,12 @@ def test_unknown_id_returns_none(db: Session) -> None:
     unknown = uuid.uuid4()
     assert update_status(db, unknown, IncidentStatus.RUNNING) is None
     assert save_report(db, unknown, _report(unknown)) is None
+
+
+def test_fail_interrupted_only_touches_running(db: Session) -> None:
+    running, done = _new(db, "en cours"), _new(db, "fini")
+    update_status(db, running.id, IncidentStatus.RUNNING)
+    update_status(db, done.id, IncidentStatus.COMPLETED)
+    assert fail_interrupted(db) == 1
+    assert running.status is IncidentStatus.FAILED and running.error
+    assert done.status is IncidentStatus.COMPLETED

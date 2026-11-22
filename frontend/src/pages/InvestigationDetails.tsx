@@ -33,10 +33,14 @@ export default function InvestigationDetails() {
         .getStatus(id)
         .then((info) => {
           setStatus(info);
+          setError(null);
           // On arrête de demander dès que l'analyse est finie (ou en échec).
           if (info.status === "running" || info.status === "pending") timer = setTimeout(poll, POLL_MS);
         })
-        .catch((e) => setError(errorMessage(e)));
+        .catch((e) => {
+          setError(errorMessage(e));
+          timer = setTimeout(poll, POLL_MS * 2); // erreur passagère (serveur qui redémarre) : on réessaie
+        });
     poll();
     return () => clearTimeout(timer);
   }, [id]);
