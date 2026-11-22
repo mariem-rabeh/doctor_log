@@ -1,0 +1,158 @@
+{
+  "cpu-overload": {
+    "summary": {
+      "runs": 1,
+      "accuracy": 1.0,
+      "consistency": 1.0,
+      "grounding": 1.0,
+      "key_evidence": 1.0,
+      "seconds": 38.4,
+      "conclusions": {
+        "confirmed": 1
+      }
+    },
+    "details": [
+      {
+        "correct": true,
+        "conclusion": "confirmed",
+        "confidence": 1.0,
+        "cause": "Saturation du CPU du service orders-service due à une charge de traitement excessive (ex. boucle inefficace ou logique lourde)",
+        "confusions": [],
+        "grounding": 1.0,
+        "key_evidence": 1.0,
+        "iterations": 1,
+        "seconds": 38.4
+      }
+    ]
+  },
+  "db-pool-exhaustion": {
+    "summary": {
+      "runs": 1,
+      "accuracy": 1.0,
+      "consistency": 1.0,
+      "grounding": 1.0,
+      "key_evidence": 1.0,
+      "seconds": 112.3,
+      "conclusions": {
+        "confirmed": 1
+      }
+    },
+    "details": [
+      {
+        "correct": true,
+        "conclusion": "confirmed",
+        "confidence": 1.0,
+        "cause": "Exhaustion du pool de connexions de la base de données du service orders‑service, entraînant des timeouts de connexion",
+        "confusions": [],
+        "grounding": 1.0,
+        "key_evidence": 1.0,
+        "iterations": 1,
+        "seconds": 112.3
+      }
+    ]
+  },
+  "dependency-down": {
+    "summary": {
+      "runs": 1,
+      "accuracy": 1.0,
+      "consistency": 1.0,
+      "grounding": 1.0,
+      "key_evidence": 1.0,
+      "seconds": 97.1,
+      "conclusions": {
+        "confirmed": 1
+      }
+    },
+    "details": [
+      {
+        "correct": true,
+        "conclusion": "confirmed",
+        "confidence": 1.0,
+        "cause": "Crash of the inventory-service causing it to be down, which makes orders-service unable to fetch stock and propagates errors to the API gateway.",
+        "confusions": [],
+        "grounding": 1.0,
+        "key_evidence": 1.0,
+        "iterations": 1,
+        "seconds": 97.1
+      }
+    ]
+  },
+  "slow-query": {
+    "summary": {
+      "runs": 1,
+      "accuracy": 1.0,
+      "consistency": 1.0,
+      "grounding": 1.0,
+      "key_evidence": 1.0,
+      "seconds": 149.0,
+      "conclusions": {
+        "confirmed": 1
+      }
+    },
+    "details": [
+      {
+        "correct": true,
+        "conclusion": "confirmed",
+        "confidence": 1.0,
+        "cause": "Dégradation du temps d'exécution de la requête SELECT orders dans le service orders‑service, probablement due à un plan de requête sous‑optimal ou à la perte d'un index.",
+        "confusions": [],
+        "grounding": 1.0,
+        "key_evidence": 1.0,
+        "iterations": 2,
+        "seconds": 149.0
+      }
+    ]
+  },
+  "trap-misleading-logs": {
+    "summary": {
+      "runs": 1,
+      "accuracy": 1.0,
+      "consistency": 1.0,
+      "grounding": 1.0,
+      "key_evidence": 1.0,
+      "seconds": 82.0,
+      "conclusions": {
+        "probable": 1
+      }
+    },
+    "details": [
+      {
+        "correct": true,
+        "conclusion": "probable",
+        "confidence": 0.7,
+        "cause": "Latence excessive du service inventory-service lors de l'appel GET /stock, propagée au travers de l'api-gateway et ralentissant la route /orders.",
+        "confusions": [],
+        "grounding": 1.0,
+        "key_evidence": 1.0,
+        "iterations": 1,
+        "seconds": 82.0
+      }
+    ]
+  },
+  "trap-missing-metrics": {
+    "summary": {
+      "runs": 1,
+      "accuracy": 1.0,
+      "consistency": 1.0,
+      "grounding": 1.0,
+      "key_evidence": 1.0,
+      "seconds": 83.2,
+      "conclusions": {
+        "probable": 1
+      }
+    },
+    "details": [
+      {
+        "correct": true,
+        "conclusion": "probable",
+        "confidence": 0.6,
+        "cause": "Déploiement récent du service orders-service introduisant une régression de requêtes, affectant les opérations search_orders et list_orders",
+        "confusions": [],
+        "grounding": 1.0,
+        "key_evidence": 1.0,
+        "iterations": 1,
+        "seconds": 83.2
+      }
+    ]
+  }
+}
