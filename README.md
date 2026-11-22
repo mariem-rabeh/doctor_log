@@ -105,7 +105,9 @@ Arrêt : `docker compose down` (ajouter `-v` pour effacer la base et les logs).
 
 3. Dans l'interface, **Nouvelle investigation** → source **Live** → fenêtre couvrant l'incident.
 4. Suivre l'avancement des agents, puis consulter le rapport : cause probable, confiance,
-   hypothèses, preuves citées et points à vérifier par un humain.
+   hypothèses, preuves citées et actions de vérification.
+
+Le déroulé complet de la démo, avec un plan B en cas de problème, est dans [`docs/DEMO.md`](docs/DEMO.md).
 
 ## Développement local
 

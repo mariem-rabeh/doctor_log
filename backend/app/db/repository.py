@@ -94,6 +94,16 @@ def update_status(
     return incident
 
 
+def fail_interrupted(db: Session) -> int:
+    """Passe en échec les analyses restées « running » (backend arrêté en pleine analyse)."""
+    incidents = db.scalars(select(Incident).where(Incident.status == IncidentStatus.RUNNING)).all()
+    for incident in incidents:
+        incident.status = IncidentStatus.FAILED
+        incident.error = "Analyse interrompue par un redémarrage du serveur : relancez-la."
+    db.commit()
+    return len(incidents)
+
+
 def save_report(db: Session, incident_id: uuid.UUID, report: DiagnosisReport) -> Incident | None:
     """Enregistre le rapport final et passe l'incident à completed."""
     incident = db.get(Incident, incident_id)
