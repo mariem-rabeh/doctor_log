@@ -80,3 +80,11 @@ def test_get_llm_picks_groq() -> None:
     )
     with pytest.raises(LLMError, match="clé Groq"):
         get_llm(Settings(_env_file=None, llm_provider="groq"))
+
+
+def test_retry_after_header_is_respected() -> None:
+    llm, _, sleeps = make(
+        httpx.Response(429, headers={"retry-after": "7"}), groq_reply('{"summary": "ok"}')
+    )
+    assert llm.complete_structured("s", "u", Answer).summary == "ok"
+    assert sleeps == [7.0]

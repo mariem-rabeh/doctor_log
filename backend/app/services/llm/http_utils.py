@@ -28,11 +28,13 @@ def post_json(
 ) -> tuple[dict[str, Any], float]:
     """POST JSON ; retente sur 429, 5xx et erreurs réseau. Renvoie (réponse, durée en ms).
 
-    Attente : 15, 30, 45 s pour un 429 (les quotas se rechargent à la minute), 2, 4, 8 s sinon.
+    Attente : celle demandée par le fournisseur (en-tête Retry-After, 60 s au plus) ; sinon
+    15, 30, 45 s pour un 429 (les quotas se rechargent à la minute) et 2, 4, 8 s pour le reste.
     """
     error = ""
     for attempt in range(max_retries + 1):
         started = time.perf_counter()
+        retry_after = None
         try:
             response = client.post(url, json=body, headers=headers)
         except httpx.TransportError as exc:
@@ -44,11 +46,24 @@ def post_json(
             if response.status_code not in RETRY_STATUSES:
                 raise LLMError(f"{name} a répondu {response.status_code} : {response.text[:200]}")
             error = f"HTTP {response.status_code}"
+            retry_after = _retry_after(response)
+            if response.status_code == 429:  # dit quel quota est atteint (minute, jour...)
+                logger.warning("%s : quota atteint : %s", name, response.text[:300])
         if attempt < max_retries:
-            delay = 15.0 * (attempt + 1) if error == "HTTP 429" else 2.0 * 2**attempt
+            if retry_after is not None:
+                delay = min(retry_after, 60.0)
+            else:
+                delay = 15.0 * (attempt + 1) if error == "HTTP 429" else 2.0 * 2**attempt
             logger.warning("%s : %s, nouvelle tentative dans %.0f s", name, error, delay)
             sleep(delay)
     raise LLMError(f"appel {name} échoué après {max_retries + 1} tentative(s) : {error}")
+
+
+def _retry_after(response: httpx.Response) -> float | None:
+    try:
+        return float(response.headers["retry-after"])
+    except (KeyError, ValueError):
+        return None
 
 
 def with_schema(user: str, schema: type[BaseModel]) -> str:
