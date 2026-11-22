@@ -9,7 +9,7 @@ L'analyse (POST /{id}/analyze, /status, /report) arrive avec la branche 19.
 """
 
 import uuid
-from datetime import datetime
+from datetime import datetime, timedelta
 from typing import Annotated, Literal
 
 from fastapi import APIRouter, Depends, Query, status
@@ -122,7 +122,8 @@ def create_incident(body: IncidentCreate, db: DbSession) -> IncidentOut:
             window = FileDataSource(root / body.dataset_name).time_range()
         except DatasetError as exc:
             raise ApiError(422, str(exc)) from exc
-        start, end = window.start, window.end
+        # Une minute de marge : les derniers spans se terminent après leur début.
+        start, end = window.start, window.end + timedelta(minutes=1)
 
     incident = repo.create_incident(
         db,
