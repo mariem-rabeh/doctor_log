@@ -11,21 +11,28 @@ Endpoints :
   GET  /metrics             métriques Prometheus
 """
 
+import logging
 import os
 import threading
 import time
+from typing import Any
 
 import httpx
 import psutil
 from fastapi import FastAPI, HTTPException, Request, Response
+from opentelemetry import trace
 from prometheus_client import CONTENT_TYPE_LATEST, Counter, Gauge, Histogram, generate_latest
 from sqlalchemy import create_engine, text
 
-DATABASE_URL = os.getenv(
-    "DATABASE_URL", "postgresql+psycopg://doctor_log:doctor_log@localhost:5432/doctor_log"
-)
+import telemetry
+
+tracer = trace.get_tracer("orders-service")
+
+# Base séparée de celle du backend (« demo »), créée au démarrage si besoin.
+SERVER_URL = os.getenv("DEMO_DB_SERVER", "postgresql+psycopg://doctor_log:doctor_log@localhost:5432")
+DATABASE_URL = f"{SERVER_URL}/demo"
 POOL_SIZE = int(os.getenv("POOL_SIZE", "5"))
-PAYMENT_URL = os.getenv("PAYMENT_URL", "http://localhost:8002")
+PAYMENT_URL = os.getenv("PAYMENT_URL", "http://127.0.0.1:8002")
 
 # Petit pool, sans débordement : facile à saturer pour le scénario S01.
 engine = create_engine(DATABASE_URL, pool_size=POOL_SIZE, max_overflow=0, pool_timeout=5)
@@ -50,6 +57,11 @@ Gauge("cpu_usage", "Part du CPU utilisée par le service (0-1)").set_function(
 
 @app.on_event("startup")
 def create_table() -> None:
+    admin = create_engine(f"{SERVER_URL}/postgres", isolation_level="AUTOCOMMIT")
+    with admin.connect() as conn:
+        if not conn.execute(text("SELECT 1 FROM pg_database WHERE datname = 'demo'")).scalar():
+            conn.execute(text("CREATE DATABASE demo"))
+    admin.dispose()
     with engine.begin() as conn:
         conn.execute(text("CREATE TABLE IF NOT EXISTS demo_orders (id SERIAL PRIMARY KEY, item TEXT)"))
         if conn.execute(text("SELECT count(*) FROM demo_orders")).scalar() == 0:
@@ -65,22 +77,40 @@ async def measure(request: Request, call_next):  # type: ignore[no-untyped-def]
         response = await call_next(request)
         status = response.status_code
         return response
+    except Exception:
+        logger.exception("Unhandled error on %s %s", request.method, route)
+        raise
     finally:
         if route != "/metrics":
-            REQUEST_SECONDS.labels(route).observe(time.perf_counter() - started)
+            seconds = time.perf_counter() - started
+            REQUEST_SECONDS.labels(route).observe(seconds)
             REQUESTS.labels(route, str(status)).inc()
+            level = logging.ERROR if status >= 500 else logging.INFO
+            logger.log(level, "%s %s %d %.0fms", request.method, route, status, seconds * 1000)
+
+
+def run_sql(sql: str, params: dict[str, float] | None = None) -> list[Any]:
+    """Requête SQL avec deux spans : l'attente d'une connexion du pool, puis la requête.
+
+    Créés à la main : l'instrumentation automatique ne gère pas SQLAlchemy 2.1.
+    Une exception (ex. timeout du pool) passe le span en erreur.
+    """
+    with tracer.start_as_current_span("db.acquire_connection", attributes={"db.pool.size": POOL_SIZE}):
+        conn = engine.connect()
+    with conn, tracer.start_as_current_span(
+        f"postgres {sql.split()[0]}", attributes={"db.system": "postgresql", "db.statement": sql}
+    ):
+        return list(conn.execute(text(sql), params or {}))
 
 
 @app.get("/orders")
 def list_orders() -> list[str]:
-    with engine.connect() as conn:
-        return [r[0] for r in conn.execute(text("SELECT item FROM demo_orders LIMIT 10"))]
+    return [r[0] for r in run_sql("SELECT item FROM demo_orders LIMIT 10")]
 
 
 @app.get("/orders/slow")
 def slow_orders(seconds: float = 3.0) -> dict[str, float]:
-    with engine.connect() as conn:
-        conn.execute(text("SELECT pg_sleep(:s)"), {"s": seconds})
+    run_sql("SELECT pg_sleep(:s)", {"s": seconds})
     return {"slept": seconds}
 
 
@@ -90,6 +120,7 @@ def payments() -> dict[str, str]:
         response = httpx.get(f"{PAYMENT_URL}/pay", timeout=2)
         response.raise_for_status()
     except httpx.HTTPError as exc:
+        logger.error("Payment call failed: payment-service unreachable (%s)", type(exc).__name__)
         raise HTTPException(503, f"payment-service indisponible : {type(exc).__name__}") from exc
     return {"payment": "ok"}
 
@@ -107,8 +138,7 @@ def hold_connections(count: int = POOL_SIZE, seconds: float = 30) -> dict[str, i
     """Occupe `count` connexions pendant `seconds` (en arrière-plan) pour saturer le pool."""
 
     def hold() -> None:
-        with engine.connect() as conn:
-            conn.execute(text("SELECT pg_sleep(:s)"), {"s": seconds})
+        run_sql("SELECT pg_sleep(:s)", {"s": seconds})
 
     for _ in range(count):
         threading.Thread(target=hold, daemon=True).start()
@@ -118,3 +148,8 @@ def hold_connections(count: int = POOL_SIZE, seconds: float = 30) -> dict[str, i
 @app.get("/metrics")
 def metrics() -> Response:
     return Response(generate_latest(), media_type=CONTENT_TYPE_LATEST)
+
+
+# En dernier : le middleware OpenTelemetry enveloppe alors « measure », donc les logs
+# écrits dans « measure » portent le trace_id de la requête.
+logger = telemetry.setup(app, "orders-service")

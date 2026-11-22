@@ -5,6 +5,7 @@
     "service": "api-gateway",
     "message": "GET /orders 200 64ms",
     "trace_id": "1ebc3e8045067c900885cfb382e2346f",
+    "span_id": null,
     "exception": null
   },
   {
@@ -13,6 +14,7 @@
     "service": "orders-service",
     "message": "Fetched 27 orders",
     "trace_id": "1ebc3e8045067c900885cfb382e2346f",
+    "span_id": null,
     "exception": null
   },
   {
@@ -21,6 +23,7 @@
     "service": "orders-service",
     "message": "Cache miss for key orders:list:page=20",
     "trace_id": null,
+    "span_id": null,
     "exception": null
   },
   {
@@ -29,6 +32,7 @@
     "service": "api-gateway",
     "message": "Deprecated config key 'proxy.timeout' used, migrate to 'upstream.timeout'",
     "trace_id": null,
+    "span_id": null,
     "exception": null
   },
   {
@@ -37,6 +41,7 @@
     "service": "api-gateway",
     "message": "GET /orders/search 200 26ms",
     "trace_id": "706862046944f4dc83441fa76e5a1925",
+    "span_id": null,
     "exception": null
   },
   {
@@ -45,6 +50,7 @@
     "service": "orders-service",
     "message": "Fetched 38 orders",
     "trace_id": "706862046944f4dc83441fa76e5a1925",
+    "span_id": null,
     "exception": null
   },
   {
@@ -53,6 +59,7 @@
     "service": "orders-service",
     "message": "Cache miss for key orders:list:page=20",
     "trace_id": null,
+    "span_id": null,
     "exception": null
   },
   {
@@ -61,6 +68,7 @@
     "service": "api-gateway",
     "message": "Deprecated config key 'proxy.timeout' used, migrate to 'upstream.timeout'",
     "trace_id": null,
+    "span_id": null,
     "exception": null
   },
   {
@@ -69,6 +77,7 @@
     "service": "api-gateway",
     "message": "GET /orders 200 65ms",
     "trace_id": "2ca631828d62840e4e972f1627c894c5",
+    "span_id": null,
     "exception": null
   },
   {
@@ -77,6 +86,7 @@
     "service": "orders-service",
     "message": "Fetched 43 orders",
     "trace_id": "2ca631828d62840e4e972f1627c894c5",
+    "span_id": null,
     "exception": null
   },
   {
@@ -85,6 +95,7 @@
     "service": "orders-service",
     "message": "Cache miss for key orders:list:page=12",
     "trace_id": null,
+    "span_id": null,
     "exception": null
   },
   {
@@ -93,6 +104,7 @@
     "service": "api-gateway",
     "message": "Deprecated config key 'proxy.timeout' used, migrate to 'upstream.timeout'",
     "trace_id": null,
+    "span_id": null,
     "exception": null
   },
   {
@@ -101,6 +113,7 @@
     "service": "api-gateway",
     "message": "GET /orders/search 200 26ms",
     "trace_id": "f75d326862818ef6f1740554d24a79e6",
+    "span_id": null,
     "exception": null
   },
   {
@@ -109,6 +122,7 @@
     "service": "orders-service",
     "message": "Fetched 50 orders",
     "trace_id": "f75d326862818ef6f1740554d24a79e6",
+    "span_id": null,
     "exception": null
   },
   {
@@ -117,6 +131,7 @@
     "service": "orders-service",
     "message": "Cache miss for key orders:list:page=10",
     "trace_id": null,
+    "span_id": null,
     "exception": null
   },
   {
@@ -125,6 +140,7 @@
     "service": "api-gateway",
     "message": "Deprecated config key 'proxy.timeout' used, migrate to 'upstream.timeout'",
     "trace_id": null,
+    "span_id": null,
     "exception": null
   },
   {
@@ -133,6 +149,7 @@
     "service": "api-gateway",
     "message": "GET /orders 200 74ms",
     "trace_id": "221095aff9e72ab7c612eefc647d53bc",
+    "span_id": null,
     "exception": null
   },
   {
@@ -141,6 +158,7 @@
     "service": "orders-service",
     "message": "Fetched 20 orders",
     "trace_id": "221095aff9e72ab7c612eefc647d53bc",
+    "span_id": null,
     "exception": null
   },
   {
@@ -149,6 +167,7 @@
     "service": "api-gateway",
     "message": "Deprecated config key 'proxy.timeout' used, migrate to 'upstream.timeout'",
     "trace_id": null,
+    "span_id": null,
     "exception": null
   },
   {
@@ -157,6 +176,7 @@
     "service": "orders-service",
     "message": "Cache miss for key orders:list:page=14",
     "trace_id": null,
+    "span_id": null,
     "exception": null
   },
   {
@@ -165,6 +185,7 @@
     "service": "api-gateway",
     "message": "GET /orders/search 200 23ms",
     "trace_id": "57881638c436e5ae8156c47738ce7dab",
+    "span_id": null,
     "exception": null
   },
   {
@@ -173,6 +194,7 @@
     "service": "orders-service",
     "message": "Fetched 32 orders",
     "trace_id": "57881638c436e5ae8156c47738ce7dab",
+    "span_id": null,
     "exception": null
   },
   {
@@ -181,6 +203,7 @@
     "service": "orders-service",
     "message": "Cache miss for key orders:list:page=39",
     "trace_id": null,
+    "span_id": null,
     "exception": null
   },
   {
@@ -189,6 +212,7 @@
     "service": "api-gateway",
     "message": "Deprecated config key 'proxy.timeout' used, migrate to 'upstream.timeout'",
     "trace_id": null,
+    "span_id": null,
     "exception": null
   },
   {
@@ -197,6 +221,7 @@
     "service": "api-gateway",
     "message": "GET /orders 200 63ms",
     "trace_id": "233d85f41f9b9c075cae333947e513b2",
+    "span_id": null,
     "exception": null
   },
   {
@@ -205,6 +230,7 @@
     "service": "orders-service",
     "message": "Fetched 23 orders",
     "trace_id": "233d85f41f9b9c075cae333947e513b2",
+    "span_id": null,
     "exception": null
   },
   {
@@ -213,6 +239,7 @@
     "service": "api-gateway",
     "message": "Deprecated config key 'proxy.timeout' used, migrate to 'upstream.timeout'",
     "trace_id": null,
+    "span_id": null,
     "exception": null
   },
   {
@@ -221,6 +248,7 @@
     "service": "orders-service",
     "message": "Cache miss for key orders:list:page=29",
     "trace_id": null,
+    "span_id": null,
     "exception": null
   },
   {
@@ -229,6 +257,7 @@
     "service": "api-gateway",
     "message": "GET /orders/search 200 29ms",
     "trace_id": "d6e93fd6deb26ae52dd1b35fa5342084",
+    "span_id": null,
     "exception": null
   },
   {
@@ -237,6 +266,7 @@
     "service": "orders-service",
     "message": "Fetched 32 orders",
     "trace_id": "d6e93fd6deb26ae52dd1b35fa5342084",
+    "span_id": null,
     "exception": null
   },
   {
@@ -245,6 +275,7 @@
     "service": "orders-service",
     "message": "Cache miss for key orders:list:page=36",
     "trace_id": null,
+    "span_id": null,
     "exception": null
   },
   {
@@ -253,6 +284,7 @@
     "service": "api-gateway",
     "message": "Deprecated config key 'proxy.timeout' used, migrate to 'upstream.timeout'",
     "trace_id": null,
+    "span_id": null,
     "exception": null
   },
   {
@@ -261,6 +293,7 @@
     "service": "api-gateway",
     "message": "GET /orders 200 59ms",
     "trace_id": "6987a8d890d058378e1ba915b9949996",
+    "span_id": null,
     "exception": null
   },
   {
@@ -269,6 +302,7 @@
     "service": "orders-service",
     "message": "Fetched 34 orders",
     "trace_id": "6987a8d890d058378e1ba915b9949996",
+    "span_id": null,
     "exception": null
   },
   {
@@ -277,6 +311,7 @@
     "service": "api-gateway",
     "message": "Deprecated config key 'proxy.timeout' used, migrate to 'upstream.timeout'",
     "trace_id": null,
+    "span_id": null,
     "exception": null
   },
   {
@@ -285,6 +320,7 @@
     "service": "orders-service",
     "message": "Cache miss for key orders:list:page=8",
     "trace_id": null,
+    "span_id": null,
     "exception": null
   },
   {
@@ -293,6 +329,7 @@
     "service": "api-gateway",
     "message": "GET /orders/search 200 33ms",
     "trace_id": "dfd0d213af7e0a079fc771f2d4ba9318",
+    "span_id": null,
     "exception": null
   },
   {
@@ -301,6 +338,7 @@
     "service": "orders-service",
     "message": "Fetched 5 orders",
     "trace_id": "dfd0d213af7e0a079fc771f2d4ba9318",
+    "span_id": null,
     "exception": null
   },
   {
@@ -309,6 +347,7 @@
     "service": "orders-service",
     "message": "Cache miss for key orders:list:page=18",
     "trace_id": null,
+    "span_id": null,
     "exception": null
   },
   {
@@ -317,6 +356,7 @@
     "service": "api-gateway",
     "message": "Deprecated config key 'proxy.timeout' used, migrate to 'upstream.timeout'",
     "trace_id": null,
+    "span_id": null,
     "exception": null
   },
   {
@@ -325,6 +365,7 @@
     "service": "api-gateway",
     "message": "GET /orders 200 63ms",
     "trace_id": "a56677a0ecfc6c8d659b9f47505b8357",
+    "span_id": null,
     "exception": null
   },
   {
@@ -333,6 +374,7 @@
     "service": "orders-service",
     "message": "Fetched 27 orders",
     "trace_id": "a56677a0ecfc6c8d659b9f47505b8357",
+    "span_id": null,
     "exception": null
   },
   {
@@ -341,6 +383,7 @@
     "service": "orders-service",
     "message": "Cache miss for key orders:list:page=2",
     "trace_id": null,
+    "span_id": null,
     "exception": null
   },
   {
@@ -349,6 +392,7 @@
     "service": "api-gateway",
     "message": "Deprecated config key 'proxy.timeout' used, migrate to 'upstream.timeout'",
     "trace_id": null,
+    "span_id": null,
     "exception": null
   },
   {
@@ -357,6 +401,7 @@
     "service": "api-gateway",
     "message": "GET /orders/search 200 22ms",
     "trace_id": "6b816d16f32f44e8a4f4e59f562e8a0c",
+    "span_id": null,
     "exception": null
   },
   {
@@ -365,6 +410,7 @@
     "service": "orders-service",
     "message": "Fetched 30 orders",
     "trace_id": "6b816d16f32f44e8a4f4e59f562e8a0c",
+    "span_id": null,
     "exception": null
   },
   {
@@ -373,6 +419,7 @@
     "service": "orders-service",
     "message": "Cache miss for key orders:list:page=6",
     "trace_id": null,
+    "span_id": null,
     "exception": null
   },
   {
@@ -381,6 +428,7 @@
     "service": "api-gateway",
     "message": "Deprecated config key 'proxy.timeout' used, migrate to 'upstream.timeout'",
     "trace_id": null,
+    "span_id": null,
     "exception": null
   },
   {
@@ -389,6 +437,7 @@
     "service": "api-gateway",
     "message": "GET /orders 200 79ms",
     "trace_id": "bb1a32a747ca8963290f38638bf4a8e6",
+    "span_id": null,
     "exception": null
   },
   {
@@ -397,6 +446,7 @@
     "service": "orders-service",
     "message": "Fetched 5 orders",
     "trace_id": "bb1a32a747ca8963290f38638bf4a8e6",
+    "span_id": null,
     "exception": null
   },
   {
@@ -405,6 +455,7 @@
     "service": "api-gateway",
     "message": "Deprecated config key 'proxy.timeout' used, migrate to 'upstream.timeout'",
     "trace_id": null,
+    "span_id": null,
     "exception": null
   },
   {
@@ -413,6 +464,7 @@
     "service": "orders-service",
     "message": "Cache miss for key orders:list:page=17",
     "trace_id": null,
+    "span_id": null,
     "exception": null
   },
   {
@@ -421,6 +473,7 @@
     "service": "api-gateway",
     "message": "GET /orders/search 200 32ms",
     "trace_id": "153d892c7308184ffc6a3563e8571492",
+    "span_id": null,
     "exception": null
   },
   {
@@ -429,6 +482,7 @@
     "service": "orders-service",
     "message": "Fetched 26 orders",
     "trace_id": "153d892c7308184ffc6a3563e8571492",
+    "span_id": null,
     "exception": null
   },
   {
@@ -437,6 +491,7 @@
     "service": "api-gateway",
     "message": "Deprecated config key 'proxy.timeout' used, migrate to 'upstream.timeout'",
     "trace_id": null,
+    "span_id": null,
     "exception": null
   },
   {
@@ -445,6 +500,7 @@
     "service": "orders-service",
     "message": "Cache miss for key orders:list:page=6",
     "trace_id": null,
+    "span_id": null,
     "exception": null
   },
   {
@@ -453,6 +509,7 @@
     "service": "api-gateway",
     "message": "GET /orders 200 53ms",
     "trace_id": "fdbe8416344ad29babda495e12022c18",
+    "span_id": null,
     "exception": null
   },
   {
@@ -461,6 +518,7 @@
     "service": "orders-service",
     "message": "Fetched 10 orders",
     "trace_id": "fdbe8416344ad29babda495e12022c18",
+    "span_id": null,
     "exception": null
   },
   {
@@ -469,6 +527,7 @@
     "service": "orders-service",
     "message": "Cache miss for key orders:list:page=3",
     "trace_id": null,
+    "span_id": null,
     "exception": null
   },
   {
@@ -477,6 +536,7 @@
     "service": "api-gateway",
     "message": "Deprecated config key 'proxy.timeout' used, migrate to 'upstream.timeout'",
     "trace_id": null,
+    "span_id": null,
     "exception": null
   },
   {
@@ -485,6 +545,7 @@
     "service": "api-gateway",
     "message": "GET /orders/search 200 22ms",
     "trace_id": "51d5219d8f4a88f19ff13d4fef7316a4",
+    "span_id": null,
     "exception": null
   },
   {
@@ -493,6 +554,7 @@
     "service": "orders-service",
     "message": "Fetched 14 orders",
     "trace_id": "51d5219d8f4a88f19ff13d4fef7316a4",
+    "span_id": null,
     "exception": null
   },
   {
@@ -501,6 +563,7 @@
     "service": "api-gateway",
     "message": "Deprecated config key 'proxy.timeout' used, migrate to 'upstream.timeout'",
     "trace_id": null,
+    "span_id": null,
     "exception": null
   },
   {
@@ -509,6 +572,7 @@
     "service": "orders-service",
     "message": "Cache miss for key orders:list:page=11",
     "trace_id": null,
+    "span_id": null,
     "exception": null
   },
   {
@@ -517,6 +581,7 @@
     "service": "api-gateway",
     "message": "GET /orders 200 56ms",
     "trace_id": "5d087f54165339d27ddb298d5ec14882",
+    "span_id": null,
     "exception": null
   },
   {
@@ -525,6 +590,7 @@
     "service": "orders-service",
     "message": "Fetched 32 orders",
     "trace_id": "5d087f54165339d27ddb298d5ec14882",
+    "span_id": null,
     "exception": null
   },
   {
@@ -533,6 +599,7 @@
     "service": "api-gateway",
     "message": "Deprecated config key 'proxy.timeout' used, migrate to 'upstream.timeout'",
     "trace_id": null,
+    "span_id": null,
     "exception": null
   },
   {
@@ -541,6 +608,7 @@
     "service": "orders-service",
     "message": "Cache miss for key orders:list:page=20",
     "trace_id": null,
+    "span_id": null,
     "exception": null
   },
   {
@@ -549,6 +617,7 @@
     "service": "api-gateway",
     "message": "GET /orders/search 200 34ms",
     "trace_id": "4f94f197a6bfc2a4cf11afd1ead48842",
+    "span_id": null,
     "exception": null
   },
   {
@@ -557,6 +626,7 @@
     "service": "orders-service",
     "message": "Fetched 29 orders",
     "trace_id": "4f94f197a6bfc2a4cf11afd1ead48842",
+    "span_id": null,
     "exception": null
   },
   {
@@ -565,6 +635,7 @@
     "service": "api-gateway",
     "message": "Deprecated config key 'proxy.timeout' used, migrate to 'upstream.timeout'",
     "trace_id": null,
+    "span_id": null,
     "exception": null
   },
   {
@@ -573,6 +644,7 @@
     "service": "orders-service",
     "message": "Cache miss for key orders:list:page=13",
     "trace_id": null,
+    "span_id": null,
     "exception": null
   },
   {
@@ -581,6 +653,7 @@
     "service": "api-gateway",
     "message": "GET /orders 200 69ms",
     "trace_id": "d576dd8d7bd19a1699e4d779ae8d7d75",
+    "span_id": null,
     "exception": null
   },
   {
@@ -589,6 +662,7 @@
     "service": "orders-service",
     "message": "Fetched 6 orders",
     "trace_id": "d576dd8d7bd19a1699e4d779ae8d7d75",
+    "span_id": null,
     "exception": null
   },
   {
@@ -597,6 +671,7 @@
     "service": "api-gateway",
     "message": "Deprecated config key 'proxy.timeout' used, migrate to 'upstream.timeout'",
     "trace_id": null,
+    "span_id": null,
     "exception": null
   },
   {
@@ -605,6 +680,7 @@
     "service": "orders-service",
     "message": "Cache miss for key orders:list:page=35",
     "trace_id": null,
+    "span_id": null,
     "exception": null
   },
   {
@@ -613,6 +689,7 @@
     "service": "api-gateway",
     "message": "GET /orders/search 200 22ms",
     "trace_id": "970635d43901056f6eeab3e19a40b322",
+    "span_id": null,
     "exception": null
   },
   {
@@ -621,6 +698,7 @@
     "service": "orders-service",
     "message": "Fetched 24 orders",
     "trace_id": "970635d43901056f6eeab3e19a40b322",
+    "span_id": null,
     "exception": null
   },
   {
@@ -629,6 +707,7 @@
     "service": "api-gateway",
     "message": "Deprecated config key 'proxy.timeout' used, migrate to 'upstream.timeout'",
     "trace_id": null,
+    "span_id": null,
     "exception": null
   },
   {
@@ -637,6 +716,7 @@
     "service": "orders-service",
     "message": "Cache miss for key orders:list:page=10",
     "trace_id": null,
+    "span_id": null,
     "exception": null
   },
   {
@@ -645,6 +725,7 @@
     "service": "api-gateway",
     "message": "GET /orders 200 57ms",
     "trace_id": "5ca25762221d55cbc08b92a64d4446cc",
+    "span_id": null,
     "exception": null
   },
   {
@@ -653,6 +734,7 @@
     "service": "orders-service",
     "message": "Fetched 7 orders",
     "trace_id": "5ca25762221d55cbc08b92a64d4446cc",
+    "span_id": null,
     "exception": null
   },
   {
@@ -661,6 +743,7 @@
     "service": "orders-service",
     "message": "Cache miss for key orders:list:page=7",
     "trace_id": null,
+    "span_id": null,
     "exception": null
   },
   {
@@ -669,6 +752,7 @@
     "service": "api-gateway",
     "message": "Deprecated config key 'proxy.timeout' used, migrate to 'upstream.timeout'",
     "trace_id": null,
+    "span_id": null,
     "exception": null
   },
   {
@@ -677,6 +761,7 @@
     "service": "api-gateway",
     "message": "GET /orders/search 200 21ms",
     "trace_id": "0c2cbb1ff6c6957d8398a74ef780e431",
+    "span_id": null,
     "exception": null
   },
   {
@@ -685,6 +770,7 @@
     "service": "orders-service",
     "message": "Fetched 32 orders",
     "trace_id": "0c2cbb1ff6c6957d8398a74ef780e431",
+    "span_id": null,
     "exception": null
   },
   {
@@ -693,6 +779,7 @@
     "service": "orders-service",
     "message": "Cache miss for key orders:list:page=26",
     "trace_id": null,
+    "span_id": null,
     "exception": null
   },
   {
@@ -701,6 +788,7 @@
     "service": "api-gateway",
     "message": "Deprecated config key 'proxy.timeout' used, migrate to 'upstream.timeout'",
     "trace_id": null,
+    "span_id": null,
     "exception": null
   },
   {
@@ -709,6 +797,7 @@
     "service": "api-gateway",
     "message": "GET /orders 200 81ms",
     "trace_id": "fc23b1faae35a23df03cf076645f8de1",
+    "span_id": null,
     "exception": null
   },
   {
@@ -717,6 +806,7 @@
     "service": "orders-service",
     "message": "Fetched 32 orders",
     "trace_id": "fc23b1faae35a23df03cf076645f8de1",
+    "span_id": null,
     "exception": null
   },
   {
@@ -725,6 +815,7 @@
     "service": "orders-service",
     "message": "Cache miss for key orders:list:page=27",
     "trace_id": null,
+    "span_id": null,
     "exception": null
   },
   {
@@ -733,6 +824,7 @@
     "service": "api-gateway",
     "message": "Deprecated config key 'proxy.timeout' used, migrate to 'upstream.timeout'",
     "trace_id": null,
+    "span_id": null,
     "exception": null
   },
   {
@@ -741,6 +833,7 @@
     "service": "api-gateway",
     "message": "GET /orders/search 200 20ms",
     "trace_id": "3804ccadaa16b9e5ef279bc83e3482f9",
+    "span_id": null,
     "exception": null
   },
   {
@@ -749,6 +842,7 @@
     "service": "orders-service",
     "message": "Fetched 36 orders",
     "trace_id": "3804ccadaa16b9e5ef279bc83e3482f9",
+    "span_id": null,
     "exception": null
   },
   {
@@ -757,6 +851,7 @@
     "service": "api-gateway",
     "message": "Deprecated config key 'proxy.timeout' used, migrate to 'upstream.timeout'",
     "trace_id": null,
+    "span_id": null,
     "exception": null
   },
   {
@@ -765,6 +860,7 @@
     "service": "orders-service",
     "message": "Cache miss for key orders:list:page=14",
     "trace_id": null,
+    "span_id": null,
     "exception": null
   },
   {
@@ -773,6 +869,7 @@
     "service": "api-gateway",
     "message": "GET /orders 200 67ms",
     "trace_id": "d98ec1e8619b839dd3fb96f9e92aecb2",
+    "span_id": null,
     "exception": null
   },
   {
@@ -781,6 +878,7 @@
     "service": "orders-service",
     "message": "Fetched 40 orders",
     "trace_id": "d98ec1e8619b839dd3fb96f9e92aecb2",
+    "span_id": null,
     "exception": null
   },
   {
@@ -789,6 +887,7 @@
     "service": "api-gateway",
     "message": "Deprecated config key 'proxy.timeout' used, migrate to 'upstream.timeout'",
     "trace_id": null,
+    "span_id": null,
     "exception": null
   },
   {
@@ -797,6 +896,7 @@
     "service": "orders-service",
     "message": "Cache miss for key orders:list:page=37",
     "trace_id": null,
+    "span_id": null,
     "exception": null
   },
   {
@@ -805,6 +905,7 @@
     "service": "api-gateway",
     "message": "GET /orders/search 200 28ms",
     "trace_id": "c78251282b0cedf3a464bcae6989a25e",
+    "span_id": null,
     "exception": null
   },
   {
@@ -813,6 +914,7 @@
     "service": "orders-service",
     "message": "Fetched 25 orders",
     "trace_id": "c78251282b0cedf3a464bcae6989a25e",
+    "span_id": null,
     "exception": null
   },
   {
@@ -821,6 +923,7 @@
     "service": "api-gateway",
     "message": "Deprecated config key 'proxy.timeout' used, migrate to 'upstream.timeout'",
     "trace_id": null,
+    "span_id": null,
     "exception": null
   },
   {
@@ -829,6 +932,7 @@
     "service": "orders-service",
     "message": "Cache miss for key orders:list:page=15",
     "trace_id": null,
+    "span_id": null,
     "exception": null
   },
   {
@@ -837,6 +941,7 @@
     "service": "api-gateway",
     "message": "GET /orders 200 74ms",
     "trace_id": "9625eb0b269ed1cafa301d10ad7e3792",
+    "span_id": null,
     "exception": null
   },
   {
@@ -845,6 +950,7 @@
     "service": "orders-service",
     "message": "Fetched 25 orders",
     "trace_id": "9625eb0b269ed1cafa301d10ad7e3792",
+    "span_id": null,
     "exception": null
   },
   {
@@ -853,6 +959,7 @@
     "service": "api-gateway",
     "message": "Deprecated config key 'proxy.timeout' used, migrate to 'upstream.timeout'",
     "trace_id": null,
+    "span_id": null,
     "exception": null
   },
   {
@@ -861,6 +968,7 @@
     "service": "orders-service",
     "message": "Cache miss for key orders:list:page=13",
     "trace_id": null,
+    "span_id": null,
     "exception": null
   },
   {
@@ -869,6 +977,7 @@
     "service": "api-gateway",
     "message": "GET /orders/search 200 24ms",
     "trace_id": "a23699309f7f71cae28710d41fd1caa6",
+    "span_id": null,
     "exception": null
   },
   {
@@ -877,6 +986,7 @@
     "service": "orders-service",
     "message": "Fetched 38 orders",
     "trace_id": "a23699309f7f71cae28710d41fd1caa6",
+    "span_id": null,
     "exception": null
   },
   {
@@ -885,6 +995,7 @@
     "service": "orders-service",
     "message": "Cache miss for key orders:list:page=27",
     "trace_id": null,
+    "span_id": null,
     "exception": null
   },
   {
@@ -893,6 +1004,7 @@
     "service": "api-gateway",
     "message": "Deprecated config key 'proxy.timeout' used, migrate to 'upstream.timeout'",
     "trace_id": null,
+    "span_id": null,
     "exception": null
   },
   {
@@ -901,6 +1013,7 @@
     "service": "api-gateway",
     "message": "GET /orders 200 72ms",
     "trace_id": "5c8f7be22c4d6d467de76e9101f77cb5",
+    "span_id": null,
     "exception": null
   },
   {
@@ -909,6 +1022,7 @@
     "service": "orders-service",
     "message": "Fetched 36 orders",
     "trace_id": "5c8f7be22c4d6d467de76e9101f77cb5",
+    "span_id": null,
     "exception": null
   },
   {
@@ -917,6 +1031,7 @@
     "service": "orders-service",
     "message": "Cache miss for key orders:list:page=24",
     "trace_id": null,
+    "span_id": null,
     "exception": null
   },
   {
@@ -925,6 +1040,7 @@
     "service": "api-gateway",
     "message": "Deprecated config key 'proxy.timeout' used, migrate to 'upstream.timeout'",
     "trace_id": null,
+    "span_id": null,
     "exception": null
   },
   {
@@ -933,6 +1049,7 @@
     "service": "api-gateway",
     "message": "GET /orders/search 200 29ms",
     "trace_id": "72e95f3f3df62871ec45c1b9812358f7",
+    "span_id": null,
     "exception": null
   },
   {
@@ -941,6 +1058,7 @@
     "service": "orders-service",
     "message": "Fetched 48 orders",
     "trace_id": "72e95f3f3df62871ec45c1b9812358f7",
+    "span_id": null,
     "exception": null
   },
   {
@@ -949,6 +1067,7 @@
     "service": "api-gateway",
     "message": "Deprecated config key 'proxy.timeout' used, migrate to 'upstream.timeout'",
     "trace_id": null,
+    "span_id": null,
     "exception": null
   },
   {
@@ -957,6 +1076,7 @@
     "service": "orders-service",
     "message": "Cache miss for key orders:list:page=24",
     "trace_id": null,
+    "span_id": null,
     "exception": null
   },
   {
@@ -965,6 +1085,7 @@
     "service": "api-gateway",
     "message": "GET /orders 200 63ms",
     "trace_id": "a620eb0952d9ba8fc649548d8cc32c00",
+    "span_id": null,
     "exception": null
   },
   {
@@ -973,6 +1094,7 @@
     "service": "orders-service",
     "message": "Fetched 49 orders",
     "trace_id": "a620eb0952d9ba8fc649548d8cc32c00",
+    "span_id": null,
     "exception": null
   },
   {
@@ -981,6 +1103,7 @@
     "service": "api-gateway",
     "message": "Deprecated config key 'proxy.timeout' used, migrate to 'upstream.timeout'",
     "trace_id": null,
+    "span_id": null,
     "exception": null
   },
   {
@@ -989,6 +1112,7 @@
     "service": "orders-service",
     "message": "Cache miss for key orders:list:page=7",
     "trace_id": null,
+    "span_id": null,
     "exception": null
   },
   {
@@ -997,6 +1121,7 @@
     "service": "api-gateway",
     "message": "GET /orders/search 200 19ms",
     "trace_id": "81521072ca779408434ffb4c278063ae",
+    "span_id": null,
     "exception": null
   },
   {
@@ -1005,6 +1130,7 @@
     "service": "orders-service",
     "message": "Fetched 29 orders",
     "trace_id": "81521072ca779408434ffb4c278063ae",
+    "span_id": null,
     "exception": null
   },
   {
@@ -1013,6 +1139,7 @@
     "service": "orders-service",
     "message": "Cache miss for key orders:list:page=15",
     "trace_id": null,
+    "span_id": null,
     "exception": null
   },
   {
@@ -1021,6 +1148,7 @@
     "service": "api-gateway",
     "message": "Deprecated config key 'proxy.timeout' used, migrate to 'upstream.timeout'",
     "trace_id": null,
+    "span_id": null,
     "exception": null
   },
   {
@@ -1029,6 +1157,7 @@
     "service": "api-gateway",
     "message": "GET /orders 200 72ms",
     "trace_id": "24bfe43486108db418f9a48a145d294f",
+    "span_id": null,
     "exception": null
   },
   {
@@ -1037,6 +1166,7 @@
     "service": "orders-service",
     "message": "Fetched 47 orders",
     "trace_id": "24bfe43486108db418f9a48a145d294f",
+    "span_id": null,
     "exception": null
   },
   {
@@ -1045,6 +1175,7 @@
     "service": "orders-service",
     "message": "Cache miss for key orders:list:page=26",
     "trace_id": null,
+    "span_id": null,
     "exception": null
   },
   {
@@ -1053,6 +1184,7 @@
     "service": "api-gateway",
     "message": "Deprecated config key 'proxy.timeout' used, migrate to 'upstream.timeout'",
     "trace_id": null,
+    "span_id": null,
     "exception": null
   },
   {
@@ -1061,6 +1193,7 @@
     "service": "api-gateway",
     "message": "GET /orders/search 200 28ms",
     "trace_id": "0fd68cde764d4cbce9059711f3b83a61",
+    "span_id": null,
     "exception": null
   },
   {
@@ -1069,6 +1202,7 @@
     "service": "orders-service",
     "message": "Fetched 39 orders",
     "trace_id": "0fd68cde764d4cbce9059711f3b83a61",
+    "span_id": null,
     "exception": null
   },
   {
@@ -1077,6 +1211,7 @@
     "service": "orders-service",
     "message": "Cache miss for key orders:list:page=36",
     "trace_id": null,
+    "span_id": null,
     "exception": null
   },
   {
@@ -1085,6 +1220,7 @@
     "service": "api-gateway",
     "message": "Deprecated config key 'proxy.timeout' used, migrate to 'upstream.timeout'",
     "trace_id": null,
+    "span_id": null,
     "exception": null
   },
   {
@@ -1093,6 +1229,7 @@
     "service": "api-gateway",
     "message": "GET /orders 200 70ms",
     "trace_id": "737c3e20c55c45f81dc7f0d00a5846c6",
+    "span_id": null,
     "exception": null
   },
   {
@@ -1101,6 +1238,7 @@
     "service": "orders-service",
     "message": "Fetched 27 orders",
     "trace_id": "737c3e20c55c45f81dc7f0d00a5846c6",
+    "span_id": null,
     "exception": null
   },
   {
@@ -1109,6 +1247,7 @@
     "service": "api-gateway",
     "message": "Deprecated config key 'proxy.timeout' used, migrate to 'upstream.timeout'",
     "trace_id": null,
+    "span_id": null,
     "exception": null
   },
   {
@@ -1117,6 +1256,7 @@
     "service": "orders-service",
     "message": "Cache miss for key orders:list:page=6",
     "trace_id": null,
+    "span_id": null,
     "exception": null
   },
   {
@@ -1125,6 +1265,7 @@
     "service": "api-gateway",
     "message": "GET /orders/search 200 28ms",
     "trace_id": "6446020188c7cf4bba1769d208877c6c",
+    "span_id": null,
     "exception": null
   },
   {
@@ -1133,6 +1274,7 @@
     "service": "orders-service",
     "message": "Fetched 42 orders",
     "trace_id": "6446020188c7cf4bba1769d208877c6c",
+    "span_id": null,
     "exception": null
   },
   {
@@ -1141,6 +1283,7 @@
     "service": "api-gateway",
     "message": "Deprecated config key 'proxy.timeout' used, migrate to 'upstream.timeout'",
     "trace_id": null,
+    "span_id": null,
     "exception": null
   },
   {
@@ -1149,6 +1292,7 @@
     "service": "orders-service",
     "message": "Cache miss for key orders:list:page=26",
     "trace_id": null,
+    "span_id": null,
     "exception": null
   },
   {
@@ -1157,6 +1301,7 @@
     "service": "api-gateway",
     "message": "GET /orders 200 65ms",
     "trace_id": "456231d2c92125afb7e645eef41823ab",
+    "span_id": null,
     "exception": null
   },
   {
@@ -1165,6 +1310,7 @@
     "service": "orders-service",
     "message": "Fetched 49 orders",
     "trace_id": "456231d2c92125afb7e645eef41823ab",
+    "span_id": null,
     "exception": null
   },
   {
@@ -1173,6 +1319,7 @@
     "service": "orders-service",
     "message": "Cache miss for key orders:list:page=3",
     "trace_id": null,
+    "span_id": null,
     "exception": null
   },
   {
@@ -1181,6 +1328,7 @@
     "service": "api-gateway",
     "message": "Deprecated config key 'proxy.timeout' used, migrate to 'upstream.timeout'",
     "trace_id": null,
+    "span_id": null,
     "exception": null
   },
   {
@@ -1189,6 +1337,7 @@
     "service": "api-gateway",
     "message": "GET /orders/search 200 23ms",
     "trace_id": "6df5150a49ed0567b03b1cea43c9a0ee",
+    "span_id": null,
     "exception": null
   },
   {
@@ -1197,6 +1346,7 @@
     "service": "orders-service",
     "message": "Fetched 49 orders",
     "trace_id": "6df5150a49ed0567b03b1cea43c9a0ee",
+    "span_id": null,
     "exception": null
   },
   {
@@ -1205,6 +1355,7 @@
     "service": "orders-service",
     "message": "Cache miss for key orders:list:page=38",
     "trace_id": null,
+    "span_id": null,
     "exception": null
   },
   {
@@ -1213,6 +1364,7 @@
     "service": "api-gateway",
     "message": "Deprecated config key 'proxy.timeout' used, migrate to 'upstream.timeout'",
     "trace_id": null,
+    "span_id": null,
     "exception": null
   },
   {
@@ -1221,6 +1373,7 @@
     "service": "api-gateway",
     "message": "GET /orders 200 51ms",
     "trace_id": "adbb65399db955e9bbd8b455e9b6b6bd",
+    "span_id": null,
     "exception": null
   },
   {
@@ -1229,6 +1382,7 @@
     "service": "orders-service",
     "message": "Fetched 27 orders",
     "trace_id": "adbb65399db955e9bbd8b455e9b6b6bd",
+    "span_id": null,
     "exception": null
   },
   {
@@ -1237,6 +1391,7 @@
     "service": "api-gateway",
     "message": "Deprecated config key 'proxy.timeout' used, migrate to 'upstream.timeout'",
     "trace_id": null,
+    "span_id": null,
     "exception": null
   },
   {
@@ -1245,6 +1400,7 @@
     "service": "orders-service",
     "message": "Cache miss for key orders:list:page=15",
     "trace_id": null,
+    "span_id": null,
     "exception": null
   },
   {
@@ -1253,6 +1409,7 @@
     "service": "api-gateway",
     "message": "GET /orders/search 200 28ms",
     "trace_id": "c8d61a4a3e26513bd4cb4bef695710f0",
+    "span_id": null,
     "exception": null
   },
   {
@@ -1261,6 +1418,7 @@
     "service": "orders-service",
     "message": "Fetched 36 orders",
     "trace_id": "c8d61a4a3e26513bd4cb4bef695710f0",
+    "span_id": null,
     "exception": null
   },
   {
@@ -1269,6 +1427,7 @@
     "service": "orders-service",
     "message": "Cache miss for key orders:list:page=15",
     "trace_id": null,
+    "span_id": null,
     "exception": null
   },
   {
@@ -1277,6 +1436,7 @@
     "service": "api-gateway",
     "message": "Deprecated config key 'proxy.timeout' used, migrate to 'upstream.timeout'",
     "trace_id": null,
+    "span_id": null,
     "exception": null
   },
   {
@@ -1285,6 +1445,7 @@
     "service": "api-gateway",
     "message": "GET /orders 200 49ms",
     "trace_id": "6bb2500de5ae410a7c044e686f84c1d6",
+    "span_id": null,
     "exception": null
   },
   {
@@ -1293,6 +1454,7 @@
     "service": "orders-service",
     "message": "Fetched 25 orders",
     "trace_id": "6bb2500de5ae410a7c044e686f84c1d6",
+    "span_id": null,
     "exception": null
   },
   {
@@ -1301,6 +1463,7 @@
     "service": "orders-service",
     "message": "Failed to send metrics to collector at 10.0.3.17:4317",
     "trace_id": null,
+    "span_id": null,
     "exception": "ConnectionRefusedError: [Errno 111] Connection refused"
   },
   {
@@ -1309,6 +1472,7 @@
     "service": "api-gateway",
     "message": "Deprecated config key 'proxy.timeout' used, migrate to 'upstream.timeout'",
     "trace_id": null,
+    "span_id": null,
     "exception": null
   },
   {
@@ -1317,6 +1481,7 @@
     "service": "orders-service",
     "message": "Cache miss for key orders:list:page=19",
     "trace_id": null,
+    "span_id": null,
     "exception": null
   },
   {
@@ -1325,6 +1490,7 @@
     "service": "orders-service",
     "message": "Failed to send metrics to collector at 10.0.3.17:4317",
     "trace_id": null,
+    "span_id": null,
     "exception": "ConnectionRefusedError: [Errno 111] Connection refused"
   },
   {
@@ -1333,6 +1499,7 @@
     "service": "api-gateway",
     "message": "GET /orders/search 200 28ms",
     "trace_id": "98070bc11f816e8d88df8dc25715cc67",
+    "span_id": null,
     "exception": null
   },
   {
@@ -1341,6 +1508,7 @@
     "service": "orders-service",
     "message": "Fetched 7 orders",
     "trace_id": "98070bc11f816e8d88df8dc25715cc67",
+    "span_id": null,
     "exception": null
   },
   {
@@ -1349,6 +1517,7 @@
     "service": "orders-service",
     "message": "Failed to send metrics to collector at 10.0.3.17:4317",
     "trace_id": null,
+    "span_id": null,
     "exception": "ConnectionRefusedError: [Errno 111] Connection refused"
   },
   {
@@ -1357,6 +1526,7 @@
     "service": "api-gateway",
     "message": "Deprecated config key 'proxy.timeout' used, migrate to 'upstream.timeout'",
     "trace_id": null,
+    "span_id": null,
     "exception": null
   },
   {
@@ -1365,6 +1535,7 @@
     "service": "orders-service",
     "message": "Failed to send metrics to collector at 10.0.3.17:4317",
     "trace_id": null,
+    "span_id": null,
     "exception": "ConnectionRefusedError: [Errno 111] Connection refused"
   },
   {
@@ -1373,6 +1544,7 @@
     "service": "orders-service",
     "message": "Failed to send metrics to collector at 10.0.3.17:4317",
     "trace_id": null,
+    "span_id": null,
     "exception": "ConnectionRefusedError: [Errno 111] Connection refused"
   },
   {
@@ -1381,6 +1553,7 @@
     "service": "orders-service",
     "message": "Cache miss for key orders:list:page=8",
     "trace_id": null,
+    "span_id": null,
     "exception": null
   },
   {
@@ -1389,6 +1562,7 @@
     "service": "orders-service",
     "message": "Failed to send metrics to collector at 10.0.3.17:4317",
     "trace_id": null,
+    "span_id": null,
     "exception": "ConnectionRefusedError: [Errno 111] Connection refused"
   },
   {
@@ -1397,6 +1571,7 @@
     "service": "api-gateway",
     "message": "Deprecated config key 'proxy.timeout' used, migrate to 'upstream.timeout'",
     "trace_id": null,
+    "span_id": null,
     "exception": null
   },
   {
@@ -1405,6 +1580,7 @@
     "service": "api-gateway",
     "message": "GET /orders 200 1450ms",
     "trace_id": "6d8d3481c34becab60d37339ab37f664",
+    "span_id": null,
     "exception": null
   },
   {
@@ -1413,6 +1589,7 @@
     "service": "orders-service",
     "message": "Fetched 25 orders",
     "trace_id": "6d8d3481c34becab60d37339ab37f664",
+    "span_id": null,
     "exception": null
   },
   {
@@ -1421,6 +1598,7 @@
     "service": "orders-service",
     "message": "Failed to send metrics to collector at 10.0.3.17:4317",
     "trace_id": null,
+    "span_id": null,
     "exception": "ConnectionRefusedError: [Errno 111] Connection refused"
   },
   {
@@ -1429,6 +1607,7 @@
     "service": "orders-service",
     "message": "Cache miss for key orders:list:page=14",
     "trace_id": null,
+    "span_id": null,
     "exception": null
   },
   {
@@ -1437,6 +1616,7 @@
     "service": "orders-service",
     "message": "Failed to send metrics to collector at 10.0.3.17:4317",
     "trace_id": null,
+    "span_id": null,
     "exception": "ConnectionRefusedError: [Errno 111] Connection refused"
   },
   {
@@ -1445,6 +1625,7 @@
     "service": "api-gateway",
     "message": "GET /orders/search 200 23ms",
     "trace_id": "fd6d1129d2e8941bd146ddd5b8297540",
+    "span_id": null,
     "exception": null
   },
   {
@@ -1453,6 +1634,7 @@
     "service": "orders-service",
     "message": "Fetched 11 orders",
     "trace_id": "fd6d1129d2e8941bd146ddd5b8297540",
+    "span_id": null,
     "exception": null
   },
   {
@@ -1461,6 +1643,7 @@
     "service": "orders-service",
     "message": "Failed to send metrics to collector at 10.0.3.17:4317",
     "trace_id": null,
+    "span_id": null,
     "exception": "ConnectionRefusedError: [Errno 111] Connection refused"
   },
   {
@@ -1469,6 +1652,7 @@
     "service": "orders-service",
     "message": "Failed to send metrics to collector at 10.0.3.17:4317",
     "trace_id": null,
+    "span_id": null,
     "exception": "ConnectionRefusedError: [Errno 111] Connection refused"
   },
   {
@@ -1477,6 +1661,7 @@
     "service": "orders-service",
     "message": "Cache miss for key orders:list:page=38",
     "trace_id": null,
+    "span_id": null,
     "exception": null
   },
   {
@@ -1485,6 +1670,7 @@
     "service": "api-gateway",
     "message": "Deprecated config key 'proxy.timeout' used, migrate to 'upstream.timeout'",
     "trace_id": null,
+    "span_id": null,
     "exception": null
   },
   {
@@ -1493,6 +1679,7 @@
     "service": "orders-service",
     "message": "Failed to send metrics to collector at 10.0.3.17:4317",
     "trace_id": null,
+    "span_id": null,
     "exception": "ConnectionRefusedError: [Errno 111] Connection refused"
   },
   {
@@ -1501,6 +1688,7 @@
     "service": "orders-service",
     "message": "Cache miss for key orders:list:page=13",
     "trace_id": null,
+    "span_id": null,
     "exception": null
   },
   {
@@ -1509,6 +1697,7 @@
     "service": "api-gateway",
     "message": "GET /orders 200 2928ms",
     "trace_id": "880724a85294687a3944c4075b2c1cb0",
+    "span_id": null,
     "exception": null
   },
   {
@@ -1517,6 +1706,7 @@
     "service": "orders-service",
     "message": "Fetched 44 orders",
     "trace_id": "880724a85294687a3944c4075b2c1cb0",
+    "span_id": null,
     "exception": null
   },
   {
@@ -1525,6 +1715,7 @@
     "service": "orders-service",
     "message": "Failed to send metrics to collector at 10.0.3.17:4317",
     "trace_id": null,
+    "span_id": null,
     "exception": "ConnectionRefusedError: [Errno 111] Connection refused"
   },
   {
@@ -1533,6 +1724,7 @@
     "service": "api-gateway",
     "message": "Deprecated config key 'proxy.timeout' used, migrate to 'upstream.timeout'",
     "trace_id": null,
+    "span_id": null,
     "exception": null
   },
   {
@@ -1541,6 +1733,7 @@
     "service": "orders-service",
     "message": "Failed to send metrics to collector at 10.0.3.17:4317",
     "trace_id": null,
+    "span_id": null,
     "exception": "ConnectionRefusedError: [Errno 111] Connection refused"
   },
   {
@@ -1549,6 +1742,7 @@
     "service": "api-gateway",
     "message": "GET /orders/search 200 27ms",
     "trace_id": "75d0f7574c413710f1a2d795e0b71ac6",
+    "span_id": null,
     "exception": null
   },
   {
@@ -1557,6 +1751,7 @@
     "service": "orders-service",
     "message": "Fetched 9 orders",
     "trace_id": "75d0f7574c413710f1a2d795e0b71ac6",
+    "span_id": null,
     "exception": null
   },
   {
@@ -1565,6 +1760,7 @@
     "service": "orders-service",
     "message": "Failed to send metrics to collector at 10.0.3.17:4317",
     "trace_id": null,
+    "span_id": null,
     "exception": "ConnectionRefusedError: [Errno 111] Connection refused"
   },
   {
@@ -1573,6 +1769,7 @@
     "service": "api-gateway",
     "message": "Deprecated config key 'proxy.timeout' used, migrate to 'upstream.timeout'",
     "trace_id": null,
+    "span_id": null,
     "exception": null
   },
   {
@@ -1581,6 +1778,7 @@
     "service": "orders-service",
     "message": "Cache miss for key orders:list:page=11",
     "trace_id": null,
+    "span_id": null,
     "exception": null
   },
   {
@@ -1589,6 +1787,7 @@
     "service": "orders-service",
     "message": "Failed to send metrics to collector at 10.0.3.17:4317",
     "trace_id": null,
+    "span_id": null,
     "exception": "ConnectionRefusedError: [Errno 111] Connection refused"
   },
   {
@@ -1597,6 +1796,7 @@
     "service": "orders-service",
     "message": "Failed to send metrics to collector at 10.0.3.17:4317",
     "trace_id": null,
+    "span_id": null,
     "exception": "ConnectionRefusedError: [Errno 111] Connection refused"
   },
   {
@@ -1605,6 +1805,7 @@
     "service": "api-gateway",
     "message": "GET /orders 200 4055ms",
     "trace_id": "cf0f3b76058e09cdb203dba2f0e042db",
+    "span_id": null,
     "exception": null
   },
   {
@@ -1613,6 +1814,7 @@
     "service": "orders-service",
     "message": "Fetched 30 orders",
     "trace_id": "cf0f3b76058e09cdb203dba2f0e042db",
+    "span_id": null,
     "exception": null
   },
   {
@@ -1621,6 +1823,7 @@
     "service": "orders-service",
     "message": "Failed to send metrics to collector at 10.0.3.17:4317",
     "trace_id": null,
+    "span_id": null,
     "exception": "ConnectionRefusedError: [Errno 111] Connection refused"
   },
   {
@@ -1629,6 +1832,7 @@
     "service": "api-gateway",
     "message": "Deprecated config key 'proxy.timeout' used, migrate to 'upstream.timeout'",
     "trace_id": null,
+    "span_id": null,
     "exception": null
   },
   {
@@ -1637,6 +1841,7 @@
     "service": "orders-service",
     "message": "Cache miss for key orders:list:page=35",
     "trace_id": null,
+    "span_id": null,
     "exception": null
   },
   {
@@ -1645,6 +1850,7 @@
     "service": "orders-service",
     "message": "Failed to send metrics to collector at 10.0.3.17:4317",
     "trace_id": null,
+    "span_id": null,
     "exception": "ConnectionRefusedError: [Errno 111] Connection refused"
   },
   {
@@ -1653,6 +1859,7 @@
     "service": "orders-service",
     "message": "Failed to send metrics to collector at 10.0.3.17:4317",
     "trace_id": null,
+    "span_id": null,
     "exception": "ConnectionRefusedError: [Errno 111] Connection refused"
   },
   {
@@ -1661,6 +1868,7 @@
     "service": "api-gateway",
     "message": "GET /orders/search 200 26ms",
     "trace_id": "68a2ef2c03c8807d35b3eb59de748583",
+    "span_id": null,
     "exception": null
   },
   {
@@ -1669,6 +1877,7 @@
     "service": "orders-service",
     "message": "Fetched 45 orders",
     "trace_id": "68a2ef2c03c8807d35b3eb59de748583",
+    "span_id": null,
     "exception": null
   },
   {
@@ -1677,6 +1886,7 @@
     "service": "orders-service",
     "message": "Failed to send metrics to collector at 10.0.3.17:4317",
     "trace_id": null,
+    "span_id": null,
     "exception": "ConnectionRefusedError: [Errno 111] Connection refused"
   },
   {
@@ -1685,6 +1895,7 @@
     "service": "orders-service",
     "message": "Failed to send metrics to collector at 10.0.3.17:4317",
     "trace_id": null,
+    "span_id": null,
     "exception": "ConnectionRefusedError: [Errno 111] Connection refused"
   },
   {
@@ -1693,6 +1904,7 @@
     "service": "orders-service",
     "message": "Cache miss for key orders:list:page=26",
     "trace_id": null,
+    "span_id": null,
     "exception": null
   },
   {
@@ -1701,6 +1913,7 @@
     "service": "api-gateway",
     "message": "Deprecated config key 'proxy.timeout' used, migrate to 'upstream.timeout'",
     "trace_id": null,
+    "span_id": null,
     "exception": null
   },
   {
@@ -1709,6 +1922,7 @@
     "service": "orders-service",
     "message": "Cache miss for key orders:list:page=2",
     "trace_id": null,
+    "span_id": null,
     "exception": null
   },
   {
@@ -1717,6 +1931,7 @@
     "service": "orders-service",
     "message": "Failed to send metrics to collector at 10.0.3.17:4317",
     "trace_id": null,
+    "span_id": null,
     "exception": "ConnectionRefusedError: [Errno 111] Connection refused"
   },
   {
@@ -1725,6 +1940,7 @@
     "service": "api-gateway",
     "message": "GET /orders 200 3792ms",
     "trace_id": "a74f45eced1da4ae7886dc6ea870bf5c",
+    "span_id": null,
     "exception": null
   },
   {
@@ -1733,6 +1949,7 @@
     "service": "orders-service",
     "message": "Fetched 38 orders",
     "trace_id": "a74f45eced1da4ae7886dc6ea870bf5c",
+    "span_id": null,
     "exception": null
   },
   {
@@ -1741,6 +1958,7 @@
     "service": "orders-service",
     "message": "Failed to send metrics to collector at 10.0.3.17:4317",
     "trace_id": null,
+    "span_id": null,
     "exception": "ConnectionRefusedError: [Errno 111] Connection refused"
   },
   {
@@ -1749,6 +1967,7 @@
     "service": "orders-service",
     "message": "Failed to send metrics to collector at 10.0.3.17:4317",
     "trace_id": null,
+    "span_id": null,
     "exception": "ConnectionRefusedError: [Errno 111] Connection refused"
   },
   {
@@ -1757,6 +1976,7 @@
     "service": "api-gateway",
     "message": "Deprecated config key 'proxy.timeout' used, migrate to 'upstream.timeout'",
     "trace_id": null,
+    "span_id": null,
     "exception": null
   },
   {
@@ -1765,6 +1985,7 @@
     "service": "api-gateway",
     "message": "GET /orders/search 200 28ms",
     "trace_id": "147169f6bfef7997511aa3801c6e91de",
+    "span_id": null,
     "exception": null
   },
   {
@@ -1773,6 +1994,7 @@
     "service": "orders-service",
     "message": "Fetched 23 orders",
     "trace_id": "147169f6bfef7997511aa3801c6e91de",
+    "span_id": null,
     "exception": null
   },
   {
@@ -1781,6 +2003,7 @@
     "service": "orders-service",
     "message": "Failed to send metrics to collector at 10.0.3.17:4317",
     "trace_id": null,
+    "span_id": null,
     "exception": "ConnectionRefusedError: [Errno 111] Connection refused"
   },
   {
@@ -1789,6 +2012,7 @@
     "service": "orders-service",
     "message": "Cache miss for key orders:list:page=1",
     "trace_id": null,
+    "span_id": null,
     "exception": null
   },
   {
@@ -1797,6 +2021,7 @@
     "service": "orders-service",
     "message": "Failed to send metrics to collector at 10.0.3.17:4317",
     "trace_id": null,
+    "span_id": null,
     "exception": "ConnectionRefusedError: [Errno 111] Connection refused"
   },
   {
@@ -1805,6 +2030,7 @@
     "service": "api-gateway",
     "message": "Deprecated config key 'proxy.timeout' used, migrate to 'upstream.timeout'",
     "trace_id": null,
+    "span_id": null,
     "exception": null
   },
   {
@@ -1813,6 +2039,7 @@
     "service": "orders-service",
     "message": "Failed to send metrics to collector at 10.0.3.17:4317",
     "trace_id": null,
+    "span_id": null,
     "exception": "ConnectionRefusedError: [Errno 111] Connection refused"
   },
   {
@@ -1821,6 +2048,7 @@
     "service": "api-gateway",
     "message": "GET /orders 200 4124ms",
     "trace_id": "f926eb913cf16e8f4758692cfe882ffe",
+    "span_id": null,
     "exception": null
   },
   {
@@ -1829,6 +2057,7 @@
     "service": "orders-service",
     "message": "Fetched 17 orders",
     "trace_id": "f926eb913cf16e8f4758692cfe882ffe",
+    "span_id": null,
     "exception": null
   },
   {
@@ -1837,6 +2066,7 @@
     "service": "orders-service",
     "message": "Failed to send metrics to collector at 10.0.3.17:4317",
     "trace_id": null,
+    "span_id": null,
     "exception": "ConnectionRefusedError: [Errno 111] Connection refused"
   },
   {
@@ -1845,6 +2075,7 @@
     "service": "orders-service",
     "message": "Failed to send metrics to collector at 10.0.3.17:4317",
     "trace_id": null,
+    "span_id": null,
     "exception": "ConnectionRefusedError: [Errno 111] Connection refused"
   },
   {
@@ -1853,6 +2084,7 @@
     "service": "orders-service",
     "message": "Cache miss for key orders:list:page=4",
     "trace_id": null,
+    "span_id": null,
     "exception": null
   },
   {
@@ -1861,6 +2093,7 @@
     "service": "api-gateway",
     "message": "Deprecated config key 'proxy.timeout' used, migrate to 'upstream.timeout'",
     "trace_id": null,
+    "span_id": null,
     "exception": null
   },
   {
@@ -1869,6 +2102,7 @@
     "service": "api-gateway",
     "message": "GET /orders/search 200 27ms",
     "trace_id": "0e6fe6599be33731f16f4f623da631d6",
+    "span_id": null,
     "exception": null
   },
   {
@@ -1877,6 +2111,7 @@
     "service": "orders-service",
     "message": "Fetched 26 orders",
     "trace_id": "0e6fe6599be33731f16f4f623da631d6",
+    "span_id": null,
     "exception": null
   },
   {
@@ -1885,6 +2120,7 @@
     "service": "orders-service",
     "message": "Failed to send metrics to collector at 10.0.3.17:4317",
     "trace_id": null,
+    "span_id": null,
     "exception": "ConnectionRefusedError: [Errno 111] Connection refused"
   },
   {
@@ -1893,6 +2129,7 @@
     "service": "orders-service",
     "message": "Failed to send metrics to collector at 10.0.3.17:4317",
     "trace_id": null,
+    "span_id": null,
     "exception": "ConnectionRefusedError: [Errno 111] Connection refused"
   },
   {
@@ -1901,6 +2138,7 @@
     "service": "api-gateway",
     "message": "Deprecated config key 'proxy.timeout' used, migrate to 'upstream.timeout'",
     "trace_id": null,
+    "span_id": null,
     "exception": null
   },
   {
@@ -1909,6 +2147,7 @@
     "service": "orders-service",
     "message": "Cache miss for key orders:list:page=22",
     "trace_id": null,
+    "span_id": null,
     "exception": null
   },
   {
@@ -1917,6 +2156,7 @@
     "service": "orders-service",
     "message": "Failed to send metrics to collector at 10.0.3.17:4317",
     "trace_id": null,
+    "span_id": null,
     "exception": "ConnectionRefusedError: [Errno 111] Connection refused"
   },
   {
@@ -1925,6 +2165,7 @@
     "service": "api-gateway",
     "message": "GET /orders 200 4180ms",
     "trace_id": "a682a0f29d8a0ef5b8ed34a36058db0e",
+    "span_id": null,
     "exception": null
   },
   {
@@ -1933,6 +2174,7 @@
     "service": "orders-service",
     "message": "Fetched 32 orders",
     "trace_id": "a682a0f29d8a0ef5b8ed34a36058db0e",
+    "span_id": null,
     "exception": null
   },
   {
@@ -1941,6 +2183,7 @@
     "service": "orders-service",
     "message": "Failed to send metrics to collector at 10.0.3.17:4317",
     "trace_id": null,
+    "span_id": null,
     "exception": "ConnectionRefusedError: [Errno 111] Connection refused"
   },
   {
@@ -1949,6 +2192,7 @@
     "service": "orders-service",
     "message": "Cache miss for key orders:list:page=11",
     "trace_id": null,
+    "span_id": null,
     "exception": null
   },
   {
@@ -1957,6 +2201,7 @@
     "service": "orders-service",
     "message": "Failed to send metrics to collector at 10.0.3.17:4317",
     "trace_id": null,
+    "span_id": null,
     "exception": "ConnectionRefusedError: [Errno 111] Connection refused"
   },
   {
@@ -1965,6 +2210,7 @@
     "service": "api-gateway",
     "message": "Deprecated config key 'proxy.timeout' used, migrate to 'upstream.timeout'",
     "trace_id": null,
+    "span_id": null,
     "exception": null
   },
   {
@@ -1973,6 +2219,7 @@
     "service": "orders-service",
     "message": "Failed to send metrics to collector at 10.0.3.17:4317",
     "trace_id": null,
+    "span_id": null,
     "exception": "ConnectionRefusedError: [Errno 111] Connection refused"
   },
   {
@@ -1981,6 +2228,7 @@
     "service": "api-gateway",
     "message": "GET /orders/search 200 27ms",
     "trace_id": "3caafa594a3d85f94c4f2fc9713ed717",
+    "span_id": null,
     "exception": null
   },
   {
@@ -1989,6 +2237,7 @@
     "service": "orders-service",
     "message": "Fetched 43 orders",
     "trace_id": "3caafa594a3d85f94c4f2fc9713ed717",
+    "span_id": null,
     "exception": null
   },
   {
@@ -1997,6 +2246,7 @@
     "service": "orders-service",
     "message": "Failed to send metrics to collector at 10.0.3.17:4317",
     "trace_id": null,
+    "span_id": null,
     "exception": "ConnectionRefusedError: [Errno 111] Connection refused"
   },
   {
@@ -2005,6 +2255,7 @@
     "service": "orders-service",
     "message": "Failed to send metrics to collector at 10.0.3.17:4317",
     "trace_id": null,
+    "span_id": null,
     "exception": "ConnectionRefusedError: [Errno 111] Connection refused"
   },
   {
@@ -2013,6 +2264,7 @@
     "service": "orders-service",
     "message": "Cache miss for key orders:list:page=20",
     "trace_id": null,
+    "span_id": null,
     "exception": null
   },
   {
@@ -2021,6 +2273,7 @@
     "service": "api-gateway",
     "message": "Deprecated config key 'proxy.timeout' used, migrate to 'upstream.timeout'",
     "trace_id": null,
+    "span_id": null,
     "exception": null
   },
   {
@@ -2029,6 +2282,7 @@
     "service": "orders-service",
     "message": "Failed to send metrics to collector at 10.0.3.17:4317",
     "trace_id": null,
+    "span_id": null,
     "exception": "ConnectionRefusedError: [Errno 111] Connection refused"
   },
   {
@@ -2037,6 +2291,7 @@
     "service": "api-gateway",
     "message": "GET /orders 200 4365ms",
     "trace_id": "643732069cac4829539af22a72ee6c0d",
+    "span_id": null,
     "exception": null
   },
   {
@@ -2045,6 +2300,7 @@
     "service": "orders-service",
     "message": "Fetched 5 orders",
     "trace_id": "643732069cac4829539af22a72ee6c0d",
+    "span_id": null,
     "exception": null
   },
   {
@@ -2053,6 +2309,7 @@
     "service": "orders-service",
     "message": "Failed to send metrics to collector at 10.0.3.17:4317",
     "trace_id": null,
+    "span_id": null,
     "exception": "ConnectionRefusedError: [Errno 111] Connection refused"
   },
   {
@@ -2061,6 +2318,7 @@
     "service": "orders-service",
     "message": "Failed to send metrics to collector at 10.0.3.17:4317",
     "trace_id": null,
+    "span_id": null,
     "exception": "ConnectionRefusedError: [Errno 111] Connection refused"
   },
   {
@@ -2069,6 +2327,7 @@
     "service": "orders-service",
     "message": "Cache miss for key orders:list:page=17",
     "trace_id": null,
+    "span_id": null,
     "exception": null
   },
   {
@@ -2077,6 +2336,7 @@
     "service": "orders-service",
     "message": "Failed to send metrics to collector at 10.0.3.17:4317",
     "trace_id": null,
+    "span_id": null,
     "exception": "ConnectionRefusedError: [Errno 111] Connection refused"
   },
   {
@@ -2085,6 +2345,7 @@
     "service": "api-gateway",
     "message": "Deprecated config key 'proxy.timeout' used, migrate to 'upstream.timeout'",
     "trace_id": null,
+    "span_id": null,
     "exception": null
   },
   {
@@ -2093,6 +2354,7 @@
     "service": "api-gateway",
     "message": "GET /orders/search 200 22ms",
     "trace_id": "abf222c0fd388bae79efcb8502a2364f",
+    "span_id": null,
     "exception": null
   },
   {
@@ -2101,6 +2363,7 @@
     "service": "orders-service",
     "message": "Fetched 41 orders",
     "trace_id": "abf222c0fd388bae79efcb8502a2364f",
+    "span_id": null,
     "exception": null
   },
   {
@@ -2109,6 +2372,7 @@
     "service": "orders-service",
     "message": "Failed to send metrics to collector at 10.0.3.17:4317",
     "trace_id": null,
+    "span_id": null,
     "exception": "ConnectionRefusedError: [Errno 111] Connection refused"
   },
   {
@@ -2117,6 +2381,7 @@
     "service": "api-gateway",
     "message": "Deprecated config key 'proxy.timeout' used, migrate to 'upstream.timeout'",
     "trace_id": null,
+    "span_id": null,
     "exception": null
   },
   {
@@ -2125,6 +2390,7 @@
     "service": "orders-service",
     "message": "Cache miss for key orders:list:page=29",
     "trace_id": null,
+    "span_id": null,
     "exception": null
   },
   {
@@ -2133,6 +2399,7 @@
     "service": "orders-service",
     "message": "Failed to send metrics to collector at 10.0.3.17:4317",
     "trace_id": null,
+    "span_id": null,
     "exception": "ConnectionRefusedError: [Errno 111] Connection refused"
   },
   {
@@ -2141,6 +2408,7 @@
     "service": "orders-service",
     "message": "Cache miss for key orders:list:page=17",
     "trace_id": null,
+    "span_id": null,
     "exception": null
   },
   {
@@ -2149,6 +2417,7 @@
     "service": "api-gateway",
     "message": "GET /orders 200 4432ms",
     "trace_id": "ec28933f4c5e208deb44129b30cc7cbd",
+    "span_id": null,
     "exception": null
   },
   {
@@ -2157,6 +2426,7 @@
     "service": "orders-service",
     "message": "Fetched 5 orders",
     "trace_id": "ec28933f4c5e208deb44129b30cc7cbd",
+    "span_id": null,
     "exception": null
   },
   {
@@ -2165,6 +2435,7 @@
     "service": "api-gateway",
     "message": "Deprecated config key 'proxy.timeout' used, migrate to 'upstream.timeout'",
     "trace_id": null,
+    "span_id": null,
     "exception": null
   },
   {
@@ -2173,6 +2444,7 @@
     "service": "orders-service",
     "message": "Failed to send metrics to collector at 10.0.3.17:4317",
     "trace_id": null,
+    "span_id": null,
     "exception": "ConnectionRefusedError: [Errno 111] Connection refused"
   },
   {
@@ -2181,6 +2453,7 @@
     "service": "orders-service",
     "message": "Failed to send metrics to collector at 10.0.3.17:4317",
     "trace_id": null,
+    "span_id": null,
     "exception": "ConnectionRefusedError: [Errno 111] Connection refused"
   },
   {
@@ -2189,6 +2462,7 @@
     "service": "orders-service",
     "message": "Failed to send metrics to collector at 10.0.3.17:4317",
     "trace_id": null,
+    "span_id": null,
     "exception": "ConnectionRefusedError: [Errno 111] Connection refused"
   },
   {
@@ -2197,6 +2471,7 @@
     "service": "api-gateway",
     "message": "GET /orders/search 200 29ms",
     "trace_id": "fa3684c53e529bd1918492591efbdc34",
+    "span_id": null,
     "exception": null
   },
   {
@@ -2205,6 +2480,7 @@
     "service": "orders-service",
     "message": "Fetched 21 orders",
     "trace_id": "fa3684c53e529bd1918492591efbdc34",
+    "span_id": null,
     "exception": null
   },
   {
@@ -2213,6 +2489,7 @@
     "service": "orders-service",
     "message": "Failed to send metrics to collector at 10.0.3.17:4317",
     "trace_id": null,
+    "span_id": null,
     "exception": "ConnectionRefusedError: [Errno 111] Connection refused"
   },
   {
@@ -2221,6 +2498,7 @@
     "service": "orders-service",
     "message": "Cache miss for key orders:list:page=19",
     "trace_id": null,
+    "span_id": null,
     "exception": null
   },
   {
@@ -2229,6 +2507,7 @@
     "service": "api-gateway",
     "message": "Deprecated config key 'proxy.timeout' used, migrate to 'upstream.timeout'",
     "trace_id": null,
+    "span_id": null,
     "exception": null
   },
   {
@@ -2237,6 +2516,7 @@
     "service": "orders-service",
     "message": "Failed to send metrics to collector at 10.0.3.17:4317",
     "trace_id": null,
+    "span_id": null,
     "exception": "ConnectionRefusedError: [Errno 111] Connection refused"
   },
   {
@@ -2245,6 +2525,7 @@
     "service": "orders-service",
     "message": "Failed to send metrics to collector at 10.0.3.17:4317",
     "trace_id": null,
+    "span_id": null,
     "exception": "ConnectionRefusedError: [Errno 111] Connection refused"
   },
   {
@@ -2253,6 +2534,7 @@
     "service": "api-gateway",
     "message": "GET /orders 200 3995ms",
     "trace_id": "7e2768592a1c6c7be9ea7add8b84e7b6",
+    "span_id": null,
     "exception": null
   },
   {
@@ -2261,6 +2543,7 @@
     "service": "orders-service",
     "message": "Fetched 47 orders",
     "trace_id": "7e2768592a1c6c7be9ea7add8b84e7b6",
+    "span_id": null,
     "exception": null
   },
   {
@@ -2269,6 +2552,7 @@
     "service": "orders-service",
     "message": "Failed to send metrics to collector at 10.0.3.17:4317",
     "trace_id": null,
+    "span_id": null,
     "exception": "ConnectionRefusedError: [Errno 111] Connection refused"
   },
   {
@@ -2277,6 +2561,7 @@
     "service": "orders-service",
     "message": "Cache miss for key orders:list:page=21",
     "trace_id": null,
+    "span_id": null,
     "exception": null
   },
   {
@@ -2285,6 +2570,7 @@
     "service": "orders-service",
     "message": "Failed to send metrics to collector at 10.0.3.17:4317",
     "trace_id": null,
+    "span_id": null,
     "exception": "ConnectionRefusedError: [Errno 111] Connection refused"
   },
   {
@@ -2293,6 +2579,7 @@
     "service": "api-gateway",
     "message": "Deprecated config key 'proxy.timeout' used, migrate to 'upstream.timeout'",
     "trace_id": null,
+    "span_id": null,
     "exception": null
   },
   {
@@ -2301,6 +2588,7 @@
     "service": "api-gateway",
     "message": "GET /orders/search 200 29ms",
     "trace_id": "9e4ab57412f7a75260aefe5e42946309",
+    "span_id": null,
     "exception": null
   },
   {
@@ -2309,6 +2597,7 @@
     "service": "orders-service",
     "message": "Fetched 6 orders",
     "trace_id": "9e4ab57412f7a75260aefe5e42946309",
+    "span_id": null,
     "exception": null
   },
   {
@@ -2317,6 +2606,7 @@
     "service": "api-gateway",
     "message": "Deprecated config key 'proxy.timeout' used, migrate to 'upstream.timeout'",
     "trace_id": null,
+    "span_id": null,
     "exception": null
   },
   {
@@ -2325,6 +2615,7 @@
     "service": "orders-service",
     "message": "Failed to send metrics to collector at 10.0.3.17:4317",
     "trace_id": null,
+    "span_id": null,
     "exception": "ConnectionRefusedError: [Errno 111] Connection refused"
   },
   {
@@ -2333,6 +2624,7 @@
     "service": "orders-service",
     "message": "Failed to send metrics to collector at 10.0.3.17:4317",
     "trace_id": null,
+    "span_id": null,
     "exception": "ConnectionRefusedError: [Errno 111] Connection refused"
   },
   {
@@ -2341,6 +2633,7 @@
     "service": "orders-service",
     "message": "Cache miss for key orders:list:page=16",
     "trace_id": null,
+    "span_id": null,
     "exception": null
   },
   {
@@ -2349,6 +2642,7 @@
     "service": "orders-service",
     "message": "Failed to send metrics to collector at 10.0.3.17:4317",
     "trace_id": null,
+    "span_id": null,
     "exception": "ConnectionRefusedError: [Errno 111] Connection refused"
   }
 ]
