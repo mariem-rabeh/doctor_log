@@ -127,7 +127,8 @@ def test_create_rejects_an_unknown_dataset(client: TestClient) -> None:
     ("overrides", "field"),
     [
         ({"title": ""}, "title"),
-        ({"source": "live"}, "source"),
+        ({"source": "live"}, ""),  # live sans fenêtre
+        ({"source": "radio"}, "source"),
         ({"unexpected": 1}, "unexpected"),
         ({"window_start": "2026-11-18T10:00:00Z"}, ""),  # fin manquante
         ({"window_start": "2026-11-18T10:30:00Z", "window_end": "2026-11-18T10:00:00Z"}, ""),

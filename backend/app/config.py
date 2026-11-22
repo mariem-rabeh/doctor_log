@@ -34,6 +34,7 @@ class Settings(BaseSettings):
     jaeger_url: str = "http://localhost:16686"
 
     datasets_dir: Path = REPO_ROOT / "datasets"
+    logs_dir: Path = REPO_ROOT / "logs"  # logs JSON de la demo-app (incidents live)
 
     # Origines autorisées à appeler l'API depuis un navigateur (le frontend Vite en dev).
     # Dans .env : CORS_ORIGINS=["http://localhost:5173","http://localhost:3000"]

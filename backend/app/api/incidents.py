@@ -34,14 +34,15 @@ DbSession = Annotated[Session, Depends(get_db)]
 class IncidentCreate(BaseModel):
     """Corps de POST /api/incidents.
 
-    Pour un dataset, la fenêtre est facultative : par défaut, toute la plage du dataset.
+    - dataset : dataset_name obligatoire ; fenêtre facultative (par défaut, tout le dataset) ;
+    - live : fenêtre obligatoire ; les données viennent de la demo-app, Prometheus et Jaeger.
     """
 
     model_config = ConfigDict(extra="forbid")
 
     title: str = Field(min_length=1, max_length=200)
-    source: Literal["dataset"] = "dataset"  # "live" arrivera avec la branche 28
-    dataset_name: str = Field(min_length=1, max_length=100)
+    source: Literal["dataset", "live"] = "dataset"
+    dataset_name: str | None = Field(default=None, min_length=1, max_length=100)
     window_start: AwareDatetime | None = None
     window_end: AwareDatetime | None = None
 
@@ -51,6 +52,10 @@ class IncidentCreate(BaseModel):
             raise ValueError("window_start et window_end vont ensemble")
         if self.window_start and self.window_end and self.window_end <= self.window_start:
             raise ValueError("window_end doit être après window_start")
+        if self.source == "dataset" and not self.dataset_name:
+            raise ValueError("dataset_name est obligatoire pour un incident de type dataset")
+        if self.source == "live" and self.window_start is None:
+            raise ValueError("un incident live a besoin de window_start et window_end")
         return self
 
 
@@ -108,6 +113,17 @@ def get_datasets() -> list[DatasetOut]:
 
 @router.post("/incidents", response_model=IncidentOut, status_code=status.HTTP_201_CREATED)
 def create_incident(body: IncidentCreate, db: DbSession) -> IncidentOut:
+    if body.source == "live":
+        assert body.window_start is not None and body.window_end is not None
+        incident = repo.create_incident(
+            db,
+            title=body.title,
+            source=IncidentSource.LIVE,
+            window_start=body.window_start,
+            window_end=body.window_end,
+        )
+        return IncidentOut.of(incident)
+
     root = get_settings().datasets_dir
     if body.dataset_name not in list_datasets(root):
         raise ApiError(
@@ -119,7 +135,7 @@ def create_incident(body: IncidentCreate, db: DbSession) -> IncidentOut:
         start, end = body.window_start, body.window_end
     else:
         try:
-            window = FileDataSource(root / body.dataset_name).time_range()
+            window = FileDataSource(root / str(body.dataset_name)).time_range()
         except DatasetError as exc:
             raise ApiError(422, str(exc)) from exc
         # Une minute de marge : les derniers spans se terminent après leur début.

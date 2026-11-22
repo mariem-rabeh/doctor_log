@@ -16,6 +16,7 @@ from sqlalchemy.orm import Session
 
 from app.api.errors import ApiError
 from app.api.incidents import DbSession, IncidentOut
+from app.config import get_settings
 from app.db import repository as repo
 from app.db.models import IncidentSource
 from app.db.session import get_sessionmaker
@@ -26,7 +27,9 @@ from app.schemas.enums import AgentName, AgentStatus, IncidentStatus
 from app.schemas.telemetry import TimeWindow
 from app.services.llm.base import LLMClient
 from app.services.llm.provider import get_llm
+from app.tools.datasources.base import DataSource
 from app.tools.datasources.file_source import FileDataSource
+from app.tools.datasources.live_source import LiveDataSource
 
 logger = logging.getLogger(__name__)
 router = APIRouter(prefix="/api/incidents", tags=["analysis"])
@@ -103,9 +106,13 @@ def run_incident_analysis(incident_id: uuid.UUID) -> None:
         if incident is None:
             return
         try:
-            if incident.source is not IncidentSource.DATASET or not incident.dataset_name:
-                raise ValueError("seules les analyses de dataset sont prises en charge")
-            source = FileDataSource.from_name(incident.dataset_name)
+            source: DataSource
+            if incident.source is IncidentSource.LIVE:
+                source = LiveDataSource.from_settings(get_settings())
+            elif incident.dataset_name:
+                source = FileDataSource.from_name(incident.dataset_name)
+            else:
+                raise ValueError("incident de type dataset sans dataset_name")
             window = TimeWindow(start=incident.window_start, end=incident.window_end)
 
             def on_update(state: IncidentState) -> None:

@@ -86,7 +86,8 @@ export interface Dataset {
 
 export interface IncidentCreate {
   title: string;
-  dataset_name: string;
+  source?: "dataset" | "live";
+  dataset_name?: string;
   window_start?: string;
   window_end?: string;
 }
