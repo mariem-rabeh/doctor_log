@@ -33,6 +33,10 @@ class Settings(BaseSettings):
 
     datasets_dir: Path = REPO_ROOT / "datasets"
 
+    # Origines autorisées à appeler l'API depuis un navigateur (le frontend Vite en dev).
+    # Dans .env : CORS_ORIGINS=["http://localhost:5173","http://localhost:3000"]
+    cors_origins: list[str] = ["http://localhost:5173"]
+
 
 @lru_cache
 def get_settings() -> Settings:
