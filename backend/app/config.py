@@ -6,6 +6,7 @@ valeurs par défaut ci-dessous. Aucune valeur secrète ne doit être écrite dan
 
 from functools import lru_cache
 from pathlib import Path
+from typing import Literal
 
 from pydantic import Field, SecretStr
 from pydantic_settings import BaseSettings, SettingsConfigDict
@@ -22,8 +23,9 @@ class Settings(BaseSettings):
     )
 
     database_url: str = "postgresql+psycopg://doctor_log:doctor_log@localhost:5432/doctor_log"
-    llm_provider: str = "openai"
-    llm_model: str = ""
+    llm_provider: str = "anthropic"  # "anthropic" (vrai modèle) ou "fake" (sans réseau)
+    llm_model: str = ""  # vide = modèle par défaut du fournisseur (claude-opus-5-5)
+    llm_effort: Literal["low", "medium", "high", "xhigh", "max"] = "medium"
     llm_api_key: SecretStr = SecretStr("")
     llm_timeout_seconds: float = Field(default=30.0, gt=0)
     llm_max_retries: int = Field(default=3, ge=0)
