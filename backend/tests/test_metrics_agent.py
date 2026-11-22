@@ -198,3 +198,10 @@ def test_custom_expected_metrics() -> None:
         expected=["cpu_usage", "up"],
     )
     assert finding.missing_data == ["metrics : métrique absente : up"]
+
+
+def test_huge_z_score_is_capped_in_text() -> None:
+    from app.agents.metrics_agent import _fmt_z
+
+    assert _fmt_z(12.34) == "z=+12.3"
+    assert _fmt_z(5e9) == "z>1000" and _fmt_z(-5e9) == "z<-1000"
