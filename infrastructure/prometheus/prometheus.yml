@@ -1,0 +1,11 @@
+# Prometheus récupère les métriques de la demo-app toutes les 5 secondes.
+# En local (Prometheus dans Docker, demo-app sur la machine) : host.docker.internal.
+global:
+  scrape_interval: 5s
+
+scrape_configs:
+  - job_name: orders-service
+    static_configs:
+      - targets: ["host.docker.internal:8001"]
+        labels:
+          service: orders-service
