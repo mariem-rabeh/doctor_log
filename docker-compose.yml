@@ -14,6 +14,7 @@ services:
       POSTGRES_DB: doctor_log
     volumes:
       - pgdata:/var/lib/postgresql/data
+    ports: ["${POSTGRES_PORT:-5432}:5432"]  # pour les tests et les outils en local
     healthcheck:
       test: ["CMD-SHELL", "pg_isready -U doctor_log -d doctor_log"]
       interval: 5s

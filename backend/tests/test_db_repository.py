@@ -15,7 +15,7 @@ from alembic import command
 from alembic.autogenerate import compare_metadata
 from alembic.config import Config
 from alembic.migration import MigrationContext
-from sqlalchemy import Engine, create_engine, text
+from sqlalchemy import Engine, create_engine, delete, text
 from sqlalchemy.exc import IntegrityError, OperationalError
 from sqlalchemy.orm import Session
 
@@ -40,7 +40,8 @@ END = START + timedelta(minutes=30)
 @pytest.fixture(scope="module")
 def engine() -> Iterator[Engine]:
     url = get_settings().database_url
-    engine = create_engine(url)
+    # connect_timeout : sans lui, une base absente bloque chaque test plusieurs minutes.
+    engine = create_engine(url, connect_args={"connect_timeout": 2})
     try:
         engine.connect().close()
     except OperationalError:
@@ -59,6 +60,9 @@ def db(engine: Engine) -> Iterator[Session]:
     transaction = connection.begin()
     # Les commit() du repository deviennent des savepoints : tout est annulé à la fin.
     session = Session(bind=connection, join_transaction_mode="create_savepoint")
+    # Table vide pour ce test uniquement (annulé avec la transaction) : les incidents déjà
+    # présents dans la base de développement ne faussent pas les comptes.
+    session.execute(delete(Incident))
     try:
         yield session
     finally:

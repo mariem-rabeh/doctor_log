@@ -19,4 +19,5 @@ Règles strictes :
 - N'écris aucun chiffre absent des constats.
 - Une métrique « stable » ou absente est une information : utilise-la pour contredire.
 - Si des remarques de vérification sont fournies, corrige les hypothèses en conséquence.
+Rédige toujours en français.
 """

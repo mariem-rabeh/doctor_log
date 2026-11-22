@@ -41,6 +41,8 @@ EXPECTED_METRICS = (
     "db_connections_idle",
     "cpu_usage",
 )
+# Variation minimale (moyenne pendant - avant) pour qu'une anomalie compte.
+MIN_ABS_CHANGE = {"cpu_usage": 0.05, "error_rate": 0.01}
 ONSET_MIN_POINTS = 3  # une anomalie de moins de 3 points ne fixe pas le début de l'incident
 MAX_ANOMALY_EVIDENCES = 8
 MAX_STABLE_EVIDENCES = 5
@@ -174,14 +176,13 @@ def analyze(series: Sequence[MetricSeries], onset: datetime | None) -> list[Seri
         if onset is None:
             reports.append(SeriesReport(s, None, series_stats([p.value for p in s.points]), []))
             continue
-        reports.append(
-            SeriesReport(
-                series=s,
-                before=series_stats([p.value for p in s.points if p.ts < onset]),
-                during=series_stats([p.value for p in s.points if p.ts >= onset]),
-                anomalies=detect_anomalies(s, baseline_end=onset),
-            )
-        )
+        before = series_stats([p.value for p in s.points if p.ts < onset])
+        during = series_stats([p.value for p in s.points if p.ts >= onset])
+        anomalies = detect_anomalies(s, baseline_end=onset)
+        change = abs(during.mean - before.mean) if before and during else 0.0
+        if change < MIN_ABS_CHANGE.get(s.name, 0.0):
+            anomalies = []  # statistiquement « anormal », mais sans importance réelle
+        reports.append(SeriesReport(s, before, during, anomalies))
     return reports
 
 
