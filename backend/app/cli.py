@@ -31,7 +31,8 @@ def main(argv: list[str] | None = None) -> int:
     settings = Settings(llm_provider="fake") if args.fake else get_settings()
 
     report = run_analysis(source, window, get_llm(settings), incident_id=source.name)
-    print(report.model_dump_json(indent=2))
+    # Octets UTF-8 : la console Windows ne doit pas changer l'encodage des accents.
+    sys.stdout.buffer.write(report.model_dump_json(indent=2).encode("utf-8") + b"\n")
     return 0
 
 
