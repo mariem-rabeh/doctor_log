@@ -37,14 +37,13 @@ def test_defaults_without_env_file() -> None:
 def test_loads_values_from_env_file(tmp_path: Path) -> None:
     env_file = tmp_path / ".env"
     env_file.write_text(
-        "LLM_PROVIDER=anthropic\nLLM_MODEL=model-x\nLLM_TIMEOUT_SECONDS=12.5\n"
-        "POSTGRES_USER=ignored\n",
+        "LLM_PROVIDER=gemini\nLLM_MODEL=model-x\nLLM_TIMEOUT_SECONDS=12.5\nPOSTGRES_USER=ignored\n",
         encoding="utf-8",
     )
 
     settings = Settings(_env_file=env_file)
 
-    assert settings.llm_provider == "anthropic"
+    assert settings.llm_provider == "gemini"
     assert settings.llm_model == "model-x"
     assert settings.llm_timeout_seconds == 12.5  # converti en float
 
