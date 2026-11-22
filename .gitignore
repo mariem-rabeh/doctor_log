@@ -28,3 +28,5 @@ Thumbs.db
 # Résultats générés
 backend/eval/runs/
 *.tsbuildinfo
+# Logs JSON écrits par la demo-app (lus par la source live)
+logs/

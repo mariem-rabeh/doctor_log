@@ -5,6 +5,7 @@
     "service": "api-gateway",
     "message": "GET /orders 200 29ms",
     "trace_id": "83c15c4b0b1c12c13bfa00987a1cec71",
+    "span_id": null,
     "exception": null
   },
   {
@@ -13,6 +14,7 @@
     "service": "orders-service",
     "message": "Fetched 25 orders",
     "trace_id": "83c15c4b0b1c12c13bfa00987a1cec71",
+    "span_id": null,
     "exception": null
   },
   {
@@ -21,6 +23,7 @@
     "service": "orders-service",
     "message": "Health check OK",
     "trace_id": null,
+    "span_id": null,
     "exception": null
   },
   {
@@ -29,6 +32,7 @@
     "service": "api-gateway",
     "message": "Health check OK",
     "trace_id": null,
+    "span_id": null,
     "exception": null
   },
   {
@@ -37,6 +41,7 @@
     "service": "api-gateway",
     "message": "GET /orders/search 200 19ms",
     "trace_id": "a57999c930d60daba020131d5d7ec5d5",
+    "span_id": null,
     "exception": null
   },
   {
@@ -45,6 +50,7 @@
     "service": "orders-service",
     "message": "Fetched 27 orders",
     "trace_id": "a57999c930d60daba020131d5d7ec5d5",
+    "span_id": null,
     "exception": null
   },
   {
@@ -53,6 +59,7 @@
     "service": "api-gateway",
     "message": "GET /orders 200 22ms",
     "trace_id": "4ad6bc206681783352ab19c23d56e734",
+    "span_id": null,
     "exception": null
   },
   {
@@ -61,6 +68,7 @@
     "service": "orders-service",
     "message": "Fetched 29 orders",
     "trace_id": "4ad6bc206681783352ab19c23d56e734",
+    "span_id": null,
     "exception": null
   },
   {
@@ -69,6 +77,7 @@
     "service": "api-gateway",
     "message": "Health check OK",
     "trace_id": null,
+    "span_id": null,
     "exception": null
   },
   {
@@ -77,6 +86,7 @@
     "service": "api-gateway",
     "message": "GET /orders/search 200 23ms",
     "trace_id": "a7aa6ebd4ecbfc8107e70d31cdaeb43b",
+    "span_id": null,
     "exception": null
   },
   {
@@ -85,6 +95,7 @@
     "service": "orders-service",
     "message": "Fetched 12 orders",
     "trace_id": "a7aa6ebd4ecbfc8107e70d31cdaeb43b",
+    "span_id": null,
     "exception": null
   },
   {
@@ -93,6 +104,7 @@
     "service": "orders-service",
     "message": "Health check OK",
     "trace_id": null,
+    "span_id": null,
     "exception": null
   },
   {
@@ -101,6 +113,7 @@
     "service": "api-gateway",
     "message": "GET /orders 200 19ms",
     "trace_id": "8f4d939ed676891695b7922e371908dd",
+    "span_id": null,
     "exception": null
   },
   {
@@ -109,6 +122,7 @@
     "service": "orders-service",
     "message": "Fetched 9 orders",
     "trace_id": "8f4d939ed676891695b7922e371908dd",
+    "span_id": null,
     "exception": null
   },
   {
@@ -117,6 +131,7 @@
     "service": "orders-service",
     "message": "Health check OK",
     "trace_id": null,
+    "span_id": null,
     "exception": null
   },
   {
@@ -125,6 +140,7 @@
     "service": "api-gateway",
     "message": "GET /orders/search 200 22ms",
     "trace_id": "df91e7ce8f7f2d0b3e4021ca19fee65a",
+    "span_id": null,
     "exception": null
   },
   {
@@ -133,6 +149,7 @@
     "service": "orders-service",
     "message": "Fetched 16 orders",
     "trace_id": "df91e7ce8f7f2d0b3e4021ca19fee65a",
+    "span_id": null,
     "exception": null
   },
   {
@@ -141,6 +158,7 @@
     "service": "api-gateway",
     "message": "Health check OK",
     "trace_id": null,
+    "span_id": null,
     "exception": null
   },
   {
@@ -149,6 +167,7 @@
     "service": "api-gateway",
     "message": "GET /orders 200 24ms",
     "trace_id": "0889d4fb60b9e86a0a16987c127d71cd",
+    "span_id": null,
     "exception": null
   },
   {
@@ -157,6 +176,7 @@
     "service": "orders-service",
     "message": "Fetched 19 orders",
     "trace_id": "0889d4fb60b9e86a0a16987c127d71cd",
+    "span_id": null,
     "exception": null
   },
   {
@@ -165,6 +185,7 @@
     "service": "orders-service",
     "message": "Health check OK",
     "trace_id": null,
+    "span_id": null,
     "exception": null
   },
   {
@@ -173,6 +194,7 @@
     "service": "api-gateway",
     "message": "GET /orders/search 200 29ms",
     "trace_id": "2023d4f1264af782daabb6243a113ecb",
+    "span_id": null,
     "exception": null
   },
   {
@@ -181,6 +203,7 @@
     "service": "orders-service",
     "message": "Fetched 17 orders",
     "trace_id": "2023d4f1264af782daabb6243a113ecb",
+    "span_id": null,
     "exception": null
   },
   {
@@ -189,6 +212,7 @@
     "service": "api-gateway",
     "message": "Health check OK",
     "trace_id": null,
+    "span_id": null,
     "exception": null
   },
   {
@@ -197,6 +221,7 @@
     "service": "api-gateway",
     "message": "GET /orders 200 26ms",
     "trace_id": "76586387af1d111f97614a0cc500cfd1",
+    "span_id": null,
     "exception": null
   },
   {
@@ -205,6 +230,7 @@
     "service": "orders-service",
     "message": "Fetched 32 orders",
     "trace_id": "76586387af1d111f97614a0cc500cfd1",
+    "span_id": null,
     "exception": null
   },
   {
@@ -213,6 +239,7 @@
     "service": "api-gateway",
     "message": "GET /orders/search 200 27ms",
     "trace_id": "13d9785a458121390bea3106fd564d61",
+    "span_id": null,
     "exception": null
   },
   {
@@ -221,6 +248,7 @@
     "service": "orders-service",
     "message": "Fetched 15 orders",
     "trace_id": "13d9785a458121390bea3106fd564d61",
+    "span_id": null,
     "exception": null
   },
   {
@@ -229,6 +257,7 @@
     "service": "orders-service",
     "message": "Health check OK",
     "trace_id": null,
+    "span_id": null,
     "exception": null
   },
   {
@@ -237,6 +266,7 @@
     "service": "api-gateway",
     "message": "Health check OK",
     "trace_id": null,
+    "span_id": null,
     "exception": null
   },
   {
@@ -245,6 +275,7 @@
     "service": "api-gateway",
     "message": "GET /orders 200 21ms",
     "trace_id": "e6fde0776160ba02e870b46ee714879d",
+    "span_id": null,
     "exception": null
   },
   {
@@ -253,6 +284,7 @@
     "service": "orders-service",
     "message": "Fetched 47 orders",
     "trace_id": "e6fde0776160ba02e870b46ee714879d",
+    "span_id": null,
     "exception": null
   },
   {
@@ -261,6 +293,7 @@
     "service": "orders-service",
     "message": "Health check OK",
     "trace_id": null,
+    "span_id": null,
     "exception": null
   },
   {
@@ -269,6 +302,7 @@
     "service": "api-gateway",
     "message": "Health check OK",
     "trace_id": null,
+    "span_id": null,
     "exception": null
   },
   {
@@ -277,6 +311,7 @@
     "service": "api-gateway",
     "message": "GET /orders/search 200 29ms",
     "trace_id": "184478e7decb18d646f49492883f5ddc",
+    "span_id": null,
     "exception": null
   },
   {
@@ -285,6 +320,7 @@
     "service": "orders-service",
     "message": "Fetched 20 orders",
     "trace_id": "184478e7decb18d646f49492883f5ddc",
+    "span_id": null,
     "exception": null
   },
   {
@@ -293,6 +329,7 @@
     "service": "api-gateway",
     "message": "GET /orders 200 24ms",
     "trace_id": "605f62a738a9883e2df5d10dd0996fe1",
+    "span_id": null,
     "exception": null
   },
   {
@@ -301,6 +338,7 @@
     "service": "orders-service",
     "message": "Fetched 40 orders",
     "trace_id": "605f62a738a9883e2df5d10dd0996fe1",
+    "span_id": null,
     "exception": null
   },
   {
@@ -309,6 +347,7 @@
     "service": "api-gateway",
     "message": "Health check OK",
     "trace_id": null,
+    "span_id": null,
     "exception": null
   },
   {
@@ -317,6 +356,7 @@
     "service": "api-gateway",
     "message": "GET /orders/search 200 21ms",
     "trace_id": "5833aaa3b17f2308859d853df68965b0",
+    "span_id": null,
     "exception": null
   },
   {
@@ -325,6 +365,7 @@
     "service": "orders-service",
     "message": "Fetched 6 orders",
     "trace_id": "5833aaa3b17f2308859d853df68965b0",
+    "span_id": null,
     "exception": null
   },
   {
@@ -333,6 +374,7 @@
     "service": "orders-service",
     "message": "Health check OK",
     "trace_id": null,
+    "span_id": null,
     "exception": null
   },
   {
@@ -341,6 +383,7 @@
     "service": "api-gateway",
     "message": "GET /orders 200 23ms",
     "trace_id": "613f001b99bbf4a5ef69361dacc10b10",
+    "span_id": null,
     "exception": null
   },
   {
@@ -349,6 +392,7 @@
     "service": "orders-service",
     "message": "Fetched 45 orders",
     "trace_id": "613f001b99bbf4a5ef69361dacc10b10",
+    "span_id": null,
     "exception": null
   },
   {
@@ -357,6 +401,7 @@
     "service": "api-gateway",
     "message": "Health check OK",
     "trace_id": null,
+    "span_id": null,
     "exception": null
   },
   {
@@ -365,6 +410,7 @@
     "service": "api-gateway",
     "message": "GET /orders/search 200 24ms",
     "trace_id": "712549ae811ab5d17b120205a260db1c",
+    "span_id": null,
     "exception": null
   },
   {
@@ -373,6 +419,7 @@
     "service": "orders-service",
     "message": "Fetched 12 orders",
     "trace_id": "712549ae811ab5d17b120205a260db1c",
+    "span_id": null,
     "exception": null
   },
   {
@@ -381,6 +428,7 @@
     "service": "orders-service",
     "message": "Health check OK",
     "trace_id": null,
+    "span_id": null,
     "exception": null
   },
   {
@@ -389,6 +437,7 @@
     "service": "api-gateway",
     "message": "GET /orders 200 20ms",
     "trace_id": "a3a6de608e3896aaf0cc40e379be53a1",
+    "span_id": null,
     "exception": null
   },
   {
@@ -397,6 +446,7 @@
     "service": "orders-service",
     "message": "Fetched 31 orders",
     "trace_id": "a3a6de608e3896aaf0cc40e379be53a1",
+    "span_id": null,
     "exception": null
   },
   {
@@ -405,6 +455,7 @@
     "service": "orders-service",
     "message": "Health check OK",
     "trace_id": null,
+    "span_id": null,
     "exception": null
   },
   {
@@ -413,6 +464,7 @@
     "service": "api-gateway",
     "message": "GET /orders/search 200 28ms",
     "trace_id": "9df4a527d136a55d20e32b7224e5db03",
+    "span_id": null,
     "exception": null
   },
   {
@@ -421,6 +473,7 @@
     "service": "orders-service",
     "message": "Fetched 36 orders",
     "trace_id": "9df4a527d136a55d20e32b7224e5db03",
+    "span_id": null,
     "exception": null
   },
   {
@@ -429,6 +482,7 @@
     "service": "api-gateway",
     "message": "Health check OK",
     "trace_id": null,
+    "span_id": null,
     "exception": null
   },
   {
@@ -437,6 +491,7 @@
     "service": "api-gateway",
     "message": "GET /orders 200 25ms",
     "trace_id": "501f724bafaa2f37b220ca9104cee48a",
+    "span_id": null,
     "exception": null
   },
   {
@@ -445,6 +500,7 @@
     "service": "orders-service",
     "message": "Fetched 36 orders",
     "trace_id": "501f724bafaa2f37b220ca9104cee48a",
+    "span_id": null,
     "exception": null
   },
   {
@@ -453,6 +509,7 @@
     "service": "api-gateway",
     "message": "Health check OK",
     "trace_id": null,
+    "span_id": null,
     "exception": null
   },
   {
@@ -461,6 +518,7 @@
     "service": "api-gateway",
     "message": "GET /orders/search 200 29ms",
     "trace_id": "5949b4b5e14086531af95d867433ecd6",
+    "span_id": null,
     "exception": null
   },
   {
@@ -469,6 +527,7 @@
     "service": "orders-service",
     "message": "Fetched 6 orders",
     "trace_id": "5949b4b5e14086531af95d867433ecd6",
+    "span_id": null,
     "exception": null
   },
   {
@@ -477,6 +536,7 @@
     "service": "orders-service",
     "message": "Health check OK",
     "trace_id": null,
+    "span_id": null,
     "exception": null
   },
   {
@@ -485,6 +545,7 @@
     "service": "api-gateway",
     "message": "GET /orders 200 24ms",
     "trace_id": "2e4ab0272fa9ef384f0cc551b2556168",
+    "span_id": null,
     "exception": null
   },
   {
@@ -493,6 +554,7 @@
     "service": "orders-service",
     "message": "Fetched 24 orders",
     "trace_id": "2e4ab0272fa9ef384f0cc551b2556168",
+    "span_id": null,
     "exception": null
   },
   {
@@ -501,6 +563,7 @@
     "service": "orders-service",
     "message": "Health check OK",
     "trace_id": null,
+    "span_id": null,
     "exception": null
   },
   {
@@ -509,6 +572,7 @@
     "service": "api-gateway",
     "message": "Health check OK",
     "trace_id": null,
+    "span_id": null,
     "exception": null
   },
   {
@@ -517,6 +581,7 @@
     "service": "api-gateway",
     "message": "GET /orders/search 200 31ms",
     "trace_id": "f050bef671820000449b0b8e42d86396",
+    "span_id": null,
     "exception": null
   },
   {
@@ -525,6 +590,7 @@
     "service": "orders-service",
     "message": "Fetched 48 orders",
     "trace_id": "f050bef671820000449b0b8e42d86396",
+    "span_id": null,
     "exception": null
   },
   {
@@ -533,6 +599,7 @@
     "service": "api-gateway",
     "message": "GET /orders 200 29ms",
     "trace_id": "bc4213745ba277a7406e3e0427a3eb9a",
+    "span_id": null,
     "exception": null
   },
   {
@@ -541,6 +608,7 @@
     "service": "orders-service",
     "message": "Fetched 7 orders",
     "trace_id": "bc4213745ba277a7406e3e0427a3eb9a",
+    "span_id": null,
     "exception": null
   },
   {
@@ -549,6 +617,7 @@
     "service": "orders-service",
     "message": "Health check OK",
     "trace_id": null,
+    "span_id": null,
     "exception": null
   },
   {
@@ -557,6 +626,7 @@
     "service": "api-gateway",
     "message": "Health check OK",
     "trace_id": null,
+    "span_id": null,
     "exception": null
   },
   {
@@ -565,6 +635,7 @@
     "service": "api-gateway",
     "message": "GET /orders/search 200 21ms",
     "trace_id": "679a0c90ffd8cc7c00839f8ec28dac4a",
+    "span_id": null,
     "exception": null
   },
   {
@@ -573,6 +644,7 @@
     "service": "orders-service",
     "message": "Fetched 31 orders",
     "trace_id": "679a0c90ffd8cc7c00839f8ec28dac4a",
+    "span_id": null,
     "exception": null
   },
   {
@@ -581,6 +653,7 @@
     "service": "api-gateway",
     "message": "GET /orders 200 22ms",
     "trace_id": "8de2d21220a4421a8f1d7cc2108f2c1f",
+    "span_id": null,
     "exception": null
   },
   {
@@ -589,6 +662,7 @@
     "service": "orders-service",
     "message": "Fetched 9 orders",
     "trace_id": "8de2d21220a4421a8f1d7cc2108f2c1f",
+    "span_id": null,
     "exception": null
   },
   {
@@ -597,6 +671,7 @@
     "service": "orders-service",
     "message": "Health check OK",
     "trace_id": null,
+    "span_id": null,
     "exception": null
   },
   {
@@ -605,6 +680,7 @@
     "service": "api-gateway",
     "message": "GET /orders/search 200 25ms",
     "trace_id": "9cdc98d3e34ef44a0a4f8a537bcb4f20",
+    "span_id": null,
     "exception": null
   },
   {
@@ -613,6 +689,7 @@
     "service": "orders-service",
     "message": "Fetched 10 orders",
     "trace_id": "9cdc98d3e34ef44a0a4f8a537bcb4f20",
+    "span_id": null,
     "exception": null
   },
   {
@@ -621,6 +698,7 @@
     "service": "api-gateway",
     "message": "Health check OK",
     "trace_id": null,
+    "span_id": null,
     "exception": null
   },
   {
@@ -629,6 +707,7 @@
     "service": "api-gateway",
     "message": "GET /orders 200 24ms",
     "trace_id": "21253376f19d022d5a320a123d3e9405",
+    "span_id": null,
     "exception": null
   },
   {
@@ -637,6 +716,7 @@
     "service": "orders-service",
     "message": "Fetched 24 orders",
     "trace_id": "21253376f19d022d5a320a123d3e9405",
+    "span_id": null,
     "exception": null
   },
   {
@@ -645,6 +725,7 @@
     "service": "api-gateway",
     "message": "Health check OK",
     "trace_id": null,
+    "span_id": null,
     "exception": null
   },
   {
@@ -653,6 +734,7 @@
     "service": "api-gateway",
     "message": "GET /orders/search 200 20ms",
     "trace_id": "7a1e085322d32abdb78f1d9745b8ba6f",
+    "span_id": null,
     "exception": null
   },
   {
@@ -661,6 +743,7 @@
     "service": "orders-service",
     "message": "Fetched 6 orders",
     "trace_id": "7a1e085322d32abdb78f1d9745b8ba6f",
+    "span_id": null,
     "exception": null
   },
   {
@@ -669,6 +752,7 @@
     "service": "orders-service",
     "message": "Health check OK",
     "trace_id": null,
+    "span_id": null,
     "exception": null
   },
   {
@@ -677,6 +761,7 @@
     "service": "api-gateway",
     "message": "GET /orders 200 29ms",
     "trace_id": "7c306a3408cec6dcb56e825739d77734",
+    "span_id": null,
     "exception": null
   },
   {
@@ -685,6 +770,7 @@
     "service": "orders-service",
     "message": "Fetched 12 orders",
     "trace_id": "7c306a3408cec6dcb56e825739d77734",
+    "span_id": null,
     "exception": null
   },
   {
@@ -693,6 +779,7 @@
     "service": "api-gateway",
     "message": "Health check OK",
     "trace_id": null,
+    "span_id": null,
     "exception": null
   },
   {
@@ -701,6 +788,7 @@
     "service": "api-gateway",
     "message": "GET /orders/search 200 25ms",
     "trace_id": "589b6297ae93e4b6424e938602add9d3",
+    "span_id": null,
     "exception": null
   },
   {
@@ -709,6 +797,7 @@
     "service": "orders-service",
     "message": "Fetched 26 orders",
     "trace_id": "589b6297ae93e4b6424e938602add9d3",
+    "span_id": null,
     "exception": null
   },
   {
@@ -717,6 +806,7 @@
     "service": "orders-service",
     "message": "Health check OK",
     "trace_id": null,
+    "span_id": null,
     "exception": null
   },
   {
@@ -725,6 +815,7 @@
     "service": "api-gateway",
     "message": "GET /orders 200 26ms",
     "trace_id": "af60a99cbf902fe06ffa4e4166bd629e",
+    "span_id": null,
     "exception": null
   },
   {
@@ -733,6 +824,7 @@
     "service": "orders-service",
     "message": "Fetched 19 orders",
     "trace_id": "af60a99cbf902fe06ffa4e4166bd629e",
+    "span_id": null,
     "exception": null
   },
   {
@@ -741,6 +833,7 @@
     "service": "api-gateway",
     "message": "GET /orders/search 200 30ms",
     "trace_id": "a49c485f8befd847ef52584a1e26129d",
+    "span_id": null,
     "exception": null
   },
   {
@@ -749,6 +842,7 @@
     "service": "orders-service",
     "message": "Fetched 41 orders",
     "trace_id": "a49c485f8befd847ef52584a1e26129d",
+    "span_id": null,
     "exception": null
   },
   {
@@ -757,6 +851,7 @@
     "service": "api-gateway",
     "message": "Health check OK",
     "trace_id": null,
+    "span_id": null,
     "exception": null
   },
   {
@@ -765,6 +860,7 @@
     "service": "orders-service",
     "message": "Health check OK",
     "trace_id": null,
+    "span_id": null,
     "exception": null
   },
   {
@@ -773,6 +869,7 @@
     "service": "api-gateway",
     "message": "GET /orders 200 24ms",
     "trace_id": "24200fc25e125ccaa91f9b68660e0d98",
+    "span_id": null,
     "exception": null
   },
   {
@@ -781,6 +878,7 @@
     "service": "orders-service",
     "message": "Fetched 47 orders",
     "trace_id": "24200fc25e125ccaa91f9b68660e0d98",
+    "span_id": null,
     "exception": null
   },
   {
@@ -789,6 +887,7 @@
     "service": "orders-service",
     "message": "Health check OK",
     "trace_id": null,
+    "span_id": null,
     "exception": null
   },
   {
@@ -797,6 +896,7 @@
     "service": "api-gateway",
     "message": "Health check OK",
     "trace_id": null,
+    "span_id": null,
     "exception": null
   },
   {
@@ -805,6 +905,7 @@
     "service": "api-gateway",
     "message": "GET /orders/search 200 30ms",
     "trace_id": "f221a090bf484bb3ca3f00ea755df14b",
+    "span_id": null,
     "exception": null
   },
   {
@@ -813,6 +914,7 @@
     "service": "orders-service",
     "message": "Fetched 37 orders",
     "trace_id": "f221a090bf484bb3ca3f00ea755df14b",
+    "span_id": null,
     "exception": null
   },
   {
@@ -821,6 +923,7 @@
     "service": "api-gateway",
     "message": "GET /orders 200 19ms",
     "trace_id": "b5ca5b0177988e3d5db2a74d21f9c094",
+    "span_id": null,
     "exception": null
   },
   {
@@ -829,6 +932,7 @@
     "service": "orders-service",
     "message": "Fetched 28 orders",
     "trace_id": "b5ca5b0177988e3d5db2a74d21f9c094",
+    "span_id": null,
     "exception": null
   },
   {
@@ -837,6 +941,7 @@
     "service": "api-gateway",
     "message": "GET /orders/search 200 22ms",
     "trace_id": "8676d02824fc51fbb562818ecb60d7ad",
+    "span_id": null,
     "exception": null
   },
   {
@@ -845,6 +950,7 @@
     "service": "orders-service",
     "message": "Fetched 30 orders",
     "trace_id": "8676d02824fc51fbb562818ecb60d7ad",
+    "span_id": null,
     "exception": null
   },
   {
@@ -853,6 +959,7 @@
     "service": "orders-service",
     "message": "Health check OK",
     "trace_id": null,
+    "span_id": null,
     "exception": null
   },
   {
@@ -861,6 +968,7 @@
     "service": "api-gateway",
     "message": "Health check OK",
     "trace_id": null,
+    "span_id": null,
     "exception": null
   },
   {
@@ -869,6 +977,7 @@
     "service": "api-gateway",
     "message": "GET /orders 200 21ms",
     "trace_id": "ea56f49470c5324b2b31e1a1ef3f3a1f",
+    "span_id": null,
     "exception": null
   },
   {
@@ -877,6 +986,7 @@
     "service": "orders-service",
     "message": "Fetched 32 orders",
     "trace_id": "ea56f49470c5324b2b31e1a1ef3f3a1f",
+    "span_id": null,
     "exception": null
   },
   {
@@ -885,6 +995,7 @@
     "service": "api-gateway",
     "message": "Health check OK",
     "trace_id": null,
+    "span_id": null,
     "exception": null
   },
   {
@@ -893,6 +1004,7 @@
     "service": "api-gateway",
     "message": "GET /orders/search 200 25ms",
     "trace_id": "fab16db402d030a5abd8787e0a05a421",
+    "span_id": null,
     "exception": null
   },
   {
@@ -901,6 +1013,7 @@
     "service": "orders-service",
     "message": "Fetched 18 orders",
     "trace_id": "fab16db402d030a5abd8787e0a05a421",
+    "span_id": null,
     "exception": null
   },
   {
@@ -909,6 +1022,7 @@
     "service": "orders-service",
     "message": "Health check OK",
     "trace_id": null,
+    "span_id": null,
     "exception": null
   },
   {
@@ -917,6 +1031,7 @@
     "service": "api-gateway",
     "message": "GET /orders 200 32ms",
     "trace_id": "845c58451379b95a7c9abc128a39a464",
+    "span_id": null,
     "exception": null
   },
   {
@@ -925,6 +1040,7 @@
     "service": "orders-service",
     "message": "Fetched 49 orders",
     "trace_id": "845c58451379b95a7c9abc128a39a464",
+    "span_id": null,
     "exception": null
   },
   {
@@ -933,6 +1049,7 @@
     "service": "api-gateway",
     "message": "Health check OK",
     "trace_id": null,
+    "span_id": null,
     "exception": null
   },
   {
@@ -941,6 +1058,7 @@
     "service": "api-gateway",
     "message": "GET /orders/search 200 29ms",
     "trace_id": "8a6b33401a55e373b897f9110e995d47",
+    "span_id": null,
     "exception": null
   },
   {
@@ -949,6 +1067,7 @@
     "service": "orders-service",
     "message": "Fetched 25 orders",
     "trace_id": "8a6b33401a55e373b897f9110e995d47",
+    "span_id": null,
     "exception": null
   },
   {
@@ -957,6 +1076,7 @@
     "service": "orders-service",
     "message": "Health check OK",
     "trace_id": null,
+    "span_id": null,
     "exception": null
   },
   {
@@ -965,6 +1085,7 @@
     "service": "api-gateway",
     "message": "GET /orders 200 24ms",
     "trace_id": "a2d0f332e2ab6c376626696ab7289efa",
+    "span_id": null,
     "exception": null
   },
   {
@@ -973,6 +1094,7 @@
     "service": "orders-service",
     "message": "Fetched 50 orders",
     "trace_id": "a2d0f332e2ab6c376626696ab7289efa",
+    "span_id": null,
     "exception": null
   },
   {
@@ -981,6 +1103,7 @@
     "service": "api-gateway",
     "message": "GET /orders/search 200 73ms",
     "trace_id": "cc5eb37097bb3dd3aefe446a64570220",
+    "span_id": null,
     "exception": null
   },
   {
@@ -989,6 +1112,7 @@
     "service": "orders-service",
     "message": "Fetched 9 orders",
     "trace_id": "cc5eb37097bb3dd3aefe446a64570220",
+    "span_id": null,
     "exception": null
   },
   {
@@ -997,6 +1121,7 @@
     "service": "api-gateway",
     "message": "Health check OK",
     "trace_id": null,
+    "span_id": null,
     "exception": null
   },
   {
@@ -1005,6 +1130,7 @@
     "service": "orders-service",
     "message": "Health check OK",
     "trace_id": null,
+    "span_id": null,
     "exception": null
   },
   {
@@ -1013,6 +1139,7 @@
     "service": "api-gateway",
     "message": "GET /orders 200 121ms",
     "trace_id": "e135b1f55e5d5353a33abd895ff9606e",
+    "span_id": null,
     "exception": null
   },
   {
@@ -1021,6 +1148,7 @@
     "service": "orders-service",
     "message": "Fetched 39 orders",
     "trace_id": "e135b1f55e5d5353a33abd895ff9606e",
+    "span_id": null,
     "exception": null
   },
   {
@@ -1029,6 +1157,7 @@
     "service": "api-gateway",
     "message": "Health check OK",
     "trace_id": null,
+    "span_id": null,
     "exception": null
   },
   {
@@ -1037,6 +1166,7 @@
     "service": "orders-service",
     "message": "Health check OK",
     "trace_id": null,
+    "span_id": null,
     "exception": null
   },
   {
@@ -1045,6 +1175,7 @@
     "service": "api-gateway",
     "message": "GET /orders/search 200 163ms",
     "trace_id": "f02873618330d72aa4cf11c6c7f97a5b",
+    "span_id": null,
     "exception": null
   },
   {
@@ -1053,6 +1184,7 @@
     "service": "orders-service",
     "message": "Fetched 42 orders",
     "trace_id": "f02873618330d72aa4cf11c6c7f97a5b",
+    "span_id": null,
     "exception": null
   },
   {
@@ -1061,6 +1193,7 @@
     "service": "api-gateway",
     "message": "GET /orders 200 222ms",
     "trace_id": "238222d556ec2e8fec914857cf2cd182",
+    "span_id": null,
     "exception": null
   },
   {
@@ -1069,6 +1202,7 @@
     "service": "orders-service",
     "message": "Slow request: list_orders took 200ms in handler",
     "trace_id": "238222d556ec2e8fec914857cf2cd182",
+    "span_id": null,
     "exception": null
   },
   {
@@ -1077,6 +1211,7 @@
     "service": "orders-service",
     "message": "Fetched 48 orders",
     "trace_id": "238222d556ec2e8fec914857cf2cd182",
+    "span_id": null,
     "exception": null
   },
   {
@@ -1085,6 +1220,7 @@
     "service": "orders-service",
     "message": "Health check OK",
     "trace_id": null,
+    "span_id": null,
     "exception": null
   },
   {
@@ -1093,6 +1229,7 @@
     "service": "api-gateway",
     "message": "GET /orders/search 200 233ms",
     "trace_id": "0d57d644e79b4279524399bcc6657f57",
+    "span_id": null,
     "exception": null
   },
   {
@@ -1101,6 +1238,7 @@
     "service": "orders-service",
     "message": "Slow request: search_orders took 218ms in handler",
     "trace_id": "0d57d644e79b4279524399bcc6657f57",
+    "span_id": null,
     "exception": null
   },
   {
@@ -1109,6 +1247,7 @@
     "service": "orders-service",
     "message": "Fetched 39 orders",
     "trace_id": "0d57d644e79b4279524399bcc6657f57",
+    "span_id": null,
     "exception": null
   },
   {
@@ -1117,6 +1256,7 @@
     "service": "api-gateway",
     "message": "Health check OK",
     "trace_id": null,
+    "span_id": null,
     "exception": null
   },
   {
@@ -1125,6 +1265,7 @@
     "service": "api-gateway",
     "message": "GET /orders 200 345ms",
     "trace_id": "a0325d703ea9b8454682f44456978810",
+    "span_id": null,
     "exception": null
   },
   {
@@ -1133,6 +1274,7 @@
     "service": "orders-service",
     "message": "Slow request: list_orders took 322ms in handler",
     "trace_id": "a0325d703ea9b8454682f44456978810",
+    "span_id": null,
     "exception": null
   },
   {
@@ -1141,6 +1283,7 @@
     "service": "orders-service",
     "message": "Fetched 6 orders",
     "trace_id": "a0325d703ea9b8454682f44456978810",
+    "span_id": null,
     "exception": null
   },
   {
@@ -1149,6 +1292,7 @@
     "service": "orders-service",
     "message": "Health check OK",
     "trace_id": null,
+    "span_id": null,
     "exception": null
   },
   {
@@ -1157,6 +1301,7 @@
     "service": "api-gateway",
     "message": "GET /orders/search 200 370ms",
     "trace_id": "c22b56ed31ba318ffd9188f27a4c4982",
+    "span_id": null,
     "exception": null
   },
   {
@@ -1165,6 +1310,7 @@
     "service": "orders-service",
     "message": "Slow request: search_orders took 348ms in handler",
     "trace_id": "c22b56ed31ba318ffd9188f27a4c4982",
+    "span_id": null,
     "exception": null
   },
   {
@@ -1173,6 +1319,7 @@
     "service": "orders-service",
     "message": "Fetched 34 orders",
     "trace_id": "c22b56ed31ba318ffd9188f27a4c4982",
+    "span_id": null,
     "exception": null
   },
   {
@@ -1181,6 +1328,7 @@
     "service": "api-gateway",
     "message": "Health check OK",
     "trace_id": null,
+    "span_id": null,
     "exception": null
   },
   {
@@ -1189,6 +1337,7 @@
     "service": "api-gateway",
     "message": "GET /orders 200 371ms",
     "trace_id": "59c5a189d52087b1d4f926447b17a3c9",
+    "span_id": null,
     "exception": null
   },
   {
@@ -1197,6 +1346,7 @@
     "service": "orders-service",
     "message": "Slow request: list_orders took 349ms in handler",
     "trace_id": "59c5a189d52087b1d4f926447b17a3c9",
+    "span_id": null,
     "exception": null
   },
   {
@@ -1205,6 +1355,7 @@
     "service": "orders-service",
     "message": "Fetched 11 orders",
     "trace_id": "59c5a189d52087b1d4f926447b17a3c9",
+    "span_id": null,
     "exception": null
   },
   {
@@ -1213,6 +1364,7 @@
     "service": "orders-service",
     "message": "Event loop blocked for 994ms",
     "trace_id": null,
+    "span_id": null,
     "exception": null
   },
   {
@@ -1221,6 +1373,7 @@
     "service": "api-gateway",
     "message": "GET /orders/search 200 347ms",
     "trace_id": "3e08b7bfd1d24463457b85ba2f6197c0",
+    "span_id": null,
     "exception": null
   },
   {
@@ -1229,6 +1382,7 @@
     "service": "orders-service",
     "message": "Slow request: search_orders took 327ms in handler",
     "trace_id": "3e08b7bfd1d24463457b85ba2f6197c0",
+    "span_id": null,
     "exception": null
   },
   {
@@ -1237,6 +1391,7 @@
     "service": "orders-service",
     "message": "Fetched 6 orders",
     "trace_id": "3e08b7bfd1d24463457b85ba2f6197c0",
+    "span_id": null,
     "exception": null
   },
   {
@@ -1245,6 +1400,7 @@
     "service": "orders-service",
     "message": "Health check OK",
     "trace_id": null,
+    "span_id": null,
     "exception": null
   },
   {
@@ -1253,6 +1409,7 @@
     "service": "api-gateway",
     "message": "Health check OK",
     "trace_id": null,
+    "span_id": null,
     "exception": null
   },
   {
@@ -1261,6 +1418,7 @@
     "service": "orders-service",
     "message": "Health check OK",
     "trace_id": null,
+    "span_id": null,
     "exception": null
   },
   {
@@ -1269,6 +1427,7 @@
     "service": "api-gateway",
     "message": "GET /orders 200 363ms",
     "trace_id": "708c7945a5be1ba5394d02f93e2cf743",
+    "span_id": null,
     "exception": null
   },
   {
@@ -1277,6 +1436,7 @@
     "service": "orders-service",
     "message": "Slow request: list_orders took 341ms in handler",
     "trace_id": "708c7945a5be1ba5394d02f93e2cf743",
+    "span_id": null,
     "exception": null
   },
   {
@@ -1285,6 +1445,7 @@
     "service": "orders-service",
     "message": "Fetched 21 orders",
     "trace_id": "708c7945a5be1ba5394d02f93e2cf743",
+    "span_id": null,
     "exception": null
   },
   {
@@ -1293,6 +1454,7 @@
     "service": "api-gateway",
     "message": "Health check OK",
     "trace_id": null,
+    "span_id": null,
     "exception": null
   },
   {
@@ -1301,6 +1463,7 @@
     "service": "api-gateway",
     "message": "GET /orders/search 200 356ms",
     "trace_id": "ccc9f6ff289ebf2e77b97497a573b0f6",
+    "span_id": null,
     "exception": null
   },
   {
@@ -1309,6 +1472,7 @@
     "service": "orders-service",
     "message": "Slow request: search_orders took 338ms in handler",
     "trace_id": "ccc9f6ff289ebf2e77b97497a573b0f6",
+    "span_id": null,
     "exception": null
   },
   {
@@ -1317,6 +1481,7 @@
     "service": "orders-service",
     "message": "Fetched 37 orders",
     "trace_id": "ccc9f6ff289ebf2e77b97497a573b0f6",
+    "span_id": null,
     "exception": null
   },
   {
@@ -1325,6 +1490,7 @@
     "service": "api-gateway",
     "message": "GET /orders 200 323ms",
     "trace_id": "050fdbb5ca73dab08388597b1cc3ed19",
+    "span_id": null,
     "exception": null
   },
   {
@@ -1333,6 +1499,7 @@
     "service": "orders-service",
     "message": "Slow request: list_orders took 301ms in handler",
     "trace_id": "050fdbb5ca73dab08388597b1cc3ed19",
+    "span_id": null,
     "exception": null
   },
   {
@@ -1341,6 +1508,7 @@
     "service": "orders-service",
     "message": "Fetched 19 orders",
     "trace_id": "050fdbb5ca73dab08388597b1cc3ed19",
+    "span_id": null,
     "exception": null
   },
   {
@@ -1349,6 +1517,7 @@
     "service": "orders-service",
     "message": "Health check OK",
     "trace_id": null,
+    "span_id": null,
     "exception": null
   },
   {
@@ -1357,6 +1526,7 @@
     "service": "api-gateway",
     "message": "Health check OK",
     "trace_id": null,
+    "span_id": null,
     "exception": null
   },
   {
@@ -1365,6 +1535,7 @@
     "service": "api-gateway",
     "message": "GET /orders/search 200 300ms",
     "trace_id": "2ad0e91ce89875b7a62457d0db4631a4",
+    "span_id": null,
     "exception": null
   },
   {
@@ -1373,6 +1544,7 @@
     "service": "orders-service",
     "message": "Slow request: search_orders took 286ms in handler",
     "trace_id": "2ad0e91ce89875b7a62457d0db4631a4",
+    "span_id": null,
     "exception": null
   },
   {
@@ -1381,6 +1553,7 @@
     "service": "orders-service",
     "message": "Fetched 15 orders",
     "trace_id": "2ad0e91ce89875b7a62457d0db4631a4",
+    "span_id": null,
     "exception": null
   },
   {
@@ -1389,6 +1562,7 @@
     "service": "api-gateway",
     "message": "GET /orders 200 312ms",
     "trace_id": "55f46e30b3966a139848863b40b6c138",
+    "span_id": null,
     "exception": null
   },
   {
@@ -1397,6 +1571,7 @@
     "service": "orders-service",
     "message": "Slow request: list_orders took 296ms in handler",
     "trace_id": "55f46e30b3966a139848863b40b6c138",
+    "span_id": null,
     "exception": null
   },
   {
@@ -1405,6 +1580,7 @@
     "service": "orders-service",
     "message": "Fetched 36 orders",
     "trace_id": "55f46e30b3966a139848863b40b6c138",
+    "span_id": null,
     "exception": null
   },
   {
@@ -1413,6 +1589,7 @@
     "service": "orders-service",
     "message": "Event loop blocked for 948ms",
     "trace_id": null,
+    "span_id": null,
     "exception": null
   },
   {
@@ -1421,6 +1598,7 @@
     "service": "api-gateway",
     "message": "GET /orders/search 200 344ms",
     "trace_id": "af1b3e3d07514eb06ff3a6639ed71c99",
+    "span_id": null,
     "exception": null
   },
   {
@@ -1429,6 +1607,7 @@
     "service": "orders-service",
     "message": "Slow request: search_orders took 325ms in handler",
     "trace_id": "af1b3e3d07514eb06ff3a6639ed71c99",
+    "span_id": null,
     "exception": null
   },
   {
@@ -1437,6 +1616,7 @@
     "service": "orders-service",
     "message": "Fetched 28 orders",
     "trace_id": "af1b3e3d07514eb06ff3a6639ed71c99",
+    "span_id": null,
     "exception": null
   },
   {
@@ -1445,6 +1625,7 @@
     "service": "orders-service",
     "message": "Health check OK",
     "trace_id": null,
+    "span_id": null,
     "exception": null
   },
   {
@@ -1453,6 +1634,7 @@
     "service": "api-gateway",
     "message": "Health check OK",
     "trace_id": null,
+    "span_id": null,
     "exception": null
   },
   {
@@ -1461,6 +1643,7 @@
     "service": "api-gateway",
     "message": "GET /orders 200 342ms",
     "trace_id": "e56c1aff9d6a64a9f9b872f87328634e",
+    "span_id": null,
     "exception": null
   },
   {
@@ -1469,6 +1652,7 @@
     "service": "orders-service",
     "message": "Slow request: list_orders took 318ms in handler",
     "trace_id": "e56c1aff9d6a64a9f9b872f87328634e",
+    "span_id": null,
     "exception": null
   },
   {
@@ -1477,6 +1661,7 @@
     "service": "orders-service",
     "message": "Fetched 44 orders",
     "trace_id": "e56c1aff9d6a64a9f9b872f87328634e",
+    "span_id": null,
     "exception": null
   },
   {
@@ -1485,6 +1670,7 @@
     "service": "orders-service",
     "message": "Health check OK",
     "trace_id": null,
+    "span_id": null,
     "exception": null
   },
   {
@@ -1493,6 +1679,7 @@
     "service": "api-gateway",
     "message": "GET /orders/search 200 272ms",
     "trace_id": "0875f7d21ef1e98071bec495c7221e76",
+    "span_id": null,
     "exception": null
   },
   {
@@ -1501,6 +1688,7 @@
     "service": "orders-service",
     "message": "Slow request: search_orders took 255ms in handler",
     "trace_id": "0875f7d21ef1e98071bec495c7221e76",
+    "span_id": null,
     "exception": null
   },
   {
@@ -1509,6 +1697,7 @@
     "service": "orders-service",
     "message": "Fetched 47 orders",
     "trace_id": "0875f7d21ef1e98071bec495c7221e76",
+    "span_id": null,
     "exception": null
   },
   {
@@ -1517,6 +1706,7 @@
     "service": "api-gateway",
     "message": "Health check OK",
     "trace_id": null,
+    "span_id": null,
     "exception": null
   },
   {
@@ -1525,6 +1715,7 @@
     "service": "api-gateway",
     "message": "GET /orders 200 267ms",
     "trace_id": "c7dd3d661a3375f2a46dba4c401a2daa",
+    "span_id": null,
     "exception": null
   },
   {
@@ -1533,6 +1724,7 @@
     "service": "orders-service",
     "message": "Slow request: list_orders took 251ms in handler",
     "trace_id": "c7dd3d661a3375f2a46dba4c401a2daa",
+    "span_id": null,
     "exception": null
   },
   {
@@ -1541,6 +1733,7 @@
     "service": "orders-service",
     "message": "Fetched 32 orders",
     "trace_id": "c7dd3d661a3375f2a46dba4c401a2daa",
+    "span_id": null,
     "exception": null
   },
   {
@@ -1549,6 +1742,7 @@
     "service": "api-gateway",
     "message": "GET /orders/search 200 283ms",
     "trace_id": "42956056e59f07532ff239e5e02f19e7",
+    "span_id": null,
     "exception": null
   },
   {
@@ -1557,6 +1751,7 @@
     "service": "orders-service",
     "message": "Slow request: search_orders took 268ms in handler",
     "trace_id": "42956056e59f07532ff239e5e02f19e7",
+    "span_id": null,
     "exception": null
   },
   {
@@ -1565,6 +1760,7 @@
     "service": "orders-service",
     "message": "Fetched 30 orders",
     "trace_id": "42956056e59f07532ff239e5e02f19e7",
+    "span_id": null,
     "exception": null
   },
   {
@@ -1573,6 +1769,7 @@
     "service": "api-gateway",
     "message": "Health check OK",
     "trace_id": null,
+    "span_id": null,
     "exception": null
   },
   {
@@ -1581,6 +1778,7 @@
     "service": "orders-service",
     "message": "Health check OK",
     "trace_id": null,
+    "span_id": null,
     "exception": null
   }
 ]

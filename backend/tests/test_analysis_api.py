@@ -5,6 +5,7 @@ Ignorés si PostgreSQL n'est pas joignable (docker compose -f docker-compose.dev
 
 from collections.abc import Iterator
 from contextlib import nullcontext
+from pathlib import Path
 from typing import Any
 
 import pytest
@@ -138,3 +139,25 @@ def test_unknown_incident_is_404(client: TestClient, path: str) -> None:
     url = f"/api/incidents/00000000-0000-0000-0000-000000000000/{path}"
     response = client.post(url) if path == "analyze" else client.get(url)
     assert response.status_code == 404
+
+
+def test_live_incident_is_created_and_analyzed(
+    client: TestClient, monkeypatch: pytest.MonkeyPatch, tmp_path: Path
+) -> None:
+    from tests.test_live_source import live
+
+    monkeypatch.setattr(analysis.LiveDataSource, "from_settings", lambda _settings: live(tmp_path))
+    body = {
+        "title": "Incident live",
+        "source": "live",
+        "window_start": "2026-11-22T09:00:00Z",
+        "window_end": "2026-11-22T10:00:00Z",
+    }
+    created = client.post("/api/incidents", json=body)
+    assert created.status_code == 201
+    incident = created.json()
+    assert incident["source"] == "live" and incident["dataset_name"] is None
+
+    client.post(f"/api/incidents/{incident['id']}/analyze")
+    status = client.get(f"/api/incidents/{incident['id']}/status").json()
+    assert status["status"] == "completed", status["error"]

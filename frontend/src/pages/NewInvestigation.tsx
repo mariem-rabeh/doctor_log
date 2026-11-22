@@ -10,6 +10,8 @@ export default function NewInvestigation() {
   const [datasets, setDatasets] = useState<Dataset[]>([]);
   const [title, setTitle] = useState("");
   const [dataset, setDataset] = useState("");
+  const [source, setSource] = useState<"dataset" | "live">("dataset");
+  const [minutes, setMinutes] = useState(15);
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
@@ -28,7 +30,14 @@ export default function NewInvestigation() {
     setBusy(true);
     setError(null);
     try {
-      const incident = await api.createIncident({ title, dataset_name: dataset });
+      // Live : la fenêtre se termine maintenant et remonte de « minutes ».
+      const end = new Date();
+      const start = new Date(end.getTime() - minutes * 60_000);
+      const incident = await api.createIncident(
+        source === "live"
+          ? { title, source, window_start: start.toISOString(), window_end: end.toISOString() }
+          : { title, source, dataset_name: dataset },
+      );
       await api.analyze(incident.id);
       navigate(`/incidents/${incident.id}`);
     } catch (e) {
@@ -52,6 +61,34 @@ export default function NewInvestigation() {
               className="mt-1 w-full rounded border border-slate-300 px-3 py-2"
             />
           </label>
+          <fieldset className="flex gap-4 text-sm">
+            {(["dataset", "live"] as const).map((value) => (
+              <label key={value} className="flex items-center gap-1">
+                <input
+                  type="radio"
+                  checked={source === value}
+                  onChange={() => setSource(value)}
+                />
+                {value === "dataset" ? "Dataset enregistré" : "Live (demo-app)"}
+              </label>
+            ))}
+          </fieldset>
+          {source === "live" ? (
+            <label className="block text-sm">
+              Période analysée
+              <select
+                value={minutes}
+                onChange={(e) => setMinutes(Number(e.target.value))}
+                className="mt-1 w-full rounded border border-slate-300 px-3 py-2"
+              >
+                {[5, 15, 30, 60].map((m) => (
+                  <option key={m} value={m}>
+                    {m} dernières minutes
+                  </option>
+                ))}
+              </select>
+            </label>
+          ) : (
           <label className="block text-sm">
             Dataset
             <select
@@ -67,9 +104,10 @@ export default function NewInvestigation() {
               ))}
             </select>
           </label>
+          )}
           {error && <p className="text-sm text-red-700">{error}</p>}
           <button
-            disabled={busy || !dataset}
+            disabled={busy || (source === "dataset" && !dataset)}
             className="rounded bg-slate-900 px-4 py-2 text-sm text-white disabled:opacity-50"
           >
             {busy ? "Lancement..." : "Créer et lancer l'analyse"}

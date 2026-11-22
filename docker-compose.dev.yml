@@ -1,4 +1,4 @@
-# Développement : PostgreSQL seul (le backend tourne en local avec uvicorn).
+# Développement : PostgreSQL, Jaeger et Prometheus (le backend et la demo-app tournent en local).
 #   docker compose -f docker-compose.dev.yml up -d
 # Identifiants identiques à DATABASE_URL dans .env.example.
 services:
@@ -17,6 +17,26 @@ services:
       interval: 5s
       timeout: 3s
       retries: 10
+
+  # Traces : UI sur http://localhost:16686, réception OTLP sur 4317 (gRPC) et 4318 (HTTP).
+  jaeger:
+    image: jaegertracing/all-in-one:1.62.0
+    environment:
+      COLLECTOR_OTLP_ENABLED: "true"
+    ports:
+      - "16686:16686"
+      - "4317:4317"
+      - "4318:4318"
+
+  # Métriques : UI sur http://localhost:9090 ; récupère celles de la demo-app (port 8001).
+  prometheus:
+    image: prom/prometheus:v2.55.1
+    volumes:
+      - ./infrastructure/prometheus/prometheus.yml:/etc/prometheus/prometheus.yml:ro
+    ports:
+      - "9090:9090"
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
 
 volumes:
   pgdata:

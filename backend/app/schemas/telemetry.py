@@ -47,6 +47,7 @@ class LogRecord(_Contract):
     service: str
     message: str
     trace_id: str | None = None
+    span_id: str | None = None  # écrit par la demo-app (branche 24)
     exception: str | None = None
 
 
