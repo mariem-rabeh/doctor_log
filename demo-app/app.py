@@ -11,6 +11,7 @@ Endpoints :
   GET  /metrics             métriques Prometheus
 """
 
+import logging
 import os
 import threading
 import time
@@ -21,11 +22,13 @@ from fastapi import FastAPI, HTTPException, Request, Response
 from prometheus_client import CONTENT_TYPE_LATEST, Counter, Gauge, Histogram, generate_latest
 from sqlalchemy import create_engine, text
 
+import telemetry
+
 DATABASE_URL = os.getenv(
     "DATABASE_URL", "postgresql+psycopg://doctor_log:doctor_log@localhost:5432/doctor_log"
 )
 POOL_SIZE = int(os.getenv("POOL_SIZE", "5"))
-PAYMENT_URL = os.getenv("PAYMENT_URL", "http://localhost:8002")
+PAYMENT_URL = os.getenv("PAYMENT_URL", "http://127.0.0.1:8002")
 
 # Petit pool, sans débordement : facile à saturer pour le scénario S01.
 engine = create_engine(DATABASE_URL, pool_size=POOL_SIZE, max_overflow=0, pool_timeout=5)
@@ -65,10 +68,16 @@ async def measure(request: Request, call_next):  # type: ignore[no-untyped-def]
         response = await call_next(request)
         status = response.status_code
         return response
+    except Exception:
+        logger.exception("Unhandled error on %s %s", request.method, route)
+        raise
     finally:
         if route != "/metrics":
-            REQUEST_SECONDS.labels(route).observe(time.perf_counter() - started)
+            seconds = time.perf_counter() - started
+            REQUEST_SECONDS.labels(route).observe(seconds)
             REQUESTS.labels(route, str(status)).inc()
+            level = logging.ERROR if status >= 500 else logging.INFO
+            logger.log(level, "%s %s %d %.0fms", request.method, route, status, seconds * 1000)
 
 
 @app.get("/orders")
@@ -90,6 +99,7 @@ def payments() -> dict[str, str]:
         response = httpx.get(f"{PAYMENT_URL}/pay", timeout=2)
         response.raise_for_status()
     except httpx.HTTPError as exc:
+        logger.error("Payment call failed: payment-service unreachable (%s)", type(exc).__name__)
         raise HTTPException(503, f"payment-service indisponible : {type(exc).__name__}") from exc
     return {"payment": "ok"}
 
@@ -118,3 +128,8 @@ def hold_connections(count: int = POOL_SIZE, seconds: float = 30) -> dict[str, i
 @app.get("/metrics")
 def metrics() -> Response:
     return Response(generate_latest(), media_type=CONTENT_TYPE_LATEST)
+
+
+# En dernier : le middleware OpenTelemetry enveloppe alors « measure », donc les logs
+# écrits dans « measure » portent le trace_id de la requête.
+logger = telemetry.setup(app, "orders-service", engine)

@@ -8,6 +8,8 @@
 
 from fastapi import FastAPI, HTTPException
 
+import telemetry
+
 app = FastAPI(title="payment-service")
 state = {"failing": False}
 
@@ -15,6 +17,7 @@ state = {"failing": False}
 @app.get("/pay")
 def pay() -> dict[str, str]:
     if state["failing"]:
+        logger.error("Payment refused: service unavailable (simulated outage)")
         raise HTTPException(503, "payment-service en panne")
     return {"status": "paid"}
 
@@ -23,3 +26,6 @@ def pay() -> dict[str, str]:
 def set_failure(enabled: bool = True) -> dict[str, bool]:
     state["failing"] = enabled
     return state
+
+
+logger = telemetry.setup(app, "payment-service")
