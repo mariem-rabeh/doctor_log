@@ -27,3 +27,4 @@ Thumbs.db
 
 # Résultats générés
 backend/eval/runs/
+*.tsbuildinfo
