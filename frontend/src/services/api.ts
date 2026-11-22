@@ -1,6 +1,14 @@
 // Client typé de l'API. Toutes les erreurs du backend ont la forme {error: {code, message, details}}.
 
-import type { Dataset, Incident, IncidentCreate, IncidentPage, IncidentStatus } from "../types";
+import type {
+  Dataset,
+  DiagnosisReport,
+  Incident,
+  IncidentCreate,
+  IncidentPage,
+  IncidentStatus,
+  IncidentStatusInfo,
+} from "../types";
 
 export class ApiError extends Error {
   constructor(
@@ -48,4 +56,7 @@ export const api = {
   getIncident: (id: string) => request<Incident>(`/incidents/${id}`),
   createIncident: (body: IncidentCreate) =>
     request<Incident>("/incidents", { method: "POST", body: JSON.stringify(body) }),
+  analyze: (id: string) => request<Incident>(`/incidents/${id}/analyze`, { method: "POST" }),
+  getStatus: (id: string) => request<IncidentStatusInfo>(`/incidents/${id}/status`),
+  getReport: (id: string) => request<DiagnosisReport>(`/incidents/${id}/report`),
 };

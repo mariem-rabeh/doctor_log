@@ -63,6 +63,14 @@ export interface Incident {
   updated_at: string;
 }
 
+export interface IncidentStatusInfo {
+  id: string;
+  status: IncidentStatus;
+  agent_statuses: Partial<Record<AgentName, AgentStatus>>;
+  error: string | null;
+  has_report: boolean;
+}
+
 export interface IncidentPage {
   items: Incident[];
   total: number;
