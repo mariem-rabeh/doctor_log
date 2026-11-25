@@ -114,6 +114,22 @@ export default function DiagnosisReport() {
         </Card>
       </div>
 
+      {report.documents.length > 0 && (
+        <Card title="Documents consultés (base de connaissances)">
+          <ul className="space-y-1 text-sm">
+            {report.documents.map((d) => (
+              <li key={d.id}>
+                <span className="mr-2 rounded bg-slate-100 px-1.5 font-mono text-xs">{d.id}</span>
+                {d.title} <span className="text-slate-500">· knowledge/{d.path}</span>
+              </li>
+            ))}
+          </ul>
+          <p className="mt-2 text-xs text-slate-500">
+            Des connaissances, pas des preuves : elles ne comptent pas dans la confiance.
+          </p>
+        </Card>
+      )}
+
       {(report.missing_data.length > 0 || (report.verification?.issues.length ?? 0) > 0) && (
         <Card title="Limites de l'analyse">
           <List

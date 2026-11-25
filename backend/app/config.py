@@ -35,6 +35,7 @@ class Settings(BaseSettings):
 
     datasets_dir: Path = REPO_ROOT / "datasets"
     logs_dir: Path = REPO_ROOT / "logs"  # logs JSON de la demo-app (incidents live)
+    knowledge_dir: Path = REPO_ROOT / "knowledge"  # runbooks du RAG
 
     # Origines autorisées à appeler l'API depuis un navigateur (le frontend Vite en dev).
     # Dans .env : CORS_ORIGINS=["http://localhost:5173","http://localhost:3000"]

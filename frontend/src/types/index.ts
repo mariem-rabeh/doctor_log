@@ -18,6 +18,14 @@ export interface Evidence {
   unit: string | null;
 }
 
+// Runbook retrouvé par le RAG : une connaissance consultée, jamais une preuve.
+export interface KnowledgeDocument {
+  id: string;
+  title: string;
+  path: string;
+  text: string;
+}
+
 export interface Hypothesis {
   cause: string;
   rank: number;
@@ -44,6 +52,7 @@ export interface DiagnosisReport {
   verification: VerificationResult | null;
   recommendations: string[];
   missing_data: string[];
+  documents: KnowledgeDocument[];
   iteration_count: number;
   generated_at: string;
 }

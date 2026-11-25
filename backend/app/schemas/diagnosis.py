@@ -24,6 +24,15 @@ class StrictModel(BaseModel):
     model_config = ConfigDict(extra="forbid")
 
 
+class Document(StrictModel):
+    """Un document de la base de connaissances (RAG) : une connaissance, jamais une preuve."""
+
+    id: str = Field(pattern=r"^doc-\d{3,}$", examples=["doc-001"])
+    title: str
+    path: str  # nom du fichier dans knowledge/
+    text: str
+
+
 class Evidence(StrictModel):
     """Un fait mesuré dans la télémétrie, citable par son identifiant."""
 
@@ -95,6 +104,7 @@ class DiagnosisReport(StrictModel):
     verification: VerificationResult | None
     recommendations: list[str] = Field(default_factory=list)
     missing_data: list[str] = Field(default_factory=list)
+    documents: list[Document] = Field(default_factory=list)  # consultés par le RCA
     iteration_count: int = Field(ge=0)
     generated_at: AwareDatetime
 

@@ -33,6 +33,9 @@ renvoie à une preuve identifiée.
 - **Trois agents d'analyse en parallèle** : logs, métriques (détection du point de rupture)
   et traces (temps propre par opération, origine des erreurs).
 - **Agent RCA** : classe les hypothèses de cause racine, chacune appuyée par des preuves citées.
+- **RAG sur des runbooks** (`knowledge/`) : le RCA reçoit les procédures les plus proches
+  de l'incident (recherche BM25). Ce sont des connaissances, jamais des preuves : elles
+  ne comptent pas dans la confiance.
 - **Agent de vérification** : contrôles déterministes (existence des preuves, fenêtre
   temporelle, valeurs réellement présentes dans les données, contradictions entre sources)
   puis jugement *causalité vs corrélation* ; la **confiance est calculée en Python**.
@@ -167,6 +170,7 @@ backend/          API FastAPI, agents, workflow LangGraph, outils, tests, évalu
 frontend/         Interface React + TypeScript + Tailwind (servie par Nginx en Docker)
 demo-app/         orders-service et payment-service instrumentés (OTel, Prometheus)
 datasets/         Six scénarios d'incident avec diagnostic attendu
+knowledge/        Runbooks de la base de connaissances (RAG)
 infrastructure/   Configuration Prometheus
 scripts/          Génération des datasets, déclenchement d'incidents
 ```

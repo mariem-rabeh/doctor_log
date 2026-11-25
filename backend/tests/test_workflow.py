@@ -57,6 +57,7 @@ def test_s01_is_confirmed_in_one_iteration() -> None:
     assert report.iteration_count == 1 and report.confidence >= 0.8
     assert report.recommendations == ["vérifier Pool de connexions saturé"]
     assert {e.id[:3] for e in report.evidences} == {"log", "met", "trc"}
+    assert report.documents[0].path == "pool-connexions.md"  # RAG : le bon runbook
     assert all(s is AgentStatus.COMPLETED for s in updates[-1]["agent_statuses"].values())
     assert set(updates[-1]["agent_statuses"]) == set(AgentName)
 
