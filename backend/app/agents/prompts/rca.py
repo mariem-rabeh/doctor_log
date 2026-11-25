@@ -19,5 +19,9 @@ Règles strictes :
 - N'écris aucun chiffre absent des constats.
 - Une métrique « stable » ou absente est une information : utilise-la pour contredire.
 - Si des remarques de vérification sont fournies, corrige les hypothèses en conséquence.
+- Des documents de référence (doc-001...) peuvent être fournis : ce sont des procédures et
+  des connaissances, jamais des preuves. Ne les mets jamais dans supporting_evidence_ids ni
+  dans contradicting_evidence_ids ; cite-les dans justification ou verification_actions
+  quand ils t'aident, et n'en tire aucun chiffre sur l'incident.
 Rédige toujours en français.
 """

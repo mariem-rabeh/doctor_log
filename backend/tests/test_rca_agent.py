@@ -5,7 +5,7 @@ from typing import Any
 
 from app.agents import rca_agent
 from app.agents.rca_agent import RcaAnswer
-from app.schemas.diagnosis import Evidence, Finding
+from app.schemas.diagnosis import Document, Evidence, Finding
 from app.services.llm.fake import FakeLLM
 
 T = datetime(2026, 11, 18, 10, 25, tzinfo=UTC)
@@ -64,6 +64,24 @@ def test_feedback_and_evidences_are_sent_to_the_llm() -> None:
     prompt = llm.calls[0].user
     assert "<telemetry>" in prompt and "trc-001" in prompt
     assert "met-001 contredit la saturation du pool" in prompt
+
+
+DOCS = [Document(id="doc-001", title="Runbook pool", path="pool.md", text="QueuePool")]
+
+
+def test_documents_are_sent_but_never_count_as_evidence() -> None:
+    answer = {
+        "hypotheses": [
+            hypo(1, "doc-001"),  # un document n'est pas une preuve
+            {**hypo(2, "log-001"), "verification_actions": ["Suivre doc-001"]},
+            {**hypo(3, "met-001"), "justification": "comme doc-009"},  # document inconnu
+        ]
+    }
+    llm = FakeLLM({RcaAnswer: answer})
+    result = rca_agent.run(FINDINGS, llm, documents=DOCS)
+    assert [(h.rank, h.cause) for h in result] == [(1, "cause 2")]
+    prompt = llm.calls[0].user
+    assert "Documents de référence" in prompt and prompt.count("<telemetry>") == 2
 
 
 def test_llm_failure_or_no_evidence_gives_no_hypothesis() -> None:

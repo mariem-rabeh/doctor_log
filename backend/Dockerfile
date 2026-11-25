@@ -9,6 +9,7 @@ RUN pip install --no-cache-dir .
 COPY backend/alembic.ini ./
 COPY backend/alembic ./alembic
 COPY datasets /app/datasets
+COPY knowledge /app/knowledge
 
 EXPOSE 8000
 # Les migrations sont appliquées à chaque démarrage (sans effet si la base est à jour).

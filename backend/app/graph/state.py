@@ -6,7 +6,13 @@ qu'il modifie. LangGraph fusionne ce dict dans l'état.
 
 from typing import Annotated, TypedDict
 
-from app.schemas.diagnosis import DiagnosisReport, Finding, Hypothesis, VerificationResult
+from app.schemas.diagnosis import (
+    DiagnosisReport,
+    Document,
+    Finding,
+    Hypothesis,
+    VerificationResult,
+)
 from app.schemas.enums import AgentName, AgentStatus
 from app.schemas.telemetry import TimeWindow  # fourni par la branche 2 (contracts/interfaces)
 
@@ -36,6 +42,7 @@ class IncidentState(TypedDict, total=False):
     trace_finding: Finding | None
 
     # Raisonnement
+    documents: list[Document]  # runbooks retrouvés par le RAG (connaissances, pas des preuves)
     hypotheses: list[Hypothesis]
     verification: VerificationResult | None
     iteration_count: int

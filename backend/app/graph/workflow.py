@@ -1,12 +1,13 @@
 """Graphe LangGraph de l'analyse d'un incident.
 
-prepare -> (log, metrics, trace en parallèle) -> rca -> verify -> rca (révision, 2 fois max)
-                                                              \\-> report
+prepare -> (log, metrics, trace en parallèle) -> retrieve -> rca -> verify -> rca (révision)
+                                                                          \\-> report
 Une erreur dans un agent d'analyse n'arrête pas le graphe : elle est notée dans missing_data.
+retrieve (RAG) donne au RCA des runbooks : des connaissances, jamais des preuves.
 """
 
 import logging
-from collections.abc import Callable
+from collections.abc import Callable, Sequence
 from datetime import UTC, datetime
 from types import ModuleType
 from typing import Any, cast
@@ -14,11 +15,13 @@ from typing import Any, cast
 from langgraph.graph import END, START, StateGraph
 
 from app.agents import log_agent, metrics_agent, rca_agent, trace_agent, verification_agent
+from app.config import get_settings
 from app.graph.state import IncidentState
-from app.schemas.diagnosis import DiagnosisReport, Finding, VerificationResult
+from app.schemas.diagnosis import DiagnosisReport, Document, Finding, VerificationResult
 from app.schemas.enums import AgentName, AgentStatus, Conclusion, SignalSource, Verdict
 from app.schemas.telemetry import TimeWindow
 from app.services.llm.base import LLMClient
+from app.tools import knowledge
 from app.tools.datasources.base import DataSource
 
 logger = logging.getLogger(__name__)
@@ -34,7 +37,7 @@ ANALYSIS_AGENTS: list[tuple[AgentName, str, SignalSource, ModuleType]] = [
 FINDING_KEYS = ("log_finding", "metrics_finding", "trace_finding")
 
 
-def build_graph(source: DataSource, llm: LLMClient) -> Any:
+def build_graph(source: DataSource, llm: LLMClient, documents: Sequence[Document] = ()) -> Any:
     graph: StateGraph[IncidentState] = StateGraph(IncidentState)
 
     def prepare(state: IncidentState) -> IncidentState:
@@ -47,10 +50,14 @@ def build_graph(source: DataSource, llm: LLMClient) -> Any:
             "agent_statuses": statuses,
         }
 
+    def retrieve(state: IncidentState) -> IncidentState:
+        query = knowledge.build_query(_findings(state))
+        return {"documents": knowledge.search(documents, query)}
+
     def rca(state: IncidentState) -> IncidentState:
         verification = state.get("verification")
         feedback = verification.issues if verification else []
-        hypotheses = rca_agent.run(_findings(state), llm, feedback)
+        hypotheses = rca_agent.run(_findings(state), llm, feedback, state.get("documents", []))
         return {
             "hypotheses": hypotheses,
             "iteration_count": state.get("iteration_count", 0) + 1,
@@ -78,12 +85,14 @@ def build_graph(source: DataSource, llm: LLMClient) -> Any:
         # LangGraph attend un paramètre nommé « state » ; Callable[...] ne peut pas l'exprimer.
         graph.add_node(name.value, node)  # type: ignore[arg-type]
         graph.add_edge("prepare", name.value)
+    graph.add_node("retrieve", retrieve)
     graph.add_node("rca", rca)
     graph.add_node("verify", verify)
     graph.add_node("report", report)
 
     graph.add_edge(START, "prepare")
-    graph.add_edge([name.value for name, *_ in ANALYSIS_AGENTS], "rca")  # attend les trois
+    graph.add_edge([name.value for name, *_ in ANALYSIS_AGENTS], "retrieve")  # attend les trois
+    graph.add_edge("retrieve", "rca")
     graph.add_edge("rca", "verify")
     graph.add_conditional_edges("verify", next_step, {"rca": "rca", "report": "report"})
     graph.add_edge("report", END)
@@ -153,6 +162,7 @@ def build_report(state: IncidentState) -> DiagnosisReport:
         verification=verification,
         recommendations=top.verification_actions if top else [],
         missing_data=[m for f in findings for m in f.missing_data],
+        documents=state.get("documents", []),
         iteration_count=state.get("iteration_count", 0),
         generated_at=datetime.now(UTC),
     )
@@ -164,9 +174,15 @@ def run_analysis(
     llm: LLMClient,
     incident_id: str,
     on_update: Callable[[IncidentState], None] | None = None,
+    documents: Sequence[Document] | None = None,
 ) -> DiagnosisReport:
-    """Lance le graphe ; on_update reçoit l'état après chaque étape (suivi par l'API)."""
-    graph = build_graph(source, llm)
+    """Lance le graphe ; on_update reçoit l'état après chaque étape (suivi par l'API).
+
+    documents : base de connaissances du RAG ; None = les runbooks de knowledge/.
+    """
+    if documents is None:
+        documents = knowledge.load_documents(get_settings().knowledge_dir)
+    graph = build_graph(source, llm, documents)
     state: IncidentState = {"incident_id": incident_id, "time_window": window}
     for step in graph.stream(state, stream_mode="values"):
         state = step
